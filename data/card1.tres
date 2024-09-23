@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://dlmq8rmwnpwjx"]
+
+[ext_resource type="Script" path="res://data/card_data.gd" id="1_3kvqi"]
+
+[resource]
+script = ExtResource("1_3kvqi")
+description = ""
+stamina_cost = 0
+card_type = 0
+speed = 0
