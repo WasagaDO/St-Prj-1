@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://kldlvd6qmeiv"]
+
+[ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="1_twima"]
+[ext_resource type="StyleBox" uid="uid://bmcdpja021dtm" path="res://resources/big_button_highlight_stylebox.tres" id="2_u0tw1"]
+
+[resource]
+Button/colors/font_outline_color = Color(0.364706, 0.470588, 0.537255, 1)
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_twima")
+Button/styles/disabled = ExtResource("2_u0tw1")
+Button/styles/focus = ExtResource("2_u0tw1")
+Button/styles/hover = ExtResource("2_u0tw1")
+Button/styles/normal = ExtResource("2_u0tw1")
+Button/styles/pressed = ExtResource("2_u0tw1")

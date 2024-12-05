@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://btlpnewiyl1sj"]
+
+[ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="1_omwn3"]
+[ext_resource type="StyleBox" uid="uid://btb06t2q4554p" path="res://resources/big_button_stylebox.tres" id="2_l4sbv"]
+
+[resource]
+Button/colors/font_outline_color = Color(0.364706, 0.470588, 0.537255, 1)
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_omwn3")
+Button/styles/disabled = ExtResource("2_l4sbv")
+Button/styles/focus = ExtResource("2_l4sbv")
+Button/styles/hover = ExtResource("2_l4sbv")
+Button/styles/normal = ExtResource("2_l4sbv")
+Button/styles/pressed = ExtResource("2_l4sbv")

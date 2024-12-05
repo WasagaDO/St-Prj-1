@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddevk2tyrxskr"]
+
+[ext_resource type="Script" path="res://scenes/battle/events/state_events/start_of_game_event.gd" id="1_li6r2"]
+
+[node name="StartofGameEvent" type="Node2D"]
+script = ExtResource("1_li6r2")
+event_type = 12

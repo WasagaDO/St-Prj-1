@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://lmttoefckcl2"]
+
+[ext_resource type="Script" path="res://scenes/battle/events/state_events/player_can_react_event.gd" id="1_gve25"]
+
+[node name="PlayerCanReact" type="Node2D"]
+script = ExtResource("1_gve25")
+event_type = 9

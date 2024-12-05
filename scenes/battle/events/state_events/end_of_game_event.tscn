@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cubgdjkworik0"]
+
+[ext_resource type="Script" path="res://scenes/battle/events/state_events/end_of_game_event.gd" id="1_vcv6m"]
+
+[node name="EndOfGameEvent" type="Node2D"]
+script = ExtResource("1_vcv6m")
+event_type = 11

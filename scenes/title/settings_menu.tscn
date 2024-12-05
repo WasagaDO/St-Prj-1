@@ -1,0 +1,252 @@
+[gd_scene load_steps=9 format=3 uid="uid://0ikcug0eih18"]
+
+[ext_resource type="Theme" uid="uid://86ip7rx7niyg" path="res://resources/menu_theme.tres" id="1_6lkli"]
+[ext_resource type="Script" path="res://scenes/title/settings_menu.gd" id="1_brcwi"]
+[ext_resource type="Script" path="res://scenes/title/volume_slider.gd" id="3_q1u7j"]
+[ext_resource type="Script" path="res://scenes/title/fullscreen_toggle.gd" id="4_nrnbe"]
+[ext_resource type="Script" path="res://scenes/title/resolution_dropdown.gd" id="5_ekx88"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qupod"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_h88oy"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_nu7tc"]
+font_size = 32
+
+[node name="SettingsMenu" type="Panel"]
+anchors_preset = -1
+anchor_left = 0.239063
+anchor_top = 0.17037
+anchor_right = 0.760938
+anchor_bottom = 0.82963
+offset_bottom = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qupod")
+script = ExtResource("1_brcwi")
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 43.0
+offset_right = 328.0
+offset_bottom = 131.0
+text = "Settings
+"
+label_settings = SubResource("LabelSettings_h88oy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0708583
+anchor_top = 0.238764
+anchor_right = 0.929142
+anchor_bottom = 0.823034
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MusicVolume" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/MusicVolume"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -22.5
+offset_right = 224.0
+offset_bottom = 22.5
+grow_vertical = 2
+text = "Music volume"
+label_settings = SubResource("LabelSettings_nu7tc")
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/MusicVolume"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -30.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_6lkli")
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource("3_q1u7j")
+
+[node name="SoundVolume" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/SoundVolume"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -22.5
+offset_right = 224.0
+offset_bottom = 22.5
+grow_vertical = 2
+text = "Sound volume"
+label_settings = SubResource("LabelSettings_nu7tc")
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/SoundVolume"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -30.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_6lkli")
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource("3_q1u7j")
+type = 1
+
+[node name="LanguageDropdown" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/LanguageDropdown"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -22.5
+offset_right = 224.0
+offset_bottom = 22.5
+grow_vertical = 2
+text = "Language
+"
+label_settings = SubResource("LabelSettings_nu7tc")
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/LanguageDropdown"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = -22.5
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_6lkli")
+selected = 0
+item_count = 1
+popup/item_0/text = "English"
+
+[node name="Fullscreen Boolean" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/Fullscreen Boolean"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -22.5
+offset_right = 224.0
+offset_bottom = 22.5
+grow_vertical = 2
+text = "Fullscreen
+"
+label_settings = SubResource("LabelSettings_nu7tc")
+vertical_alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/Fullscreen Boolean"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -12.0
+offset_right = -39.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+script = ExtResource("4_nrnbe")
+
+[node name="ResolutionDropdown" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ResolutionDropdown"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -22.5
+offset_right = 224.0
+offset_bottom = 22.5
+grow_vertical = 2
+text = "Resolution
+"
+label_settings = SubResource("LabelSettings_nu7tc")
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/ResolutionDropdown" node_paths=PackedStringArray("full_screen_toggle")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = -22.5
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_6lkli")
+selected = 0
+item_count = 1
+popup/item_0/text = "1920x1080"
+script = ExtResource("5_ekx88")
+resolutions = Array[String](["1920x1080", "1792x1008", "1664x936", "1536x864", "1408x792", "1280x720"])
+full_screen_toggle = NodePath("../../Fullscreen Boolean/CheckButton")
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -106.0
+offset_right = 116.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_6lkli")
+text = "Close"
+
+[connection signal="value_changed" from="VBoxContainer/MusicVolume/HSlider" to="VBoxContainer/MusicVolume/HSlider" method="_on_value_changed"]
+[connection signal="toggled" from="VBoxContainer/Fullscreen Boolean/CheckButton" to="VBoxContainer/Fullscreen Boolean/CheckButton" method="_on_toggled"]
+[connection signal="item_selected" from="VBoxContainer/ResolutionDropdown/OptionButton" to="VBoxContainer/ResolutionDropdown/OptionButton" method="_on_item_selected"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

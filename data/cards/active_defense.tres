@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=9 format=3 uid="uid://mlcyxfv2ivp0"]
+
+[ext_resource type="Script" path="res://data/cards/armor_data.gd" id="1_latiy"]
+[ext_resource type="Script" path="res://data/cards/buff_data.gd" id="2_2ic33"]
+[ext_resource type="Script" path="res://data/cards/debuff_data.gd" id="3_cc77s"]
+[ext_resource type="Script" path="res://data/cards/card_data.gd" id="4_dx4y5"]
+[ext_resource type="Texture2D" uid="uid://bq44re1wqbv32" path="res://assets/card_art/active_defense.png" id="4_pildl"]
+
+[sub_resource type="Resource" id="Resource_553y4"]
+script = ExtResource("1_latiy")
+type = 0
+amt = 5
+
+[sub_resource type="Resource" id="Resource_xnv3t"]
+script = ExtResource("1_latiy")
+type = 1
+amt = 5
+
+[sub_resource type="Resource" id="Resource_ipd7y"]
+script = ExtResource("1_latiy")
+type = 2
+amt = 5
+
+[resource]
+script = ExtResource("4_dx4y5")
+description = "Gain 5 crushing, slashing and piercing armor"
+name = "Active Defense"
+image = ExtResource("4_pildl")
+stamina_cost = 3
+card_type = 1
+speed = 0
+damage = Array[ExtResource("1_latiy")]([])
+armor = Array[ExtResource("1_latiy")]([SubResource("Resource_553y4"), SubResource("Resource_xnv3t"), SubResource("Resource_ipd7y")])
+buffs = Array[ExtResource("2_2ic33")]([])
+debuffs = Array[ExtResource("3_cc77s")]([])
+special_reactions = Array[int]([])
+healing = 0
+cooldown = 0

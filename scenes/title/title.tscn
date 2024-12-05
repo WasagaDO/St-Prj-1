@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://bffpuucr3863m"]
+
+[ext_resource type="Script" path="res://scenes/title/title.gd" id="1_kd62u"]
+[ext_resource type="Theme" uid="uid://86ip7rx7niyg" path="res://resources/menu_theme.tres" id="1_kjtye"]
+[ext_resource type="PackedScene" uid="uid://bw4iu7av3kh7y" path="res://scenes/session_settings/session_settings.tscn" id="2_amrso"]
+[ext_resource type="Texture2D" uid="uid://b7jay4shdst11" path="res://assets/ui/game menu without text.png" id="3_cb8co"]
+[ext_resource type="PackedScene" uid="uid://0ikcug0eih18" path="res://scenes/title/settings_menu.tscn" id="4_iixu0"]
+[ext_resource type="Texture2D" uid="uid://bq7s1rk0cllqb" path="res://assets/ui/Main Menu Navigation.png" id="5_beusg"]
+
+[node name="TitleScreen" type="CanvasLayer"]
+script = ExtResource("1_kd62u")
+session_settings_scene = ExtResource("2_amrso")
+
+[node name="BG" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_cb8co")
+expand_mode = 2
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 849.0
+offset_top = 560.0
+offset_right = 1001.0
+offset_bottom = 615.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("1_kjtye")
+text = "Play"
+icon = ExtResource("5_beusg")
+expand_icon = true
+
+[node name="SettingsButton" type="Button" parent="."]
+offset_left = 819.0
+offset_top = 655.0
+offset_right = 1031.0
+offset_bottom = 710.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("1_kjtye")
+text = "Settings"
+icon = ExtResource("5_beusg")
+expand_icon = true
+
+[node name="AboutButton" type="Button" parent="."]
+offset_left = 717.0
+offset_top = 750.0
+offset_right = 1133.0
+offset_bottom = 805.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("1_kjtye")
+text = "About the project"
+icon = ExtResource("5_beusg")
+expand_icon = true
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 838.0
+offset_top = 845.0
+offset_right = 1012.0
+offset_bottom = 900.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("1_kjtye")
+text = "Exit
+"
+icon = ExtResource("5_beusg")
+expand_icon = true
+
+[node name="SettingsMenu" parent="." instance=ExtResource("4_iixu0")]
+visible = false
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="AboutButton" to="." method="_on_about_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

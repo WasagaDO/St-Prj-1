@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://d25gbowo88gdv"]
+
+[ext_resource type="Theme" uid="uid://btlpnewiyl1sj" path="res://resources/big_button_theme.tres" id="1_otmig"]
+[ext_resource type="LabelSettings" uid="uid://ro3ugjl1d61c" path="res://resources/big_button_label_style.tres" id="2_2xuse"]
+[ext_resource type="Script" path="res://scenes/session_settings/big_button.gd" id="2_lpd8l"]
+[ext_resource type="LabelSettings" uid="uid://bei575rl061xm" path="res://resources/big_button_highlighted_label_style.tres" id="4_2y3x8"]
+
+[node name="BigButton" type="Button"]
+clip_children = 2
+offset_left = 1159.0
+offset_top = 576.0
+offset_right = 1557.0
+offset_bottom = 704.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_otmig")
+script = ExtResource("2_lpd8l")
+normal_label_settings = ExtResource("2_2xuse")
+highlighted_label_settings = ExtResource("4_2y3x8")
+hover_lift_amount = 10.0
+press_lower_amount = 10.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EQUIPMENT"
+label_settings = ExtResource("2_2xuse")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Flash" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -52.0
+offset_right = 61.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

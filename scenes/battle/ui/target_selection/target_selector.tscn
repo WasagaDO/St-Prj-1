@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://7b2xta84ie5h"]
+
+[ext_resource type="Texture2D" uid="uid://ct4peviak2h58" path="res://assets/target_selector_arrow.png" id="1_aagnq"]
+[ext_resource type="Script" path="res://scenes/battle/ui/target_selection/target_selector.gd" id="1_t3rbp"]
+[ext_resource type="PackedScene" uid="uid://827b1si4gsut" path="res://scenes/battle/ui/target_selection/target_selector_node.tscn" id="2_1ydel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohy6r"]
+size = Vector2(104, 100)
+
+[node name="TargetSelector" type="Node2D"]
+script = ExtResource("1_t3rbp")
+node_scene = ExtResource("2_1ydel")
+
+[node name="Arrow" type="Area2D" parent="."]
+position = Vector2(1, -4)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_ohy6r")
+
+[node name="Sprite" type="Sprite2D" parent="Arrow"]
+texture = ExtResource("1_aagnq")
+
+[connection signal="area_entered" from="Arrow" to="." method="_on_target_selector_arrow_area_entered"]
+[connection signal="area_exited" from="Arrow" to="." method="_on_target_selector_arrow_area_exited"]

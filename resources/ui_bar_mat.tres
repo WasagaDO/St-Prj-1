@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://crqd71wqca5bs"]
+
+[ext_resource type="Shader" path="res://ui_bar.gdshader" id="1_5kohc"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_5kohc")
+shader_parameter/fill_amt = 1.0

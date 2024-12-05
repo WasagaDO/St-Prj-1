@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://vuj1phmqegpr"]
+
+[ext_resource type="Script" path="res://scenes/battle/events/battle_events/heal_event.gd" id="1_ag72w"]
+
+[node name="HealEvent" type="Node2D"]
+script = ExtResource("1_ag72w")
+event_type = 1

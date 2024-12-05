@@ -1,0 +1,13 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bei575rl061xm"]
+
+[ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="1_t765w"]
+
+[resource]
+font = ExtResource("1_t765w")
+font_size = 32
+font_color = Color(1, 0.937255, 0.513726, 1)
+outline_size = 20
+outline_color = Color(0.372549, 0.0431373, 0.0431373, 1)
+shadow_size = 3
+shadow_color = Color(0.105882, 0.12549, 0.14902, 1)
+shadow_offset = Vector2(0, 2)

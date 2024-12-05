@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://b1jc4jqifkrq1"]
+
+[ext_resource type="Script" path="res://data/cards/armor_data.gd" id="1_1v341"]
+[ext_resource type="Script" path="res://data/cards/buff_data.gd" id="2_my2h2"]
+[ext_resource type="Script" path="res://data/cards/debuff_data.gd" id="3_sbyvi"]
+[ext_resource type="Script" path="res://data/cards/card_data.gd" id="4_ubkoi"]
+
+[sub_resource type="Resource" id="Resource_bt07t"]
+script = ExtResource("1_1v341")
+type = 0
+amt = 8
+
+[sub_resource type="Resource" id="Resource_xxxjg"]
+script = ExtResource("1_1v341")
+type = 1
+amt = 4
+
+[resource]
+script = ExtResource("4_ubkoi")
+description = ""
+name = "Strong Swing"
+stamina_cost = 0
+card_type = 0
+speed = -1
+damage = Array[ExtResource("1_1v341")]([SubResource("Resource_bt07t"), SubResource("Resource_xxxjg")])
+armor = Array[ExtResource("1_1v341")]([])
+buffs = Array[ExtResource("2_my2h2")]([])
+debuffs = Array[ExtResource("3_sbyvi")]([])
+special_reactions = Array[int]([])
+healing = 0
+cooldown = 0

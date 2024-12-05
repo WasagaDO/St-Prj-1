@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5hd811ycl1ay"]
+
+[ext_resource type="Script" path="res://scenes/battle/events/battle_events/debuff_event.gd" id="1_3ah2t"]
+
+[node name="DebuffEvent" type="Node2D"]
+script = ExtResource("1_3ah2t")
+event_type = 4

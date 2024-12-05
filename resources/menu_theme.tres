@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://86ip7rx7niyg"]
+
+[ext_resource type="FontFile" uid="uid://drw6amwfsq20x" path="res://assets/fonts/CenturyGothic.ttf" id="1_x615l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx105"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hk6xr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ds4ob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_geigu"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_j8igv"]
+color = Color(0.244776, 0.244776, 0.244776, 1)
+thickness = 7
+
+[resource]
+Button/colors/font_focus_color = Color(0.929412, 0.717647, 0.223529, 1)
+Button/colors/font_hover_color = Color(0.929412, 0.717647, 0.223529, 1)
+Button/colors/font_pressed_color = Color(0.815897, 0.620668, 0.141641, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 0)
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_x615l")
+Button/styles/focus = SubResource("StyleBoxEmpty_nx105")
+Button/styles/hover = SubResource("StyleBoxEmpty_hk6xr")
+Button/styles/normal = SubResource("StyleBoxEmpty_ds4ob")
+Button/styles/pressed = SubResource("StyleBoxEmpty_geigu")
+HSlider/constants/center_grabber = 1
+HSlider/styles/slider = SubResource("StyleBoxLine_j8igv")

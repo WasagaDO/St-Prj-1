@@ -1,0 +1,305 @@
+[gd_scene load_steps=54 format=3 uid="uid://cvp83fjtisnpi"]
+
+[ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_0hcyc"]
+[ext_resource type="Texture2D" uid="uid://gxc6hddx846" path="res://assets/misc/Protagonist final.png" id="2_e2xxr"]
+[ext_resource type="Script" path="res://scenes/battle/player.gd" id="3_3oe4q"]
+[ext_resource type="PackedScene" uid="uid://dlgug5h82pnj5" path="res://scenes/battle/ui/bars/bars.tscn" id="4_6f28h"]
+[ext_resource type="Texture2D" uid="uid://cfjs0wgqs5wjv" path="res://assets/misc/Goat Man Final.png" id="6_q8p32"]
+[ext_resource type="PackedScene" uid="uid://cixqxm0jpmef5" path="res://scenes/battle/cards/deck.tscn" id="7_i6lf0"]
+[ext_resource type="Resource" uid="uid://mlcyxfv2ivp0" path="res://data/cards/active_defense.tres" id="8_ff4qw"]
+[ext_resource type="Script" path="res://data/cards/card_slot.gd" id="9_dn6dx"]
+[ext_resource type="PackedScene" uid="uid://brc8fwhvn5s1l" path="res://scenes/battle/cards/card.tscn" id="10_cji3i"]
+[ext_resource type="Resource" uid="uid://bg60n250ekmi6" path="res://data/cards/deceptive_strike.tres" id="10_hr0ue"]
+[ext_resource type="Script" path="res://scenes/battle/cards/hand.gd" id="11_pluhi"]
+[ext_resource type="Resource" uid="uid://cxhlhjaxt1da" path="res://data/cards/dodge.tres" id="11_van6b"]
+[ext_resource type="Resource" uid="uid://0c2r737s4881" path="res://data/cards/horizontal_cut.tres" id="12_hfool"]
+[ext_resource type="Script" path="res://scenes/battle/cards/card_manager.gd" id="12_o3gil"]
+[ext_resource type="Script" path="res://scenes/battle/battle_manager.gd" id="13_m5uja"]
+[ext_resource type="Resource" uid="uid://b3gpl0mt77wja" path="res://data/cards/jab.tres" id="13_rr1by"]
+[ext_resource type="Script" path="res://scenes/battle/enemy.gd" id="14_f5yk6"]
+[ext_resource type="PackedScene" uid="uid://7b2xta84ie5h" path="res://scenes/battle/ui/target_selection/target_selector.tscn" id="14_ovprx"]
+[ext_resource type="Resource" uid="uid://dkttfuu7htvyw" path="res://data/cards/lunge.tres" id="14_q7opk"]
+[ext_resource type="Resource" uid="uid://cd0ke7keiwnu5" path="res://data/cards/noggin_kick.tres" id="15_jodq2"]
+[ext_resource type="Resource" uid="uid://dpgb3yd0f5q31" path="res://data/cards/sprawling_punch.tres" id="17_0jlqh"]
+[ext_resource type="Resource" uid="uid://3mae7wxyuadm" path="res://data/cards/wide_swing.tres" id="19_e5nfj"]
+[ext_resource type="FontFile" uid="uid://krn0i701mii6" path="res://assets/fonts/MAYFLOWERANTIQUE (1)(1)(2).TTF" id="26_drgew"]
+[ext_resource type="Resource" uid="uid://kffdlj5dqjq3" path="res://data/enemes/goatman/goatman.tres" id="26_vwuyc"]
+[ext_resource type="Script" path="res://scenes/battle/ui/battle_alert.gd" id="28_xevio"]
+[ext_resource type="Script" path="res://scenes/battle/ui/logs/logs.gd" id="29_mj1lp"]
+[ext_resource type="PackedScene" uid="uid://jquvrnm2nybh" path="res://scenes/battle/ui/logs/log_message.tscn" id="29_wskmf"]
+[ext_resource type="Script" path="res://scenes/battle/events/events.gd" id="31_go2ce"]
+[ext_resource type="PackedScene" uid="uid://deqgifofr0xk2" path="res://scenes/battle/events/battle_events/damage_event.tscn" id="33_1yotk"]
+[ext_resource type="PackedScene" uid="uid://fdpp3thjfhyx" path="res://scenes/battle/events/battle_events/armor_damage_event.tscn" id="34_a8wsi"]
+[ext_resource type="PackedScene" uid="uid://vuj1phmqegpr" path="res://scenes/battle/events/battle_events/heal_event.tscn" id="35_8dhsw"]
+[ext_resource type="PackedScene" uid="uid://daffehj1kva0w" path="res://scenes/battle/events/battle_events/armor_heal_event.tscn" id="36_s0fps"]
+[ext_resource type="PackedScene" uid="uid://b5hd811ycl1ay" path="res://scenes/battle/events/battle_events/debuff_event.tscn" id="37_2o8c0"]
+[ext_resource type="PackedScene" uid="uid://b6l1ys4rqnc57" path="res://scenes/battle/events/state_events/enemy_move_played_event.tscn" id="37_mpgih"]
+[ext_resource type="PackedScene" uid="uid://cy0objp05lqf6" path="res://scenes/battle/events/battle_events/buff_event.tscn" id="38_m25nb"]
+[ext_resource type="PackedScene" uid="uid://dakjnfsa0jk6u" path="res://scenes/battle/events/state_events/card_played_event.tscn" id="39_gh2so"]
+[ext_resource type="PackedScene" uid="uid://e3juvlur7cd7" path="res://scenes/battle/events/state_events/new_turn_event.tscn" id="40_18j3u"]
+[ext_resource type="PackedScene" uid="uid://cubgdjkworik0" path="res://scenes/battle/events/state_events/end_of_game_event.tscn" id="40_t6ak5"]
+[ext_resource type="PackedScene" uid="uid://lmttoefckcl2" path="res://scenes/battle/events/state_events/player_can_react_event.tscn" id="41_ho70s"]
+[ext_resource type="PackedScene" uid="uid://ddevk2tyrxskr" path="res://scenes/battle/events/state_events/start_of_game_event.tscn" id="41_jpniv"]
+[ext_resource type="PackedScene" uid="uid://b7jk4c6e3tluy" path="res://scenes/battle/events/react_events/attack_dodged_event.tscn" id="42_i3ye5"]
+
+[sub_resource type="Resource" id="Resource_yqjmm"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("12_hfool")
+copies = 3
+
+[sub_resource type="Resource" id="Resource_ocq4n"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("13_rr1by")
+copies = 3
+
+[sub_resource type="Resource" id="Resource_mqs75"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("15_jodq2")
+copies = 3
+
+[sub_resource type="Resource" id="Resource_otbtb"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("17_0jlqh")
+copies = 1
+
+[sub_resource type="Resource" id="Resource_ugkr7"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("19_e5nfj")
+copies = 1
+
+[sub_resource type="Resource" id="Resource_ptoyu"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("14_q7opk")
+copies = 1
+
+[sub_resource type="Resource" id="Resource_v3khq"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("11_van6b")
+copies = 2
+
+[sub_resource type="Resource" id="Resource_6gbfq"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("10_hr0ue")
+copies = 1
+
+[sub_resource type="Resource" id="Resource_7ndk8"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("8_ff4qw")
+copies = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tu052"]
+size = Vector2(342, 426)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vv33i"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_qtnqa"]
+font = ExtResource("26_drgew")
+font_size = 100
+
+[node name="BattleScene" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0hcyc")
+metadata/_edit_lock_ = true
+
+[node name="Cards" type="Node2D" parent="."]
+z_index = 100
+
+[node name="Deck" parent="Cards" node_paths=PackedStringArray("card_manager", "refill_deck") instance=ExtResource("7_i6lf0")]
+position = Vector2(68, 693)
+scale = Vector2(0.5, 0.5)
+card_manager = NodePath("../CardManager")
+face_down = true
+starting_cards = Array[ExtResource("9_dn6dx")]([SubResource("Resource_yqjmm"), SubResource("Resource_ocq4n"), SubResource("Resource_mqs75"), SubResource("Resource_otbtb"), SubResource("Resource_ugkr7"), SubResource("Resource_ptoyu"), SubResource("Resource_v3khq"), SubResource("Resource_6gbfq"), SubResource("Resource_7ndk8")])
+card_scene = ExtResource("10_cji3i")
+refill_deck = NodePath("../DiscardPile")
+snap_cards_in_place = true
+
+[node name="DiscardPile" parent="Cards" node_paths=PackedStringArray("card_manager") instance=ExtResource("7_i6lf0")]
+position = Vector2(1837, 730)
+scale = Vector2(0.5, 0.5)
+card_manager = NodePath("../CardManager")
+face_down = true
+card_scene = ExtResource("10_cji3i")
+is_pile = true
+messy_rotation_offset = 10
+
+[node name="Hand" type="Node2D" parent="Cards" node_paths=PackedStringArray("card_manager", "target_selector")]
+position = Vector2(715, 938)
+script = ExtResource("11_pluhi")
+card_manager = NodePath("../CardManager")
+card_separation = 150.0
+target_selector = NodePath("../../UI/TargetSelector")
+card_y_max = 150.0
+card_hovered_y_offset = -80.0
+enabled = false
+
+[node name="CardManager" type="Node2D" parent="Cards"]
+script = ExtResource("12_o3gil")
+
+[node name="Protagonist" type="Sprite2D" parent="."]
+position = Vector2(536, 553)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_e2xxr")
+script = ExtResource("3_3oe4q")
+armor = {
+0: 21,
+1: 11,
+2: 11
+}
+max_hp = 30
+max_stamina = 30
+max_armor = 30
+log_name = "Player"
+
+[node name="Bars" parent="Protagonist" instance=ExtResource("4_6f28h")]
+position = Vector2(-300, -1690)
+
+[node name="Enemy" type="Area2D" parent="."]
+position = Vector2(1457, 575)
+collision_mask = 0
+script = ExtResource("14_f5yk6")
+enemy_data = ExtResource("26_vwuyc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(20, -50)
+shape = SubResource("RectangleShape2D_tu052")
+
+[node name="Sprite" type="Sprite2D" parent="Enemy"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_q8p32")
+
+[node name="Bars" parent="Enemy" instance=ExtResource("4_6f28h")]
+position = Vector2(-5.00012, -360)
+scale = Vector2(0.2, 0.2)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="TargetSelector" parent="UI" instance=ExtResource("14_ovprx")]
+z_index = 99
+
+[node name="EndTurnButton" type="Button" parent="UI"]
+offset_left = 1630.0
+offset_top = 829.0
+offset_right = 1896.0
+offset_bottom = 944.0
+theme_override_font_sizes/font_size = 32
+text = "End Turn"
+
+[node name="Alert" type="Label" parent="UI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = 414.0
+offset_right = 1915.0
+offset_bottom = 502.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Out of stamina!"
+label_settings = SubResource("LabelSettings_vv33i")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("28_xevio")
+
+[node name="Log" type="Control" parent="UI" node_paths=PackedStringArray("message_parent")]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1646.0
+offset_top = 253.0
+offset_right = 1904.0
+offset_bottom = 634.0
+mouse_filter = 2
+script = ExtResource("29_mj1lp")
+max_logs = 20
+message_parent = NodePath("ScrollContainer/MarginContainer/VBoxContainer")
+message_scene = ExtResource("29_wskmf")
+
+[node name="ColorRect" type="ColorRect" parent="UI/Log"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.568627)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/Log"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Log/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Log/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+
+[node name="StateOverlay" type="ColorRect" parent="UI/CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.145098, 0.145098, 0.145098, 0.6)
+
+[node name="Label" type="Label" parent="UI/CanvasLayer/StateOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game over!"
+label_settings = SubResource("LabelSettings_qtnqa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BattleManager" type="Node2D" parent="." node_paths=PackedStringArray("player", "deck", "hand", "discard_pile", "enemies")]
+script = ExtResource("13_m5uja")
+player = NodePath("../Protagonist")
+deck = NodePath("../Cards/Deck")
+hand = NodePath("../Cards/Hand")
+discard_pile = NodePath("../Cards/DiscardPile")
+enemies = [NodePath("../Enemy")]
+
+[node name="Events" type="Node" parent="." node_paths=PackedStringArray("hand", "deck", "discard_pile", "state_overlay", "end_turn_button")]
+script = ExtResource("31_go2ce")
+hand = NodePath("../Cards/Hand")
+deck = NodePath("../Cards/Deck")
+discard_pile = NodePath("../Cards/DiscardPile")
+state_overlay = NodePath("../UI/CanvasLayer/StateOverlay")
+event_handlers = Array[PackedScene]([ExtResource("34_a8wsi"), ExtResource("36_s0fps"), ExtResource("38_m25nb"), ExtResource("33_1yotk"), ExtResource("37_2o8c0"), ExtResource("35_8dhsw"), ExtResource("42_i3ye5"), ExtResource("39_gh2so"), ExtResource("37_mpgih"), ExtResource("40_18j3u"), ExtResource("41_ho70s"), ExtResource("40_t6ak5"), ExtResource("41_jpniv")])
+end_turn_button = NodePath("../UI/EndTurnButton")
+
+[connection signal="card_can_be_played" from="Cards/Hand" to="Protagonist" method="_on_hand_card_can_be_played"]
+[connection signal="card_played" from="Cards/Hand" to="Protagonist" method="_on_hand_card_played"]
+[connection signal="card_played" from="Cards/Hand" to="BattleManager" method="_on_hand_card_played"]
+[connection signal="not_enough_stamina" from="Protagonist" to="UI/Alert" method="_on_protagonist_not_enough_stamina"]
+[connection signal="move_made" from="Enemy" to="BattleManager" method="_on_enemy_move_made"]
+[connection signal="cancelled" from="UI/TargetSelector" to="Cards/Hand" method="_on_target_selector_cancelled"]
+[connection signal="target_selected" from="UI/TargetSelector" to="Cards/Hand" method="_on_target_selector_target_selected"]
+[connection signal="pressed" from="UI/EndTurnButton" to="BattleManager" method="_on_end_turn_button_pressed"]

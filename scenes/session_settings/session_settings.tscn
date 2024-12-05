@@ -1,0 +1,339 @@
+[gd_scene load_steps=16 format=3 uid="uid://bw4iu7av3kh7y"]
+
+[ext_resource type="Script" path="res://scenes/session_settings/session_settings.gd" id="1_7ngu6"]
+[ext_resource type="Script" path="res://scenes/session_settings/location_selector.gd" id="2_6k2tw"]
+[ext_resource type="Texture2D" uid="uid://byblm2p042tg3" path="res://assets/ui/BACKGROUND.png" id="2_iv6sp"]
+[ext_resource type="PackedScene" uid="uid://d25gbowo88gdv" path="res://scenes/session_settings/big_button.tscn" id="3_mjfei"]
+[ext_resource type="Theme" uid="uid://kldlvd6qmeiv" path="res://resources/big_button_highlight_theme.tres" id="4_p44ky"]
+[ext_resource type="Texture2D" uid="uid://plgvx6ca866i" path="res://assets/ui/MAIN ARENA SELECT.png" id="5_omtcd"]
+[ext_resource type="Script" path="res://data/locations/location_data.gd" id="6_rlba2"]
+[ext_resource type="Resource" uid="uid://ceqhyanhgbbnu" path="res://data/locations/the_old_mill.tres" id="7_4kfuu"]
+[ext_resource type="Texture2D" uid="uid://dxrlfburrobob" path="res://assets/ui/arrow right.png" id="8_by1rr"]
+[ext_resource type="Texture2D" uid="uid://cn2at2kby6rhx" path="res://assets/ui/MENU.png" id="9_aiap3"]
+[ext_resource type="Texture2D" uid="uid://dfp5c6af206nf" path="res://assets/ui/HEADER.png" id="9_tpusw"]
+[ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="10_cmggk"]
+[ext_resource type="Script" path="res://scenes/session_settings/pop_button.gd" id="13_tr7ww"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rb6er"]
+texture = ExtResource("5_omtcd")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kputf"]
+font = ExtResource("10_cmggk")
+font_size = 32
+outline_size = 20
+outline_color = Color(0.184314, 0.0470588, 0.0470588, 1)
+
+[node name="SessionSettings" type="CanvasLayer"]
+script = ExtResource("1_7ngu6")
+title_scene = "res://scenes/title/title.tscn"
+
+[node name="BACKGROUND" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iv6sp")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1067.0
+offset_top = -176.0
+offset_right = -62.0
+offset_bottom = -59.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 30
+
+[node name="BigButton" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
+custom_minimum_size = Vector2(370, 0)
+layout_mode = 2
+display_text = "BATTLE SETTINGS"
+
+[node name="BigButton2" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
+layout_mode = 2
+display_text = "EQUIPMENT"
+
+[node name="BigButton3" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
+layout_mode = 2
+theme = ExtResource("4_p44ky")
+display_text = "TO BATTLE!"
+highlighted = true
+
+[node name="LocationSelector" type="Control" parent="." node_paths=PackedStringArray("arenas")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 373.5
+offset_top = 113.0
+offset_right = 413.5
+offset_bottom = 153.0
+script = ExtResource("2_6k2tw")
+locations = Array[ExtResource("6_rlba2")]([ExtResource("7_4kfuu"), ExtResource("7_4kfuu"), ExtResource("7_4kfuu"), ExtResource("7_4kfuu"), ExtResource("7_4kfuu")])
+arenas = [NodePath("ArenaPanels/LeftmostArena"), NodePath("ArenaPanels/LeftArena"), NodePath("ArenaPanels/MainArena"), NodePath("ArenaPanels/RightArena"), NodePath("ArenaPanels/RightmostArena")]
+
+[node name="ArenaPanels" type="Control" parent="LocationSelector"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeftmostArena" type="Panel" parent="LocationSelector/ArenaPanels"]
+modulate = Color(1, 1, 1, 0.176471)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -20.0
+offset_right = 753.0
+offset_bottom = 702.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(586, 361)
+theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
+
+[node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/LeftmostArena"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="LeftArena" type="Panel" parent="LocationSelector/ArenaPanels"]
+modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -20.0
+offset_right = 953.0
+offset_bottom = 702.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(586, 361)
+theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
+
+[node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/LeftArena"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="RightArena" type="Panel" parent="LocationSelector/ArenaPanels"]
+modulate = Color(1, 1, 1, 0.392157)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = -20.0
+offset_right = 1353.0
+offset_bottom = 702.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(586, 361)
+theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
+
+[node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/RightArena"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="RightmostArena" type="Panel" parent="LocationSelector/ArenaPanels"]
+modulate = Color(1, 1, 1, 0.176471)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 380.0
+offset_top = -20.0
+offset_right = 1553.0
+offset_bottom = 702.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(586, 361)
+theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
+
+[node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/RightmostArena"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="MainArena" type="Panel" parent="LocationSelector/ArenaPanels"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 1153.0
+offset_bottom = 702.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(586, 361)
+theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
+
+[node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/MainArena"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+
+[node name="LeftArrow" type="TextureButton" parent="LocationSelector"]
+clip_children = 2
+z_index = 100
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 284.0
+offset_right = -140.0
+offset_bottom = 398.0
+grow_vertical = 2
+pivot_offset = Vector2(80, 57)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_by1rr")
+texture_pressed = ExtResource("8_by1rr")
+texture_hover = ExtResource("8_by1rr")
+texture_disabled = ExtResource("8_by1rr")
+texture_focused = ExtResource("8_by1rr")
+ignore_texture_size = true
+stretch_mode = 4
+flip_h = true
+script = ExtResource("13_tr7ww")
+
+[node name="Flash" type="ColorRect" parent="LocationSelector/LeftArrow"]
+layout_mode = 0
+offset_right = 174.0
+offset_bottom = 174.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="RightArrow" type="TextureButton" parent="LocationSelector"]
+clip_children = 2
+z_index = 100
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1273.0
+offset_top = 284.0
+offset_right = 1433.0
+offset_bottom = 398.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(80, 57)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_by1rr")
+texture_pressed = ExtResource("8_by1rr")
+texture_hover = ExtResource("8_by1rr")
+texture_disabled = ExtResource("8_by1rr")
+texture_focused = ExtResource("8_by1rr")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("13_tr7ww")
+
+[node name="Flash" type="ColorRect" parent="LocationSelector/RightArrow"]
+layout_mode = 0
+offset_right = 174.0
+offset_bottom = 174.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Header" type="TextureRect" parent="LocationSelector"]
+z_index = 100
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 385.0
+offset_top = -40.0
+offset_right = 748.0
+offset_bottom = 67.0
+grow_horizontal = 2
+texture = ExtResource("9_tpusw")
+expand_mode = 1
+
+[node name="LocationTitle" type="Label" parent="LocationSelector/Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "THE OLD MILL"
+label_settings = SubResource("LabelSettings_kputf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackToMenu" type="TextureButton" parent="."]
+clip_children = 2
+offset_left = 47.0
+offset_top = 38.0
+offset_right = 197.0
+offset_bottom = 187.0
+pivot_offset = Vector2(75, 75)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_aiap3")
+texture_pressed = ExtResource("9_aiap3")
+texture_hover = ExtResource("9_aiap3")
+texture_disabled = ExtResource("9_aiap3")
+texture_focused = ExtResource("9_aiap3")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("13_tr7ww")
+
+[node name="Flash" type="ColorRect" parent="BackToMenu"]
+layout_mode = 0
+offset_right = 174.0
+offset_bottom = 174.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="pressed" from="LocationSelector/LeftArrow" to="LocationSelector" method="_on_left_arrow_pressed"]
+[connection signal="pressed" from="LocationSelector/RightArrow" to="LocationSelector" method="_on_right_arrow_pressed"]
+[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]

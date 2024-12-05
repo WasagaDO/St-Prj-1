@@ -1,0 +1,112 @@
+[gd_scene load_steps=10 format=3 uid="uid://brc8fwhvn5s1l"]
+
+[ext_resource type="Texture2D" uid="uid://bpypr716gy2ll" path="res://assets/cards/card_back_3.png" id="2_6c3ux"]
+[ext_resource type="Script" path="res://scenes/battle/cards/card.gd" id="2_qoqoa"]
+[ext_resource type="Texture2D" uid="uid://duxhlxs02x7lc" path="res://assets/cards/card design.png" id="3_ecsgj"]
+[ext_resource type="Texture2D" uid="uid://bq44re1wqbv32" path="res://assets/card_art/active_defense.png" id="4_8mdnb"]
+[ext_resource type="FontFile" uid="uid://krn0i701mii6" path="res://assets/fonts/MAYFLOWERANTIQUE (1)(1)(2).TTF" id="5_0m76m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7mex"]
+size = Vector2(212.5, 339)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d12nj"]
+font = ExtResource("5_0m76m")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_6pfix"]
+line_spacing = -1.0
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fn5ew"]
+font_size = 24
+font_color = Color(0.0253638, 0.0253638, 0.0253638, 1)
+outline_size = 8
+
+[node name="Card" type="Area2D"]
+position = Vector2(-1, 0)
+collision_layer = 2
+script = ExtResource("2_qoqoa")
+disabled_color = Color(0.380392, 0.380392, 0.380392, 1)
+
+[node name="OtherFace" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-7, -2.5)
+scale = Vector2(1.51429, 1.76316)
+texture = ExtResource("2_6c3ux")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 0.34902)
+position = Vector2(7, 8)
+texture = ExtResource("2_6c3ux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.25, -0.5)
+shape = SubResource("RectangleShape2D_v7mex")
+
+[node name="FrontFace" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="FrontFace"]
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("3_ecsgj")
+
+[node name="CardImage" type="Sprite2D" parent="FrontFace"]
+position = Vector2(-6, -71)
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("4_8mdnb")
+
+[node name="Title" type="Label" parent="FrontFace"]
+offset_left = -95.0
+offset_top = 6.0
+offset_right = 83.0
+offset_bottom = 48.0
+theme_override_constants/outline_size = 0
+text = "Card"
+label_settings = SubResource("LabelSettings_d12nj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="FrontFace"]
+offset_left = -96.0
+offset_top = 51.0
+offset_right = 83.0
+offset_bottom = 164.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Description" type="Label" parent="FrontFace/MarginContainer"]
+custom_minimum_size = Vector2(117, 60)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
+label_settings = SubResource("LabelSettings_6pfix")
+autowrap_mode = 3
+
+[node name="Stamina" type="Label" parent="FrontFace"]
+offset_left = -106.0
+offset_top = -173.0
+offset_right = -67.0
+offset_bottom = -139.0
+text = "10
+"
+label_settings = SubResource("LabelSettings_fn5ew")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Speed" type="Label" parent="FrontFace"]
+offset_left = -67.0
+offset_top = -183.0
+offset_right = -28.0
+offset_bottom = -149.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_fn5ew")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://fdpp3thjfhyx"]
+
+[ext_resource type="Script" path="res://scenes/battle/events/battle_events/armor_damage_event.gd" id="1_50ha1"]
+
+[node name="ArmorDamageEvent" type="Node2D"]
+script = ExtResource("1_50ha1")
+event_type = 2
