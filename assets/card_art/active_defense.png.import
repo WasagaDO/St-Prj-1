@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyvbyidkxevmm"
-path="res://.godot/imported/card_back.png-b9b11515849b0e58e50baa6270f6d41b.ctex"
+uid="uid://bq44re1wqbv32"
+path="res://.godot/imported/active_defense.png-401313cd96d20461671c7d17fd37b615.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card-utils/card_back.png"
-dest_files=["res://.godot/imported/card_back.png-b9b11515849b0e58e50baa6270f6d41b.ctex"]
+source_file="res://assets/card_art/active_defense.png"
+dest_files=["res://.godot/imported/active_defense.png-401313cd96d20461671c7d17fd37b615.ctex"]
 
 [params]
 

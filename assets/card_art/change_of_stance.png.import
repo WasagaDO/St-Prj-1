@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5wlu1u5paagy"
-path="res://.godot/imported/deck_outline.png-85a4ac392e69c8a5f91364d556da98f4.ctex"
+uid="uid://dgu6abduaxdcd"
+path="res://.godot/imported/change_of_stance.png-45f5e9fa5737b2efee027681ca7c049c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card-utils/deck_outline.png"
-dest_files=["res://.godot/imported/deck_outline.png-85a4ac392e69c8a5f91364d556da98f4.ctex"]
+source_file="res://assets/card_art/change_of_stance.png"
+dest_files=["res://.godot/imported/change_of_stance.png-45f5e9fa5737b2efee027681ca7c049c.ctex"]
 
 [params]
 

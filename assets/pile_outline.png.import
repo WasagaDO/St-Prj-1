@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8pvpl6e23rpk"
-path="res://.godot/imported/palette.png-da968b8b0a2252138c35a1f625e5619d.ctex"
+uid="uid://tqkqd0q1b8eu"
+path="res://.godot/imported/pile_outline.png-c134e8b1be7c9c0c04d0b183deeab32c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card-utils/palette.png"
-dest_files=["res://.godot/imported/palette.png-da968b8b0a2252138c35a1f625e5619d.ctex"]
+source_file="res://assets/pile_outline.png"
+dest_files=["res://.godot/imported/pile_outline.png-c134e8b1be7c9c0c04d0b183deeab32c.ctex"]
 
 [params]
 

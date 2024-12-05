@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lqix4uv33oaq"
-path="res://.godot/imported/spear.png-19791b394ae9293203a3944e0fc20c7b.ctex"
+uid="uid://bupxkdsumav4y"
+path="res://.godot/imported/starmap_bg.jpg-0d6825c13f8b1195eaccca26dcb9ef6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card-utils/spear.png"
-dest_files=["res://.godot/imported/spear.png-19791b394ae9293203a3944e0fc20c7b.ctex"]
+source_file="res://assets/starmap_bg.jpg"
+dest_files=["res://.godot/imported/starmap_bg.jpg-0d6825c13f8b1195eaccca26dcb9ef6a.ctex"]
 
 [params]
 
