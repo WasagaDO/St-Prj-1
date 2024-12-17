@@ -1,54 +1,72 @@
-[gd_scene load_steps=9 format=3 uid="uid://0ikcug0eih18"]
+[gd_scene load_steps=12 format=3 uid="uid://0ikcug0eih18"]
 
 [ext_resource type="Theme" uid="uid://86ip7rx7niyg" path="res://resources/menu_theme.tres" id="1_6lkli"]
-[ext_resource type="Script" path="res://scenes/title/settings_menu.gd" id="1_brcwi"]
+[ext_resource type="Script" path="res://scenes/title/basic_menu.gd" id="1_brcwi"]
+[ext_resource type="Texture2D" uid="uid://dfp5c6af206nf" path="res://assets/ui/HEADER.png" id="2_yffr7"]
 [ext_resource type="Script" path="res://scenes/title/volume_slider.gd" id="3_q1u7j"]
+[ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="3_xd8t3"]
 [ext_resource type="Script" path="res://scenes/title/fullscreen_toggle.gd" id="4_nrnbe"]
 [ext_resource type="Script" path="res://scenes/title/resolution_dropdown.gd" id="5_ekx88"]
+[ext_resource type="Texture2D" uid="uid://bq7s1rk0cllqb" path="res://assets/ui/Main Menu Navigation.png" id="8_c44l1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qupod"]
 bg_color = Color(0, 0, 0, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
 
-[sub_resource type="LabelSettings" id="LabelSettings_h88oy"]
-font_size = 64
+[sub_resource type="LabelSettings" id="LabelSettings_6tjtr"]
+font = ExtResource("3_xd8t3")
+font_size = 48
+outline_size = 20
+outline_color = Color(0.184314, 0.0470588, 0.0470588, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_nu7tc"]
 font_size = 32
 
 [node name="SettingsMenu" type="Panel"]
-anchors_preset = -1
-anchor_left = 0.239063
-anchor_top = 0.17037
-anchor_right = 0.760938
-anchor_bottom = 0.82963
-offset_bottom = 6.10352e-05
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_right = 448.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qupod")
 script = ExtResource("1_brcwi")
-metadata/_edit_use_anchors_ = true
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 43.0
-offset_right = 328.0
-offset_bottom = 131.0
-text = "Settings
-"
-label_settings = SubResource("LabelSettings_h88oy")
+[node name="Header" type="TextureRect" parent="."]
+z_index = 100
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -268.0
+offset_top = 68.0
+offset_right = 268.0
+offset_bottom = 235.0
+grow_horizontal = 2
+texture = ExtResource("2_yffr7")
+expand_mode = 1
+metadata/_edit_group_ = true
+
+[node name="Title" type="Label" parent="Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_6tjtr")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0708583
-anchor_top = 0.238764
-anchor_right = 0.929142
-anchor_bottom = 0.823034
+anchor_left = 0.0703125
+anchor_top = 0.238889
+anchor_right = 0.928571
+anchor_bottom = 0.763889
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -142,18 +160,20 @@ label_settings = SubResource("LabelSettings_nu7tc")
 vertical_alignment = 1
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/LanguageDropdown"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -218.0
-offset_top = -22.5
-offset_bottom = 22.5
+offset_left = -177.0
+offset_top = -25.0
+offset_bottom = 25.0
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("1_6lkli")
+alignment = 2
 selected = 0
 item_count = 1
 popup/item_0/text = "English"
@@ -211,18 +231,20 @@ label_settings = SubResource("LabelSettings_nu7tc")
 vertical_alignment = 1
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/ResolutionDropdown" node_paths=PackedStringArray("full_screen_toggle")]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -218.0
-offset_top = -22.5
-offset_bottom = 22.5
+offset_left = -234.0
+offset_top = -25.0
+offset_bottom = 25.0
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("1_6lkli")
+alignment = 2
 selected = 0
 item_count = 1
 popup/item_0/text = "1920x1080"
@@ -237,14 +259,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -116.0
-offset_top = -106.0
-offset_right = 116.0
-offset_bottom = -38.0
+offset_left = -111.0
+offset_top = -126.0
+offset_right = 51.0
+offset_bottom = -76.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_6lkli")
 text = "Close"
+icon = ExtResource("8_c44l1")
+expand_icon = true
 
 [connection signal="value_changed" from="VBoxContainer/MusicVolume/HSlider" to="VBoxContainer/MusicVolume/HSlider" method="_on_value_changed"]
 [connection signal="toggled" from="VBoxContainer/Fullscreen Boolean/CheckButton" to="VBoxContainer/Fullscreen Boolean/CheckButton" method="_on_toggled"]

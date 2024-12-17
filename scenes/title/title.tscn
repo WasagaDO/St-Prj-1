@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bffpuucr3863m"]
+[gd_scene load_steps=13 format=3 uid="uid://bffpuucr3863m"]
 
 [ext_resource type="Script" path="res://scenes/title/title.gd" id="1_kd62u"]
 [ext_resource type="Theme" uid="uid://86ip7rx7niyg" path="res://resources/menu_theme.tres" id="1_kjtye"]
@@ -6,6 +6,30 @@
 [ext_resource type="Texture2D" uid="uid://b7jay4shdst11" path="res://assets/ui/game menu without text.png" id="3_cb8co"]
 [ext_resource type="PackedScene" uid="uid://0ikcug0eih18" path="res://scenes/title/settings_menu.tscn" id="4_iixu0"]
 [ext_resource type="Texture2D" uid="uid://bq7s1rk0cllqb" path="res://assets/ui/Main Menu Navigation.png" id="5_beusg"]
+[ext_resource type="Texture2D" uid="uid://dfp5c6af206nf" path="res://assets/ui/HEADER.png" id="7_dffjw"]
+[ext_resource type="Script" path="res://scenes/title/basic_menu.gd" id="7_k14j3"]
+[ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="8_0hycj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbpm7"]
+bg_color = Color(0, 0, 0, 0.909804)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8nigs"]
+font = ExtResource("8_0hycj")
+font_size = 48
+outline_size = 20
+outline_color = Color(0.184314, 0.0470588, 0.0470588, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5mlb"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.393085, 0.393086, 0.393085, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_kd62u")
@@ -76,7 +100,82 @@ expand_icon = true
 [node name="SettingsMenu" parent="." instance=ExtResource("4_iixu0")]
 visible = false
 
+[node name="AboutTheProject" type="Panel" parent="."]
+visible = false
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_right = 448.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbpm7")
+script = ExtResource("7_k14j3")
+
+[node name="Header" type="TextureRect" parent="AboutTheProject"]
+z_index = 100
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -268.0
+offset_top = 68.0
+offset_right = 268.0
+offset_bottom = 235.0
+grow_horizontal = 2
+texture = ExtResource("7_dffjw")
+expand_mode = 1
+metadata/_edit_group_ = true
+
+[node name="Title" type="Label" parent="AboutTheProject/Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "About the Project"
+label_settings = SubResource("LabelSettings_8nigs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AboutTheProject"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = -269.0
+offset_right = 337.0
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y5mlb")
+horizontal_scroll_mode = 0
+
+[node name="CloseButton" type="Button" parent="AboutTheProject"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -201.0
+offset_right = 45.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_kjtye")
+text = "Close"
+icon = ExtResource("5_beusg")
+expand_icon = true
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="AboutButton" to="." method="_on_about_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="AboutTheProject/CloseButton" to="AboutTheProject" method="_on_close_button_pressed"]

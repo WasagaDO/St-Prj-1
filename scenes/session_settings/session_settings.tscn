@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bw4iu7av3kh7y"]
+[gd_scene load_steps=25 format=3 uid="uid://bw4iu7av3kh7y"]
 
 [ext_resource type="Script" path="res://scenes/session_settings/session_settings.gd" id="1_7ngu6"]
 [ext_resource type="Script" path="res://scenes/session_settings/location_selector.gd" id="2_6k2tw"]
@@ -9,10 +9,16 @@
 [ext_resource type="Script" path="res://data/locations/location_data.gd" id="6_rlba2"]
 [ext_resource type="Resource" uid="uid://ceqhyanhgbbnu" path="res://data/locations/the_old_mill.tres" id="7_4kfuu"]
 [ext_resource type="Texture2D" uid="uid://dxrlfburrobob" path="res://assets/ui/arrow right.png" id="8_by1rr"]
+[ext_resource type="Resource" uid="uid://b5akrkfsutc6e" path="res://data/locations/blood_palace.tres" id="8_oj5um"]
 [ext_resource type="Texture2D" uid="uid://cn2at2kby6rhx" path="res://assets/ui/MENU.png" id="9_aiap3"]
+[ext_resource type="Resource" uid="uid://b562ce4gp4ijm" path="res://data/locations/the_arena.tres" id="9_cef1e"]
 [ext_resource type="Texture2D" uid="uid://dfp5c6af206nf" path="res://assets/ui/HEADER.png" id="9_tpusw"]
 [ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="10_cmggk"]
 [ext_resource type="Script" path="res://scenes/session_settings/pop_button.gd" id="13_tr7ww"]
+[ext_resource type="Script" path="res://scenes/title/basic_menu.gd" id="16_3b30q"]
+[ext_resource type="FontFile" uid="uid://drw6amwfsq20x" path="res://assets/fonts/CenturyGothic.ttf" id="16_e20v3"]
+[ext_resource type="Theme" uid="uid://86ip7rx7niyg" path="res://resources/menu_theme.tres" id="17_ctiyb"]
+[ext_resource type="Texture2D" uid="uid://bq7s1rk0cllqb" path="res://assets/ui/Main Menu Navigation.png" id="18_qlllo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rb6er"]
 texture = ExtResource("5_omtcd")
@@ -23,9 +29,24 @@ font_size = 32
 outline_size = 20
 outline_color = Color(0.184314, 0.0470588, 0.0470588, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxena"]
+bg_color = Color(0, 0, 0, 0.894118)
+
+[sub_resource type="LabelSettings" id="LabelSettings_chp5v"]
+font = ExtResource("10_cmggk")
+font_size = 48
+outline_size = 20
+outline_color = Color(0.184314, 0.0470588, 0.0470588, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vvp3d"]
+font = ExtResource("16_e20v3")
+font_size = 32
+
 [node name="SessionSettings" type="CanvasLayer"]
 script = ExtResource("1_7ngu6")
 title_scene = "res://scenes/title/title.tscn"
+equipment_scene = "res://scenes/Inventory/Inventory.tscn"
+battle_scene = "res://scenes/battle/battle_scene.tscn"
 
 [node name="BACKGROUND" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -51,22 +72,22 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/separation = 30
 
-[node name="BigButton" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
+[node name="BattleSettings" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
 custom_minimum_size = Vector2(370, 0)
 layout_mode = 2
 display_text = "BATTLE SETTINGS"
 
-[node name="BigButton2" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
+[node name="Equipment" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
 layout_mode = 2
 display_text = "EQUIPMENT"
 
-[node name="BigButton3" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
+[node name="ToBattle" parent="HBoxContainer" instance=ExtResource("3_mjfei")]
 layout_mode = 2
 theme = ExtResource("4_p44ky")
 display_text = "TO BATTLE!"
 highlighted = true
 
-[node name="LocationSelector" type="Control" parent="." node_paths=PackedStringArray("arenas")]
+[node name="LocationSelector" type="Control" parent="." node_paths=PackedStringArray("frames")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 373.5
@@ -74,8 +95,8 @@ offset_top = 113.0
 offset_right = 413.5
 offset_bottom = 153.0
 script = ExtResource("2_6k2tw")
-locations = Array[ExtResource("6_rlba2")]([ExtResource("7_4kfuu"), ExtResource("7_4kfuu"), ExtResource("7_4kfuu"), ExtResource("7_4kfuu"), ExtResource("7_4kfuu")])
-arenas = [NodePath("ArenaPanels/LeftmostArena"), NodePath("ArenaPanels/LeftArena"), NodePath("ArenaPanels/MainArena"), NodePath("ArenaPanels/RightArena"), NodePath("ArenaPanels/RightmostArena")]
+locations = Array[ExtResource("6_rlba2")]([ExtResource("7_4kfuu"), ExtResource("9_cef1e"), ExtResource("8_oj5um")])
+frames = [NodePath("ArenaPanels/LeftArena"), NodePath("ArenaPanels/MainArena"), NodePath("ArenaPanels/RightArena")]
 
 [node name="ArenaPanels" type="Control" parent="LocationSelector"]
 anchors_preset = 0
@@ -83,6 +104,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="LeftmostArena" type="Panel" parent="LocationSelector/ArenaPanels"]
+visible = false
 modulate = Color(1, 1, 1, 0.176471)
 layout_mode = 1
 anchors_preset = 8
@@ -167,6 +189,7 @@ grow_vertical = 2
 expand_mode = 2
 
 [node name="RightmostArena" type="Panel" parent="LocationSelector/ArenaPanels"]
+visible = false
 modulate = Color(1, 1, 1, 0.176471)
 layout_mode = 1
 anchors_preset = 8
@@ -334,6 +357,174 @@ offset_bottom = 174.0
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
+[node name="BattleSettings" type="Panel" parent="."]
+z_index = 4096
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -428.0
+offset_right = 428.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nxena")
+script = ExtResource("16_3b30q")
+
+[node name="Header" type="TextureRect" parent="BattleSettings"]
+z_index = 100
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -268.0
+offset_top = 68.0
+offset_right = 268.0
+offset_bottom = 235.0
+grow_horizontal = 2
+texture = ExtResource("9_tpusw")
+expand_mode = 1
+metadata/_edit_group_ = true
+
+[node name="LocationTitle" type="Label" parent="BattleSettings/Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "BATTLE SETTINGS"
+label_settings = SubResource("LabelSettings_chp5v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="VBoxContainer" parent="BattleSettings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -362.0
+offset_top = -316.0
+offset_right = 362.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="MenuRow" type="HBoxContainer" parent="BattleSettings/Settings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow"]
+layout_mode = 2
+text = "Enemy behaviour"
+label_settings = SubResource("LabelSettings_vvp3d")
+
+[node name="EnemyBehaviourOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("17_ctiyb")
+alignment = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "Aggressive"
+popup/item_1/text = "Balanced"
+popup/item_1/id = 1
+popup/item_2/text = "Passive"
+popup/item_2/id = 2
+popup/item_3/text = "Random"
+popup/item_3/id = 3
+
+[node name="MenuRow2" type="HBoxContainer" parent="BattleSettings/Settings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow2"]
+layout_mode = 2
+text = "Time of day"
+label_settings = SubResource("LabelSettings_vvp3d")
+
+[node name="TimeofDayOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("17_ctiyb")
+alignment = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Day"
+popup/item_1/text = "Night"
+popup/item_1/id = 1
+popup/item_2/text = "Random"
+popup/item_2/id = 2
+
+[node name="MenuRow3" type="HBoxContainer" parent="BattleSettings/Settings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow3"]
+layout_mode = 2
+text = "Interactive items"
+label_settings = SubResource("LabelSettings_vvp3d")
+
+[node name="ItemsOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow3"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("17_ctiyb")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Yes"
+popup/item_1/text = "No"
+popup/item_1/id = 1
+
+[node name="MenuRow4" type="HBoxContainer" parent="BattleSettings/Settings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow4"]
+layout_mode = 2
+text = "First turn"
+label_settings = SubResource("LabelSettings_vvp3d")
+
+[node name="FirstTurnOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow4"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("17_ctiyb")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Player"
+popup/item_1/text = "Enemy"
+popup/item_1/id = 1
+
+[node name="CloseButton" type="Button" parent="BattleSettings"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -201.0
+offset_right = 45.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("17_ctiyb")
+text = "Close"
+icon = ExtResource("18_qlllo")
+expand_icon = true
+
+[connection signal="pressed" from="HBoxContainer/BattleSettings" to="." method="_on_battle_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/Equipment" to="." method="_on_equipment_pressed"]
+[connection signal="pressed" from="HBoxContainer/ToBattle" to="." method="_on_to_battle_pressed"]
 [connection signal="pressed" from="LocationSelector/LeftArrow" to="LocationSelector" method="_on_left_arrow_pressed"]
 [connection signal="pressed" from="LocationSelector/RightArrow" to="LocationSelector" method="_on_right_arrow_pressed"]
 [connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="item_selected" from="BattleSettings/Settings/MenuRow/EnemyBehaviourOptionButton" to="." method="_on_enemy_behaviour_option_button_item_selected"]
+[connection signal="item_selected" from="BattleSettings/Settings/MenuRow2/TimeofDayOptionButton" to="." method="_on_timeof_day_option_button_item_selected"]
+[connection signal="item_selected" from="BattleSettings/Settings/MenuRow3/ItemsOptionButton" to="." method="_on_items_option_button_item_selected"]
+[connection signal="item_selected" from="BattleSettings/Settings/MenuRow4/FirstTurnOptionButton" to="." method="_on_first_turn_option_button_item_selected"]
+[connection signal="pressed" from="BattleSettings/CloseButton" to="BattleSettings" method="_on_close_button_pressed"]

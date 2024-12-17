@@ -1,0 +1,1864 @@
+[gd_scene load_steps=38 format=3 uid="uid://bri2nfm1lp86i"]
+
+[ext_resource type="Script" path="res://Inventory/Card.gd" id="1_q6xp5"]
+[ext_resource type="Script" path="res://Inventory/Inventory.gd" id="1_tp6t7"]
+[ext_resource type="Script" path="res://Inventory/DescriptionCard.gd" id="2_olkvm"]
+[ext_resource type="Texture2D" uid="uid://cc10hn8537i86" path="res://Inventory/Hero_s Table/hero_s table.png" id="2_qw5tc"]
+[ext_resource type="Texture2D" uid="uid://dchq5rinbngm" path="res://Inventory/Hero_s Table/TableButtons/GoBackButton.png" id="3_7tsdn"]
+[ext_resource type="Texture2D" uid="uid://yy6cjs55jcit" path="res://Inventory/Hero_s Table/Filter/FilterNormal.png" id="3_spx18"]
+[ext_resource type="Texture2D" uid="uid://njo5fk0mppmw" path="res://Inventory/Hero_s Table/TableButtons/MenuButton.png" id="4_cm33x"]
+[ext_resource type="Texture2D" uid="uid://otuypurlld0g" path="res://Inventory/Hero_s Table/Filter/FilterSelected.png" id="4_pla76"]
+[ext_resource type="Texture2D" uid="uid://dd0i38rmqcb68" path="res://Inventory/Hero_s Table/Book/BookCover.png" id="5_14vf6"]
+[ext_resource type="Texture2D" uid="uid://dvwlpqvvll5r8" path="res://Inventory/Hero_s Table/SortSearch/LvlNormal.png" id="5_u6dqi"]
+[ext_resource type="Texture2D" uid="uid://b4aggdajbkajh" path="res://Inventory/Hero_s Table/Scroller/pathline.png" id="6_au8qn"]
+[ext_resource type="Texture2D" uid="uid://lm6d7ylau25j" path="res://Inventory/Hero_s Table/Scroller/Border.png" id="6_b530g"]
+[ext_resource type="Texture2D" uid="uid://c5nh3dupbhd0r" path="res://Inventory/Hero_s Table/SortSearch/LvlPressed.png" id="6_s3rlm"]
+[ext_resource type="Texture2D" uid="uid://bppw6rck31fwd" path="res://Inventory/Hero_s Table/Book/BookContent.png" id="6_twtty"]
+[ext_resource type="Texture2D" uid="uid://d2pn8r87l88om" path="res://Inventory/Hero_s Table/Scroller/Grabber.png" id="7_0oy1o"]
+[ext_resource type="Texture2D" uid="uid://ist5nruufywj" path="res://Inventory/Hero_s Table/Bookmark/AllSelected.png" id="7_54rfc"]
+[ext_resource type="Texture2D" uid="uid://cgcaxo28jrk0c" path="res://Inventory/Hero_s Table/SortSearch/AlphNormal.png" id="7_37086"]
+[ext_resource type="Texture2D" uid="uid://b1ykrulooq0f2" path="res://Inventory/Hero_s Table/SortSearch/AlphPressed.png" id="8_mf35a"]
+[ext_resource type="Texture2D" uid="uid://ns6o6jfs07lq" path="res://Inventory/Hero_s Table/Bookmark/SwordNormal.png" id="8_o4yv1"]
+[ext_resource type="Texture2D" uid="uid://dlkmx8cbv4tr6" path="res://Inventory/Hero_s Table/Bookmark/RingNormal.png" id="8_qe6pv"]
+[ext_resource type="Texture2D" uid="uid://dh8exl0cufmj4" path="res://Inventory/Hero_s Table/SortSearch/RandomNormal.png" id="9_8kfjo"]
+[ext_resource type="Texture2D" uid="uid://djebebphbhrf1" path="res://Inventory/Hero_s Table/Bookmark/RingSelected.png" id="9_5230i"]
+[ext_resource type="FontFile" uid="uid://bih6bkcxthx1o" path="res://Inventory/Fonts/MayflowerAntique.ttf" id="9_ajwxg"]
+[ext_resource type="Texture2D" uid="uid://bayciigcjmsxv" path="res://Inventory/Hero_s Table/Bookmark/SwordSelected.png" id="9_g2eqm"]
+[ext_resource type="Texture2D" uid="uid://csmwqtumwq8qp" path="res://Inventory/Hero_s Table/SortSearch/RandomPressed.png" id="10_sodv1"]
+[ext_resource type="Texture2D" uid="uid://swo58kw8oblp" path="res://Inventory/Hero_s Table/SortSearch/Search.png" id="11_ev5pc"]
+[ext_resource type="Texture2D" uid="uid://bndhvwv65i0y5" path="res://Inventory/Hero_s Table/CardHolder/CardHolderNormal.png" id="17_n1ihj"]
+[ext_resource type="Texture2D" uid="uid://bc4o7ek6f21s0" path="res://Inventory/Cards/active defense.png" id="20_puxs0"]
+[ext_resource type="FontFile" uid="uid://dsgbqt8ne3tjc" path="res://Inventory/Fonts/BREATHE_FIRE.OTF" id="23_rldjp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cx5t"]
+bg_color = Color(0.247059, 0.247059, 0.247059, 0)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_scvwu"]
+font = ExtResource("9_ajwxg")
+font_size = 11
+font_color = Color(0.423529, 0.160784, 0.184314, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v0lqs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d74hb"]
+font_size = 9
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wt7xr"]
+texture = ExtResource("6_au8qn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4rs2g"]
+texture = ExtResource("7_0oy1o")
+texture_margin_top = 37.0
+texture_margin_bottom = 37.0
+expand_margin_left = 15.0
+expand_margin_top = 12.0
+expand_margin_right = 15.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlo1x"]
+bg_color = Color(0.247059, 0.247059, 0.247059, 0)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_hfmkf"]
+font = ExtResource("23_rldjp")
+font_size = 41
+font_color = Color(0.94902, 0.67451, 0.32549, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tp6t7")
+
+[node name="Panel" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1619.39, 1016.24)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -200.0
+offset_right = 350.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qw5tc")
+expand_mode = 1
+
+[node name="BackButton" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_constants/margin_left = 110
+theme_override_constants/margin_top = 140
+
+[node name="BackButton" type="TextureButton" parent="Panel/BackButton"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("3_7tsdn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MenuButton" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -230.0
+offset_bottom = 260.0
+grow_horizontal = 0
+theme_override_constants/margin_right = 110
+
+[node name="MenuButton" type="TextureButton" parent="Panel/MenuButton"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("4_cm33x")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -700.0
+offset_top = -385.0
+offset_right = 700.0
+offset_bottom = 385.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 50
+
+[node name="Book" type="TextureRect" parent="Panel/MarginContainer"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_14vf6")
+expand_mode = 1
+
+[node name="BookContent" type="TextureRect" parent="Panel/MarginContainer/Book"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_twtty")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/Book/BookContent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -598.5
+offset_top = -299.5
+offset_right = 598.5
+offset_bottom = 299.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FilterButtons" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="All" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons"]
+custom_minimum_size = Vector2(55, 70)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("4_pla76")
+texture_pressed = ExtResource("4_pla76")
+texture_hover = ExtResource("4_pla76")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/All"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/All/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("23_rldjp")
+theme_override_font_sizes/font_size = 18
+text = "All"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="PHY" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons"]
+custom_minimum_size = Vector2(55, 70)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("3_spx18")
+texture_pressed = ExtResource("4_pla76")
+texture_hover = ExtResource("4_pla76")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/PHY"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/PHY/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.545098, 0.270588, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("23_rldjp")
+theme_override_font_sizes/font_size = 18
+text = "PHY"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MAG" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons"]
+custom_minimum_size = Vector2(55, 70)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("3_spx18")
+texture_pressed = ExtResource("4_pla76")
+texture_hover = ExtResource("4_pla76")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/MAG"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/MAG/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.545098, 0.270588, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("23_rldjp")
+theme_override_font_sizes/font_size = 18
+text = "MAG"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/margin_right = 167
+theme_override_constants/margin_bottom = 18
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Cardlist" type="PanelContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(422.5, 550)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7cx5t")
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="NavButtons" type="HBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sort" type="HBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Sort"]
+layout_mode = 2
+text = "Sort:"
+label_settings = SubResource("LabelSettings_scvwu")
+uppercase = true
+
+[node name="Lvl" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Sort"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("5_u6dqi")
+texture_pressed = ExtResource("6_s3rlm")
+texture_hover = ExtResource("6_s3rlm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Aa" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Sort"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("7_37086")
+texture_pressed = ExtResource("8_mf35a")
+texture_hover = ExtResource("8_mf35a")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="InitOrder" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Sort"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("9_8kfjo")
+texture_pressed = ExtResource("10_sodv1")
+texture_hover = ExtResource("10_sodv1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Search" type="HBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Search"]
+layout_mode = 2
+text = "Search:"
+label_settings = SubResource("LabelSettings_scvwu")
+uppercase = true
+
+[node name="TextureButton" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Search"]
+custom_minimum_size = Vector2(180, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("11_ev5pc")
+expand_mode = 1
+
+[node name="SearchBar" type="LineEdit" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Search/TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.0
+offset_top = -15.5
+offset_right = 53.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v0lqs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v0lqs")
+context_menu_enabled = false
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(325, 490)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="CardList" type="GridContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="Card" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Astrodude"
+type2 = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.875
+offset_top = -60.5
+offset_right = 44.875
+offset_bottom = 60.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Astrodude"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card2" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Monkey"
+type2 = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Monkey"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card3" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Hello"
+type2 = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -38.5
+offset_right = 43.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Hello"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card4" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Spider"
+type = 2
+type2 = 1
+level = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Spider"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 8"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card5" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Alt"
+type2 = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Alt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card6" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Mamma"
+type = 2
+type2 = 2
+level = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Mamma"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 6"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card7" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Bat"
+type = 2
+type2 = 2
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Bat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card8" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Savage"
+type = 2
+type2 = 2
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Savage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card9" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card10" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Snappy"
+type = 2
+type2 = 2
+level = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Snappy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 12"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/MarginContainer2/Control"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+offset_left = -3.13501
+offset_top = -85.5
+offset_right = 46.865
+offset_bottom = 455.5
+texture = ExtResource("6_b530g")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/MarginContainer2/Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -400.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 20
+
+[node name="CardsScroll" type="VScrollBar" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/MarginContainer2/Control/TextureRect/MarginContainer"]
+custom_minimum_size = Vector2(20, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/scroll = SubResource("StyleBoxTexture_wt7xr")
+theme_override_styles/grabber = SubResource("StyleBoxTexture_4rs2g")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_4rs2g")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_4rs2g")
+rounded = true
+
+[node name="SecondTab" type="PanelContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_tlo1x")
+
+[node name="DescriptionTab" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="DescriptionCard" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_olkvm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard"]
+custom_minimum_size = Vector2(130, 240)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -120.0
+offset_right = 65.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+theme_override_font_sizes/font_size = 12
+text = "Type: "
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+theme_override_font_sizes/font_size = 12
+text = "Lvl: "
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard"]
+custom_minimum_size = Vector2(372.4, 558.6)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.5
+offset_top = -276.736
+offset_right = 193.9
+offset_bottom = 281.864
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_puxs0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab"]
+layout_mode = 2
+theme_override_constants/margin_top = 23
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/MarginContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.345098, 0.141176, 0, 1)
+theme_override_fonts/normal_font = ExtResource("23_rldjp")
+theme_override_font_sizes/normal_font_size = 24
+text = "Lorem ipsum dolor sit amet sat ar menior Helr roto canimamo"
+
+[node name="PlayerDeckTab" type="ScrollContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(400, 475)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CardList" type="GridContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 6
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="Card" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Astrodude"
+type2 = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.875
+offset_top = -60.5
+offset_right = 44.875
+offset_bottom = 60.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Astrodude"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="Card2" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Monkey"
+type2 = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Monkey"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="Card3" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Hello"
+type2 = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -38.5
+offset_right = 43.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card3/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Hello"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="Card4" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Spider"
+type = 2
+type2 = 1
+level = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card4/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Spider"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 8"
+vertical_alignment = 1
+
+[node name="Card5" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Alt"
+type2 = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card5/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Alt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card5/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card5/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="Card6" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Mamma"
+type = 2
+type2 = 2
+level = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card6/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Mamma"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card6/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card6/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 6"
+vertical_alignment = 1
+
+[node name="Card7" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Bat"
+type = 2
+type2 = 2
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card7/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Bat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card7/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card7/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="Card8" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Savage"
+type = 2
+type2 = 2
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card8/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Savage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card8/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card8/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="Card9" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card9/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card9/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card9/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="Card10" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Snappy"
+type = 2
+type2 = 2
+level = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card10/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Snappy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card10/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/PlayerDeckTab/CardList/Card10/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 12"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/margin_left = 18
+
+[node name="STSwitchers" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Info" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers"]
+custom_minimum_size = Vector2(55, 70)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("4_pla76")
+texture_pressed = ExtResource("4_pla76")
+texture_hover = ExtResource("4_pla76")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers/Info"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers/Info/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("23_rldjp")
+theme_override_font_sizes/font_size = 18
+text = "Info"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Deck" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers"]
+custom_minimum_size = Vector2(55, 70)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("3_spx18")
+texture_pressed = ExtResource("4_pla76")
+texture_hover = ExtResource("4_pla76")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers/Deck"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers/Deck/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.545098, 0.270588, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("23_rldjp")
+theme_override_font_sizes/font_size = 18
+text = "DECk"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent"]
+show_behind_parent = true
+layout_mode = 1
+offset_top = -29.0
+offset_right = 428.0
+offset_bottom = 71.0
+theme_override_constants/margin_left = 100
+
+[node name="FilterButtons" type="HBoxContainer" parent="Panel/MarginContainer/Book/BookContent/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="All" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/MarginContainer/FilterButtons"]
+z_index = 1
+custom_minimum_size = Vector2(70, 100)
+layout_mode = 2
+texture_normal = ExtResource("7_54rfc")
+texture_pressed = ExtResource("7_54rfc")
+texture_hover = ExtResource("7_54rfc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sword" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/MarginContainer/FilterButtons"]
+custom_minimum_size = Vector2(70, 100)
+layout_mode = 2
+texture_normal = ExtResource("8_o4yv1")
+texture_pressed = ExtResource("9_g2eqm")
+texture_hover = ExtResource("9_g2eqm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Ring" type="TextureButton" parent="Panel/MarginContainer/Book/BookContent/MarginContainer/FilterButtons"]
+custom_minimum_size = Vector2(70, 100)
+layout_mode = 2
+texture_normal = ExtResource("8_qe6pv")
+texture_pressed = ExtResource("9_5230i")
+texture_hover = ExtResource("9_5230i")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Lvl" type="Control" parent="Panel"]
+custom_minimum_size = Vector2(0, 185)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Panel/Lvl"]
+custom_minimum_size = Vector2(333.333, 90)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -11.5
+offset_right = 33.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "LV. 99/99999G"
+label_settings = SubResource("LabelSettings_hfmkf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/All" to="." method="filter" binds= ["NONE"]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/PHY" to="." method="filter" binds= ["PHY"]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons/MAG" to="." method="filter" binds= ["MAG"]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Sort/Lvl" to="." method="sort_pressed" binds= [1]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Sort/Aa" to="." method="sort_pressed" binds= [0]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Sort/InitOrder" to="." method="sort_pressed" binds= [2]]
+[connection signal="text_changed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/NavButtons/Search/TextureButton/SearchBar" to="." method="searched"]
+[connection signal="value_changed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/MarginContainer2/Control/TextureRect/MarginContainer/CardsScroll" to="." method="scroll"]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers/Info" to="." method="switch_tab" binds= ["info"]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers/Deck" to="." method="switch_tab" binds= ["deck"]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/MarginContainer/FilterButtons/All" to="." method="secondary_filter" binds= ["NONE"]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/MarginContainer/FilterButtons/Sword" to="." method="secondary_filter" binds= ["SWORD"]]
+[connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/MarginContainer/FilterButtons/Ring" to="." method="secondary_filter" binds= ["RING"]]

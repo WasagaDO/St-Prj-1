@@ -1,6 +1,8 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://86ip7rx7niyg"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://86ip7rx7niyg"]
 
 [ext_resource type="FontFile" uid="uid://drw6amwfsq20x" path="res://assets/fonts/CenturyGothic.ttf" id="1_x615l"]
+[ext_resource type="StyleBox" uid="uid://dqscxwgut0inf" path="res://resources/option_button_default.tres" id="2_b45v4"]
+[ext_resource type="StyleBox" uid="uid://77u5rhfq6o8e" path="res://resources/option_button_pressed.tres" id="3_5gxnk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx105"]
 
@@ -12,7 +14,14 @@
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_j8igv"]
 color = Color(0.244776, 0.244776, 0.244776, 1)
-thickness = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_de6x5"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.393085, 0.393086, 0.393085, 1)
 
 [resource]
 Button/colors/font_focus_color = Color(0.929412, 0.717647, 0.223529, 1)
@@ -27,3 +36,12 @@ Button/styles/normal = SubResource("StyleBoxEmpty_ds4ob")
 Button/styles/pressed = SubResource("StyleBoxEmpty_geigu")
 HSlider/constants/center_grabber = 1
 HSlider/styles/slider = SubResource("StyleBoxLine_j8igv")
+OptionButton/constants/h_separation = 20
+OptionButton/font_sizes/font_size = 32
+OptionButton/styles/focus = ExtResource("2_b45v4")
+OptionButton/styles/hover = ExtResource("2_b45v4")
+OptionButton/styles/normal = ExtResource("2_b45v4")
+OptionButton/styles/pressed = ExtResource("3_5gxnk")
+PopupMenu/font_sizes/font_size = 32
+PopupMenu/fonts/font = ExtResource("1_x615l")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_de6x5")

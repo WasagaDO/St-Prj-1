@@ -19,13 +19,17 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 BattleSignals="*res://scenes/battle/battle_signals.gd"
 BattleUtil="*res://util/battle_util.gd"
 LogSignals="*res://scenes/battle/ui/logs/log_signals.gd"
-BattleOptions="*res://battle_options.gd"
+BattleSettings="*res://util/battle_settings.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
+
+[gui]
+
+theme/custom_font="res://assets/fonts/CenturyGothic.ttf"
 
 [input]
 

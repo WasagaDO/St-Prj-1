@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LocationData" load_steps=3 format=3 uid="uid://b562ce4gp4ijm"]
+
+[ext_resource type="Texture2D" uid="uid://cj1rjuuyjq51t" path="res://assets/fighting_pits.jpg" id="1_cd707"]
+[ext_resource type="Script" path="res://data/locations/location_data.gd" id="2_2y0pi"]
+
+[resource]
+script = ExtResource("2_2y0pi")
+cover = ExtResource("1_cd707")
+name = "The Fighting Pits"

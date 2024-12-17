@@ -16,11 +16,11 @@ func start():
 	hand.set_enabled(acting_combatant is Player);
 	if acting_combatant is Player:
 		acting_combatant.recover_stamina(2);
-		deck.deal_to(BattleOptions.hand_size-hand.cards.size(), hand);
+		deck.deal_to(BattleSettings.hand_size-hand.cards.size(), hand);
 		
 		# we literally just dealt cards to them up to their hand size
 		# so if they're not there, they're on the way and we shld wait
-		if hand.cards.size() < BattleOptions.hand_size: await hand.cards_settled
+		if hand.cards.size() < BattleSettings.hand_size: await hand.cards_settled
 		
 		for card in hand.cards:
 			card.is_disabled = card.data.card_type == CardData.CardType.REACTION
