@@ -19,6 +19,7 @@ enum SecondaryTypes {
 @export var type2: SecondaryTypes
 @export var level: int
 
+@onready var card_pic: TextureRect = $CardPic
 @onready var title_label: Label = $VBoxContainer/Title
 @onready var type_label: Label = $VBoxContainer/Type
 @onready var level_label: Label = $"VBoxContainer/Lvl"
@@ -32,10 +33,10 @@ func _process(delta: float) -> void:
 	title_label.text = title
 	level_label.text = "Lv: " + str(level)
 
-const CARD_HOLDER_NORMAL = preload("res://Inventory/Hero_s Table/CardHolder/CardHolderNormal.png")
-const CARD_HOLDER_SELECTED = preload("res://Inventory/Hero_s Table/CardHolder/CardHolderSelected.png")
+const CARD_HOLDER_NORMAL = preload("res://scenes/Inventory/Hero_s Table/CardHolder/CardHolderNormal.png")
+const CARD_HOLDER_SELECTED = preload("res://scenes/Inventory/Hero_s Table/CardHolder/CardHolderSelected.png")
 
-func on_hover(card: Card, hover: String) -> void:
+func on_hover(card: InventoryCard, hover: String) -> void:
 	match hover:
 		"entered":
 			card.texture = CARD_HOLDER_SELECTED

@@ -16,6 +16,3 @@ func _ready() -> void:
 		Combatant.DamageType.CRUSHING: crushing_armor
 	};
 	
-func _process(delta: float) -> void:
-	if get_parent() is Player:
-		print("stam max: %d stam val: %d" % [stamina_bar.maximum, stamina_bar.value]);

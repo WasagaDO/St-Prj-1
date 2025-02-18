@@ -15,7 +15,7 @@ func start():
 	end_turn_button.disabled = not acting_combatant is Player;
 	hand.set_enabled(acting_combatant is Player);
 	if acting_combatant is Player:
-		acting_combatant.recover_stamina(2);
+		acting_combatant.add_stamina(2);
 		deck.deal_to(BattleSettings.hand_size-hand.cards.size(), hand);
 		
 		# we literally just dealt cards to them up to their hand size
@@ -28,6 +28,6 @@ func start():
 		acting_combatant.act();
 
 	
-	await get_tree().create_timer(0.3).timeout;
+	await get_tree().create_timer(delay).timeout;
 	finished.emit();
 	

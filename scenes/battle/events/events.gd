@@ -19,7 +19,8 @@ enum EventType {
 	PLAYER_CAN_REACT,
 	ATTACK_DODGED,
 	END_OF_GAME,
-	START_OF_GAME
+	START_OF_GAME,
+	CARD_RESOLVED
 }
 
 
@@ -29,6 +30,12 @@ enum EventType {
 @export var state_overlay:Control;
 @export var event_handlers:Array[PackedScene] = [];
 @export var end_turn_button:Button;
+@export var darken_overlay:ColorRect
+
+@export var stat_popups_player:Control
+@export var stat_popups_enemy:Control;
+
+@export_file var end_scene_path:String;
 var event_map:Dictionary = {};
 
 var event_queue:Array[Event] = [];
@@ -77,7 +84,7 @@ func _ready() -> void:
 			"source": source, 
 			"target": target,
 			"hand": hand,
-			"discard_pile": discard_pile
+			"discard_pile": discard_pile,
 		})
 	)
 	
@@ -93,7 +100,8 @@ func _ready() -> void:
 		push_event(EventType.PLAYER_CAN_REACT, {
 			"attack": attack,
 			"hand": hand,
-			"end_turn_button": end_turn_button
+			"end_turn_button": end_turn_button,
+			"darken_overlay": darken_overlay
 		});	
 	)
 	
@@ -106,7 +114,14 @@ func _ready() -> void:
 	BattleSignals.game_over.connect(func(winner):
 		push_event(EventType.END_OF_GAME, {
 			"winner": winner,
-			"endgame_overlay": state_overlay
+			"endgame_overlay": state_overlay,
+			"end_scene_path": end_scene_path
+		})
+	)
+	
+	BattleSignals.card_resolved.connect(func(source, target, card):
+		push_event(EventType.CARD_RESOLVED, {
+			"darken_overlay": darken_overlay
 		})
 	)
 	
@@ -115,7 +130,8 @@ func push_battle_event(event_type, source, target, amt, type):
 		"source": source,
 		"target": target,
 		"amt": amt,
-		"type": type
+		"type": type,
+		"status_popups": stat_popups_player if target is Player else stat_popups_enemy
 	})
 	
 func push_event(event_type:EventType, data):

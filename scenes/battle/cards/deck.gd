@@ -42,6 +42,7 @@ class_name Deck;
 ## A convenience boolean for debugging only.
 @export var enable_logging:bool = false;
 
+
 var card_queue:Array[Card]
 signal card_dealt(card:Card, location:CardContainer)
 signal starting_cards_dealt(deck:Deck);
@@ -73,7 +74,6 @@ func _ready():
 			
 func add_card(card:Card):
 	super.add_card(card);
-	
 	card_queue.append(card);
 	if card.face_down != face_down: 
 		card.flip(snap_cards_in_place);

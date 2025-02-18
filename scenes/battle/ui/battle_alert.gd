@@ -13,5 +13,6 @@ func _process(delta: float) -> void:
 	life_counter -= delta;
 	visible = life_counter > 0;
 
+
 func _on_protagonist_not_enough_stamina() -> void:
-	trigger("Not enough stamina!");
+	trigger("Out of stamina!");

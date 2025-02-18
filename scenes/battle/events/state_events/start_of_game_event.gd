@@ -10,5 +10,5 @@ func start():
 	LogSignals.push_log.emit("Game started!");
 	await get_tree().create_timer(1).timeout;
 	state_overlay.visible = false;
-	await get_tree().create_timer(0.2).timeout;
+	await get_tree().create_timer(delay).timeout;
 	finished.emit()

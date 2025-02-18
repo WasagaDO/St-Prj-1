@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bw4iu7av3kh7y"]
+[gd_scene load_steps=29 format=3 uid="uid://bw4iu7av3kh7y"]
 
 [ext_resource type="Script" path="res://scenes/session_settings/session_settings.gd" id="1_7ngu6"]
 [ext_resource type="Script" path="res://scenes/session_settings/location_selector.gd" id="2_6k2tw"]
@@ -19,6 +19,9 @@
 [ext_resource type="FontFile" uid="uid://drw6amwfsq20x" path="res://assets/fonts/CenturyGothic.ttf" id="16_e20v3"]
 [ext_resource type="Theme" uid="uid://86ip7rx7niyg" path="res://resources/menu_theme.tres" id="17_ctiyb"]
 [ext_resource type="Texture2D" uid="uid://bq7s1rk0cllqb" path="res://assets/ui/Main Menu Navigation.png" id="18_qlllo"]
+[ext_resource type="PackedScene" uid="uid://bri2nfm1lp86i" path="res://scenes/Inventory/Inventory.tscn" id="20_3qynl"]
+[ext_resource type="Shader" path="res://resources/blur.gdshader" id="20_7h11a"]
+[ext_resource type="Script" path="res://scenes/session_settings/inventory.gd" id="20_g3hyj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rb6er"]
 texture = ExtResource("5_omtcd")
@@ -41,6 +44,10 @@ outline_color = Color(0.184314, 0.0470588, 0.0470588, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_vvp3d"]
 font = ExtResource("16_e20v3")
 font_size = 32
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4u6jq"]
+shader = ExtResource("20_7h11a")
+shader_parameter/lod = 0.0
 
 [node name="SessionSettings" type="CanvasLayer"]
 script = ExtResource("1_7ngu6")
@@ -358,6 +365,7 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="BattleSettings" type="Panel" parent="."]
+visible = false
 z_index = 4096
 anchors_preset = 13
 anchor_left = 0.5
@@ -516,6 +524,22 @@ theme = ExtResource("17_ctiyb")
 text = "Close"
 icon = ExtResource("18_qlllo")
 expand_icon = true
+
+[node name="Inventory" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+script = ExtResource("20_g3hyj")
+
+[node name="Backround" type="ColorRect" parent="Inventory"]
+material = SubResource("ShaderMaterial_4u6jq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Inventory" parent="Inventory" instance=ExtResource("20_3qynl")]
 
 [connection signal="pressed" from="HBoxContainer/BattleSettings" to="." method="_on_battle_settings_pressed"]
 [connection signal="pressed" from="HBoxContainer/Equipment" to="." method="_on_equipment_pressed"]

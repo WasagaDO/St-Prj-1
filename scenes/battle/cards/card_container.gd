@@ -6,8 +6,11 @@ var cards:Array[Card] = []
 
 var cards_are_interactive:bool = false;
 
+# whether to keep the cards in this pile hidden or not
+@export var hide_cards:bool = false;
 func add_card(card:Card):
 	card.is_disabled = not cards_are_interactive;
+	card.visible = not hide_cards;
 	cards.append(card);
 
 func on_cards_initialized():

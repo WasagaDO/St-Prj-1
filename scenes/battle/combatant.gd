@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name Combatant;
 enum DamageType {
 	CRUSHING,
@@ -17,8 +17,8 @@ enum Buff {
 ## 0: Crushing 1: Cutting 2: Piercing
 @export var armor = {
 	DamageType.CRUSHING: 0,
-	DamageType.CUTTING: 0,
-	DamageType.PIERCING: 0
+	DamageType.CUTTING: 1,
+	DamageType.PIERCING: 2
 }
 
 
@@ -73,6 +73,7 @@ func apply_damage(source:Combatant, damage:int, type:DamageType):
 		BattleSignals.armor_damage_applied.emit(source, self, roundi(damage_to_armor), type);
 	BattleSignals.damage_applied.emit(source, self, roundi(damage_to_health), DamageType.NONE);
 	armor[type] = armor_amt;
+
 func apply_healing(amt:int):
 	hp += amt;
 	if hp > max_hp: hp = max_hp;

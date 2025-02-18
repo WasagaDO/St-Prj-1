@@ -23,7 +23,7 @@ amt = 5
 
 [resource]
 script = ExtResource("4_dx4y5")
-description = "Gain 5 crushing, slashing and piercing armor"
+description = "Gain 5 crushing, slashing and piercing armor until end of turn."
 name = "Active Defense"
 image = ExtResource("4_pildl")
 stamina_cost = 3

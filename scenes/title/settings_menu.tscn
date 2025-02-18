@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://0ikcug0eih18"]
 
 [ext_resource type="Theme" uid="uid://86ip7rx7niyg" path="res://resources/menu_theme.tres" id="1_6lkli"]
-[ext_resource type="Script" path="res://scenes/title/basic_menu.gd" id="1_brcwi"]
+[ext_resource type="Script" path="res://scenes/title/settings_menu.gd" id="1_brcwi"]
 [ext_resource type="Texture2D" uid="uid://dfp5c6af206nf" path="res://assets/ui/HEADER.png" id="2_yffr7"]
 [ext_resource type="Script" path="res://scenes/title/volume_slider.gd" id="3_q1u7j"]
 [ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="3_xd8t3"]
@@ -21,7 +21,7 @@ outline_color = Color(0.184314, 0.0470588, 0.0470588, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_nu7tc"]
 font_size = 32
 
-[node name="SettingsMenu" type="Panel"]
+[node name="SettingsMenu" type="Panel" node_paths=PackedStringArray("music_slider", "sound_slider", "language_dropdown", "resolution_dropdown", "fullscreen_toggle")]
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -32,6 +32,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qupod")
 script = ExtResource("1_brcwi")
+music_slider = NodePath("VBoxContainer/MusicVolume/Music")
+sound_slider = NodePath("VBoxContainer/SoundVolume/Sound")
+language_dropdown = NodePath("VBoxContainer/LanguageDropdown/Language")
+resolution_dropdown = NodePath("VBoxContainer/ResolutionDropdown/Resolution")
+fullscreen_toggle = NodePath("VBoxContainer/Fullscreen Boolean/Fullscreen")
 
 [node name="Header" type="TextureRect" parent="."]
 z_index = 100
@@ -88,7 +93,7 @@ grow_vertical = 2
 text = "Music volume"
 label_settings = SubResource("LabelSettings_nu7tc")
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/MusicVolume"]
+[node name="Music" type="HSlider" parent="VBoxContainer/MusicVolume"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -122,7 +127,7 @@ grow_vertical = 2
 text = "Sound volume"
 label_settings = SubResource("LabelSettings_nu7tc")
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/SoundVolume"]
+[node name="Sound" type="HSlider" parent="VBoxContainer/SoundVolume"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -159,7 +164,7 @@ text = "Language
 label_settings = SubResource("LabelSettings_nu7tc")
 vertical_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/LanguageDropdown"]
+[node name="Language" type="OptionButton" parent="VBoxContainer/LanguageDropdown"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 1
 anchors_preset = 6
@@ -196,7 +201,7 @@ text = "Fullscreen
 label_settings = SubResource("LabelSettings_nu7tc")
 vertical_alignment = 1
 
-[node name="CheckButton" type="CheckButton" parent="VBoxContainer/Fullscreen Boolean"]
+[node name="Fullscreen" type="CheckButton" parent="VBoxContainer/Fullscreen Boolean"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -230,7 +235,7 @@ text = "Resolution
 label_settings = SubResource("LabelSettings_nu7tc")
 vertical_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/ResolutionDropdown" node_paths=PackedStringArray("full_screen_toggle")]
+[node name="Resolution" type="OptionButton" parent="VBoxContainer/ResolutionDropdown" node_paths=PackedStringArray("full_screen_toggle")]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 1
 anchors_preset = 6
@@ -246,11 +251,20 @@ grow_vertical = 2
 theme = ExtResource("1_6lkli")
 alignment = 2
 selected = 0
-item_count = 1
+item_count = 6
 popup/item_0/text = "1920x1080"
+popup/item_1/text = "1792x1008"
+popup/item_1/id = 1
+popup/item_2/text = "1664x936"
+popup/item_2/id = 2
+popup/item_3/text = "1536x864"
+popup/item_3/id = 3
+popup/item_4/text = "1408x792"
+popup/item_4/id = 4
+popup/item_5/text = "1280x720"
+popup/item_5/id = 5
 script = ExtResource("5_ekx88")
-resolutions = Array[String](["1920x1080", "1792x1008", "1664x936", "1536x864", "1408x792", "1280x720"])
-full_screen_toggle = NodePath("../../Fullscreen Boolean/CheckButton")
+full_screen_toggle = NodePath("../../Fullscreen Boolean/Fullscreen")
 
 [node name="CloseButton" type="Button" parent="."]
 layout_mode = 1
@@ -270,7 +284,10 @@ text = "Close"
 icon = ExtResource("8_c44l1")
 expand_icon = true
 
-[connection signal="value_changed" from="VBoxContainer/MusicVolume/HSlider" to="VBoxContainer/MusicVolume/HSlider" method="_on_value_changed"]
-[connection signal="toggled" from="VBoxContainer/Fullscreen Boolean/CheckButton" to="VBoxContainer/Fullscreen Boolean/CheckButton" method="_on_toggled"]
-[connection signal="item_selected" from="VBoxContainer/ResolutionDropdown/OptionButton" to="VBoxContainer/ResolutionDropdown/OptionButton" method="_on_item_selected"]
+[connection signal="value_changed" from="VBoxContainer/MusicVolume/Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/SoundVolume/Sound" to="." method="_on_sound_value_changed"]
+[connection signal="item_selected" from="VBoxContainer/LanguageDropdown/Language" to="." method="_on_language_item_selected"]
+[connection signal="toggled" from="VBoxContainer/Fullscreen Boolean/Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="VBoxContainer/Fullscreen Boolean/Fullscreen" to="VBoxContainer/ResolutionDropdown/Resolution" method="_on_fullscreen_toggled"]
+[connection signal="item_selected" from="VBoxContainer/ResolutionDropdown/Resolution" to="." method="_on_resolution_item_selected"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

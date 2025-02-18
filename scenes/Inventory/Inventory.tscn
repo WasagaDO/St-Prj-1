@@ -1,34 +1,45 @@
-[gd_scene load_steps=38 format=3 uid="uid://bri2nfm1lp86i"]
+[gd_scene load_steps=49 format=3 uid="uid://bri2nfm1lp86i"]
 
-[ext_resource type="Script" path="res://Inventory/Card.gd" id="1_q6xp5"]
-[ext_resource type="Script" path="res://Inventory/Inventory.gd" id="1_tp6t7"]
-[ext_resource type="Script" path="res://Inventory/DescriptionCard.gd" id="2_olkvm"]
-[ext_resource type="Texture2D" uid="uid://cc10hn8537i86" path="res://Inventory/Hero_s Table/hero_s table.png" id="2_qw5tc"]
-[ext_resource type="Texture2D" uid="uid://dchq5rinbngm" path="res://Inventory/Hero_s Table/TableButtons/GoBackButton.png" id="3_7tsdn"]
-[ext_resource type="Texture2D" uid="uid://yy6cjs55jcit" path="res://Inventory/Hero_s Table/Filter/FilterNormal.png" id="3_spx18"]
-[ext_resource type="Texture2D" uid="uid://njo5fk0mppmw" path="res://Inventory/Hero_s Table/TableButtons/MenuButton.png" id="4_cm33x"]
-[ext_resource type="Texture2D" uid="uid://otuypurlld0g" path="res://Inventory/Hero_s Table/Filter/FilterSelected.png" id="4_pla76"]
-[ext_resource type="Texture2D" uid="uid://dd0i38rmqcb68" path="res://Inventory/Hero_s Table/Book/BookCover.png" id="5_14vf6"]
-[ext_resource type="Texture2D" uid="uid://dvwlpqvvll5r8" path="res://Inventory/Hero_s Table/SortSearch/LvlNormal.png" id="5_u6dqi"]
-[ext_resource type="Texture2D" uid="uid://b4aggdajbkajh" path="res://Inventory/Hero_s Table/Scroller/pathline.png" id="6_au8qn"]
-[ext_resource type="Texture2D" uid="uid://lm6d7ylau25j" path="res://Inventory/Hero_s Table/Scroller/Border.png" id="6_b530g"]
-[ext_resource type="Texture2D" uid="uid://c5nh3dupbhd0r" path="res://Inventory/Hero_s Table/SortSearch/LvlPressed.png" id="6_s3rlm"]
-[ext_resource type="Texture2D" uid="uid://bppw6rck31fwd" path="res://Inventory/Hero_s Table/Book/BookContent.png" id="6_twtty"]
-[ext_resource type="Texture2D" uid="uid://d2pn8r87l88om" path="res://Inventory/Hero_s Table/Scroller/Grabber.png" id="7_0oy1o"]
-[ext_resource type="Texture2D" uid="uid://ist5nruufywj" path="res://Inventory/Hero_s Table/Bookmark/AllSelected.png" id="7_54rfc"]
-[ext_resource type="Texture2D" uid="uid://cgcaxo28jrk0c" path="res://Inventory/Hero_s Table/SortSearch/AlphNormal.png" id="7_37086"]
-[ext_resource type="Texture2D" uid="uid://b1ykrulooq0f2" path="res://Inventory/Hero_s Table/SortSearch/AlphPressed.png" id="8_mf35a"]
-[ext_resource type="Texture2D" uid="uid://ns6o6jfs07lq" path="res://Inventory/Hero_s Table/Bookmark/SwordNormal.png" id="8_o4yv1"]
-[ext_resource type="Texture2D" uid="uid://dlkmx8cbv4tr6" path="res://Inventory/Hero_s Table/Bookmark/RingNormal.png" id="8_qe6pv"]
-[ext_resource type="Texture2D" uid="uid://dh8exl0cufmj4" path="res://Inventory/Hero_s Table/SortSearch/RandomNormal.png" id="9_8kfjo"]
-[ext_resource type="Texture2D" uid="uid://djebebphbhrf1" path="res://Inventory/Hero_s Table/Bookmark/RingSelected.png" id="9_5230i"]
-[ext_resource type="FontFile" uid="uid://bih6bkcxthx1o" path="res://Inventory/Fonts/MayflowerAntique.ttf" id="9_ajwxg"]
-[ext_resource type="Texture2D" uid="uid://bayciigcjmsxv" path="res://Inventory/Hero_s Table/Bookmark/SwordSelected.png" id="9_g2eqm"]
-[ext_resource type="Texture2D" uid="uid://csmwqtumwq8qp" path="res://Inventory/Hero_s Table/SortSearch/RandomPressed.png" id="10_sodv1"]
-[ext_resource type="Texture2D" uid="uid://swo58kw8oblp" path="res://Inventory/Hero_s Table/SortSearch/Search.png" id="11_ev5pc"]
-[ext_resource type="Texture2D" uid="uid://bndhvwv65i0y5" path="res://Inventory/Hero_s Table/CardHolder/CardHolderNormal.png" id="17_n1ihj"]
-[ext_resource type="Texture2D" uid="uid://bc4o7ek6f21s0" path="res://Inventory/Cards/active defense.png" id="20_puxs0"]
-[ext_resource type="FontFile" uid="uid://dsgbqt8ne3tjc" path="res://Inventory/Fonts/BREATHE_FIRE.OTF" id="23_rldjp"]
+[ext_resource type="Script" path="res://scenes/Inventory/Card.gd" id="1_q6xp5"]
+[ext_resource type="Script" path="res://scenes/Inventory/Inventory.gd" id="1_tp6t7"]
+[ext_resource type="Script" path="res://scenes/Inventory/DescriptionCard.gd" id="2_olkvm"]
+[ext_resource type="Texture2D" uid="uid://cc10hn8537i86" path="res://scenes/Inventory/Hero_s Table/hero_s table.png" id="2_qw5tc"]
+[ext_resource type="Texture2D" uid="uid://dchq5rinbngm" path="res://scenes/Inventory/Hero_s Table/TableButtons/GoBackButton.png" id="3_7tsdn"]
+[ext_resource type="Texture2D" uid="uid://yy6cjs55jcit" path="res://scenes/Inventory/Hero_s Table/Filter/FilterNormal.png" id="3_spx18"]
+[ext_resource type="Texture2D" uid="uid://njo5fk0mppmw" path="res://scenes/Inventory/Hero_s Table/TableButtons/MenuButton.png" id="4_cm33x"]
+[ext_resource type="Texture2D" uid="uid://otuypurlld0g" path="res://scenes/Inventory/Hero_s Table/Filter/FilterSelected.png" id="4_pla76"]
+[ext_resource type="Texture2D" uid="uid://dd0i38rmqcb68" path="res://scenes/Inventory/Hero_s Table/Book/BookCover.png" id="5_14vf6"]
+[ext_resource type="Texture2D" uid="uid://dvwlpqvvll5r8" path="res://scenes/Inventory/Hero_s Table/SortSearch/LvlNormal.png" id="5_u6dqi"]
+[ext_resource type="Texture2D" uid="uid://b4aggdajbkajh" path="res://scenes/Inventory/Hero_s Table/Scroller/pathline.png" id="6_au8qn"]
+[ext_resource type="Texture2D" uid="uid://lm6d7ylau25j" path="res://scenes/Inventory/Hero_s Table/Scroller/Border.png" id="6_b530g"]
+[ext_resource type="Texture2D" uid="uid://c5nh3dupbhd0r" path="res://scenes/Inventory/Hero_s Table/SortSearch/LvlPressed.png" id="6_s3rlm"]
+[ext_resource type="Texture2D" uid="uid://bppw6rck31fwd" path="res://scenes/Inventory/Hero_s Table/Book/BookContent.png" id="6_twtty"]
+[ext_resource type="Texture2D" uid="uid://d2pn8r87l88om" path="res://scenes/Inventory/Hero_s Table/Scroller/Grabber.png" id="7_0oy1o"]
+[ext_resource type="Texture2D" uid="uid://ist5nruufywj" path="res://scenes/Inventory/Hero_s Table/Bookmark/AllSelected.png" id="7_54rfc"]
+[ext_resource type="Texture2D" uid="uid://cgcaxo28jrk0c" path="res://scenes/Inventory/Hero_s Table/SortSearch/AlphNormal.png" id="7_37086"]
+[ext_resource type="Texture2D" uid="uid://b1ykrulooq0f2" path="res://scenes/Inventory/Hero_s Table/SortSearch/AlphPressed.png" id="8_mf35a"]
+[ext_resource type="Texture2D" uid="uid://ns6o6jfs07lq" path="res://scenes/Inventory/Hero_s Table/Bookmark/SwordNormal.png" id="8_o4yv1"]
+[ext_resource type="Texture2D" uid="uid://dlkmx8cbv4tr6" path="res://scenes/Inventory/Hero_s Table/Bookmark/RingNormal.png" id="8_qe6pv"]
+[ext_resource type="Texture2D" uid="uid://dh8exl0cufmj4" path="res://scenes/Inventory/Hero_s Table/SortSearch/RandomNormal.png" id="9_8kfjo"]
+[ext_resource type="Texture2D" uid="uid://djebebphbhrf1" path="res://scenes/Inventory/Hero_s Table/Bookmark/RingSelected.png" id="9_5230i"]
+[ext_resource type="FontFile" uid="uid://bih6bkcxthx1o" path="res://scenes/Inventory/Fonts/MayflowerAntique.ttf" id="9_ajwxg"]
+[ext_resource type="Texture2D" uid="uid://bayciigcjmsxv" path="res://scenes/Inventory/Hero_s Table/Bookmark/SwordSelected.png" id="9_g2eqm"]
+[ext_resource type="Texture2D" uid="uid://csmwqtumwq8qp" path="res://scenes/Inventory/Hero_s Table/SortSearch/RandomPressed.png" id="10_sodv1"]
+[ext_resource type="Texture2D" uid="uid://swo58kw8oblp" path="res://scenes/Inventory/Hero_s Table/SortSearch/Search.png" id="11_ev5pc"]
+[ext_resource type="Texture2D" uid="uid://bndhvwv65i0y5" path="res://scenes/Inventory/Hero_s Table/CardHolder/CardHolderNormal.png" id="17_n1ihj"]
+[ext_resource type="Texture2D" uid="uid://bc4o7ek6f21s0" path="res://scenes/Inventory/Cards/active defense.png" id="20_puxs0"]
+[ext_resource type="Texture2D" uid="uid://bo1a33mhrklgy" path="res://assets/card_art/FullCards/change of stance.png" id="21_ex84n"]
+[ext_resource type="Texture2D" uid="uid://cj3gchnjc6xii" path="res://assets/card_art/FullCards/deceptive strike.png" id="22_orllb"]
+[ext_resource type="Texture2D" uid="uid://b78msk4xkhfix" path="res://assets/card_art/FullCards/dodge.png" id="23_qqbve"]
+[ext_resource type="FontFile" uid="uid://dsgbqt8ne3tjc" path="res://scenes/Inventory/Fonts/BREATHE_FIRE.OTF" id="23_rldjp"]
+[ext_resource type="Texture2D" uid="uid://cl3tm6iotjign" path="res://assets/card_art/FullCards/horizontal cut.png" id="24_tjjd2"]
+[ext_resource type="Texture2D" uid="uid://cj1iurx8fjf24" path="res://assets/card_art/FullCards/jab.png" id="25_dwthj"]
+[ext_resource type="Texture2D" uid="uid://chqfx2romdl1u" path="res://assets/card_art/FullCards/lunge.png" id="26_2ap0x"]
+[ext_resource type="Texture2D" uid="uid://bi8j6kl0tplce" path="res://assets/card_art/FullCards/noggin kick.png" id="27_4ojfv"]
+[ext_resource type="Texture2D" uid="uid://bkds3wyklbgw0" path="res://assets/card_art/FullCards/overhead strike.png" id="28_k74ks"]
+[ext_resource type="Texture2D" uid="uid://de1f7jedi2xsy" path="res://assets/card_art/FullCards/sprawling punch.png" id="29_4ohew"]
+[ext_resource type="Texture2D" uid="uid://dp6g0k1b1ng32" path="res://assets/card_art/FullCards/strong overhead kick.png" id="30_x6xh0"]
+[ext_resource type="Texture2D" uid="uid://c7vxboo328e8k" path="res://assets/card_art/FullCards/wide swing.png" id="31_uox5n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cx5t"]
 bg_color = Color(0.247059, 0.247059, 0.247059, 0)
@@ -94,41 +105,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_qw5tc")
 expand_mode = 1
-
-[node name="BackButton" type="MarginContainer" parent="Panel"]
-layout_mode = 1
-offset_right = 100.0
-offset_bottom = 100.0
-theme_override_constants/margin_left = 110
-theme_override_constants/margin_top = 140
-
-[node name="BackButton" type="TextureButton" parent="Panel/BackButton"]
-custom_minimum_size = Vector2(120, 120)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture_normal = ExtResource("3_7tsdn")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="MenuButton" type="MarginContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -230.0
-offset_bottom = 260.0
-grow_horizontal = 0
-theme_override_constants/margin_right = 110
-
-[node name="MenuButton" type="TextureButton" parent="Panel/MenuButton"]
-custom_minimum_size = Vector2(120, 120)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-texture_normal = ExtResource("4_cm33x")
-ignore_texture_size = true
-stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
@@ -404,8 +380,8 @@ offset_right = 53.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_v0lqs")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v0lqs")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v0lqs")
 context_menu_enabled = false
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer"]
@@ -497,6 +473,7 @@ expand_mode = 1
 script = ExtResource("1_q6xp5")
 title = "Monkey"
 type2 = 1
+level = 15
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2"]
 layout_mode = 1
@@ -532,7 +509,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
-text = "Lv: 0"
+text = "Lv: 15"
 vertical_alignment = 1
 
 [node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2"]
@@ -549,7 +526,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("21_ex84n")
 expand_mode = 1
 stretch_mode = 5
 
@@ -613,7 +590,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("22_orllb")
 expand_mode = 1
 stretch_mode = 5
 
@@ -679,7 +656,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("23_qqbve")
 expand_mode = 1
 stretch_mode = 5
 
@@ -743,7 +720,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("24_tjjd2")
 expand_mode = 1
 stretch_mode = 5
 
@@ -809,7 +786,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("25_dwthj")
 expand_mode = 1
 stretch_mode = 5
 
@@ -875,7 +852,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("26_2ap0x")
 expand_mode = 1
 stretch_mode = 5
 
@@ -941,7 +918,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("27_4ojfv")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1006,7 +983,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("28_k74ks")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1071,7 +1048,137 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("29_4ohew")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card11" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Snappy"
+type = 2
+type2 = 2
+level = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Snappy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 12"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_x6xh0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card12" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Snappy"
+type = 2
+type2 = 2
+level = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Snappy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 12"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("31_uox5n")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1816,6 +1923,71 @@ layout_mode = 2
 texture_normal = ExtResource("8_qe6pv")
 texture_pressed = ExtResource("9_5230i")
 texture_hover = ExtResource("9_5230i")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BackButton" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_constants/margin_left = 170
+theme_override_constants/margin_top = 200
+
+[node name="Pivot" type="Control" parent="Panel/BackButton"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="BackButton" type="TextureButton" parent="Panel/BackButton/Pivot"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+pivot_offset = Vector2(60, 60)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_7tsdn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MenuButton" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -230.0
+offset_bottom = 260.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 140
+theme_override_constants/margin_right = 110
+
+[node name="Pivot" type="Control" parent="Panel/MenuButton"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MenuButton" type="TextureButton" parent="Panel/MenuButton/Pivot"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(60, 60)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_cm33x")
 ignore_texture_size = true
 stretch_mode = 5
 

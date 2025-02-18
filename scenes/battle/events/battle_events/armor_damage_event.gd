@@ -7,5 +7,6 @@ func start():
 		amt, 
 		BattleUtil.damage_type_info[combat_type].name,
 	])
-	await get_tree().create_timer(0.3).timeout;
+	status_popups.stat_changed(-amt, combat_type)
+	await get_tree().create_timer(delay).timeout;
 	finished.emit();

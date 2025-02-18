@@ -43,6 +43,8 @@ func increment_turn_order():
 
 func on_card_played(card:CardData, source:Combatant, target:Combatant):
 	var card_can_be_resolved:bool = true;
+	if source is Player:
+		source.add_stamina(-card.stamina_cost);
 	if card.card_type == CardData.CardType.REACTION:
 		waiting_for_player_reaction = false;
 		reaction_happened_this_turn = true;
@@ -72,7 +74,10 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 				# it's reaction time, so don't resolve the attack yet.
 				# wait for the player.
 				card_can_be_resolved = false;
-
+		var attack_animation: CombatantAnimator = CombatantAnimator.new()
+		source.add_child(attack_animation)
+		attack_animation.combatant_attacked(source)
+	
 	# either this is not an attack, or there wasn't any reactions possible.
 	# so we just resolve it.
 	if card_can_be_resolved:
@@ -103,7 +108,7 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant):
 		target.apply_armor(armor.type, armor.amt); 
 	for buff:BuffData in card.buffs:
 		target.apply_buff(buff.type, buff.stacks);
-		
+
 	# we've just resolved whatever this card was,
 	# so it's possible the player or the targeted enemy is dead.
 	# if so, we can't resolve the queued attack, so we gotta check.

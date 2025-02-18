@@ -10,5 +10,5 @@ func initialize(data):
 func start():
 	var action_text = "reacted with" if move.card_type == CardData.CardType.REACTION else "played"
 	LogSignals.push_log.emit("%s %s %s!" % [source.log_name, action_text, move.name]);
-	await get_tree().create_timer(0.2).timeout;
+	await get_tree().create_timer(delay).timeout;
 	finished.emit()

@@ -5,6 +5,7 @@ var type: String
 var type2: String
 var level: String
 
+@onready var card_pic: TextureRect = $CardPic
 @onready var title_label: Label = $VBoxContainer/Title
 @onready var type_label: Label = $VBoxContainer/HBoxContainer/Type
 @onready var level_label: Label = $VBoxContainer/HBoxContainer/Level

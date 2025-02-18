@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbinw3r6wni0k"]
+
+[ext_resource type="Script" path="res://scenes/battle/events/battle_events/card_resolved_event.gd" id="1_obm8o"]
+
+[node name="CardResolvedEvent" type="Node2D"]
+script = ExtResource("1_obm8o")
+event_type = 13

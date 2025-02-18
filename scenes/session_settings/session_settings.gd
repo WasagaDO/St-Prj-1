@@ -4,6 +4,7 @@ class_name SessionSettings
 
 @export_file var title_scene:String
 @onready var battle_settings:Panel = $BattleSettings;
+@onready var inventory: CanvasLayer = $Inventory
 @export_file var equipment_scene:String;
 @export_file var battle_scene:String
 
@@ -18,8 +19,7 @@ func _on_battle_settings_pressed() -> void:
 
 
 func _on_equipment_pressed() -> void:
-	get_tree().change_scene_to_file(equipment_scene);
-	pass # Replace with function body.
+	inventory.toggle_inventory()
 
 
 func _on_to_battle_pressed() -> void:

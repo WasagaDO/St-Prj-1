@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://btyo6lo3wp2o8"]
+[gd_scene load_steps=8 format=3 uid="uid://btyo6lo3wp2o8"]
 
 [ext_resource type="Texture2D" uid="uid://y5wo0blq888d" path="res://assets/misc/bars/BAR_ULT.png" id="1_1wvsc"]
 [ext_resource type="Script" path="res://scenes/battle/ui/bars/bar.gd" id="2_bumqd"]
+[ext_resource type="FontFile" uid="uid://drw6amwfsq20x" path="res://assets/fonts/CenturyGothic.ttf" id="3_08tgg"]
+[ext_resource type="Texture2D" uid="uid://b81bovb8awv4l" path="res://assets/ui/health_icon.png" id="4_ia1b7"]
 
 [sub_resource type="Shader" id="Shader_3wmk5"]
 code = "shader_type canvas_item;
@@ -18,10 +20,54 @@ shader = SubResource("Shader_3wmk5")
 shader_parameter/base_fill_amt = 1.0
 shader_parameter/fill_amt = 1.0
 
-[node name="HpBar" type="Sprite2D"]
-modulate = Color(1, 1, 1, 0.215686)
+[sub_resource type="LabelSettings" id="LabelSettings_ll5hr"]
+font = ExtResource("3_08tgg")
+font_size = 140
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HpBar" type="TextureRect"]
 material = SubResource("ShaderMaterial_61hp5")
-position = Vector2(-10.0006, -64.9999)
-scale = Vector2(1.51479, 1)
+offset_left = -10.0006
+offset_top = -64.9999
+offset_right = -10.0006
+offset_bottom = -64.9999
 texture = ExtResource("1_1wvsc")
 script = ExtResource("2_bumqd")
+
+[node name="Info" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -482.0
+offset_top = -150.0
+offset_right = 482.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Label" type="Label" parent="Info"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "30/30"
+label_settings = SubResource("LabelSettings_ll5hr")
+horizontal_alignment = 2
+
+[node name="Icon" type="TextureRect" parent="Info"]
+z_index = 1
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("4_ia1b7")
+expand_mode = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
