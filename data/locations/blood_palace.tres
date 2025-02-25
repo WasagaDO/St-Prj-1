@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LocationData" load_steps=3 format=3 uid="uid://b5akrkfsutc6e"]
 
 [ext_resource type="Texture2D" uid="uid://dp4mxtsa7gi17" path="res://assets/blood_palace.jpg" id="1_8cncj"]
-[ext_resource type="Script" path="res://data/locations/location_data.gd" id="2_iwff2"]
+[ext_resource type="Script" path="res://data/scripts/location_data.gd" id="2_iwff2"]
 
 [resource]
 script = ExtResource("2_iwff2")

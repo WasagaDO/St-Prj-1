@@ -4,7 +4,9 @@ class_name Enemy;
 @export var enemy_data:EnemyData;
 
 signal move_made(enemy:Enemy, move:CardData)
-var moves:Array[EnemyTurnData]
+var completed_turn = false;
+var turns:Array[EnemyTurnData]
+var turn_index:int = -1;
 var move_index:int = 0;
 
 var card_cooldowns:Dictionary = {};
@@ -17,20 +19,26 @@ func load_data(data:EnemyData):
 	log_name = data.name;
 	for armor_data:ArmorData in data.armor:
 		armor[armor_data.type] = armor_data.amt;
-	moves = data.moves;
+	turns = data.moves;
 	initialize_bars();
 
+
 func act():
+	move_made.emit(self, turns[turn_index].moves[move_index]);
+	move_index += 1;
+	if move_index == turns[turn_index].moves.size():
+		completed_turn = true;
+
+func increment_turn():
+	completed_turn = false;
+	move_index = 0;
 	# tick down any reactions on cooldown
 	for card in card_cooldowns.keys():
 		card_cooldowns[card] -= 1;
 		if card_cooldowns[card] < 0: card_cooldowns[card] = 0;
-
-	var move_to_make = moves[move_index].potential_moves.pick_random();
-	move_made.emit(self, move_to_make);
-	move_index += 1;
-	if move_index >= moves.size():
-		move_index = 0;
+	turn_index += 1;
+	if turn_index >= turns.size():
+		turn_index = 0;
 	
 
 func try_get_valid_reaction(attack):

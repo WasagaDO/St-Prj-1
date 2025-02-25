@@ -1,9 +1,8 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://b0qev82lgjjbh"]
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://b0qev82lgjjbh"]
 
-[ext_resource type="Script" path="res://data/cards/armor_data.gd" id="1_n7pqc"]
-[ext_resource type="Script" path="res://data/cards/buff_data.gd" id="2_wtxct"]
-[ext_resource type="Script" path="res://data/cards/debuff_data.gd" id="3_ecdxm"]
-[ext_resource type="Script" path="res://data/cards/card_data.gd" id="4_oehdc"]
+[ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_n7pqc"]
+[ext_resource type="Script" path="res://data/scripts/status_effect.gd" id="3_rglwx"]
+[ext_resource type="Script" path="res://data/scripts/card_data.gd" id="4_oehdc"]
 
 [sub_resource type="Resource" id="Resource_h1jdr"]
 script = ExtResource("1_n7pqc")
@@ -24,8 +23,8 @@ card_type = 0
 speed = 1
 damage = Array[ExtResource("1_n7pqc")]([SubResource("Resource_h1jdr"), SubResource("Resource_v8lyw")])
 armor = Array[ExtResource("1_n7pqc")]([])
-buffs = Array[ExtResource("2_wtxct")]([])
-debuffs = Array[ExtResource("3_ecdxm")]([])
+status_effects = Array[ExtResource("3_rglwx")]([])
 special_reactions = Array[int]([])
 healing = 0
 cooldown = 0
+apply_to_self = false

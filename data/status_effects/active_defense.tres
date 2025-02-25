@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="StatusEffectData" load_steps=9 format=3 uid="uid://br42hnpsroipc"]
+
+[ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_j7l2i"]
+[ext_resource type="Texture2D" uid="uid://bq44re1wqbv32" path="res://assets/card_art/active_defense.png" id="2_p2xc5"]
+[ext_resource type="Script" path="res://data/scripts/card_data.gd" id="3_7j1ya"]
+[ext_resource type="Script" path="res://data/scripts/status_effect.gd" id="4_g38t8"]
+
+[sub_resource type="Resource" id="Resource_nivkq"]
+script = ExtResource("1_j7l2i")
+type = 0
+amt = 5
+
+[sub_resource type="Resource" id="Resource_2pmjk"]
+script = ExtResource("1_j7l2i")
+type = 1
+amt = 5
+
+[sub_resource type="Resource" id="Resource_c6yu7"]
+script = ExtResource("1_j7l2i")
+type = 2
+amt = 5
+
+[sub_resource type="Resource" id="Resource_wl705"]
+script = ExtResource("3_7j1ya")
+description = ""
+name = "Active Defense"
+image = ExtResource("2_p2xc5")
+stamina_cost = 0
+card_type = 2
+speed = 0
+damage = Array[ExtResource("1_j7l2i")]([])
+armor = Array[ExtResource("1_j7l2i")]([SubResource("Resource_nivkq"), SubResource("Resource_2pmjk"), SubResource("Resource_c6yu7")])
+status_effects = Array[ExtResource("4_g38t8")]([])
+special_reactions = Array[int]([])
+healing = 0
+cooldown = 0
+apply_to_self = false
+
+[resource]
+script = ExtResource("4_g38t8")
+timing = 2
+effect = SubResource("Resource_wl705")

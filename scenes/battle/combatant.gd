@@ -6,14 +6,6 @@ enum DamageType {
 	PIERCING,
 	NONE,
 }
-
-enum Debuff {
-	
-}
-
-enum Buff {
-	
-}
 ## 0: Crushing 1: Cutting 2: Piercing
 @export var armor = {
 	DamageType.CRUSHING: 0,
@@ -23,11 +15,8 @@ enum Buff {
 
 
 
-# buff enum to int (int being the number of stacks)
-var buffs = {}
-
-# debuff enum to int (int being the number of stacks)
-var debuffs = {};
+# status effect data
+var status_effects = {}
 
 @export var max_hp:int = 100;
 var hp:int;
@@ -55,6 +44,23 @@ func initialize_bars():
 	for armor_type in bars.armor.keys():
 		bars.armor[armor_type].maximum = max_armor;
 		bars.armor[armor_type].value = armor[armor_type];
+
+func apply_status_effects():
+	for status:StatusEffectData in status_effects.keys():
+		var effect:CardData = status.effect;
+		if status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
+			effect = BattleUtil.reverse_effect(effect);
+		# TODO: communicate that the status is giving the effect.
+		# maybe "source" can be a bit more lenient in BattleSignals.
+		# or figure it out some other way.
+		if 	status.timing == StatusEffectData.Timing.ON_WORN_OFF or \
+			status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
+			for i in range(0, status_effects[status]):
+				apply_effect(self, effect);
+		
+		BattleSignals.status_wore_off.emit(self, status);
+		status_effects[status]-=1;
+		if status_effects[status] < 0: status_effects[status] = 0;
 func apply_damage(source:Combatant, damage:int, type:DamageType):
 	var armor_amt = 0 if not armor.has(type) else armor[type];
 	var damage_to_armor = damage * 0.8;
@@ -81,16 +87,28 @@ func apply_healing(amt:int):
 	bars.hp_bar.value = hp;
 	BattleSignals.healing_applied.emit(self, self, amt);
 	
+
 func apply_armor(type:DamageType, amt:int):
 	armor[type] += amt;
 	if armor[type] > max_armor: armor[type] = max_armor;
 	bars.armor[type].value = armor[type];
 	BattleSignals.armor_applied.emit(self, self, amt, type);
-	
-func apply_buff(buff:Buff, stacks:int):
-	buffs[buff] = stacks;
-	BattleSignals.buff_applied.emit(self, self, buff, stacks)
 
-func apply_debuff(source:Combatant, debuff:Debuff, stacks:int):
-	debuffs[debuff] = stacks;
-	BattleSignals.debuff_applied.emit(source, self, debuff, stacks)
+func apply_effect(source:Combatant, effect:CardData):
+	for damage in effect.damage:
+		if damage.amt > 0:
+			apply_damage(source, damage.amt, damage.type)
+	
+	if effect.healing > 0:
+		apply_healing(effect.healing);
+	for armor:ArmorData in effect.armor:
+		apply_armor(armor.type, armor.amt); 
+	for status in effect.status_effects:
+		BattleSignals.status_applied.emit(self, status);
+		if status_effects.has(status): 
+			status_effects[status] += 1;
+		else: 
+			status_effects[status] = 1;
+		if status.timing == StatusEffectData.Timing.ON_APPLIED or \
+			status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
+			apply_effect(source, status.effect);

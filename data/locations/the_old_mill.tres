@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="LocationData" load_steps=3 format=3 uid="uid://ceqhyanhgbbnu"]
 
-[ext_resource type="Script" path="res://data/locations/location_data.gd" id="1_lrbnf"]
+[ext_resource type="Script" path="res://data/scripts/location_data.gd" id="1_lrbnf"]
 [ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_yyyuv"]
 
 [resource]

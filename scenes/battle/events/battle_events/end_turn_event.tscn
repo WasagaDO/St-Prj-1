@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qjn0sxvwnccc"]
+
+[ext_resource type="Script" path="res://scenes/battle/events/battle_events/end_turn_event.gd" id="1_t4oo8"]
+
+[node name="EndTurnEvent" type="Node2D"]
+script = ExtResource("1_t4oo8")
+event_type = 14

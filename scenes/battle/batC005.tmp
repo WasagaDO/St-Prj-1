@@ -1,10 +1,10 @@
-[gd_scene load_steps=56 format=3 uid="uid://cvp83fjtisnpi"]
+[gd_scene load_steps=57 format=3 uid="uid://cvp83fjtisnpi"]
 
 [ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_0hcyc"]
 [ext_resource type="PackedScene" uid="uid://dlgug5h82pnj5" path="res://scenes/battle/ui/bars/bars.tscn" id="4_6f28h"]
 [ext_resource type="PackedScene" uid="uid://cixqxm0jpmef5" path="res://scenes/battle/cards/deck.tscn" id="7_i6lf0"]
 [ext_resource type="Resource" uid="uid://mlcyxfv2ivp0" path="res://data/cards/active_defense.tres" id="8_ff4qw"]
-[ext_resource type="Script" path="res://data/scripts/card_slot.gd" id="9_dn6dx"]
+[ext_resource type="Script" path="res://data/cards/card_slot.gd" id="9_dn6dx"]
 [ext_resource type="PackedScene" uid="uid://brc8fwhvn5s1l" path="res://scenes/battle/cards/card.tscn" id="10_cji3i"]
 [ext_resource type="Resource" uid="uid://bg60n250ekmi6" path="res://data/cards/deceptive_strike.tres" id="10_hr0ue"]
 [ext_resource type="Script" path="res://scenes/battle/cards/hand.gd" id="11_pluhi"]
@@ -34,7 +34,9 @@
 [ext_resource type="PackedScene" uid="uid://fdpp3thjfhyx" path="res://scenes/battle/events/battle_events/armor_damage_event.tscn" id="34_a8wsi"]
 [ext_resource type="PackedScene" uid="uid://vuj1phmqegpr" path="res://scenes/battle/events/battle_events/heal_event.tscn" id="35_8dhsw"]
 [ext_resource type="PackedScene" uid="uid://daffehj1kva0w" path="res://scenes/battle/events/battle_events/armor_heal_event.tscn" id="36_s0fps"]
+[ext_resource type="PackedScene" uid="uid://b5hd811ycl1ay" path="res://scenes/battle/events/battle_events/debuff_event.tscn" id="37_2o8c0"]
 [ext_resource type="PackedScene" uid="uid://b6l1ys4rqnc57" path="res://scenes/battle/events/state_events/enemy_move_played_event.tscn" id="37_mpgih"]
+[ext_resource type="PackedScene" uid="uid://cy0objp05lqf6" path="res://scenes/battle/events/battle_events/buff_event.tscn" id="38_m25nb"]
 [ext_resource type="PackedScene" uid="uid://dakjnfsa0jk6u" path="res://scenes/battle/events/state_events/card_played_event.tscn" id="39_gh2so"]
 [ext_resource type="PackedScene" uid="uid://e3juvlur7cd7" path="res://scenes/battle/events/state_events/new_turn_event.tscn" id="40_18j3u"]
 [ext_resource type="PackedScene" uid="uid://cubgdjkworik0" path="res://scenes/battle/events/state_events/end_of_game_event.tscn" id="40_t6ak5"]
@@ -43,7 +45,6 @@
 [ext_resource type="PackedScene" uid="uid://ddevk2tyrxskr" path="res://scenes/battle/events/state_events/start_of_game_event.tscn" id="41_jpniv"]
 [ext_resource type="PackedScene" uid="uid://b7jk4c6e3tluy" path="res://scenes/battle/events/react_events/attack_dodged_event.tscn" id="42_i3ye5"]
 [ext_resource type="PackedScene" uid="uid://cbinw3r6wni0k" path="res://scenes/battle/events/battle_events/card_resolved_event.tscn" id="44_gpbrr"]
-[ext_resource type="PackedScene" uid="uid://qjn0sxvwnccc" path="res://scenes/battle/events/battle_events/end_turn_event.tscn" id="44_i32r0"]
 
 [sub_resource type="Resource" id="Resource_yqjmm"]
 script = ExtResource("9_dn6dx")
@@ -164,10 +165,11 @@ log_name = "Player"
 position = Vector2(-300, -1690)
 scale = Vector2(1.255, 1.31111)
 
-[node name="Enemy" parent="." instance=ExtResource("18_nndee")]
+[node name="Enemy" parent="." node_paths=PackedStringArray("events") instance=ExtResource("18_nndee")]
 position = Vector2(1328, 511)
 scale = Vector2(0.18, 0.18)
 enemy_data = ExtResource("26_vwuyc")
+events = NodePath("../Events")
 max_stamina = 30
 log_name = "Goat Man"
 
@@ -322,7 +324,7 @@ deck = NodePath("../Cards/Deck")
 dealer = NodePath("../Cards/Dealer")
 discard_pile = NodePath("../Cards/DiscardPile")
 state_overlay = NodePath("../UI/CanvasLayer/StateOverlay")
-event_handlers = Array[PackedScene]([ExtResource("34_a8wsi"), ExtResource("36_s0fps"), ExtResource("33_1yotk"), ExtResource("35_8dhsw"), ExtResource("42_i3ye5"), ExtResource("39_gh2so"), ExtResource("37_mpgih"), ExtResource("40_18j3u"), ExtResource("41_ho70s"), ExtResource("40_t6ak5"), ExtResource("41_jpniv"), ExtResource("44_gpbrr"), ExtResource("44_i32r0")])
+event_handlers = Array[PackedScene]([ExtResource("34_a8wsi"), ExtResource("36_s0fps"), ExtResource("38_m25nb"), ExtResource("33_1yotk"), ExtResource("37_2o8c0"), ExtResource("35_8dhsw"), ExtResource("42_i3ye5"), ExtResource("39_gh2so"), ExtResource("37_mpgih"), ExtResource("40_18j3u"), ExtResource("41_ho70s"), ExtResource("40_t6ak5"), ExtResource("41_jpniv"), ExtResource("44_gpbrr")])
 end_turn_button = NodePath("../UI/EndTurnButton")
 darken_overlay = NodePath("../ColorRect")
 stat_popups_player = NodePath("../UI/StatusPopups_Player")
@@ -331,8 +333,8 @@ end_scene_path = "res://scenes/session_settings/session_settings.tscn"
 
 [connection signal="card_played" from="Cards/Hand" to="BattleManager" method="_on_hand_card_played"]
 [connection signal="not_enough_stamina" from="Protagonist" to="UI/Alert" method="_on_protagonist_not_enough_stamina"]
+[connection signal="completed_turn" from="Enemy" to="BattleManager" method="_on_enemy_completed_turn"]
 [connection signal="move_made" from="Enemy" to="BattleManager" method="_on_enemy_move_made"]
 [connection signal="cancelled" from="UI/TargetSelector" to="Cards/Hand" method="_on_target_selector_cancelled"]
 [connection signal="target_selected" from="UI/TargetSelector" to="Cards/Hand" method="_on_target_selector_target_selected"]
 [connection signal="pressed" from="UI/EndTurnButton" to="BattleManager" method="_on_end_turn_button_pressed"]
-[connection signal="queue_empty" from="Events" to="BattleManager" method="_on_events_queue_empty"]

@@ -1,7 +1,6 @@
 extends Control
 
 @export var locations:Array[LocationData]
-@onready var location_cover: TextureRect = $LocationCover
 @onready var location_title: Label = $Header/LocationTitle
 
 var location_index:int = 0;

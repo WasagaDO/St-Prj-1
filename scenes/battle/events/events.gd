@@ -20,12 +20,17 @@ enum EventType {
 	ATTACK_DODGED,
 	END_OF_GAME,
 	START_OF_GAME,
-	CARD_RESOLVED
+	CARD_RESOLVED,
+	END_TURN,
+	STATUS_APPLIED,
+	STATUS_EFFECT_APPLIED,
+	STATUS_WORE_OFF
 }
 
 
 @export var hand:Hand;
 @export var deck:Deck;
+@export var dealer:Dealer;
 @export var discard_pile:Deck;
 @export var state_overlay:Control;
 @export var event_handlers:Array[PackedScene] = [];
@@ -41,6 +46,8 @@ var event_map:Dictionary = {};
 var event_queue:Array[Event] = [];
 
 var current_event:Event
+
+signal queue_empty();
 func _ready() -> void:
 	for handler in event_handlers:
 		var temp_event = handler.instantiate();
@@ -62,21 +69,20 @@ func _ready() -> void:
 	BattleSignals.armor_applied.connect(func(src, trgt, amt, type): 
 		push_battle_event(EventType.ARMOR_HEALING, src,trgt,amt,type)
 	)
-	BattleSignals.debuff_applied.connect(func(src, trgt, amt, type): 
-		push_battle_event(EventType.DEBUFF, src,trgt,amt,type)
-	)
-	BattleSignals.buff_applied.connect(func(src, trgt, amt, type): 
-		push_battle_event(EventType.BUFF, src,trgt,amt,type)
-	)
 	
 	BattleSignals.new_turn.connect(func(acting_combatant): 
 		push_event(EventType.NEW_TURN, {
 			"acting_combatant": acting_combatant, 
 			"hand": hand, 
-			"deck": deck,
+			"dealer": dealer,
 			"end_turn_button": end_turn_button
 		})
 	)
+	
+	BattleSignals.end_turn.connect(func(acting_combatant):
+		push_event(EventType.END_TURN, {
+			"acting_combatant": acting_combatant
+		}))
 	
 	BattleSignals.card_played.connect(func(source, target, card): 
 		push_event(EventType.CARD_PLAYED, {
@@ -161,6 +167,8 @@ func serve_next_event():
 	# the current event is finished, so we can remove it.
 	if is_instance_valid(current_event): current_event.queue_free();
 	
-	if event_queue.size() == 0: return;
+	if event_queue.size() == 0:
+		queue_empty.emit();
+		return;
 	current_event = event_queue.pop_front()
 	current_event.start();

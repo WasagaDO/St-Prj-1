@@ -82,8 +82,7 @@ func setup(new_data:CardData):
 	stamina.text = str(data.stamina_cost);
 	speed.text = str(data.speed);
 	
-	# if we want to attack or debuff something, we need to know what that will be
-	needs_target = data.damage.size() > 0 or data.debuffs.size() > 0;
+	needs_target = not data.apply_to_self
 func change_state(new_state:CardState):
 	var old_state = state;
 	state = new_state;

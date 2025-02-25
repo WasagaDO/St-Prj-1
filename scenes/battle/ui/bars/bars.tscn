@@ -10,27 +10,27 @@
 [ext_resource type="Texture2D" uid="uid://cn873hj5wtugq" path="res://assets/ui/slashing_icon.png" id="6_7ekre"]
 [ext_resource type="Texture2D" uid="uid://4odu8cyhbo3o" path="res://assets/ui/bashing_damage.png" id="7_x6ixa"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1o7xn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ao43"]
 resource_local_to_scene = true
 shader = ExtResource("3_cff34")
 shader_parameter/fill_amt = 1.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_14yjk"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2nwoh"]
 resource_local_to_scene = true
 shader = ExtResource("3_cff34")
 shader_parameter/fill_amt = 1.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7qvq4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rc0a7"]
 resource_local_to_scene = true
 shader = ExtResource("3_cff34")
 shader_parameter/fill_amt = 1.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ucvxh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i6ccs"]
 resource_local_to_scene = true
 shader = ExtResource("3_cff34")
 shader_parameter/fill_amt = 1.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_11t3i"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hqn1w"]
 resource_local_to_scene = true
 shader = ExtResource("3_cff34")
 shader_parameter/fill_amt = 1.0
@@ -41,7 +41,7 @@ script = ExtResource("2_hkpxn")
 
 [node name="HpBar" parent="." instance=ExtResource("2_bawsi")]
 self_modulate = Color(0.678431, 0.152941, 0, 1)
-material = SubResource("ShaderMaterial_1o7xn")
+material = SubResource("ShaderMaterial_6ao43")
 offset_left = -1274.0
 offset_top = -108.0
 offset_right = 1280.0
@@ -50,7 +50,7 @@ icon = ExtResource("5_j4cr2")
 
 [node name="StaminaBar" parent="." instance=ExtResource("2_bawsi")]
 self_modulate = Color(0.776471, 0.513726, 0, 1)
-material = SubResource("ShaderMaterial_14yjk")
+material = SubResource("ShaderMaterial_2nwoh")
 offset_left = -1245.0
 offset_top = -181.0
 offset_right = 1234.0
@@ -62,7 +62,7 @@ icon = ExtResource("6_6mhh8")
 
 [node name="PiercingArmor" parent="Armor" instance=ExtResource("2_bawsi")]
 self_modulate = Color(0, 0.635294, 0.25098, 1)
-material = SubResource("ShaderMaterial_7qvq4")
+material = SubResource("ShaderMaterial_rc0a7")
 offset_left = -1234.0
 offset_top = 2.0
 offset_right = -433.0
@@ -72,7 +72,7 @@ icon = ExtResource("5_ouf2k")
 
 [node name="CuttingArmor" parent="Armor" instance=ExtResource("2_bawsi")]
 self_modulate = Color(0, 0.521569, 0.627451, 1)
-material = SubResource("ShaderMaterial_ucvxh")
+material = SubResource("ShaderMaterial_i6ccs")
 offset_left = -407.0
 offset_top = 2.0
 offset_right = 393.0
@@ -82,7 +82,7 @@ icon = ExtResource("6_7ekre")
 
 [node name="CrushingArmor" parent="Armor" instance=ExtResource("2_bawsi")]
 self_modulate = Color(0.4, 0.545098, 0.447059, 1)
-material = SubResource("ShaderMaterial_11t3i")
+material = SubResource("ShaderMaterial_hqn1w")
 offset_left = 417.0
 offset_top = 2.0
 offset_right = 1240.0

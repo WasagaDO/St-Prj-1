@@ -1,9 +1,8 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://cxhlhjaxt1da"]
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://cxhlhjaxt1da"]
 
-[ext_resource type="Script" path="res://data/cards/armor_data.gd" id="1_urc7o"]
-[ext_resource type="Script" path="res://data/cards/buff_data.gd" id="2_gsn8a"]
-[ext_resource type="Script" path="res://data/cards/debuff_data.gd" id="3_4ty2i"]
-[ext_resource type="Script" path="res://data/cards/card_data.gd" id="4_ti3uk"]
+[ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_urc7o"]
+[ext_resource type="Script" path="res://data/scripts/card_data.gd" id="4_ti3uk"]
+[ext_resource type="Script" path="res://data/scripts/status_effect.gd" id="4_vobd5"]
 [ext_resource type="Texture2D" uid="uid://cbo1yphvomu7q" path="res://assets/card_art/dodge.png" id="4_yl7pi"]
 
 [resource]
@@ -18,8 +17,7 @@ card_type = 3
 speed = 1
 damage = Array[ExtResource("1_urc7o")]([])
 armor = Array[ExtResource("1_urc7o")]([])
-buffs = Array[ExtResource("2_gsn8a")]([])
-debuffs = Array[ExtResource("3_4ty2i")]([])
+status_effects = Array[ExtResource("4_vobd5")]([])
 special_reactions = Array[int]([0])
 healing = 0
 cooldown = 0

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d25gbowo88gdv" path="res://scenes/session_settings/big_button.tscn" id="3_mjfei"]
 [ext_resource type="Theme" uid="uid://kldlvd6qmeiv" path="res://resources/big_button_highlight_theme.tres" id="4_p44ky"]
 [ext_resource type="Texture2D" uid="uid://plgvx6ca866i" path="res://assets/ui/MAIN ARENA SELECT.png" id="5_omtcd"]
-[ext_resource type="Script" path="res://data/locations/location_data.gd" id="6_rlba2"]
+[ext_resource type="Script" path="res://data/scripts/location_data.gd" id="6_rlba2"]
 [ext_resource type="Resource" uid="uid://ceqhyanhgbbnu" path="res://data/locations/the_old_mill.tres" id="7_4kfuu"]
 [ext_resource type="Texture2D" uid="uid://dxrlfburrobob" path="res://assets/ui/arrow right.png" id="8_by1rr"]
 [ext_resource type="Resource" uid="uid://b5akrkfsutc6e" path="res://data/locations/blood_palace.tres" id="8_oj5um"]

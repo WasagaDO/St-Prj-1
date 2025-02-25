@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cy0objp05lqf6"]
-
-[ext_resource type="Script" path="res://scenes/battle/events/battle_events/buff_event.gd" id="1_syg55"]
-
-[node name="BuffEvent" type="Node2D"]
-script = ExtResource("1_syg55")
-event_type = 5

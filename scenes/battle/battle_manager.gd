@@ -13,10 +13,10 @@ enum Turn {
 var queued_attack;
 
 @export var enemies:Array[Enemy];
-var acting_combatant;
+var acting_combatant:Combatant;
 
 var turn_order = -1;
-var reaction_happened_this_turn = false;
+var move_reacted_to = false;
 var waiting_for_player_reaction:bool = false;
 var game_over:bool = false;
 # Called when the node enters the scene tree for the first time.
@@ -26,15 +26,16 @@ func _ready():
 	await get_tree().process_frame
 	BattleSignals.start_game.emit();
 	increment_turn_order();
-	
 func increment_turn_order():
 	if game_over: return;
-	reaction_happened_this_turn = false;
+	BattleSignals.end_turn.emit(acting_combatant);
+	move_reacted_to = false;
 	turn_order += 1;
 	if turn_order == 0:
 		acting_combatant = player;
 	else:
 		acting_combatant = enemies[turn_order-1]
+		acting_combatant.increment_turn();
 	# this would mean we've gone through the player and all the enemies.
 	if turn_order == enemies.size():
 		turn_order = -1;
@@ -47,9 +48,9 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 		source.add_stamina(-card.stamina_cost);
 	if card.card_type == CardData.CardType.REACTION:
 		waiting_for_player_reaction = false;
-		reaction_happened_this_turn = true;
+		move_reacted_to = true;
 
-	if card.card_type == CardData.CardType.ATTACK and not reaction_happened_this_turn:
+	if card.card_type == CardData.CardType.ATTACK and not move_reacted_to:
 		# let's put this away for now
 		queued_attack = {"card": card, "source": source, "target": target}
 		if target is Enemy:
@@ -84,7 +85,8 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 		resolve_card(card, source, target);
 	
 
-func resolve_card(card:CardData, source:Combatant, target:Combatant):
+func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn:bool = false):
+	BattleSignals.card_resolved.emit(source, target, card)
 	if card.card_type == CardData.CardType.REACTION:
 		for special:CardData.Reaction in card.special_reactions:
 			if special == CardData.Reaction.DODGE:
@@ -92,22 +94,8 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant):
 				# the attack that was incoming has been dodged,
 				# so it can no longer be resolved.
 				queued_attack = null;
-
-	#resolving the card's effects
-	# we apply the negative effects to the combatant being targeted
-	for damage in card.damage:
-		if damage.amt > 0:
-			target.apply_damage(source, damage.amt, damage.type)
-	for debuff:DebuffData in card.debuffs:
-		target.apply_debuff(source, debuff.type, debuff.stacks);
 	
-	# we apply the positive effects of the card to the combatant playing the card
-	if card.healing > 0:
-		target.apply_healing(card.healing);
-	for armor:ArmorData in card.armor:
-		target.apply_armor(armor.type, armor.amt); 
-	for buff:BuffData in card.buffs:
-		target.apply_buff(buff.type, buff.stacks);
+	target.apply_effect(source, card)
 
 	# we've just resolved whatever this card was,
 	# so it's possible the player or the targeted enemy is dead.
@@ -119,13 +107,11 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant):
 	else:
 		queued_attack = null;
 	
+	
 	# it's possible the last enemy died from this,
 	# or the player did.
 	check_for_end_of_battle();
-	
-	if acting_combatant is Enemy:
-		increment_turn_order();
-	
+	if game_over: return;
 
 func attack_can_resolve(attack):
 	if attack == null: return false;
@@ -157,7 +143,7 @@ func _on_enemy_move_made(enemy, move):
 	BattleSignals.enemy_move_played.emit(enemy, player, move);
 	on_card_played(move, enemy, player);
 
-	
+
 func _on_end_turn_button_pressed():
 	# if this button is pressed while waiting for player reaction,
 	# it indicates that the player declined to react.
@@ -166,3 +152,14 @@ func _on_end_turn_button_pressed():
 		resolve_card(queued_attack.card, queued_attack.source, queued_attack.target);
 	else:
 		increment_turn_order();
+
+
+
+func _on_events_queue_empty() -> void:
+	if waiting_for_player_reaction or game_over: return;
+	if acting_combatant is Enemy:
+		if acting_combatant.completed_turn:
+			increment_turn_order();
+		else:
+			move_reacted_to = false;
+			acting_combatant.act();

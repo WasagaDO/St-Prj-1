@@ -24,10 +24,8 @@ enum Reaction {
 
 @export var armor:Array[ArmorData] = [];
 
-@export var buffs:Array[BuffData] = [];
-
-@export var debuffs:Array[DebuffData] = [];
-
+## Dictionary from status effect to stacks
+@export var status_effects:Array[StatusEffectData] = [];
 ## Actions that relate to the attack coming in, and can't be represented in data.
 @export var special_reactions:Array[Reaction] = [];
 
@@ -35,3 +33,5 @@ enum Reaction {
 
 ## In turns. Only relevant for enemy reactions.
 @export var cooldown:int = 0;
+
+@export var apply_to_self:bool = false;
