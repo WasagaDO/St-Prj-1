@@ -38,5 +38,6 @@ apply_to_self = false
 
 [resource]
 script = ExtResource("4_g38t8")
+log_name = "Active Defense"
 timing = 2
 effect = SubResource("Resource_wl705")

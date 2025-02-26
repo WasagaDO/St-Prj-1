@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://cvp83fjtisnpi"]
+[gd_scene load_steps=58 format=3 uid="uid://cvp83fjtisnpi"]
 
 [ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_0hcyc"]
 [ext_resource type="PackedScene" uid="uid://dlgug5h82pnj5" path="res://scenes/battle/ui/bars/bars.tscn" id="4_6f28h"]
@@ -44,6 +44,8 @@
 [ext_resource type="PackedScene" uid="uid://b7jk4c6e3tluy" path="res://scenes/battle/events/react_events/attack_dodged_event.tscn" id="42_i3ye5"]
 [ext_resource type="PackedScene" uid="uid://cbinw3r6wni0k" path="res://scenes/battle/events/battle_events/card_resolved_event.tscn" id="44_gpbrr"]
 [ext_resource type="PackedScene" uid="uid://qjn0sxvwnccc" path="res://scenes/battle/events/battle_events/end_turn_event.tscn" id="44_i32r0"]
+[ext_resource type="PackedScene" uid="uid://c60ncshk4otu6" path="res://scenes/battle/events/battle_events/status_applied.tscn" id="45_40ag2"]
+[ext_resource type="PackedScene" uid="uid://ij7gsovl7fxo" path="res://scenes/battle/events/battle_events/status_wore_off.tscn" id="46_7a5bm"]
 
 [sub_resource type="Resource" id="Resource_yqjmm"]
 script = ExtResource("9_dn6dx")
@@ -322,7 +324,7 @@ deck = NodePath("../Cards/Deck")
 dealer = NodePath("../Cards/Dealer")
 discard_pile = NodePath("../Cards/DiscardPile")
 state_overlay = NodePath("../UI/CanvasLayer/StateOverlay")
-event_handlers = Array[PackedScene]([ExtResource("34_a8wsi"), ExtResource("36_s0fps"), ExtResource("33_1yotk"), ExtResource("35_8dhsw"), ExtResource("42_i3ye5"), ExtResource("39_gh2so"), ExtResource("37_mpgih"), ExtResource("40_18j3u"), ExtResource("41_ho70s"), ExtResource("40_t6ak5"), ExtResource("41_jpniv"), ExtResource("44_gpbrr"), ExtResource("44_i32r0")])
+event_handlers = Array[PackedScene]([ExtResource("34_a8wsi"), ExtResource("36_s0fps"), ExtResource("33_1yotk"), ExtResource("35_8dhsw"), ExtResource("42_i3ye5"), ExtResource("39_gh2so"), ExtResource("37_mpgih"), ExtResource("40_18j3u"), ExtResource("41_ho70s"), ExtResource("40_t6ak5"), ExtResource("41_jpniv"), ExtResource("44_gpbrr"), ExtResource("44_i32r0"), ExtResource("45_40ag2"), ExtResource("46_7a5bm")])
 end_turn_button = NodePath("../UI/EndTurnButton")
 darken_overlay = NodePath("../ColorRect")
 stat_popups_player = NodePath("../UI/StatusPopups_Player")

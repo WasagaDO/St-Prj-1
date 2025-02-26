@@ -23,7 +23,6 @@ enum EventType {
 	CARD_RESOLVED,
 	END_TURN,
 	STATUS_APPLIED,
-	STATUS_EFFECT_APPLIED,
 	STATUS_WORE_OFF
 }
 
@@ -130,6 +129,11 @@ func _ready() -> void:
 			"darken_overlay": darken_overlay
 		})
 	)
+	
+	BattleSignals.status_applied.connect(func(target, status_effect):
+		push_event(EventType.STATUS_APPLIED, {"target": target, "status_effect": status_effect}))
+	BattleSignals.status_applied.connect(func(target, status_effect):
+		push_event(EventType.STATUS_WORE_OFF, {"target": target, "status_effect": status_effect}))
 	
 func push_battle_event(event_type, source, target, amt, type):
 	push_event(event_type, {

@@ -50,13 +50,10 @@ func apply_status_effects():
 		var effect:CardData = status.effect;
 		if status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
 			effect = BattleUtil.reverse_effect(effect);
-		# TODO: communicate that the status is giving the effect.
-		# maybe "source" can be a bit more lenient in BattleSignals.
-		# or figure it out some other way.
 		if 	status.timing == StatusEffectData.Timing.ON_WORN_OFF or \
 			status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
 			for i in range(0, status_effects[status]):
-				apply_effect(self, effect);
+				apply_effect(status, effect);
 		
 		BattleSignals.status_wore_off.emit(self, status);
 		status_effects[status]-=1;
@@ -94,7 +91,7 @@ func apply_armor(type:DamageType, amt:int):
 	bars.armor[type].value = armor[type];
 	BattleSignals.armor_applied.emit(self, self, amt, type);
 
-func apply_effect(source:Combatant, effect:CardData):
+func apply_effect(source, effect:CardData):
 	for damage in effect.damage:
 		if damage.amt > 0:
 			apply_damage(source, damage.amt, damage.type)
