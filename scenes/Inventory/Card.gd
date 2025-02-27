@@ -18,8 +18,6 @@ enum SecondaryTypes {
 @export var type: Types = Types.PHY
 @export var type2: SecondaryTypes
 @export var level: int
-
-@onready var card_pic: TextureRect = $CardPic
 @onready var title_label: Label = $VBoxContainer/Title
 @onready var type_label: Label = $VBoxContainer/Type
 @onready var level_label: Label = $"VBoxContainer/Lvl"

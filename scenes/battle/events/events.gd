@@ -48,11 +48,13 @@ var current_event:Event
 
 signal queue_empty();
 func _ready() -> void:
+	
+	## would love to figure out a better way to do this.
+	## 
 	for handler in event_handlers:
 		var temp_event = handler.instantiate();
 		event_map[temp_event.event_type] = handler;
 		temp_event.queue_free();
-	
 	BattleSignals.start_game.connect(func():
 		push_event(EventType.START_OF_GAME, {"state_overlay": state_overlay})	
 	)
@@ -131,9 +133,9 @@ func _ready() -> void:
 	)
 	
 	BattleSignals.status_applied.connect(func(target, status_effect):
-		push_event(EventType.STATUS_APPLIED, {"target": target, "status_effect": status_effect}))
-	BattleSignals.status_applied.connect(func(target, status_effect):
-		push_event(EventType.STATUS_WORE_OFF, {"target": target, "status_effect": status_effect}))
+		push_event(EventType.STATUS_APPLIED, {"target": target, "status": status_effect}))
+	BattleSignals.status_wore_off.connect(func(target, status_effect):
+		push_event(EventType.STATUS_WORE_OFF, {"target": target, "status": status_effect}))
 	
 func push_battle_event(event_type, source, target, amt, type):
 	push_event(event_type, {

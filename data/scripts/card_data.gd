@@ -34,4 +34,4 @@ enum Reaction {
 ## In turns. Only relevant for enemy reactions.
 @export var cooldown:int = 0;
 
-@export var apply_to_self:bool = false;
+@export var needs_target:bool = true;

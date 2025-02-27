@@ -26,3 +26,4 @@ func reverse_effect(effect:CardData):
 	reversed_effect.healing *= -1;
 	for damage in reversed_effect.damage:
 		damage.amt *= -1;
+	return reversed_effect

@@ -20,4 +20,4 @@ status_effects = Array[ExtResource("4_1nas7")]([ExtResource("5_1px4w")])
 special_reactions = Array[int]([])
 healing = 0
 cooldown = 0
-apply_to_self = true
+needs_target = false

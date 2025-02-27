@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=12 format=3 uid="uid://kffdlj5dqjq3"]
+[gd_resource type="Resource" script_class="EnemyData" load_steps=15 format=3 uid="uid://kffdlj5dqjq3"]
 
 [ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_i1770"]
 [ext_resource type="Script" path="res://data/scripts/enemy_turn_data.gd" id="2_p4mp8"]
@@ -8,6 +8,21 @@
 [ext_resource type="Resource" uid="uid://b1jc4jqifkrq1" path="res://data/enemes/goatman/strong_swing.tres" id="6_jsc2w"]
 [ext_resource type="Resource" uid="uid://bd0o06bvjx2v4" path="res://data/enemes/goatman/bounce.tres" id="7_5qt0f"]
 [ext_resource type="Script" path="res://data/scripts/enemy_data.gd" id="8_6y6y3"]
+
+[sub_resource type="Resource" id="Resource_ihh8v"]
+script = ExtResource("1_i1770")
+type = 0
+amt = 0
+
+[sub_resource type="Resource" id="Resource_b0pht"]
+script = ExtResource("1_i1770")
+type = 1
+amt = 0
+
+[sub_resource type="Resource" id="Resource_1d228"]
+script = ExtResource("1_i1770")
+type = 2
+amt = 0
 
 [sub_resource type="Resource" id="Resource_1n4rt"]
 script = ExtResource("2_p4mp8")
@@ -27,4 +42,4 @@ name = "Goatman"
 moves = Array[ExtResource("2_p4mp8")]([SubResource("Resource_1n4rt"), SubResource("Resource_t3kag"), SubResource("Resource_0wrom")])
 reactions = Array[ExtResource("3_sajlm")]([ExtResource("7_5qt0f")])
 max_hp = 36
-armor = Array[ExtResource("1_i1770")]([])
+armor = Array[ExtResource("1_i1770")]([SubResource("Resource_ihh8v"), SubResource("Resource_b0pht"), SubResource("Resource_1d228")])

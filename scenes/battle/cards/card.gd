@@ -82,7 +82,7 @@ func setup(new_data:CardData):
 	stamina.text = str(data.stamina_cost);
 	speed.text = str(data.speed);
 	
-	needs_target = not data.apply_to_self
+	needs_target = data.needs_target
 func change_state(new_state:CardState):
 	var old_state = state;
 	state = new_state;

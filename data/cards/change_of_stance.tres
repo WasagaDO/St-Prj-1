@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://cwxyxks5e2nqy"]
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://cwxyxks5e2nqy"]
 
 [ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_vs0y1"]
 [ext_resource type="Script" path="res://data/scripts/card_data.gd" id="4_7vv52"]
 [ext_resource type="Texture2D" uid="uid://dgu6abduaxdcd" path="res://assets/card_art/change_of_stance.png" id="4_i455k"]
+[ext_resource type="Script" path="res://data/scripts/status_effect.gd" id="4_tjrbd"]
 
 [resource]
 script = ExtResource("4_7vv52")
@@ -12,7 +13,10 @@ image = ExtResource("4_i455k")
 stamina_cost = 0
 card_type = 1
 speed = 0
-damage = 0
-damage_type = 0
-healing = 0
+damage = Array[ExtResource("1_vs0y1")]([])
 armor = Array[ExtResource("1_vs0y1")]([])
+status_effects = Array[ExtResource("4_tjrbd")]([])
+special_reactions = Array[int]([])
+healing = 0
+cooldown = 0
+needs_target = false

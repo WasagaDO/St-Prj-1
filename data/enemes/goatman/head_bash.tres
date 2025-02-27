@@ -22,4 +22,4 @@ status_effects = Array[ExtResource("3_ygy3u")]([])
 special_reactions = Array[int]([])
 healing = 0
 cooldown = 0
-apply_to_self = false
+needs_target = true

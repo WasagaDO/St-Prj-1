@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ij7gsovl7fxo"]
 
-[ext_resource type="Script" path="res://scenes/battle/events/event.gd" id="1_2lm7c"]
+[ext_resource type="Script" path="res://scenes/battle/events/battle_events/status_wore_off.gd" id="1_xoxlo"]
 
 [node name="StatusWoreOff" type="Node2D"]
-script = ExtResource("1_2lm7c")
+script = ExtResource("1_xoxlo")
 event_type = 16

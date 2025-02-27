@@ -21,3 +21,4 @@ status_effects = Array[ExtResource("4_vobd5")]([])
 special_reactions = Array[int]([0])
 healing = 0
 cooldown = 0
+needs_target = false

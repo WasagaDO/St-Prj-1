@@ -47,17 +47,18 @@ func initialize_bars():
 
 func apply_status_effects():
 	for status:StatusEffectData in status_effects.keys():
-		var effect:CardData = status.effect;
-		if status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
-			effect = BattleUtil.reverse_effect(effect);
-		if 	status.timing == StatusEffectData.Timing.ON_WORN_OFF or \
-			status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
-			for i in range(0, status_effects[status]):
-				apply_effect(status, effect);
-		
-		BattleSignals.status_wore_off.emit(self, status);
-		status_effects[status]-=1;
-		if status_effects[status] < 0: status_effects[status] = 0;
+		# if we don't have any stacks, there's nothing to wear off.
+		if status_effects[status] > 0:
+			var effect:CardData = status.effect;
+			if status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
+				effect = BattleUtil.reverse_effect(effect);
+			if 	status.timing == StatusEffectData.Timing.ON_WORN_OFF or \
+				status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
+				for i in range(0, status_effects[status]):
+					apply_effect(status, effect);
+			
+			BattleSignals.status_wore_off.emit(self, status);
+			status_effects[status]-=1;
 func apply_damage(source:Combatant, damage:int, type:DamageType):
 	var armor_amt = 0 if not armor.has(type) else armor[type];
 	var damage_to_armor = damage * 0.8;
@@ -68,14 +69,13 @@ func apply_damage(source:Combatant, damage:int, type:DamageType):
 	if hp < 0: hp = 0;
 	if armor_amt < 0: armor_amt = 0;
 	
-	bars.hp_bar.value = hp;
-	if type != DamageType.NONE:
-		bars.armor[type].value = armor_amt;
 	
+
+	
+	armor[type] = armor_amt;
 	if armor_amt > 0:
 		BattleSignals.armor_damage_applied.emit(source, self, roundi(damage_to_armor), type);
 	BattleSignals.damage_applied.emit(source, self, roundi(damage_to_health), DamageType.NONE);
-	armor[type] = armor_amt;
 
 func apply_healing(amt:int):
 	hp += amt;

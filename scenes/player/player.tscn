@@ -597,7 +597,7 @@ remote_path = NodePath("../../../../../poligons/Protagonist-final0001Behind-left
 [node name="ShoulderR" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmR"]
 position = Vector2(-303, 351)
 rotation = 0.0347757
-scale = Vector2(0.999998, 0.999998)
+scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(0.999395, 0.0347687, -0.0347687, 0.999395, -303, 351)
 auto_calculate_length_and_angle = false
 length = 552.385
