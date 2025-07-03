@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://bvjwyq472xwh"]
 
-[ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_gl6ek"]
-[ext_resource type="Script" path="res://data/scripts/status_effect.gd" id="3_ygy3u"]
-[ext_resource type="Script" path="res://data/scripts/card_data.gd" id="4_bmtos"]
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_gl6ek"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_ygy3u"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_bmtos"]
 
 [sub_resource type="Resource" id="Resource_w01bj"]
 script = ExtResource("1_gl6ek")

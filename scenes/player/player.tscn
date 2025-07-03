@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://bihp7rr2uqxld"]
 
-[ext_resource type="Script" path="res://scenes/player/warrior.gd" id="1_nlwd0"]
+[ext_resource type="Script" uid="uid://dcw0unoyolluo" path="res://scenes/player/warrior.gd" id="1_nlwd0"]
 [ext_resource type="Texture2D" uid="uid://uaomgn6uhek2" path="res://assets/mainHERO/Protagonist-Final_0003_Shield.png" id="3_d1xxc"]
 [ext_resource type="Texture2D" uid="uid://beg12yhlym5wi" path="res://assets/mainHERO/Protagonist-Final_0011_Waist-Cloth-behind.png" id="3_g6h52"]
 [ext_resource type="Texture2D" uid="uid://bpaq3peufovem" path="res://assets/mainHERO/Protagonist-Final_0009_Behind-Right-Foot.png" id="4_h8xr0"]
@@ -458,8 +458,8 @@ tracks/17/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_78aug"]
 _data = {
-"RESET": SubResource("Animation_xq1u5"),
-"Stand": SubResource("Animation_gmw8i")
+&"RESET": SubResource("Animation_xq1u5"),
+&"Stand": SubResource("Animation_gmw8i")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3mog"]
@@ -686,7 +686,7 @@ remote_path = NodePath("../../../../../poligons/Protagonist-final0003Shield")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_78aug")
+&"": SubResource("AnimationLibrary_78aug")
 }
 speed_scale = 1.398
 

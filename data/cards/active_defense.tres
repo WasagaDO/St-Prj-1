@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://mlcyxfv2ivp0"]
 
-[ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_latiy"]
-[ext_resource type="Script" path="res://data/scripts/status_effect.gd" id="4_1nas7"]
-[ext_resource type="Script" path="res://data/scripts/card_data.gd" id="4_dx4y5"]
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_latiy"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_1nas7"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_dx4y5"]
 [ext_resource type="Texture2D" uid="uid://bq44re1wqbv32" path="res://assets/card_art/active_defense.png" id="4_pildl"]
 [ext_resource type="Resource" uid="uid://br42hnpsroipc" path="res://data/status_effects/active_defense.tres" id="5_1px4w"]
 

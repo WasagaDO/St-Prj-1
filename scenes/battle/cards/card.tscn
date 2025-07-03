@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://brc8fwhvn5s1l"]
 
 [ext_resource type="Texture2D" uid="uid://bpypr716gy2ll" path="res://assets/cards/card_back_3.png" id="2_6c3ux"]
-[ext_resource type="Script" path="res://scenes/battle/cards/card.gd" id="2_qoqoa"]
+[ext_resource type="Script" uid="uid://doxn858mu40ix" path="res://scenes/battle/cards/card.gd" id="2_qoqoa"]
 [ext_resource type="Texture2D" uid="uid://duxhlxs02x7lc" path="res://assets/cards/card design.png" id="3_ecsgj"]
 [ext_resource type="Texture2D" uid="uid://bq44re1wqbv32" path="res://assets/card_art/active_defense.png" id="4_8mdnb"]
 [ext_resource type="FontFile" uid="uid://krn0i701mii6" path="res://assets/fonts/MAYFLOWERANTIQUE (1)(1)(2).TTF" id="5_0m76m"]
