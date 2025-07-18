@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://krn0i701mii6" path="res://assets/fonts/MAYFLOWERANTIQUE (1)(1)(2).TTF" id="5_0m76m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7mex"]
-size = Vector2(212.5, 339)
+size = Vector2(212.5, 426)
 
 [sub_resource type="LabelSettings" id="LabelSettings_d12nj"]
 font = ExtResource("5_0m76m")
@@ -42,7 +42,7 @@ position = Vector2(7, 8)
 texture = ExtResource("2_6c3ux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8.25, -0.5)
+position = Vector2(-8.25, 43)
 shape = SubResource("RectangleShape2D_v7mex")
 
 [node name="FrontFace" type="Node2D" parent="."]

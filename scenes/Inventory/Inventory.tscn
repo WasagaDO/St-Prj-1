@@ -1,8 +1,8 @@
 [gd_scene load_steps=49 format=3 uid="uid://bri2nfm1lp86i"]
 
-[ext_resource type="Script" path="res://scenes/Inventory/Card.gd" id="1_q6xp5"]
-[ext_resource type="Script" path="res://scenes/Inventory/Inventory.gd" id="1_tp6t7"]
-[ext_resource type="Script" path="res://scenes/Inventory/DescriptionCard.gd" id="2_olkvm"]
+[ext_resource type="Script" uid="uid://7qnddkoi4ew" path="res://scenes/Inventory/Card.gd" id="1_q6xp5"]
+[ext_resource type="Script" uid="uid://d3uvg6ump6pcs" path="res://scenes/Inventory/Inventory.gd" id="1_tp6t7"]
+[ext_resource type="Script" uid="uid://bhs821b8pd054" path="res://scenes/Inventory/DescriptionCard.gd" id="2_olkvm"]
 [ext_resource type="Texture2D" uid="uid://cc10hn8537i86" path="res://scenes/Inventory/Hero_s Table/hero_s table.png" id="2_qw5tc"]
 [ext_resource type="Texture2D" uid="uid://dchq5rinbngm" path="res://scenes/Inventory/Hero_s Table/TableButtons/GoBackButton.png" id="3_7tsdn"]
 [ext_resource type="Texture2D" uid="uid://yy6cjs55jcit" path="res://scenes/Inventory/Hero_s Table/Filter/FilterNormal.png" id="3_spx18"]

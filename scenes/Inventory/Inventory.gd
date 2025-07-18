@@ -21,10 +21,15 @@ func _ready() -> void:
 
 func card_hover(card: InventoryCard):
 	description_card.title = card.title
-	description_card.card_pic.texture = card.card_pic.texture
+	description_card.card_pic.texture = card.get_node("CardPic").texture
+
+	print("card.texture:", card.get_node("CardPic").texture)
 	description_card.type = card.get_type_string(card.type)
 	description_card.type2 = card.get_secondary_type_string(card.type2)
 	description_card.level = str(card.level)
+	description_card.update()
+
+
 
 var filtered_type: InventoryCard.Types = InventoryCard.Types.NONE
 var filtered_secondary_type: InventoryCard.SecondaryTypes = InventoryCard.SecondaryTypes.NONE
