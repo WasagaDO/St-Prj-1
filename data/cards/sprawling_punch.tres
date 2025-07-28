@@ -12,10 +12,10 @@ amt = 7
 
 [resource]
 script = ExtResource("4_npxhb")
-description = "Deal 7 crushing damage"
+description = "Deal 7 crushing damage."
 name = "Sprawling Punch"
 image = ExtResource("4_rptus")
-stamina_cost = 0
+stamina_cost = 3
 card_type = 0
 speed = -1
 damage = Array[ExtResource("1_wcboa")]([SubResource("Resource_7vnum")])
@@ -23,5 +23,6 @@ armor = Array[ExtResource("1_wcboa")]([])
 status_effects = Array[ExtResource("4_28m3t")]([])
 special_reactions = Array[int]([])
 healing = 0
+balance_healing = 0
 cooldown = 0
 needs_target = true

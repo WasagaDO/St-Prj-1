@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://cxyoa1xb7n354"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_1oxb5"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_tm5gl"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_57nyt"]
+
+[sub_resource type="Resource" id="Resource_1oxb5"]
+script = ExtResource("1_1oxb5")
+type = 0
+amt = 12
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_tm5gl")
+description = "Deal 12 crushing damage."
+name = "Crushing Blow"
+stamina_cost = 0
+card_type = 0
+speed = 0
+damage = Array[ExtResource("1_1oxb5")]([SubResource("Resource_1oxb5")])
+armor = Array[ExtResource("1_1oxb5")]([])
+status_effects = Array[ExtResource("3_57nyt")]([])
+special_reactions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

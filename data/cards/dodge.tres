@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://cxhlhjaxt1da"]
 
-[ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_urc7o"]
-[ext_resource type="Script" path="res://data/scripts/card_data.gd" id="4_ti3uk"]
-[ext_resource type="Script" path="res://data/scripts/status_effect.gd" id="4_vobd5"]
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_urc7o"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_ti3uk"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_vobd5"]
 [ext_resource type="Texture2D" uid="uid://cbo1yphvomu7q" path="res://assets/card_art/dodge.png" id="4_yl7pi"]
 
 [resource]

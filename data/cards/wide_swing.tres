@@ -12,7 +12,7 @@ amt = 7
 
 [resource]
 script = ExtResource("4_pl4bd")
-description = "Deal 7 slashing damage"
+description = "Deal 7 slashing damage."
 name = "Wide Swing"
 image = ExtResource("4_d75gh")
 stamina_cost = 5
@@ -23,5 +23,6 @@ armor = Array[ExtResource("1_8rjlj")]([])
 status_effects = Array[ExtResource("4_ynpha")]([])
 special_reactions = Array[int]([])
 healing = 0
+balance_healing = 0
 cooldown = 0
 needs_target = true

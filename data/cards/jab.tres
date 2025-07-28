@@ -12,7 +12,7 @@ amt = 4
 
 [resource]
 script = ExtResource("4_k27ah")
-description = "Deal 4 piercing damage"
+description = "Deal 4 piercing damage."
 name = "Jab"
 image = ExtResource("4_bkwlg")
 stamina_cost = 3
@@ -23,5 +23,6 @@ armor = Array[ExtResource("1_pb6ff")]([])
 status_effects = Array[ExtResource("4_i5cxq")]([])
 special_reactions = Array[int]([])
 healing = 0
+balance_healing = 0
 cooldown = 0
 needs_target = true

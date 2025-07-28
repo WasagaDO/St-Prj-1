@@ -12,7 +12,7 @@ amt = 4
 
 [resource]
 script = ExtResource("4_7mgvq")
-description = "Deal 4 slashing damage"
+description = "Deal 4 slashing damage."
 name = "Horizontal Cut"
 image = ExtResource("4_gxw06")
 stamina_cost = 3
@@ -23,5 +23,6 @@ armor = Array[ExtResource("1_81nnw")]([])
 status_effects = Array[ExtResource("4_j3502")]([])
 special_reactions = Array[int]([])
 healing = 0
+balance_healing = 0
 cooldown = 0
 needs_target = true

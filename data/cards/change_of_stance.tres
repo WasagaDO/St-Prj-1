@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://cwxyxks5e2nqy"]
 
-[ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_vs0y1"]
-[ext_resource type="Script" path="res://data/scripts/card_data.gd" id="4_7vv52"]
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_vs0y1"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_7vv52"]
 [ext_resource type="Texture2D" uid="uid://dgu6abduaxdcd" path="res://assets/card_art/change_of_stance.png" id="4_i455k"]
-[ext_resource type="Script" path="res://data/scripts/status_effect.gd" id="4_tjrbd"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_tjrbd"]
 
 [resource]
 script = ExtResource("4_7vv52")
-description = ""
+description = "Heal 20 balance."
 name = "Change of Stance"
 image = ExtResource("4_i455k")
-stamina_cost = 0
+stamina_cost = 3
 card_type = 1
 speed = 0
 damage = Array[ExtResource("1_vs0y1")]([])
@@ -18,5 +18,6 @@ armor = Array[ExtResource("1_vs0y1")]([])
 status_effects = Array[ExtResource("4_tjrbd")]([])
 special_reactions = Array[int]([])
 healing = 0
+balance_healing = 0
 cooldown = 0
 needs_target = false

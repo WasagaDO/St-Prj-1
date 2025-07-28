@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://c5w4nklj85i0j"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_dav0n"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_ijm3n"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_i26ma"]
+
+[sub_resource type="Resource" id="Resource_dav0n"]
+script = ExtResource("1_dav0n")
+type = 0
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_ijm3n"]
+script = ExtResource("1_dav0n")
+type = 3
+amt = 5
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_i26ma"]
+script = ExtResource("3_i26ma")
+log_name = "Stun"
+timing = 0
+metadata/_custom_type_script = "uid://bgj73ykcpodne"
+
+[resource]
+script = ExtResource("2_ijm3n")
+description = "Deal 4 crushing damage and apply Stun. Deal 5 balance damage."
+name = "Shield Bash"
+stamina_cost = 3
+card_type = 0
+speed = 0
+damage = Array[ExtResource("1_dav0n")]([SubResource("Resource_dav0n"), SubResource("Resource_ijm3n")])
+armor = Array[ExtResource("1_dav0n")]([])
+status_effects = Array[ExtResource("3_i26ma")]([SubResource("Resource_i26ma")])
+special_reactions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

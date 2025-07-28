@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://bce3c3hqkmne2"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_3ls1m"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_12agl"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_7135w"]
+
+[sub_resource type="Resource" id="Resource_3ls1m"]
+script = ExtResource("1_3ls1m")
+type = 3
+amt = 15
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_12agl"]
+script = ExtResource("3_7135w")
+log_name = "Stun"
+timing = 0
+metadata/_custom_type_script = "uid://bgj73ykcpodne"
+
+[resource]
+script = ExtResource("2_12agl")
+description = "Deal 15 balance damage and apply Stun."
+name = "Weapon Grab"
+stamina_cost = 3
+card_type = 1
+speed = 0
+damage = Array[ExtResource("1_3ls1m")]([SubResource("Resource_3ls1m")])
+armor = Array[ExtResource("1_3ls1m")]([])
+status_effects = Array[ExtResource("3_7135w")]([SubResource("Resource_12agl")])
+special_reactions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

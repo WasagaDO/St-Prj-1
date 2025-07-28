@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bri2nfm1lp86i"]
+[gd_scene load_steps=50 format=3 uid="uid://bri2nfm1lp86i"]
 
 [ext_resource type="Script" uid="uid://7qnddkoi4ew" path="res://scenes/Inventory/Card.gd" id="1_q6xp5"]
 [ext_resource type="Script" uid="uid://d3uvg6ump6pcs" path="res://scenes/Inventory/Inventory.gd" id="1_tp6t7"]
@@ -27,19 +27,20 @@
 [ext_resource type="Texture2D" uid="uid://csmwqtumwq8qp" path="res://scenes/Inventory/Hero_s Table/SortSearch/RandomPressed.png" id="10_sodv1"]
 [ext_resource type="Texture2D" uid="uid://swo58kw8oblp" path="res://scenes/Inventory/Hero_s Table/SortSearch/Search.png" id="11_ev5pc"]
 [ext_resource type="Texture2D" uid="uid://bndhvwv65i0y5" path="res://scenes/Inventory/Hero_s Table/CardHolder/CardHolderNormal.png" id="17_n1ihj"]
+[ext_resource type="Texture2D" uid="uid://mhfxroea62cr" path="res://assets/cards_final/Action Cards/ACTIVE DEFENSE with stamina.png" id="18_n7aan"]
+[ext_resource type="Texture2D" uid="uid://bl4iat4jihltn" path="res://assets/cards_final/Action Cards/DECEPTIVE STRIKE.png" id="20_nspnh"]
 [ext_resource type="Texture2D" uid="uid://bc4o7ek6f21s0" path="res://scenes/Inventory/Cards/active defense.png" id="20_puxs0"]
+[ext_resource type="Texture2D" uid="uid://dyx6ha1m3yd5k" path="res://assets/cards_final/Action Cards/DODGE.png" id="21_0a5el"]
 [ext_resource type="Texture2D" uid="uid://bo1a33mhrklgy" path="res://assets/card_art/FullCards/change of stance.png" id="21_ex84n"]
-[ext_resource type="Texture2D" uid="uid://cj3gchnjc6xii" path="res://assets/card_art/FullCards/deceptive strike.png" id="22_orllb"]
-[ext_resource type="Texture2D" uid="uid://b78msk4xkhfix" path="res://assets/card_art/FullCards/dodge.png" id="23_qqbve"]
+[ext_resource type="Texture2D" uid="uid://gmurh1l7y8h6" path="res://assets/cards_final/Action Cards/HORIZONTAL CUT.png" id="22_4j2t0"]
 [ext_resource type="FontFile" uid="uid://dsgbqt8ne3tjc" path="res://scenes/Inventory/Fonts/BREATHE_FIRE.OTF" id="23_rldjp"]
-[ext_resource type="Texture2D" uid="uid://cl3tm6iotjign" path="res://assets/card_art/FullCards/horizontal cut.png" id="24_tjjd2"]
+[ext_resource type="Texture2D" uid="uid://dkc23sd8fm7pd" path="res://assets/cards_final/Action Cards/LUNGE.png" id="24_n7aan"]
 [ext_resource type="Texture2D" uid="uid://cj1iurx8fjf24" path="res://assets/card_art/FullCards/jab.png" id="25_dwthj"]
-[ext_resource type="Texture2D" uid="uid://chqfx2romdl1u" path="res://assets/card_art/FullCards/lunge.png" id="26_2ap0x"]
-[ext_resource type="Texture2D" uid="uid://bi8j6kl0tplce" path="res://assets/card_art/FullCards/noggin kick.png" id="27_4ojfv"]
-[ext_resource type="Texture2D" uid="uid://bkds3wyklbgw0" path="res://assets/card_art/FullCards/overhead strike.png" id="28_k74ks"]
-[ext_resource type="Texture2D" uid="uid://de1f7jedi2xsy" path="res://assets/card_art/FullCards/sprawling punch.png" id="29_4ohew"]
-[ext_resource type="Texture2D" uid="uid://dp6g0k1b1ng32" path="res://assets/card_art/FullCards/strong overhead kick.png" id="30_x6xh0"]
-[ext_resource type="Texture2D" uid="uid://c7vxboo328e8k" path="res://assets/card_art/FullCards/wide swing.png" id="31_uox5n"]
+[ext_resource type="Texture2D" uid="uid://b3xqnovvuydro" path="res://assets/cards_final/Action Cards/NOGGIN KICK.png" id="25_nspnh"]
+[ext_resource type="Texture2D" uid="uid://3huap7xompmf" path="res://assets/cards_final/Action Cards/OVERHEAD STRIKE.png" id="26_n7aan"]
+[ext_resource type="Texture2D" uid="uid://bc3dhenbr2f1x" path="res://assets/cards_final/Action Cards/SPRAWLING PUNCH.png" id="27_n7aan"]
+[ext_resource type="Texture2D" uid="uid://cpbutydh1jx1i" path="res://assets/cards_final/Action Cards/SOK.png" id="28_n7aan"]
+[ext_resource type="Texture2D" uid="uid://bhfrbhysvy6uy" path="res://assets/cards_final/Action Cards/WIDE SWING.png" id="29_n7aan"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cx5t"]
 bg_color = Color(0.247059, 0.247059, 0.247059, 0)
@@ -461,7 +462,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_puxs0")
+texture = ExtResource("18_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -590,7 +591,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("22_orllb")
+texture = ExtResource("20_nspnh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -656,7 +657,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("23_qqbve")
+texture = ExtResource("21_0a5el")
 expand_mode = 1
 stretch_mode = 5
 
@@ -720,7 +721,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("24_tjjd2")
+texture = ExtResource("22_4j2t0")
 expand_mode = 1
 stretch_mode = 5
 
@@ -852,7 +853,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("26_2ap0x")
+texture = ExtResource("24_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -918,7 +919,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("27_4ojfv")
+texture = ExtResource("25_nspnh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -983,7 +984,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("28_k74ks")
+texture = ExtResource("26_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1048,7 +1049,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("29_4ohew")
+texture = ExtResource("27_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1113,7 +1114,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("30_x6xh0")
+texture = ExtResource("28_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1178,7 +1179,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("31_uox5n")
+texture = ExtResource("29_n7aan")
 expand_mode = 1
 stretch_mode = 5
 

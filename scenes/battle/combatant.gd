@@ -4,13 +4,15 @@ enum DamageType {
 	CRUSHING,
 	CUTTING,
 	PIERCING,
+	BALANCE,  # TEMPORARY PLACEHOLDER, NOT IMPLEMENTED
 	NONE,
 }
 ## 0: Crushing 1: Cutting 2: Piercing
 @export var armor = {
 	DamageType.CRUSHING: 0,
 	DamageType.CUTTING: 1,
-	DamageType.PIERCING: 2
+	DamageType.PIERCING: 2,
+	DamageType.BALANCE:3   # TEMPORARY PLACEHOLDER, NOT IMPLEMENTED
 }
 
 

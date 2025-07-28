@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://m2e55tpcd322"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_tcygy"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_23x1l"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_cruk0"]
+
+[sub_resource type="Resource" id="Resource_tcygy"]
+script = ExtResource("1_tcygy")
+type = 0
+amt = 5
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_23x1l"]
+script = ExtResource("3_cruk0")
+log_name = "Fracture"
+timing = 0
+metadata/_custom_type_script = "uid://bgj73ykcpodne"
+
+[resource]
+script = ExtResource("2_23x1l")
+description = "Deal 5 crushing damage and apply \"Fracture\" to an unarmored enemy."
+name = "Gliding Strike"
+stamina_cost = 6
+card_type = 0
+speed = 1
+damage = Array[ExtResource("1_tcygy")]([SubResource("Resource_tcygy")])
+armor = Array[ExtResource("1_tcygy")]([])
+status_effects = Array[ExtResource("3_cruk0")]([SubResource("Resource_23x1l")])
+special_reactions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

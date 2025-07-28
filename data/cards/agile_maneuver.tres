@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=4 format=3 uid="uid://c2fhjcy37ys7r"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_na3pi"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_dkdjf"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_b6r6p"]
+
+[resource]
+script = ExtResource("2_dkdjf")
+description = "Restore stamina equal to the cost of your previous card."
+name = "Agile Maneuver"
+stamina_cost = 0
+card_type = 1
+speed = 0
+damage = Array[ExtResource("1_na3pi")]([])
+armor = Array[ExtResource("1_na3pi")]([])
+status_effects = Array[ExtResource("3_b6r6p")]([])
+special_reactions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = false
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

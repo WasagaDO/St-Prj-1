@@ -1,18 +1,35 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://ddp41t075pffm"]
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://ddp41t075pffm"]
 
-[ext_resource type="Script" path="res://data/scripts/armor_data.gd" id="1_b6j23"]
-[ext_resource type="Script" path="res://data/scripts/card_data.gd" id="4_ggeiu"]
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_b6j23"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_ggeiu"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_l476p"]
 [ext_resource type="Texture2D" uid="uid://dwfmg6kr6p3j1" path="res://assets/card_art/strong_overhead_kick.png" id="4_lxtip"]
+
+[sub_resource type="Resource" id="Resource_028vd"]
+script = ExtResource("1_b6j23")
+type = 0
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_1od8r"]
+script = ExtResource("1_b6j23")
+type = 1
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 
 [resource]
 script = ExtResource("4_ggeiu")
-description = ""
+description = "Deal 6 crushing and 6 cutting damage."
 name = "Strong Overhead Kick"
 image = ExtResource("4_lxtip")
-stamina_cost = 0
+stamina_cost = 5
 card_type = 0
 speed = 0
-damage = 0
-damage_type = 0
-healing = 0
+damage = Array[ExtResource("1_b6j23")]([SubResource("Resource_028vd"), SubResource("Resource_1od8r")])
 armor = Array[ExtResource("1_b6j23")]([])
+status_effects = Array[ExtResource("4_l476p")]([])
+special_reactions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true

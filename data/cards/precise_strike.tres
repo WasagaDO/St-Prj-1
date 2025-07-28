@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://ev13s10ogqxi"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_j85td"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_34xlw"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_lxyyc"]
+
+[sub_resource type="Resource" id="Resource_j85td"]
+script = ExtResource("1_j85td")
+type = 1
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_34xlw"]
+script = ExtResource("1_j85td")
+type = 2
+amt = 4
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_34xlw")
+description = "Deal 6 slashing and 4 piercing damage. Double the damage if the enemy has a status effect."
+name = "Precise Strike"
+stamina_cost = 5
+card_type = 0
+speed = 1
+damage = Array[ExtResource("1_j85td")]([SubResource("Resource_j85td"), SubResource("Resource_34xlw")])
+armor = Array[ExtResource("1_j85td")]([])
+status_effects = Array[ExtResource("3_lxyyc")]([])
+special_reactions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

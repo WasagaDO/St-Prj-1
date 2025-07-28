@@ -23,5 +23,6 @@ armor = Array[ExtResource("1_cnl6r")]([])
 status_effects = Array[ExtResource("4_y24au")]([])
 special_reactions = Array[int]([])
 healing = 0
+balance_healing = 0
 cooldown = 0
 needs_target = true
