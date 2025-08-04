@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://cvp83fjtisnpi"]
+[gd_scene load_steps=96 format=3 uid="uid://cvp83fjtisnpi"]
 
 [ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_0hcyc"]
 [ext_resource type="PackedScene" uid="uid://dlgug5h82pnj5" path="res://scenes/battle/ui/bars/bars.tscn" id="4_6f28h"]
@@ -11,24 +11,43 @@
 [ext_resource type="Resource" uid="uid://cxhlhjaxt1da" path="res://data/cards/dodge.tres" id="11_van6b"]
 [ext_resource type="Resource" uid="uid://0c2r737s4881" path="res://data/cards/horizontal_cut.tres" id="12_hfool"]
 [ext_resource type="Script" uid="uid://bvgdp22r7k7x7" path="res://scenes/battle/cards/card_manager.gd" id="12_o3gil"]
+[ext_resource type="Resource" uid="uid://m2e55tpcd322" path="res://data/cards/gliding_strike.tres" id="13_kbog3"]
 [ext_resource type="Script" uid="uid://b44yrs38c0yeg" path="res://scenes/battle/battle_manager.gd" id="13_m5uja"]
 [ext_resource type="Resource" uid="uid://b3gpl0mt77wja" path="res://data/cards/jab.tres" id="13_rr1by"]
+[ext_resource type="Resource" uid="uid://bqp6hqt8l66ky" path="res://data/cards/double_strike.tres" id="14_bewwa"]
 [ext_resource type="PackedScene" uid="uid://7b2xta84ie5h" path="res://scenes/battle/ui/target_selection/target_selector.tscn" id="14_ovprx"]
 [ext_resource type="Resource" uid="uid://dkttfuu7htvyw" path="res://data/cards/lunge.tres" id="14_q7opk"]
+[ext_resource type="Resource" uid="uid://bsvmal5boc56b" path="res://data/cards/kick.tres" id="15_b6rjj"]
 [ext_resource type="Resource" uid="uid://cd0ke7keiwnu5" path="res://data/cards/noggin_kick.tres" id="15_jodq2"]
 [ext_resource type="PackedScene" uid="uid://bihp7rr2uqxld" path="res://scenes/player/player.tscn" id="16_8f82i"]
 [ext_resource type="Script" uid="uid://cutn2lfqgnt71" path="res://scenes/battle/cards/dealer.gd" id="16_jltus"]
+[ext_resource type="Resource" uid="uid://by5jslim0rd0f" path="res://data/cards/parry.tres" id="16_r0588"]
 [ext_resource type="Resource" uid="uid://dpgb3yd0f5q31" path="res://data/cards/sprawling_punch.tres" id="17_0jlqh"]
+[ext_resource type="Resource" uid="uid://c5w4nklj85i0j" path="res://data/cards/shield_bash.tres" id="17_0so8e"]
 [ext_resource type="PackedScene" uid="uid://c6eh6dyhgsgg0" path="res://scenes/enemy/enemy.tscn" id="18_nndee"]
+[ext_resource type="Resource" uid="uid://bce3c3hqkmne2" path="res://data/cards/weapon_grab.tres" id="18_s0olx"]
+[ext_resource type="Resource" uid="uid://bskj3wiyc6sdt" path="res://data/cards/feint.tres" id="19_301yo"]
 [ext_resource type="Resource" uid="uid://3mae7wxyuadm" path="res://data/cards/wide_swing.tres" id="19_e5nfj"]
+[ext_resource type="Resource" uid="uid://dpl1x64oa5efg" path="res://data/cards/ramming_strike.tres" id="20_2n5on"]
+[ext_resource type="Resource" uid="uid://c2fhjcy37ys7r" path="res://data/cards/agile_maneuver.tres" id="21_m0fgd"]
+[ext_resource type="Resource" uid="uid://ct40w0eufijbo" path="res://data/cards/powerful_thrust.tres" id="22_ac7wl"]
+[ext_resource type="Resource" uid="uid://7cy4bdn1ctqi" path="res://data/cards/circular_strike.tres" id="23_ytjid"]
+[ext_resource type="Resource" uid="uid://d24cil55sy0hy" path="res://data/cards/distance_control.tres" id="24_03fk3"]
+[ext_resource type="Resource" uid="uid://ophu6ua3hsf0" path="res://data/cards/quick_counterattack.tres" id="25_au34j"]
 [ext_resource type="FontFile" uid="uid://krn0i701mii6" path="res://assets/fonts/MAYFLOWERANTIQUE (1)(1)(2).TTF" id="26_drgew"]
+[ext_resource type="Resource" uid="uid://cxyoa1xb7n354" path="res://data/cards/crushing_blow.tres" id="26_fdqrj"]
 [ext_resource type="Texture2D" uid="uid://d0opntfigbwrf" path="res://assets/ui/backpack closed.png" id="26_si0dq"]
 [ext_resource type="Resource" uid="uid://kffdlj5dqjq3" path="res://data/enemes/goatman/goatman.tres" id="26_vwuyc"]
+[ext_resource type="Resource" uid="uid://cooinsn46rxg7" path="res://data/cards/leg_strike.tres" id="27_becrk"]
 [ext_resource type="Script" uid="uid://cupg58xub85an" path="res://scenes/battle/status_popup_manager.gd" id="27_mfn67"]
 [ext_resource type="PackedScene" uid="uid://vs4mnjf7dn4a" path="res://scenes/battle/ui/status_popup.tscn" id="28_evgrh"]
+[ext_resource type="Resource" uid="uid://ev13s10ogqxi" path="res://data/cards/precise_strike.tres" id="28_x3gp7"]
 [ext_resource type="Script" uid="uid://cjhgdj2g4qopw" path="res://scenes/battle/ui/battle_alert.gd" id="28_xevio"]
+[ext_resource type="Resource" uid="uid://dpblkqhytlh0a" path="res://data/cards/sudden_throw.tres" id="29_bvq7d"]
 [ext_resource type="Script" uid="uid://cyuo7tkv0rbis" path="res://scenes/battle/ui/logs/logs.gd" id="29_mj1lp"]
 [ext_resource type="PackedScene" uid="uid://jquvrnm2nybh" path="res://scenes/battle/ui/logs/log_message.tscn" id="29_wskmf"]
+[ext_resource type="Resource" uid="uid://k65wkgf3houj" path="res://data/cards/power_block.tres" id="30_kaah5"]
+[ext_resource type="Resource" uid="uid://b2gmia7x36kvp" path="res://data/cards/elbow_strike.tres" id="31_dmmaj"]
 [ext_resource type="Script" uid="uid://bd6kq1gnvohy0" path="res://scenes/battle/events/events.gd" id="31_go2ce"]
 [ext_resource type="PackedScene" uid="uid://deqgifofr0xk2" path="res://scenes/battle/events/battle_events/damage_event.tscn" id="33_1yotk"]
 [ext_resource type="PackedScene" uid="uid://fdpp3thjfhyx" path="res://scenes/battle/events/battle_events/armor_damage_event.tscn" id="34_a8wsi"]
@@ -92,6 +111,120 @@ script = ExtResource("9_dn6dx")
 card = ExtResource("8_ff4qw")
 copies = 3
 
+[sub_resource type="Resource" id="Resource_bewwa"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("13_kbog3")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_kbog3"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("14_bewwa")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_folwx"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("15_b6rjj")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_rkb8f"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("16_r0588")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_ajuk0"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("17_0so8e")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_6v43u"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("18_s0olx")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_u3ojb"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("19_301yo")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_lqsp4"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("20_2n5on")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_ema6m"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("21_m0fgd")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_e6ws5"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("22_ac7wl")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_til0e"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("23_ytjid")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_ps7l8"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("24_03fk3")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_cs065"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("25_au34j")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_c7h7c"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("26_fdqrj")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_ascb6"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("27_becrk")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_c5cw1"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("28_x3gp7")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_wfi3p"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("29_bvq7d")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_arddj"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("30_kaah5")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
+[sub_resource type="Resource" id="Resource_xw5x7"]
+script = ExtResource("9_dn6dx")
+card = ExtResource("31_dmmaj")
+copies = 2
+metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
+
 [sub_resource type="LabelSettings" id="LabelSettings_vv33i"]
 font_size = 64
 
@@ -122,7 +255,7 @@ position = Vector2(198, 921)
 scale = Vector2(0.5, 0.5)
 card_manager = NodePath("../CardManager")
 face_down = true
-starting_cards = Array[ExtResource("9_dn6dx")]([SubResource("Resource_yqjmm"), SubResource("Resource_ocq4n"), SubResource("Resource_mqs75"), SubResource("Resource_otbtb"), SubResource("Resource_ugkr7"), SubResource("Resource_ptoyu"), SubResource("Resource_v3khq"), SubResource("Resource_6gbfq"), SubResource("Resource_7ndk8")])
+starting_cards = Array[ExtResource("9_dn6dx")]([SubResource("Resource_yqjmm"), SubResource("Resource_ocq4n"), SubResource("Resource_mqs75"), SubResource("Resource_otbtb"), SubResource("Resource_ugkr7"), SubResource("Resource_ptoyu"), SubResource("Resource_v3khq"), SubResource("Resource_6gbfq"), SubResource("Resource_7ndk8"), SubResource("Resource_bewwa"), SubResource("Resource_kbog3"), SubResource("Resource_folwx"), SubResource("Resource_rkb8f"), SubResource("Resource_ajuk0"), SubResource("Resource_6v43u"), SubResource("Resource_u3ojb"), SubResource("Resource_lqsp4"), SubResource("Resource_ema6m"), SubResource("Resource_e6ws5"), SubResource("Resource_til0e"), SubResource("Resource_ps7l8"), SubResource("Resource_cs065"), SubResource("Resource_c7h7c"), SubResource("Resource_ascb6"), SubResource("Resource_c5cw1"), SubResource("Resource_wfi3p"), SubResource("Resource_arddj"), SubResource("Resource_xw5x7")])
 card_scene = ExtResource("10_cji3i")
 refill_deck = NodePath("../DiscardPile")
 snap_cards_in_place = true

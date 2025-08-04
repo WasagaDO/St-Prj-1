@@ -27,6 +27,7 @@ damage = Array[ExtResource("1_3ls1m")]([SubResource("Resource_3ls1m")])
 armor = Array[ExtResource("1_3ls1m")]([])
 status_effects = Array[ExtResource("3_7135w")]([SubResource("Resource_12agl")])
 special_reactions = Array[int]([])
+special_effect = 0
 healing = 0
 balance_healing = 0
 cooldown = 0

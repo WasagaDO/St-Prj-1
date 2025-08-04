@@ -15,7 +15,7 @@ enum DamageType {
 	DamageType.BALANCE:3   # TEMPORARY PLACEHOLDER, NOT IMPLEMENTED
 }
 
-
+var last_card_played: CardData = null # useful for Agile Maneuver
 
 # status effect data
 var status_effects = {}
@@ -31,6 +31,11 @@ var stamina:int;
 @onready var bars:Bars = $Bars;
 
 @export var log_name:String;
+
+# boosts the speed of the (one) next reaction card by an amount. Used by Distant Control card
+@export var next_reaction_speed_boost:int = 0
+
+
 
 func _ready() -> void:
 	hp = max_hp;
@@ -111,3 +116,22 @@ func apply_effect(source, effect:CardData):
 		if status.timing == StatusEffectData.Timing.ON_APPLIED or \
 			status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
 			apply_effect(source, status.effect);
+
+
+func has_status_effect() -> bool:
+	for status in status_effects.keys():
+		if status_effects[status] > 0:
+			return true
+	return false
+
+
+func increment_stamina(increment: int):
+	stamina += increment
+	if stamina < 0:
+		stamina = 0
+	if stamina > max_stamina:
+		stamina = max_stamina
+
+
+func interrupt_moveset():
+	return

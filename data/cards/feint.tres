@@ -15,6 +15,7 @@ damage = Array[ExtResource("1_g8q53")]([])
 armor = Array[ExtResource("1_g8q53")]([])
 status_effects = Array[ExtResource("3_0tr5c")]([])
 special_reactions = Array[int]([])
+special_effect = 3
 healing = 0
 balance_healing = 0
 cooldown = 0

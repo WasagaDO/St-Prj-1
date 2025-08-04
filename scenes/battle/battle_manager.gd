@@ -42,6 +42,10 @@ func increment_turn_order():
 
 	BattleSignals.new_turn.emit(acting_combatant);
 
+
+
+
+
 func on_card_played(card:CardData, source:Combatant, target:Combatant):
 	var card_can_be_resolved:bool = true;
 	if source is Player:
@@ -79,11 +83,55 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 		source.add_child(attack_animation)
 		attack_animation.combatant_attacked(source)
 	
+	# if the card has a special behaviour, apply it
+	apply_special_effect(card, source, target)
+	
 	# either this is not an attack, or there wasn't any reactions possible.
 	# so we just resolve it.
 	if card_can_be_resolved:
 		resolve_card(card, source, target);
-	
+
+func apply_special_effect(card:CardData, source:Combatant, target:Combatant) -> bool:
+	match card.special_effect:
+		CardData.SpecialEffect.DOUBLE_STRIKE:
+			start_double_strike(source)
+			return false  # Do not resolve this card now, the sequence will handle it.
+		CardData.SpecialEffect.INTERRUPT_ENEMY_MOVESET:
+			target.interrupt_moveset()
+		CardData.SpecialEffect.FORCE_TRIGGER_ENEMY_REACTION:
+			target.force_trigger_reaction()
+		CardData.SpecialEffect.RESTORE_STAMINA_BY_PREVIOUS_CARD_COST:
+			if source.last_card_played != null:
+				source.increment_stamina(source.last_card_played.stamina_cost)
+		CardData.SpecialEffect.DEAL_DAMAGE_TO_ALL_ENEMIES:
+			pass
+		CardData.SpecialEffect.INCRAESE_SPEED_OF_NEXT_REACTION_BY_1:
+			source.next_reaction_speed_boost = 1
+		CardData.SpecialEffect.DOUBLE_DAMAGE_IF_ENEMY_HAS_STATUS_EFFECT:
+			if target.has_status_effect():
+				# Applies double damage manually
+				for dmg in card.damage:
+					target.apply_damage(source, dmg.amt * 2, dmg.type)
+			else:
+				# Apply normal damage
+				for dmg in card.damage:
+					target.apply_damage(source, dmg.amt, dmg.type)
+			return false  # We resolved damage manually.
+		CardData.SpecialEffect.BLOCK_ALL_INCOMING_DAMAGE:
+			pass
+		_:
+			pass  # NONE or unhandled effect.
+	return true  # Return true to let the card continue normal resolution.
+
+
+func start_double_strike(source:Combatant):
+	print("Double strike")
+
+
+
+
+
+
 
 func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn:bool = false):
 	BattleSignals.card_resolved.emit(source, target, card)
@@ -94,7 +142,7 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn
 				# the attack that was incoming has been dodged,
 				# so it can no longer be resolved.
 				queued_attack = null;
-	
+	source.last_card_played = card
 	target.apply_effect(source, card)
 
 	# we've just resolved whatever this card was,
