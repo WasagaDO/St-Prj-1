@@ -8,11 +8,12 @@ enum CardType {
 	REACTION,
 }
 
-enum Reaction {
-	DODGE
+enum SpecialReaction {
+	DODGE,
+	BLOCK
 }
 
-enum SpecialEffect {
+enum SpecialAction {
 	NONE,
 	DOUBLE_STRIKE, # choose 2 attack cards to be played with a discount equal to the cheapest one
 	INTERRUPT_ENEMY_MOVESET,
@@ -21,7 +22,6 @@ enum SpecialEffect {
 	DEAL_DAMAGE_TO_ALL_ENEMIES, # deals the damage of this card but to all enemies
 	INCRAESE_SPEED_OF_NEXT_REACTION_BY_1,
 	DOUBLE_DAMAGE_IF_ENEMY_HAS_STATUS_EFFECT,
-	BLOCK_ALL_INCOMING_DAMAGE,
 	# ... 
 }
 
@@ -41,9 +41,9 @@ enum SpecialEffect {
 ## Dictionary from status effect to stacks
 @export var status_effects:Array[StatusEffectData] = [];
 ## Actions that relate to the attack coming in, and can't be represented in data.
-@export var special_reactions:Array[Reaction] = [];
+@export var special_reactions:Array[SpecialReaction] = [];
 ## Triggers a unique behaviour (coded in battle_manager.gd)
-@export var special_effect: SpecialEffect = SpecialEffect.NONE
+@export var special_actions: Array[SpecialAction] = []
 
 
 

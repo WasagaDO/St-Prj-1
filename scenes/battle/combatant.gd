@@ -76,9 +76,6 @@ func apply_damage(source:Combatant, damage:int, type:DamageType):
 	if hp < 0: hp = 0;
 	if armor_amt < 0: armor_amt = 0;
 	
-	
-
-	
 	armor[type] = armor_amt;
 	if armor_amt > 0:
 		BattleSignals.armor_damage_applied.emit(source, self, roundi(damage_to_armor), type);
@@ -99,14 +96,16 @@ func apply_armor(type:DamageType, amt:int):
 	BattleSignals.armor_applied.emit(self, self, amt, type);
 
 func apply_effect(source, effect:CardData):
+	print("apply_effect()")
+	print("source: ", source.name, " effect: ", effect.name)
 	for damage in effect.damage:
 		if damage.amt > 0:
 			apply_damage(source, damage.amt, damage.type)
 	
 	if effect.healing > 0:
 		apply_healing(effect.healing);
-	for armor:ArmorData in effect.armor:
-		apply_armor(armor.type, armor.amt); 
+	for armor_:ArmorData in effect.armor:
+		apply_armor(armor_.type, armor_.amt); 
 	for status in effect.status_effects:
 		BattleSignals.status_applied.emit(self, status);
 		if status_effects.has(status): 
