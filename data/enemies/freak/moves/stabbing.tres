@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://dcqov8pfro7dg"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_tqx23"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_ru06f"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_kpjaf"]
+
+[sub_resource type="Resource" id="Resource_tqx23"]
+script = ExtResource("1_tqx23")
+type = 2
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_ru06f"]
+script = ExtResource("1_tqx23")
+type = 2
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_kpjaf"]
+script = ExtResource("1_tqx23")
+type = 2
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_ru06f")
+description = ""
+name = "Stabbing"
+stamina_cost = 0
+card_type = 0
+speed = 1
+damage = Array[ExtResource("1_tqx23")]([SubResource("Resource_tqx23"), SubResource("Resource_ru06f"), SubResource("Resource_kpjaf")])
+armor = Array[ExtResource("1_tqx23")]([])
+status_effects = Array[ExtResource("3_kpjaf")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

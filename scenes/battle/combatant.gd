@@ -62,10 +62,13 @@ func apply_status_effects():
 			if 	status.timing == StatusEffectData.Timing.ON_WORN_OFF or \
 				status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
 				for i in range(0, status_effects[status]):
-					apply_effect(status, effect);
+					apply_card_effect(status, effect);
 			
 			BattleSignals.status_wore_off.emit(self, status);
 			status_effects[status]-=1;
+
+
+
 func apply_damage(source:Combatant, damage:int, type:DamageType):
 	var armor_amt = 0 if not armor.has(type) else armor[type];
 	var damage_to_armor = damage * 0.8;
@@ -95,8 +98,8 @@ func apply_armor(type:DamageType, amt:int):
 	bars.armor[type].value = armor[type];
 	BattleSignals.armor_applied.emit(self, self, amt, type);
 
-func apply_effect(source, effect:CardData):
-	print("apply_effect()")
+func apply_card_effect(source, effect:CardData):
+	print("apply_card_effect()")
 	print("source: ", source.name, " effect: ", effect.name)
 	for damage in effect.damage:
 		if damage.amt > 0:
@@ -114,7 +117,7 @@ func apply_effect(source, effect:CardData):
 			status_effects[status] = 1;
 		if status.timing == StatusEffectData.Timing.ON_APPLIED or \
 			status.timing == StatusEffectData.Timing.WHILE_ACTIVE:
-			apply_effect(source, status.effect);
+			apply_card_effect(source, status.effect);
 
 
 func has_status_effect() -> bool:

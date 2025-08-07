@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=5 format=3 uid="uid://eps0lc2n1hb2"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_ch80e"]
+[ext_resource type="Script" uid="uid://07xrxm0x4phv" path="res://data/scripts/enemy_turn_data.gd" id="2_xf02p"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_cj7r7"]
+[ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="4_0aboi"]
+
+[resource]
+script = ExtResource("4_0aboi")
+name = "Freak"
+moves = Array[ExtResource("2_xf02p")]([])
+reactions = Array[ExtResource("3_cj7r7")]([])
+max_hp = 0
+armor = Array[ExtResource("1_ch80e")]([])
+metadata/_custom_type_script = "uid://3jkx5d0irahs"

@@ -7,8 +7,11 @@
 
 [sub_resource type="Resource" id="Resource_m0ddh"]
 script = ExtResource("3_m0ddh")
-log_name = ""
+log_name = "Stun"
 timing = 0
+special_effect_behaviour = 0
+apply_to = 1
+apply_if_unarmored = false
 effect = ExtResource("4_3i3ox")
 metadata/_custom_type_script = "uid://bgj73ykcpodne"
 

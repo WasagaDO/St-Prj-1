@@ -3,7 +3,7 @@ class_name CardData
 
 enum CardType {
 	ATTACK,
-	DEFENSE,
+	ACTION,
 	STATUS,
 	REACTION,
 }

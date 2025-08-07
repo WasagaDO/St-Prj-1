@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=5 format=3 uid="uid://dyqx3duejof0l"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_u67gk"]
+[ext_resource type="Script" uid="uid://07xrxm0x4phv" path="res://data/scripts/enemy_turn_data.gd" id="2_bwhku"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_te25b"]
+[ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="4_k6k4w"]
+
+[resource]
+script = ExtResource("4_k6k4w")
+name = "Gladiator with dual weapons"
+moves = Array[ExtResource("2_bwhku")]([])
+reactions = Array[ExtResource("3_te25b")]([])
+max_hp = 0
+armor = Array[ExtResource("1_u67gk")]([])
+metadata/_custom_type_script = "uid://3jkx5d0irahs"

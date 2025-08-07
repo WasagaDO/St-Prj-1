@@ -14,7 +14,10 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 [sub_resource type="Resource" id="Resource_23x1l"]
 script = ExtResource("3_cruk0")
 log_name = "Fracture"
-timing = 0
+timing = 2
+special_effect_behaviour = 1
+apply_to = 1
+apply_if_unarmored = true
 effect = ExtResource("4_23x1l")
 metadata/_custom_type_script = "uid://bgj73ykcpodne"
 

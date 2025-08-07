@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://c6eh6dyhgsgg0"]
 
 [ext_resource type="Texture2D" uid="uid://b8ypwoqvl44jy" path="res://assets/GoatMan/Goat-Man-Final_0007_Left-Arm.png" id="1_ld54p"]
-[ext_resource type="Script" path="res://scenes/enemy/goat_man.gd" id="1_ryhei"]
+[ext_resource type="Script" uid="uid://reoeu2ghlb8t" path="res://scenes/enemy/goat_man.gd" id="1_ryhei"]
 [ext_resource type="Texture2D" uid="uid://dygedai44xmru" path="res://assets/GoatMan/Goat-Man-Final_0004_Torso.png" id="2_kdycd"]
 [ext_resource type="Texture2D" uid="uid://dtgox78e6uclu" path="res://assets/GoatMan/Goat-Man-Final_0006_Left-Forearm.png" id="3_vk7ip"]
 [ext_resource type="Texture2D" uid="uid://coq6da2hronpg" path="res://assets/GoatMan/Goat-Man-Final_0009_Right-Calf.png" id="4_phoul"]
@@ -793,8 +793,8 @@ tracks/31/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_btbj7"]
 _data = {
-"RESET": SubResource("Animation_nc686"),
-"Stand": SubResource("Animation_te67y")
+&"RESET": SubResource("Animation_nc686"),
+&"Stand": SubResource("Animation_te67y")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emepc"]
@@ -807,97 +807,94 @@ script = ExtResource("1_ryhei")
 position = Vector2(-3, 3)
 
 [node name="Goat-man-final0007Left-arm" type="Sprite2D" parent="poligons"]
-position = Vector2(237.181, -583.872)
-rotation = -0.0902556
+position = Vector2(249.023, -710.273)
+rotation = -0.0268424
+scale = Vector2(1, 1)
 texture = ExtResource("1_ld54p")
 offset = Vector2(29.4503, 156.04)
 
 [node name="Goat-man-final0004Torso" type="Sprite2D" parent="poligons"]
-position = Vector2(652.525, -0.912987)
+position = Vector2(661.352, -128.897)
 rotation = 0.0782436
 texture = ExtResource("2_kdycd")
 offset = Vector2(-103.518, -330.837)
 
 [node name="Goat-man-final0006Left-forearm" type="Sprite2D" parent="poligons"]
-position = Vector2(351.691, -184.522)
-rotation = 0.308027
-scale = Vector2(1, 1)
+position = Vector2(325.36, -323.884)
+rotation = 0.348067
 texture = ExtResource("3_vk7ip")
 offset = Vector2(-147.254, 121.435)
 
 [node name="Goat-man-final0009Right-calf" type="Sprite2D" parent="poligons"]
-position = Vector2(803.051, 616.269)
-rotation = -0.31947
-scale = Vector2(1, 1)
+position = Vector2(849.972, 489.653)
+rotation = 0.0692125
+scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("4_phoul")
 offset = Vector2(140.421, 138.396)
 
 [node name="Goat-man-final0008Right-leg" type="Sprite2D" parent="poligons"]
-position = Vector2(839.329, 137.507)
-rotation = 0.119663
-scale = Vector2(1, 1)
+position = Vector2(848.156, 9.52222)
+rotation = 0.0402485
+scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("5_qqorh")
 offset = Vector2(-16.1344, 278.904)
 
 [node name="Goat-man-final0010Right-hoof" type="Sprite2D" parent="poligons"]
-position = Vector2(1134.72, 752.872)
-rotation = -0.098592
-scale = Vector2(0.999999, 0.999999)
+position = Vector2(1105.13, 741.759)
+rotation = 0.0692125
+scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("6_ng3ld")
 offset = Vector2(-34.2507, 334.793)
 
 [node name="Goat-man-final0012Left-calf" type="Sprite2D" parent="poligons"]
-position = Vector2(105.131, 422.367)
-rotation = -0.0689931
-scale = Vector2(1, 1)
+position = Vector2(177.603, 365.719)
+rotation = -0.0037796
 texture = ExtResource("7_ws2y0")
 offset = Vector2(224.683, 219.998)
 
 [node name="Goat-man-final0011Left-leg" type="Sprite2D" parent="poligons"]
-position = Vector2(482.741, 150.372)
-rotation = 0.186224
+position = Vector2(491.567, 22.3874)
+rotation = -0.0250524
 scale = Vector2(1, 1)
 texture = ExtResource("8_abrrk")
 offset = Vector2(-101.329, 211.397)
 
 [node name="Goat-man-final0002Right-arm" type="Sprite2D" parent="poligons"]
-position = Vector2(809.955, -690.413)
-rotation = -0.0601073
+position = Vector2(820.59, -814.007)
+rotation = 0.0617136
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("9_6qaqt")
 offset = Vector2(184.589, 85.4819)
 
 [node name="Goat-man-final0001Right-forearm" type="Sprite2D" parent="poligons"]
-position = Vector2(1211.19, -503.898)
-rotation = -0.110298
+position = Vector2(1196.19, -580.116)
+rotation = 0.0115226
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("10_d17yg")
 offset = Vector2(-6.7608, 193.844)
 
 [node name="Goat-man-final0005Left-hand" type="Sprite2D" parent="poligons"]
-position = Vector2(-1.67574, -51.5679)
-rotation = 0.174822
-scale = Vector2(1, 1)
+position = Vector2(-37.3591, -207.725)
+rotation = 0.728913
 texture = ExtResource("11_vrcdh")
 offset = Vector2(-50.6752, 186.458)
 
 [node name="Goat-man-final0013Left-hoof" type="Sprite2D" parent="poligons"]
-position = Vector2(424.616, 698.355)
-rotation = -0.0689931
-scale = Vector2(1, 1)
+position = Vector2(478.424, 661.941)
+rotation = -0.0037796
 texture = ExtResource("12_8puxq")
 offset = Vector2(-67.8704, 295.826)
 
 [node name="Goat-man-final0000Right-hand" type="Sprite2D" parent="poligons"]
-position = Vector2(1204.17, -82.5333)
-rotation = -0.349175
+position = Vector2(1135.91, -162.15)
+rotation = -0.0508677
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("13_s18n4")
 offset = Vector2(52.733, 188.509)
 
 [node name="Goat-man-final0003Mane" type="Sprite2D" parent="poligons"]
-position = Vector2(521.489, -631.548)
-rotation = -0.140415
+position = Vector2(530.464, -758.874)
+rotation = -0.0103924
 texture = ExtResource("14_ygbs6")
 offset = Vector2(-106.074, -151.313)
 
@@ -944,7 +941,6 @@ remote_path = NodePath("../../../../../poligons/Goat-man-final0007Left-arm")
 [node name="ShoulderR" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmR"]
 position = Vector2(98.5801, 338.863)
 rotation = 2.55224
-scale = Vector2(1, 1)
 rest = Transform2D(0.999395, 0.0347687, -0.0347687, 0.999395, -303, 351)
 auto_calculate_length_and_angle = false
 length = 552.385
@@ -959,7 +955,6 @@ remote_path = NodePath("../../../../../../poligons/Goat-man-final0006Left-forear
 [node name="ShoulderR2" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmR/ShoulderR"]
 position = Vector2(359.425, 116.339)
 rotation = 0.171246
-scale = Vector2(1, 1)
 rest = Transform2D(0.999395, 0.0347687, -0.0347687, 0.999395, -303, 351)
 auto_calculate_length_and_angle = false
 length = 280.135
@@ -998,7 +993,6 @@ remote_path = NodePath("../../../../../../poligons/Goat-man-final0001Right-forea
 
 [node name="ShoulderL2" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmL/ShoulderL"]
 position = Vector2(-98.806, 398.515)
-scale = Vector2(1, 1)
 rest = Transform2D(0.91926, -0.393651, 0.393651, 0.91926, 203.649, 423.415)
 auto_calculate_length_and_angle = false
 length = 305.125
@@ -1013,7 +1007,7 @@ remote_path = NodePath("../../../../../../../poligons/Goat-man-final0000Right-ha
 [node name="HipL" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
 position = Vector2(197.294, 96.3959)
 rotation = -0.0379951
-scale = Vector2(1, 1)
+scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(0.999278, -0.037986, 0.037986, 0.999278, 131, 91)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipL"]
@@ -1034,7 +1028,6 @@ remote_path = NodePath("../../../../../../poligons/Goat-man-final0009Right-calf"
 
 [node name="LegL2" type="Bone2D" parent="Bones/Skeleton2D/Hip/HipL/LegL"]
 position = Vector2(271.987, 233.857)
-scale = Vector2(1, 1)
 rest = Transform2D(0.999581, 0.02896, -0.02896, 0.999581, 258, 406)
 auto_calculate_length_and_angle = false
 length = 704.875
@@ -1047,7 +1040,6 @@ remote_path = NodePath("../../../../../../../poligons/Goat-man-final0010Right-ho
 [node name="HipR" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
 position = Vector2(-157.198, 137.094)
 rotation = -0.103296
-scale = Vector2(1, 1)
 rest = Transform2D(0.99467, -0.103112, 0.103112, 0.99467, -176, 131)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipR"]
@@ -1083,7 +1075,7 @@ remote_path = NodePath("../../../../../../../poligons/Goat-man-final0013Left-hoo
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_btbj7")
+&"": SubResource("AnimationLibrary_btbj7")
 }
 speed_scale = 0.2
 

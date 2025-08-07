@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://ccfx1jcx4j7b6"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_6nvmi"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_7r7bq"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_istqg"]
+
+[sub_resource type="Resource" id="Resource_6nvmi"]
+script = ExtResource("1_6nvmi")
+type = 0
+amt = 16
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_7r7bq")
+description = ""
+name = "Breakthrough"
+stamina_cost = 0
+card_type = 0
+speed = -1
+damage = Array[ExtResource("1_6nvmi")]([SubResource("Resource_6nvmi")])
+armor = Array[ExtResource("1_6nvmi")]([])
+status_effects = Array[ExtResource("3_istqg")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 4
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

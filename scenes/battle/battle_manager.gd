@@ -116,11 +116,13 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn
 				# TODO : starting a double strike sequence shoudn't be a card resolution and should have its own system
 				start_double_strike(source)
 			CardData.SpecialAction.INTERRUPT_ENEMY_MOVESET:
-				# TODO
-				target.interrupt_moveset()
+				# Not used. The card that was planned to use this effect (Kick) now
+				# gives Shock.
+				# We could implement it like this : target.interrupt_moveset()
+				pass
 			CardData.SpecialAction.FORCE_TRIGGER_ENEMY_REACTION:
 				# TODO
-				#target.force_trigger_reaction()
+				# target.force_trigger_reaction()
 				pass
 			CardData.SpecialAction.RESTORE_STAMINA_BY_PREVIOUS_CARD_COST:
 				if source.last_card_played != null:
@@ -139,7 +141,16 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn
 
 
 	source.last_card_played = card
-	target.apply_effect(source, card)
+	target.apply_card_effect(source, card)
+	for effect in card.status_effects:
+		var combatant = source
+		if effect.apply_to == StatusEffectData.ApplyTo.SELF:
+			combatant = target
+		combatant.add_status_effect(effect)
+		if effect.timing == StatusEffectData.Timing.ON_APPLIED or \
+			effect.timing == StatusEffectData.Timing.WHILE_ACTIVE:
+			combatant.apply_card_effect(source, effect.effect);
+
 
 	# we've just resolved whatever this card was,
 	# so it's possible the player or the targeted enemy is dead.

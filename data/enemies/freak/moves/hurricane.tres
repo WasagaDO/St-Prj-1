@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=9 format=3 uid="uid://d21a1y2ujj0t3"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_8lnlw"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_fxqa7"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_rm4xj"]
+
+[sub_resource type="Resource" id="Resource_8lnlw"]
+script = ExtResource("1_8lnlw")
+type = 1
+amt = 7
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_fxqa7"]
+script = ExtResource("1_8lnlw")
+type = 1
+amt = 4
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_rm4xj"]
+script = ExtResource("1_8lnlw")
+type = 0
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_410yp"]
+script = ExtResource("1_8lnlw")
+type = 1
+amt = 8
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_282g3"]
+script = ExtResource("1_8lnlw")
+type = 0
+amt = 1
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_fxqa7")
+description = ""
+name = "Hurricane"
+stamina_cost = 0
+card_type = 0
+speed = -1
+damage = Array[ExtResource("1_8lnlw")]([SubResource("Resource_8lnlw"), SubResource("Resource_fxqa7"), SubResource("Resource_rm4xj"), SubResource("Resource_410yp"), SubResource("Resource_282g3")])
+armor = Array[ExtResource("1_8lnlw")]([])
+status_effects = Array[ExtResource("3_rm4xj")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

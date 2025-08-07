@@ -1,14 +1,25 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://bsvmal5boc56b"]
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://bsvmal5boc56b"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_3pnni"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_wb0fa"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_jghte"]
+[ext_resource type="Resource" uid="uid://b2p8ypjie0cu7" path="res://data/status_effects/shock.tres" id="4_wb0fa"]
 
 [sub_resource type="Resource" id="Resource_3pnni"]
 script = ExtResource("1_3pnni")
 type = 0
 amt = 3
 metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_jghte"]
+script = ExtResource("3_jghte")
+log_name = "Shock"
+timing = 0
+special_effect_behaviour = 0
+apply_to = 0
+apply_if_unarmored = false
+effect = ExtResource("4_wb0fa")
+metadata/_custom_type_script = "uid://bgj73ykcpodne"
 
 [resource]
 script = ExtResource("2_wb0fa")
@@ -19,9 +30,9 @@ card_type = 0
 speed = 0
 damage = Array[ExtResource("1_3pnni")]([SubResource("Resource_3pnni")])
 armor = Array[ExtResource("1_3pnni")]([])
-status_effects = Array[ExtResource("3_jghte")]([])
+status_effects = Array[ExtResource("3_jghte")]([SubResource("Resource_jghte")])
 special_reactions = Array[int]([])
-special_effect = 2
+special_actions = Array[int]([])
 healing = 0
 balance_healing = 0
 cooldown = 0

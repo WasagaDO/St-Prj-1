@@ -15,6 +15,9 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("3_7135w")
 log_name = "Stun"
 timing = 0
+special_effect_behaviour = 2
+apply_to = 1
+apply_if_unarmored = false
 effect = ExtResource("4_12agl")
 metadata/_custom_type_script = "uid://bgj73ykcpodne"
 

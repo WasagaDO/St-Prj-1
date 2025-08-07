@@ -497,18 +497,21 @@ offset = Vector2(-122.234, 284.624)
 [node name="Protagonist-final0007Right-foot" type="Sprite2D" parent="poligons"]
 position = Vector2(-888.963, 670.587)
 rotation = -0.0687811
+scale = Vector2(1, 1)
 texture = ExtResource("6_evix5")
 offset = Vector2(-66.4248, 316.399)
 
 [node name="Protagonist-final0010Behind-left-foot" type="Sprite2D" parent="poligons"]
 position = Vector2(-439.216, 65.7267)
 rotation = -0.024753
+scale = Vector2(1, 1)
 texture = ExtResource("7_dyl2i")
 offset = Vector2(157, 327)
 
 [node name="Protagonist-final0008Left-foot" type="Sprite2D" parent="poligons"]
 position = Vector2(-171.247, 465.217)
 rotation = 0.004211
+scale = Vector2(1, 1)
 texture = ExtResource("8_56753")
 offset = Vector2(79, 398)
 
@@ -546,15 +549,15 @@ offset = Vector2(-87, -466)
 
 [node name="Protagonist-final0000Right-forearm" type="Sprite2D" parent="poligons"]
 position = Vector2(-1182.19, -499.275)
-rotation = 0.0181709
-scale = Vector2(0.999998, 0.999998)
+rotation = 0.0181708
+scale = Vector2(0.999997, 0.999997)
 texture = ExtResource("14_aqmh7")
 offset = Vector2(257, 230)
 
 [node name="Protagonist-final0000Head" type="Sprite2D" parent="poligons"]
 position = Vector2(-511, -873)
 rotation = 0.152322
-scale = Vector2(0.999999, 0.999999)
+scale = Vector2(1, 1)
 texture = ExtResource("13_226fm")
 offset = Vector2(60.9673, -245.52)
 

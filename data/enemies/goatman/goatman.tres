@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_i1770"]
 [ext_resource type="Script" uid="uid://07xrxm0x4phv" path="res://data/scripts/enemy_turn_data.gd" id="2_p4mp8"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_sajlm"]
-[ext_resource type="Resource" uid="uid://bvjwyq472xwh" path="res://data/enemes/goatman/head_bash.tres" id="4_w85et"]
-[ext_resource type="Resource" uid="uid://b0qev82lgjjbh" path="res://data/enemes/goatman/bite.tres" id="5_7uyow"]
-[ext_resource type="Resource" uid="uid://b1jc4jqifkrq1" path="res://data/enemes/goatman/strong_swing.tres" id="6_jsc2w"]
-[ext_resource type="Resource" uid="uid://bd0o06bvjx2v4" path="res://data/enemes/goatman/bounce.tres" id="7_5qt0f"]
+[ext_resource type="Resource" uid="uid://bvjwyq472xwh" path="res://data/enemies/goatman/moves/head_bash.tres" id="4_81fc8"]
+[ext_resource type="Resource" uid="uid://b0qev82lgjjbh" path="res://data/enemies/goatman/moves/bite.tres" id="5_kxq7j"]
+[ext_resource type="Resource" uid="uid://b1jc4jqifkrq1" path="res://data/enemies/goatman/moves/strong_swing.tres" id="6_shx4i"]
+[ext_resource type="Resource" uid="uid://bd0o06bvjx2v4" path="res://data/enemies/goatman/moves/bounce.tres" id="7_x5b2r"]
 [ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="8_6y6y3"]
 
 [sub_resource type="Resource" id="Resource_ihh8v"]
@@ -26,20 +26,20 @@ amt = 0
 
 [sub_resource type="Resource" id="Resource_1n4rt"]
 script = ExtResource("2_p4mp8")
-moves = Array[ExtResource("3_sajlm")]([ExtResource("4_w85et"), ExtResource("5_7uyow")])
+moves = Array[ExtResource("3_sajlm")]([ExtResource("4_81fc8"), ExtResource("5_kxq7j")])
 
 [sub_resource type="Resource" id="Resource_t3kag"]
 script = ExtResource("2_p4mp8")
-moves = Array[ExtResource("3_sajlm")]([ExtResource("5_7uyow"), ExtResource("6_jsc2w")])
+moves = Array[ExtResource("3_sajlm")]([ExtResource("5_kxq7j"), ExtResource("6_shx4i")])
 
 [sub_resource type="Resource" id="Resource_0wrom"]
 script = ExtResource("2_p4mp8")
-moves = Array[ExtResource("3_sajlm")]([ExtResource("6_jsc2w")])
+moves = Array[ExtResource("3_sajlm")]([ExtResource("6_shx4i")])
 
 [resource]
 script = ExtResource("8_6y6y3")
 name = "Goatman"
 moves = Array[ExtResource("2_p4mp8")]([SubResource("Resource_1n4rt"), SubResource("Resource_t3kag"), SubResource("Resource_0wrom")])
-reactions = Array[ExtResource("3_sajlm")]([ExtResource("7_5qt0f")])
+reactions = Array[ExtResource("3_sajlm")]([ExtResource("7_x5b2r")])
 max_hp = 36
 armor = Array[ExtResource("1_i1770")]([SubResource("Resource_ihh8v"), SubResource("Resource_b0pht"), SubResource("Resource_1d228")])

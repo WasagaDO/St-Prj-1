@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://b4wirit8cff20"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_6l3d3"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_22d2h"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_a4gio"]
+
+[sub_resource type="Resource" id="Resource_6l3d3"]
+script = ExtResource("1_6l3d3")
+type = 1
+amt = 4
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_22d2h"]
+script = ExtResource("1_6l3d3")
+type = 0
+amt = 7
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_a4gio"]
+script = ExtResource("1_6l3d3")
+type = 2
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_h0d3w"]
+script = ExtResource("1_6l3d3")
+type = 1
+amt = 4
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_22d2h")
+description = ""
+name = "Freak's Wild Swinging"
+stamina_cost = 0
+card_type = 0
+speed = -1
+damage = Array[ExtResource("1_6l3d3")]([SubResource("Resource_6l3d3"), SubResource("Resource_22d2h"), SubResource("Resource_a4gio"), SubResource("Resource_h0d3w")])
+armor = Array[ExtResource("1_6l3d3")]([])
+status_effects = Array[ExtResource("3_a4gio")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

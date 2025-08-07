@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=5 format=3 uid="uid://c6wtc8libsxgp"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_mx08i"]
+[ext_resource type="Script" uid="uid://07xrxm0x4phv" path="res://data/scripts/enemy_turn_data.gd" id="2_cv018"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_8bmov"]
+[ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="4_w1224"]
+
+[resource]
+script = ExtResource("4_w1224")
+name = "Freak with a spear"
+moves = Array[ExtResource("2_cv018")]([])
+reactions = Array[ExtResource("3_8bmov")]([])
+max_hp = 0
+armor = Array[ExtResource("1_mx08i")]([])
+metadata/_custom_type_script = "uid://3jkx5d0irahs"

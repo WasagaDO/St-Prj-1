@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://siornsgedik4"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_2o0c5"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_pbfva"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_vwqbg"]
+
+[sub_resource type="Resource" id="Resource_2o0c5"]
+script = ExtResource("1_2o0c5")
+type = 2
+amt = 11
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_pbfva"]
+script = ExtResource("1_2o0c5")
+type = 1
+amt = 8
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_vwqbg"]
+script = ExtResource("1_2o0c5")
+type = 3
+amt = 8
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_pbfva")
+description = ""
+name = "Shot"
+stamina_cost = 0
+card_type = 0
+speed = -1
+damage = Array[ExtResource("1_2o0c5")]([SubResource("Resource_2o0c5"), SubResource("Resource_pbfva"), SubResource("Resource_vwqbg")])
+armor = Array[ExtResource("1_2o0c5")]([])
+status_effects = Array[ExtResource("3_vwqbg")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"
