@@ -22,6 +22,7 @@ enum SpecialAction {
 	DEAL_DAMAGE_TO_ALL_ENEMIES, # deals the damage of this card but to all enemies
 	INCRAESE_SPEED_OF_NEXT_REACTION_BY_1,
 	DOUBLE_DAMAGE_IF_ENEMY_HAS_STATUS_EFFECT,
+	EXTRA_14_PIERCING_DAMAGE_IF_ENEMY_HAS_FRACTURE,
 	# ... 
 }
 
@@ -58,3 +59,13 @@ enum SpecialAction {
 @export var cooldown:int = 0;
 
 @export var needs_target:bool = true;
+@export_category("Custom card's logic")
+
+@export var has_custom_effects: bool
+@export var custom_effects: Array[ConditionalEffect] = []
+@export var custom_logic_timing: CustomLogicTiming
+
+enum CustomLogicTiming {
+	ON_RESOLVE,
+	NEVER
+}

@@ -109,8 +109,9 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn
 				# so it can no longer be resolved.
 				queued_attack = null;
 
+	
 	# special actions
-	for special_action:CardData.SpecialReaction in card.special_reactions:
+	"""for special_action:CardData.SpecialReaction in card.special_reactions:
 		match special_action:
 			CardData.SpecialAction.DOUBLE_STRIKE:
 				# TODO : starting a double strike sequence shoudn't be a card resolution and should have its own system
@@ -138,10 +139,16 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn
 					# We only need to apply damage once here because it's already done once below
 					for dmg in card.damage:
 						target.apply_damage(source, dmg.amt, dmg.type)
-
+	"""
 
 	source.last_card_played = card
 	target.apply_card_effect(source, card)
+	
+	if card.card_type == CardData.CardType.ATTACK:
+		if source is Enemy:
+			source.trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ON_ATTACK_SUCCESS)
+
+	
 	for effect in card.status_effects:
 		var combatant = source
 		if effect.apply_to == StatusEffectData.ApplyTo.SELF:

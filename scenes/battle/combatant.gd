@@ -83,6 +83,12 @@ func apply_damage(source:Combatant, damage:int, type:DamageType):
 	if armor_amt > 0:
 		BattleSignals.armor_damage_applied.emit(source, self, roundi(damage_to_armor), type);
 	BattleSignals.damage_applied.emit(source, self, roundi(damage_to_health), DamageType.NONE);
+	
+	if self is Enemy:
+		var enemy := self as Enemy
+		enemy.trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ON_DAMAGE_TAKEN)
+
+
 
 func apply_healing(amt:int):
 	hp += amt;
@@ -91,6 +97,10 @@ func apply_healing(amt:int):
 	bars.hp_bar.value = hp;
 	BattleSignals.healing_applied.emit(self, self, amt);
 	
+
+func apply_balance_healing(amt:int):
+	pass
+
 
 func apply_armor(type:DamageType, amt:int):
 	armor[type] += amt;
@@ -137,3 +147,11 @@ func increment_stamina(increment: int):
 
 func interrupt_moveset():
 	return
+
+
+
+func has_named_status(name: String) -> bool:
+	for status in status_effects.keys():
+		if status.log_name.to_lower() == name.to_lower() and status_effects[status] > 0:
+			return true
+	return false

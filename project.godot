@@ -33,7 +33,8 @@ folder_colors={
 "res://assets/": "yellow",
 "res://data/": "purple",
 "res://resources/": "teal",
-"res://scenes/": "blue"
+"res://scenes/": "blue",
+"res://scripts/": "red"
 }
 
 [gui]

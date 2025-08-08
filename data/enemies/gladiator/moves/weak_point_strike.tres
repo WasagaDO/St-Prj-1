@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=9 format=3 uid="uid://mxglx0rkqvx8"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_pn6ui"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_kthxc"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_uc8m7"]
+[ext_resource type="Script" uid="uid://c11vd12wvu421" path="res://scripts/card custom behaviour/damage_if_opponent_has_effect.gd" id="3_u67fc"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_uc8m7"]
+
+[sub_resource type="Resource" id="Resource_uc8m7"]
+script = ExtResource("1_pn6ui")
+type = 2
+amt = 14
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_u67fc"]
+script = ExtResource("3_u67fc")
+armor_data = SubResource("Resource_uc8m7")
+required_status = "fracture"
+metadata/_custom_type_script = "uid://c11vd12wvu421"
+
+[sub_resource type="Resource" id="Resource_pn6ui"]
+script = ExtResource("1_pn6ui")
+type = 2
+amt = 8
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_kthxc")
+description = ""
+name = "Weak Point Strike"
+stamina_cost = 0
+card_type = 0
+speed = 1
+damage = Array[ExtResource("1_pn6ui")]([SubResource("Resource_pn6ui")])
+armor = Array[ExtResource("1_pn6ui")]([])
+status_effects = Array[ExtResource("3_uc8m7")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+has_custom_effects = true
+custom_effects = Array[ExtResource("2_uc8m7")]([SubResource("Resource_u67fc")])
+custom_logic_timing = 0
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

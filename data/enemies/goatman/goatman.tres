@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=15 format=3 uid="uid://kffdlj5dqjq3"]
+[gd_resource type="Resource" script_class="EnemyData" load_steps=16 format=3 uid="uid://kffdlj5dqjq3"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_i1770"]
+[ext_resource type="Script" uid="uid://ckyyf6cokbqg5" path="res://scripts/enemy custom behaviours/enemy_custom_behaviour.gd" id="2_kxq7j"]
 [ext_resource type="Script" uid="uid://07xrxm0x4phv" path="res://data/scripts/enemy_turn_data.gd" id="2_p4mp8"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_sajlm"]
 [ext_resource type="Resource" uid="uid://bvjwyq472xwh" path="res://data/enemies/goatman/moves/head_bash.tres" id="4_81fc8"]
@@ -43,3 +44,5 @@ moves = Array[ExtResource("2_p4mp8")]([SubResource("Resource_1n4rt"), SubResourc
 reactions = Array[ExtResource("3_sajlm")]([ExtResource("7_x5b2r")])
 max_hp = 36
 armor = Array[ExtResource("1_i1770")]([SubResource("Resource_ihh8v"), SubResource("Resource_b0pht"), SubResource("Resource_1d228")])
+has_custom_behaviours = false
+behaviours = Array[ExtResource("2_kxq7j")]([])

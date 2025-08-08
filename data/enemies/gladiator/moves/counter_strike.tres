@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://ddnlwjkajhrg7"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_w3hc1"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_lqoa8"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_vg6c1"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_vg6c1"]
+
+[sub_resource type="Resource" id="Resource_lqoa8"]
+script = ExtResource("1_w3hc1")
+type = 1
+amt = 5
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_lqoa8")
+description = ""
+name = "Counter-Strike"
+stamina_cost = 0
+card_type = 3
+speed = 1
+damage = Array[ExtResource("1_w3hc1")]([SubResource("Resource_lqoa8")])
+armor = Array[ExtResource("1_w3hc1")]([])
+status_effects = Array[ExtResource("3_vg6c1")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 3
+needs_target = false
+has_custom_effects = false
+custom_effects = Array[ExtResource("2_vg6c1")]([])
+custom_logic_timing = 0
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

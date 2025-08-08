@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://dgcq6jfk75k1f"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_qhpx4"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_hyarr"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_pixnl"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_pixnl"]
+
+[resource]
+script = ExtResource("2_hyarr")
+description = ""
+name = "Gladiator's dodge"
+stamina_cost = 0
+card_type = 3
+speed = 1
+damage = Array[ExtResource("1_qhpx4")]([])
+armor = Array[ExtResource("1_qhpx4")]([])
+status_effects = Array[ExtResource("3_pixnl")]([])
+special_reactions = Array[int]([0])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 4
+needs_target = false
+has_custom_effects = false
+custom_effects = Array[ExtResource("2_pixnl")]([])
+custom_logic_timing = 0
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

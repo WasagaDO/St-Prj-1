@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://b3nyv6vrmrvqr"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_ow1a4"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_sirbv"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_4tm2t"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_m0mgo"]
+
+[sub_resource type="Resource" id="Resource_ow1a4"]
+script = ExtResource("1_ow1a4")
+type = 2
+amt = 5
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("3_4tm2t")
+description = ""
+name = "Gladiator's Stab"
+stamina_cost = 0
+card_type = 0
+speed = 0
+damage = Array[ExtResource("1_ow1a4")]([SubResource("Resource_ow1a4")])
+armor = Array[ExtResource("1_ow1a4")]([])
+status_effects = Array[ExtResource("4_m0mgo")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+has_custom_effects = false
+custom_effects = Array[ExtResource("2_sirbv")]([])
+custom_logic_timing = 0
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

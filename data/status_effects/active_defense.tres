@@ -44,5 +44,5 @@ log_name = "Active Defense"
 timing = 2
 special_effect_behaviour = 0
 apply_to = 0
-apply_if_unarmored = false
+apply_only_if_unarmored = false
 effect = SubResource("Resource_wl705")

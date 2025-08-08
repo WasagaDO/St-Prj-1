@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("4_cdv4u")
-name = ""
+name = "Gladiator"
 moves = Array[ExtResource("2_0fjhd")]([])
 reactions = Array[ExtResource("3_47hes")]([])
 max_hp = 0

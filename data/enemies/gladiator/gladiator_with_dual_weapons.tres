@@ -1,15 +1,48 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=5 format=3 uid="uid://dyqx3duejof0l"]
+[gd_resource type="Resource" script_class="EnemyData" load_steps=18 format=3 uid="uid://dyqx3duejof0l"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_u67gk"]
 [ext_resource type="Script" uid="uid://07xrxm0x4phv" path="res://data/scripts/enemy_turn_data.gd" id="2_bwhku"]
+[ext_resource type="Script" uid="uid://ckyyf6cokbqg5" path="res://scripts/enemy custom behaviours/enemy_custom_behaviour.gd" id="2_te25b"]
+[ext_resource type="Script" uid="uid://caoh2swsveyq3" path="res://scripts/enemy custom behaviours/enemy_behaviour_recover_stat.gd" id="3_k6k4w"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_te25b"]
 [ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="4_k6k4w"]
+[ext_resource type="Resource" uid="uid://cqo2v8ovnapst" path="res://data/enemies/gladiator/moves/lunge.tres" id="6_cc00x"]
+[ext_resource type="Resource" uid="uid://dgcq6jfk75k1f" path="res://data/enemies/gladiator/moves/gladiators_dodge.tres" id="6_hbrdu"]
+[ext_resource type="Resource" uid="uid://dkttfuu7htvyw" path="res://data/cards/lunge.tres" id="7_iy302"]
+[ext_resource type="Resource" uid="uid://ddnlwjkajhrg7" path="res://data/enemies/gladiator/moves/counter_strike.tres" id="7_r4da1"]
+[ext_resource type="Resource" uid="uid://diw3aqf3b3rdt" path="res://data/enemies/gladiator/moves/jump_cut.tres" id="8_ctw53"]
+[ext_resource type="Resource" uid="uid://iu1m8necot4i" path="res://data/enemies/gladiator/moves/double_stab.tres" id="9_wyn3a"]
+[ext_resource type="Resource" uid="uid://b3nyv6vrmrvqr" path="res://data/enemies/gladiator/moves/gladiators_stab.tres" id="10_u0o7a"]
+
+[sub_resource type="Resource" id="Resource_hbrdu"]
+script = ExtResource("3_k6k4w")
+stat = 1
+amount = 3
+trigger = 1
+metadata/_custom_type_script = "uid://caoh2swsveyq3"
+
+[sub_resource type="Resource" id="Resource_2orda"]
+script = ExtResource("2_bwhku")
+moves = Array[ExtResource("3_te25b")]([ExtResource("6_cc00x"), ExtResource("7_iy302")])
+metadata/_custom_type_script = "uid://07xrxm0x4phv"
+
+[sub_resource type="Resource" id="Resource_ctw53"]
+script = ExtResource("2_bwhku")
+moves = Array[ExtResource("3_te25b")]([ExtResource("8_ctw53"), ExtResource("9_wyn3a")])
+metadata/_custom_type_script = "uid://07xrxm0x4phv"
+
+[sub_resource type="Resource" id="Resource_wyn3a"]
+script = ExtResource("2_bwhku")
+moves = Array[ExtResource("3_te25b")]([ExtResource("9_wyn3a"), ExtResource("10_u0o7a")])
+metadata/_custom_type_script = "uid://07xrxm0x4phv"
 
 [resource]
 script = ExtResource("4_k6k4w")
 name = "Gladiator with dual weapons"
-moves = Array[ExtResource("2_bwhku")]([])
-reactions = Array[ExtResource("3_te25b")]([])
-max_hp = 0
+moves = Array[ExtResource("2_bwhku")]([SubResource("Resource_2orda"), SubResource("Resource_ctw53"), SubResource("Resource_wyn3a")])
+reactions = Array[ExtResource("3_te25b")]([ExtResource("6_hbrdu"), ExtResource("7_r4da1")])
+max_hp = 36
 armor = Array[ExtResource("1_u67gk")]([])
+has_custom_behaviours = true
+behaviours = Array[ExtResource("2_te25b")]([SubResource("Resource_hbrdu")])
 metadata/_custom_type_script = "uid://3jkx5d0irahs"

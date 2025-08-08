@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://cg88tcy6r3n2i"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_bydqw"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_ahcpe"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_5ds6h"]
+
+[sub_resource type="Resource" id="Resource_bydqw"]
+script = ExtResource("1_bydqw")
+type = 1
+amt = 8
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[resource]
+script = ExtResource("2_ahcpe")
+description = ""
+name = "Strong Cut"
+stamina_cost = 0
+card_type = 0
+speed = 0
+damage = Array[ExtResource("1_bydqw")]([SubResource("Resource_bydqw")])
+armor = Array[ExtResource("1_bydqw")]([])
+status_effects = Array[ExtResource("3_5ds6h")]([])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

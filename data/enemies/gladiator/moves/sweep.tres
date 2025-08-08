@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://c4vll65y2gos2"]
+
+[ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_yugti"]
+[ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_cqtgu"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_kky60"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_kky60"]
+[ext_resource type="Resource" uid="uid://d12ov26egb5hk" path="res://data/status_effects/fracture.tres" id="4_cqtgu"]
+
+[sub_resource type="Resource" id="Resource_yugti"]
+script = ExtResource("1_yugti")
+type = 0
+amt = 3
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_cqtgu"]
+script = ExtResource("3_kky60")
+log_name = "Fracture"
+timing = 0
+special_effect_behaviour = 0
+apply_to = 1
+apply_only_if_unarmored = false
+effect = ExtResource("4_cqtgu")
+metadata/_custom_type_script = "uid://bgj73ykcpodne"
+
+[resource]
+script = ExtResource("2_cqtgu")
+description = ""
+name = "Sweep"
+stamina_cost = 0
+card_type = 0
+speed = 1
+damage = Array[ExtResource("1_yugti")]([SubResource("Resource_yugti")])
+armor = Array[ExtResource("1_yugti")]([])
+status_effects = Array[ExtResource("3_kky60")]([SubResource("Resource_cqtgu")])
+special_reactions = Array[int]([])
+special_actions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
+needs_target = true
+conditional_effects = Array[ExtResource("2_kky60")]([])
+custom_logic_timing = 0
+metadata/_custom_type_script = "uid://cg1up0heh2u54"

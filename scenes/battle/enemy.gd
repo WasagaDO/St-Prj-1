@@ -13,6 +13,10 @@ var card_cooldowns:Dictionary = {};
 func _ready():
 	super._ready();
 	load_data(enemy_data);
+	trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ONLY_ONCE_ON_BATTLE_START)
+
+
+
 func load_data(data:EnemyData):
 	max_hp = data.max_hp;
 	hp = data.max_hp;
@@ -28,6 +32,8 @@ func act():
 	move_index += 1;
 	if move_index == turns[turn_index].moves.size():
 		completed_turn = true;
+	trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ON_EACH_TURN_END)
+
 
 func increment_turn():
 	completed_turn = false;
@@ -39,6 +45,7 @@ func increment_turn():
 	turn_index += 1;
 	if turn_index >= turns.size():
 		turn_index = 0;
+	trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ON_EACH_TURN_START)
 	
 
 func try_get_valid_reaction(attack):
@@ -47,3 +54,15 @@ func try_get_valid_reaction(attack):
 		if not on_cooldown and BattleUtil.card_can_react(reaction, attack):
 			card_cooldowns[reaction] = reaction.cooldown;
 			return reaction;
+
+
+
+# this function triggers the special behaviours of the enemy.
+# Argument "trigger_type" : indicates the turn moment we are on. If a custom script
+#     is not set to be triggered on this moment, it will not be triggered.
+func trigger_custom_behaviours(trigger_type: EnemyCustomBehaviour.Trigger):
+	if not enemy_data.has_custom_behaviours:
+		return # enemy's custom behaviours are disabled
+	for behaviour in enemy_data.behaviours:
+		if behaviour.trigger == trigger_type:
+			behaviour.execute(self)
