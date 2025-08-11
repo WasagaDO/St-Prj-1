@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://7cy4bdn1ctqi"]
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://7cy4bdn1ctqi"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_w2dga"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_27mcp"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_35mfj"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_27mcp"]
 
@@ -21,9 +22,10 @@ damage = Array[ExtResource("1_w2dga")]([SubResource("Resource_w2dga")])
 armor = Array[ExtResource("1_w2dga")]([])
 status_effects = Array[ExtResource("3_27mcp")]([])
 special_reactions = Array[int]([])
-special_actions = Array[int]([])
 healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
+has_custom_effects = false
+custom_effects = Array[ExtResource("2_27mcp")]([])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

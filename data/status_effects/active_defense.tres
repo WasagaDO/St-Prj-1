@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="StatusEffectData" load_steps=9 format=3 uid="uid://br42hnpsroipc"]
+[gd_resource type="Resource" script_class="StatusEffectData" load_steps=10 format=3 uid="uid://br42hnpsroipc"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_j7l2i"]
 [ext_resource type="Texture2D" uid="uid://bq44re1wqbv32" path="res://assets/card_art/active_defense.png" id="2_p2xc5"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_sma2a"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_7j1ya"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_g38t8"]
 
@@ -32,17 +33,18 @@ damage = Array[ExtResource("1_j7l2i")]([])
 armor = Array[ExtResource("1_j7l2i")]([SubResource("Resource_nivkq"), SubResource("Resource_2pmjk"), SubResource("Resource_c6yu7")])
 status_effects = Array[ExtResource("4_g38t8")]([])
 special_reactions = Array[int]([])
-special_actions = Array[int]([])
 healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
+has_custom_effects = false
+custom_effects = Array[ExtResource("2_sma2a")]([])
 
 [resource]
 script = ExtResource("4_g38t8")
 log_name = "Active Defense"
 timing = 2
-special_effect_behaviour = 0
 apply_to = 0
 apply_only_if_unarmored = false
+duration = 100000
 effect = SubResource("Resource_wl705")

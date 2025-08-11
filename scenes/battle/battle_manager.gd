@@ -29,26 +29,42 @@ func _ready():
 	increment_turn_order();
 
 func increment_turn_order():
-	if game_over: return;
-	BattleSignals.end_turn.emit(acting_combatant);
-	move_reacted_to = false;
-	turn_order += 1;
+	if game_over: return
+	# END of previous actor's turn
+	var prev := acting_combatant
+	BattleSignals.end_turn.emit(prev)
+	
+	move_reacted_to = false
+	turn_order += 1
+	# pick next actor
 	if turn_order == 0:
-		acting_combatant = player;
+		acting_combatant = player
 	else:
-		acting_combatant = enemies[turn_order-1]
-		acting_combatant.increment_turn();
-	# this would mean we've gone through the player and all the enemies.
+		acting_combatant = enemies[turn_order - 1]
+		acting_combatant.increment_turn()
+
+	# loop back after last enemy
 	if turn_order == enemies.size():
-		turn_order = -1;
-
-	BattleSignals.new_turn.emit(acting_combatant);
-
+		turn_order = -1
+	# START of new actor's turn
+	if acting_combatant != null:
+			acting_combatant.apply_all_status_effects()
+	
+	# STUN: skip turn if flagged
+	if acting_combatant.skip_next_turn:
+		print("[STUN] %s skips this turn." % acting_combatant.log_name)
+		acting_combatant.skip_next_turn = false
+		if acting_combatant is Enemy:
+			(acting_combatant as Enemy).completed_turn = true
+		increment_turn_order()
+		return
+	BattleSignals.new_turn.emit(acting_combatant)
 
 
 
 
 func on_card_played(card:CardData, source:Combatant, target:Combatant):
+	source.last_card_played = card
 	var card_can_be_resolved:bool = true;
 	# remove some stamina from the player
 	if source is Player:
@@ -96,7 +112,7 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 
 
 
-func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn:bool = false):
+func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_turn:bool = false, special_card_effects:bool = true):
 	print("resolving card ", card.name, " played by ", source.name)
 	BattleSignals.card_resolved.emit(source, target, card)
 	
@@ -109,55 +125,23 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn
 				# so it can no longer be resolved.
 				queued_attack = null;
 
-	
-	# special actions
-	"""for special_action:CardData.SpecialReaction in card.special_reactions:
-		match special_action:
-			CardData.SpecialAction.DOUBLE_STRIKE:
-				# TODO : starting a double strike sequence shoudn't be a card resolution and should have its own system
-				start_double_strike(source)
-			CardData.SpecialAction.INTERRUPT_ENEMY_MOVESET:
-				# Not used. The card that was planned to use this effect (Kick) now
-				# gives Shock.
-				# We could implement it like this : target.interrupt_moveset()
-				pass
-			CardData.SpecialAction.FORCE_TRIGGER_ENEMY_REACTION:
-				# TODO
-				# target.force_trigger_reaction()
-				pass
-			CardData.SpecialAction.RESTORE_STAMINA_BY_PREVIOUS_CARD_COST:
-				if source.last_card_played != null:
-					source.increment_stamina(source.last_card_played.stamina_cost)
-			CardData.SpecialAction.DEAL_DAMAGE_TO_ALL_ENEMIES:
-				# TODO
-				pass
-			CardData.SpecialAction.INCRAESE_SPEED_OF_NEXT_REACTION_BY_1:
-				source.next_reaction_speed_boost = 1
-			CardData.SpecialAction.DOUBLE_DAMAGE_IF_ENEMY_HAS_STATUS_EFFECT:
-				if target.has_status_effect():
-					# Applies double damage.
-					# We only need to apply damage once here because it's already done once below
-					for dmg in card.damage:
-						target.apply_damage(source, dmg.amt, dmg.type)
-	"""
-
 	source.last_card_played = card
+	# applies the base effects of the card to the target
 	target.apply_card_effect(source, card)
-	
+
+	# status effects
+	for status:StatusEffectData in card.status_effects:
+		var receiver:Combatant = target
+		if status.apply_to == StatusEffectData.ApplyTo.SELF:
+			receiver = source
+		if status.apply_only_if_unarmored and receiver.is_armored():
+			continue
+		
+		receiver.apply_new_status_effect(status, source)
+
 	if card.card_type == CardData.CardType.ATTACK:
 		if source is Enemy:
 			source.trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ON_ATTACK_SUCCESS)
-
-	
-	for effect in card.status_effects:
-		var combatant = source
-		if effect.apply_to == StatusEffectData.ApplyTo.SELF:
-			combatant = target
-		combatant.add_status_effect(effect)
-		if effect.timing == StatusEffectData.Timing.ON_APPLIED or \
-			effect.timing == StatusEffectData.Timing.WHILE_ACTIVE:
-			combatant.apply_card_effect(source, effect.effect);
-
 
 	# we've just resolved whatever this card was,
 	# so it's possible the player or the targeted enemy is dead.
@@ -169,29 +153,10 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, finish_turn
 	else:
 		queued_attack = null;
 	
-	
 	# it's possible the last enemy died from this,
 	# or the player did.
 	check_for_end_of_battle();
 	if game_over: return;
-
-
-
-
-#### special effects
-
-
-func start_double_strike(source:Combatant):
-	print("Double strike")
-
-
-####
-
-
-
-
-
-
 
 
 

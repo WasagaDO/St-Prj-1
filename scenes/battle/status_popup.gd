@@ -29,6 +29,8 @@ func setup(damage_type:Combatant.DamageType, amt:int):
 	icons[Combatant.DamageType.PIERCING] = piericng_icon;
 	icons[Combatant.DamageType.CRUSHING] = crushing_icon;
 	icons[Combatant.DamageType.CUTTING] = slashing_icon;
+	icons[Combatant.DamageType.PURE] = null;
+	icons[Combatant.DamageType.BALANCE] = null;
 	icons[Combatant.DamageType.NONE] = health_icon;
 	icon.texture = icons[damage_type]
 	amount.text = "%s%d" % ["+" if amt > 0 else "", amt];

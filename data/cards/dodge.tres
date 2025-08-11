@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://cxhlhjaxt1da"]
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://cxhlhjaxt1da"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_urc7o"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_ra2m1"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_ti3uk"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_vobd5"]
 [ext_resource type="Texture2D" uid="uid://cbo1yphvomu7q" path="res://assets/card_art/dodge.png" id="4_yl7pi"]
@@ -19,8 +20,9 @@ damage = Array[ExtResource("1_urc7o")]([])
 armor = Array[ExtResource("1_urc7o")]([])
 status_effects = Array[ExtResource("4_vobd5")]([])
 special_reactions = Array[int]([0])
-special_actions = Array[int]([])
 healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = false
+has_custom_effects = false
+custom_effects = Array[ExtResource("2_ra2m1")]([])

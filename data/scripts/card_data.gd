@@ -13,18 +13,6 @@ enum SpecialReaction {
 	BLOCK
 }
 
-enum SpecialAction {
-	NONE,
-	DOUBLE_STRIKE, # choose 2 attack cards to be played with a discount equal to the cheapest one
-	INTERRUPT_ENEMY_MOVESET,
-	FORCE_TRIGGER_ENEMY_REACTION,
-	RESTORE_STAMINA_BY_PREVIOUS_CARD_COST, # restores stamina equal to the cost of your previous card
-	DEAL_DAMAGE_TO_ALL_ENEMIES, # deals the damage of this card but to all enemies
-	INCRAESE_SPEED_OF_NEXT_REACTION_BY_1,
-	DOUBLE_DAMAGE_IF_ENEMY_HAS_STATUS_EFFECT,
-	EXTRA_14_PIERCING_DAMAGE_IF_ENEMY_HAS_FRACTURE,
-	# ... 
-}
 
 
 @export_multiline var description:String
@@ -44,7 +32,6 @@ enum SpecialAction {
 ## Actions that relate to the attack coming in, and can't be represented in data.
 @export var special_reactions:Array[SpecialReaction] = [];
 ## Triggers a unique behaviour (coded in battle_manager.gd)
-@export var special_actions: Array[SpecialAction] = []
 
 
 
@@ -63,9 +50,3 @@ enum SpecialAction {
 
 @export var has_custom_effects: bool
 @export var custom_effects: Array[ConditionalEffect] = []
-@export var custom_logic_timing: CustomLogicTiming
-
-enum CustomLogicTiming {
-	ON_RESOLVE,
-	NEVER
-}

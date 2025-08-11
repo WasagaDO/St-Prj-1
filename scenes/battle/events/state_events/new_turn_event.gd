@@ -26,7 +26,6 @@ func start():
 		for card in hand.cards:
 			card.is_disabled = card.data.card_type == CardData.CardType.REACTION
 
-	acting_combatant.apply_status_effects();
 	await get_tree().create_timer(delay).timeout;
 	finished.emit();
 	

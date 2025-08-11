@@ -1,8 +1,28 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://ev13s10ogqxi"]
+[gd_resource type="Resource" script_class="CardData" load_steps=11 format=3 uid="uid://ev13s10ogqxi"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_j85td"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_34xlw"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_lxyyc"]
+[ext_resource type="Script" uid="uid://bafoedredhjvd" path="res://scripts/card custom behaviour/damage_if_enemy_has_any_effect.gd" id="3_egwfa"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_lxyyc"]
+
+[sub_resource type="Resource" id="Resource_lxyyc"]
+script = ExtResource("1_j85td")
+type = 1
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_egwfa"]
+script = ExtResource("1_j85td")
+type = 2
+amt = 4
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_xqi38"]
+script = ExtResource("3_egwfa")
+damage = Array[ExtResource("1_j85td")]([SubResource("Resource_lxyyc"), SubResource("Resource_egwfa")])
+custom_logic_timing = 0
+metadata/_custom_type_script = "uid://bafoedredhjvd"
 
 [sub_resource type="Resource" id="Resource_j85td"]
 script = ExtResource("1_j85td")
@@ -27,9 +47,10 @@ damage = Array[ExtResource("1_j85td")]([SubResource("Resource_j85td"), SubResour
 armor = Array[ExtResource("1_j85td")]([])
 status_effects = Array[ExtResource("3_lxyyc")]([])
 special_reactions = Array[int]([])
-special_actions = Array[int]([7])
 healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
+has_custom_effects = false
+custom_effects = Array[ExtResource("2_lxyyc")]([SubResource("Resource_xqi38")])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

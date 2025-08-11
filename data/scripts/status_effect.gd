@@ -3,19 +3,11 @@ class_name StatusEffectData
 
 
 enum Timing {
-	ON_APPLIED, ## this status will do it's effect when it's applied.
-	ON_WORN_OFF, ## this status will do it's effect when it wears off.
-	WHILE_ACTIVE, ## this status will do it's effect when it's applied, and remove it when it wears off.
+	ON_APPLIED,                ## Apply immediately on application, do not store.
+	ON_WORN_OFF,               ## Apply only when remaining reaches 0, then remove.
+	WHILE_ACTIVE,              ## At start of each owner's turn, apply; then decrement; no reverse.
 }
 
-
-enum SpecialEffectBehaviour {
-	NONE,
-	FRACTURE,
-	STUN,
-	SHOCK,
-	DISORIENTATION
-}
 
 enum ApplyTo {
 	SELF,
@@ -24,7 +16,7 @@ enum ApplyTo {
 
 @export var log_name:String;
 @export var timing:Timing;
-@export var special_effect_behaviour:SpecialEffectBehaviour;
 @export var apply_to:ApplyTo;
 @export var apply_only_if_unarmored:bool;
+@export var duration:int=100000;
 @export var effect:CardData;

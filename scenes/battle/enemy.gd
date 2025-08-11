@@ -58,6 +58,7 @@ func try_get_valid_reaction(attack):
 
 
 # this function triggers the special behaviours of the enemy.
+# (some enemies have some inherent special behaviours, this is not the effect of a card).
 # Argument "trigger_type" : indicates the turn moment we are on. If a custom script
 #     is not set to be triggered on this moment, it will not be triggered.
 func trigger_custom_behaviours(trigger_type: EnemyCustomBehaviour.Trigger):
