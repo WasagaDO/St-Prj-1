@@ -238,6 +238,20 @@ func get_speed_modifier_from_statuses() -> int:
 		m -= 1         # permanent
 	return m
 
+
+# Get the actual speed that the card will have when played.
+# This takes into consideration the card's speed and all the speed modifiers
+# that the combatant has (status effects and reaction speed boost (e.g. Distant Control)).
+# If the card shall be used as a reaction, set 'as_reaction' to true
+func get_effective_speed_for(card: CardData, as_reaction: bool) -> int:
+	var s := card.speed + get_speed_modifier_from_statuses()
+	if as_reaction:
+		s += next_reaction_speed_boost
+	return s
+
+
+
+
 # Incoming damage multiplier for THIS combatant (defender-side)
 func get_incoming_damage_multiplier() -> float:
 	var mul := 1.0

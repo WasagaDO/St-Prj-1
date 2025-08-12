@@ -1,4 +1,4 @@
-extends ConditionalEffect
+extends SpecialCardEffect
 class_name DamageIfEnemyHasAnyEffect
 
 @export var damage:Array[ArmorData] = [];

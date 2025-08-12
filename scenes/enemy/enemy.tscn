@@ -1005,7 +1005,7 @@ remote_path = NodePath("../../../../../../../poligons/Goat-man-final0000Right-ha
 [node name="HipL" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
 position = Vector2(197.294, 96.3959)
 rotation = -0.0379951
-scale = Vector2(0.999982, 0.999982)
+scale = Vector2(0.999981, 0.999981)
 rest = Transform2D(0.999278, -0.037986, 0.037986, 0.999278, 131, 91)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipL"]

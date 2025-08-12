@@ -2,9 +2,21 @@
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_j85td"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_34xlw"]
-[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_lxyyc"]
 [ext_resource type="Script" uid="uid://bafoedredhjvd" path="res://scripts/card custom behaviour/damage_if_enemy_has_any_effect.gd" id="3_egwfa"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_lxyyc"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="3_xqi38"]
+
+[sub_resource type="Resource" id="Resource_j85td"]
+script = ExtResource("1_j85td")
+type = 1
+amt = 6
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
+
+[sub_resource type="Resource" id="Resource_34xlw"]
+script = ExtResource("1_j85td")
+type = 2
+amt = 4
+metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 
 [sub_resource type="Resource" id="Resource_lxyyc"]
 script = ExtResource("1_j85td")
@@ -18,23 +30,12 @@ type = 2
 amt = 4
 metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 
-[sub_resource type="Resource" id="Resource_xqi38"]
+[sub_resource type="Resource" id="Resource_xmcm8"]
 script = ExtResource("3_egwfa")
 damage = Array[ExtResource("1_j85td")]([SubResource("Resource_lxyyc"), SubResource("Resource_egwfa")])
-custom_logic_timing = 0
+timing = 0
+revert_on_end_of_turn = false
 metadata/_custom_type_script = "uid://bafoedredhjvd"
-
-[sub_resource type="Resource" id="Resource_j85td"]
-script = ExtResource("1_j85td")
-type = 1
-amt = 6
-metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
-
-[sub_resource type="Resource" id="Resource_34xlw"]
-script = ExtResource("1_j85td")
-type = 2
-amt = 4
-metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 
 [resource]
 script = ExtResource("2_34xlw")
@@ -51,6 +52,5 @@ healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
-has_custom_effects = false
-custom_effects = Array[ExtResource("2_lxyyc")]([SubResource("Resource_xqi38")])
+special_effects = Array[ExtResource("3_xqi38")]([SubResource("Resource_xmcm8")])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

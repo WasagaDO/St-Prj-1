@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://c2fhjcy37ys7r"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_na3pi"]
-[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_b6r6p"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_b6r6p"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_dkdjf"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_b6r6p"]
 [ext_resource type="Script" uid="uid://dbnbcv25x7uyr" path="res://scripts/card custom behaviour/agile_maneuver_beheaviour.gd" id="3_vfw55"]
 
-[sub_resource type="Resource" id="Resource_iv25o"]
+[sub_resource type="Resource" id="Resource_b6r6p"]
 script = ExtResource("3_vfw55")
 custom_logic_timing = 0
 metadata/_custom_type_script = "uid://dbnbcv25x7uyr"
@@ -26,6 +26,5 @@ healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = false
-has_custom_effects = true
-custom_effects = Array[ExtResource("2_b6r6p")]([SubResource("Resource_iv25o")])
+special_effects = Array[ExtResource("2_b6r6p")]([SubResource("Resource_b6r6p")])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

@@ -162,7 +162,7 @@ metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 [sub_resource type="Resource" id="Resource_ema6m"]
 script = ExtResource("9_dn6dx")
 card = ExtResource("21_m0fgd")
-copies = 2
+copies = 20
 metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 
 [sub_resource type="Resource" id="Resource_e6ws5"]

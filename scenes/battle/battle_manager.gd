@@ -64,7 +64,6 @@ func increment_turn_order():
 
 
 func on_card_played(card:CardData, source:Combatant, target:Combatant):
-	source.last_card_played = card
 	var card_can_be_resolved:bool = true;
 	# remove some stamina from the player
 	if source is Player:
@@ -125,7 +124,6 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 				# so it can no longer be resolved.
 				queued_attack = null;
 
-	source.last_card_played = card
 	# applies the base effects of the card to the target
 	target.apply_card_effect(source, card)
 
@@ -139,6 +137,12 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 		
 		receiver.apply_new_status_effect(status, source)
 
+	# custom card effect
+	for effect:SpecialCardEffect in card.special_effects:
+		if effect.timing == SpecialCardEffect.Timing.ON_RESOLVE:
+			effect.execute(source, target)
+
+	# custom enemy behaviour that happen on an attack
 	if card.card_type == CardData.CardType.ATTACK:
 		if source is Enemy:
 			source.trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ON_ATTACK_SUCCESS)
@@ -152,6 +156,9 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 		resolve_card(queued_attack.card, queued_attack.source, queued_attack.target)
 	else:
 		queued_attack = null;
+	
+	# update 
+	source.last_card_played = card
 	
 	# it's possible the last enemy died from this,
 	# or the player did.

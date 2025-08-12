@@ -48,5 +48,4 @@ enum SpecialReaction {
 @export var needs_target:bool = true;
 @export_category("Custom card's logic")
 
-@export var has_custom_effects: bool
-@export var custom_effects: Array[ConditionalEffect] = []
+@export var special_effects: Array[SpecialCardEffect] = []

@@ -1,4 +1,4 @@
-extends ConditionalEffect
+extends SpecialCardEffect
 class_name DamageIfOpponentHasEffect
 
 @export var armor_data: ArmorData

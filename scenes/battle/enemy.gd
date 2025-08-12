@@ -51,9 +51,21 @@ func increment_turn():
 func try_get_valid_reaction(attack):
 	for reaction in enemy_data.reactions:
 		var on_cooldown = card_cooldowns.has(reaction) and card_cooldowns[reaction] > 0
-		if not on_cooldown and BattleUtil.card_can_react(reaction, attack):
-			card_cooldowns[reaction] = reaction.cooldown;
-			return reaction;
+		if on_cooldown:
+			continue
+		if not BattleUtil.card_can_react(reaction, attack):
+			continue
+		
+		# >>> SPEED CHECK <<<
+		var attack_speed := self.get_effective_speed_for(attack, false)
+		var react_speed  := self.get_effective_speed_for(reaction, true)
+		# the reaction must be AT LEAST as fast as the attack
+		if react_speed < attack_speed:
+			continue
+		
+		# valid reaction
+		card_cooldowns[reaction] = reaction.cooldown;
+		return reaction;
 
 
 

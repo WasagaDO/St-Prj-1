@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://bsvmal5boc56b"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_3pnni"]
-[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_jghte"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_jghte"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_wb0fa"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_jghte"]
 [ext_resource type="Resource" uid="uid://b2p8ypjie0cu7" path="res://data/status_effects/shock.tres" id="4_wb0fa"]

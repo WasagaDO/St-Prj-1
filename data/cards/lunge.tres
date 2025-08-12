@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://dkttfuu7htvyw"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_yg783"]
-[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/conditional_effect.gd" id="2_3cgue"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_3cgue"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_cgmeh"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_j3nbc"]
 [ext_resource type="Texture2D" uid="uid://bsjsbl7t8rjle" path="res://assets/card_art/lunge.png" id="4_yylsg"]
