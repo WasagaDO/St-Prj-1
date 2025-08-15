@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://cvp83fjtisnpi"]
+[gd_scene load_steps=96 format=3 uid="uid://cvp83fjtisnpi"]
 
 [ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_0hcyc"]
 [ext_resource type="PackedScene" uid="uid://dlgug5h82pnj5" path="res://scenes/battle/ui/bars/bars.tscn" id="4_6f28h"]
@@ -65,14 +65,6 @@
 [ext_resource type="PackedScene" uid="uid://qjn0sxvwnccc" path="res://scenes/battle/events/battle_events/end_turn_event.tscn" id="44_i32r0"]
 [ext_resource type="PackedScene" uid="uid://c60ncshk4otu6" path="res://scenes/battle/events/battle_events/status_applied.tscn" id="45_40ag2"]
 [ext_resource type="PackedScene" uid="uid://ij7gsovl7fxo" path="res://scenes/battle/events/battle_events/status_wore_off.tscn" id="46_7a5bm"]
-[ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="50_ac7wl"]
-[ext_resource type="Resource" uid="uid://c6wtc8libsxgp" path="res://data/enemies/freak/freak_with_a_spear.tres" id="51_ytjid"]
-[ext_resource type="Resource" uid="uid://b7p105j6jandf" path="res://data/enemies/freak/freak_with_a_crossbow.tres" id="52_03fk3"]
-[ext_resource type="Resource" uid="uid://b6unc8ncrqo7u" path="res://data/enemies/freak/freak_with_a_net_and_sword.tres" id="53_au34j"]
-[ext_resource type="Resource" uid="uid://b1yfgmwejoiju" path="res://data/enemies/freak/freak_with_3_swords.tres" id="54_fdqrj"]
-[ext_resource type="Resource" uid="uid://dyqx3duejof0l" path="res://data/enemies/gladiator/gladiator_with_dual_weapons.tres" id="55_becrk"]
-[ext_resource type="Resource" uid="uid://d0n5ss0mxq3gu" path="res://data/enemies/gladiator/gladiator_with_shield.tres" id="56_x3gp7"]
-[ext_resource type="Resource" uid="uid://dnk025ovxfb34" path="res://data/enemies/gladiator/gladiator_with_sword.tres" id="57_ytjid"]
 
 [sub_resource type="Resource" id="Resource_yqjmm"]
 script = ExtResource("9_dn6dx")
@@ -117,7 +109,7 @@ copies = 1
 [sub_resource type="Resource" id="Resource_7ndk8"]
 script = ExtResource("9_dn6dx")
 card = ExtResource("8_ff4qw")
-copies = 2
+copies = 3
 
 [sub_resource type="Resource" id="Resource_bewwa"]
 script = ExtResource("9_dn6dx")
@@ -170,7 +162,7 @@ metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 [sub_resource type="Resource" id="Resource_ema6m"]
 script = ExtResource("9_dn6dx")
 card = ExtResource("21_m0fgd")
-copies = 2
+copies = 20
 metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 
 [sub_resource type="Resource" id="Resource_e6ws5"]
@@ -296,25 +288,23 @@ script = ExtResource("16_jltus")
 hand = NodePath("../Hand")
 deck = NodePath("../Deck")
 
-[node name="Protagonist" parent="." node_paths=PackedStringArray("hand", "debug_text") instance=ExtResource("16_8f82i")]
+[node name="Protagonist" parent="." node_paths=PackedStringArray("hand") instance=ExtResource("16_8f82i")]
 position = Vector2(536, 553)
 scale = Vector2(0.2, 0.2)
 hand = NodePath("../Cards/Hand")
 max_stamina = 30
 log_name = "Player"
-debug_text = NodePath("../UI/Debug Infos/Player Debug Infos")
 
 [node name="Bars" parent="Protagonist" instance=ExtResource("4_6f28h")]
 position = Vector2(-300, -1690)
 scale = Vector2(1.255, 1.31111)
 
-[node name="Enemy" parent="." node_paths=PackedStringArray("debug_text") instance=ExtResource("18_nndee")]
+[node name="Enemy" parent="." instance=ExtResource("18_nndee")]
 position = Vector2(1328, 511)
 scale = Vector2(0.18, 0.18)
 enemy_data = ExtResource("26_vwuyc")
 max_stamina = 30
 log_name = "Goat Man"
-debug_text = NodePath("../UI/Debug Infos/Enemy Debug Infos")
 
 [node name="Bars" parent="Enemy" instance=ExtResource("4_6f28h")]
 position = Vector2(500, -1666.67)
@@ -362,16 +352,15 @@ offset_bottom = 143.0
 
 [node name="Player Debug Infos" type="RichTextLabel" parent="UI/Debug Infos"]
 layout_mode = 0
-offset_top = -21.0
 offset_right = 662.0
-offset_bottom = 209.0
+offset_bottom = 115.0
 
 [node name="Enemy Debug Infos" type="RichTextLabel" parent="UI/Debug Infos"]
 layout_mode = 0
 offset_left = 1106.0
-offset_top = -21.0
+offset_top = -2.0
 offset_right = 1768.0
-offset_bottom = 194.0
+offset_bottom = 113.0
 
 [node name="Log" type="Control" parent="UI" node_paths=PackedStringArray("message_parent")]
 clip_contents = true
@@ -480,8 +469,6 @@ deck = NodePath("../Cards/Deck")
 hand = NodePath("../Cards/Hand")
 discard_pile = NodePath("../Cards/DiscardPile")
 enemies = [NodePath("../Enemy")]
-enemy_datas = Array[ExtResource("50_ac7wl")]([ExtResource("26_vwuyc"), ExtResource("51_ytjid"), ExtResource("52_03fk3"), ExtResource("53_au34j"), ExtResource("54_fdqrj"), ExtResource("55_becrk"), ExtResource("56_x3gp7"), ExtResource("57_ytjid")])
-enemy_data_labels = Array[int]([0, 1, 2, 3, 4, 5, 6, 7])
 
 [node name="Events" type="Node" parent="." node_paths=PackedStringArray("hand", "deck", "dealer", "discard_pile", "state_overlay", "end_turn_button", "darken_overlay", "stat_popups_player", "stat_popups_enemy")]
 script = ExtResource("31_go2ce")

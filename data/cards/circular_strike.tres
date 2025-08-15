@@ -26,6 +26,5 @@ healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
-has_custom_effects = false
-custom_effects = Array[ExtResource("2_27mcp")]([])
+special_effects = Array[ExtResource("2_27mcp")]([])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

@@ -1,15 +1,44 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=5 format=3 uid="uid://b1yfgmwejoiju"]
+[gd_resource type="Resource" script_class="EnemyData" load_steps=14 format=3 uid="uid://b1yfgmwejoiju"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_17p38"]
+[ext_resource type="Script" uid="uid://ckyyf6cokbqg5" path="res://scripts/enemy custom behaviours/enemy_custom_behaviour.gd" id="2_0n3ni"]
 [ext_resource type="Script" uid="uid://07xrxm0x4phv" path="res://data/scripts/enemy_turn_data.gd" id="2_0riuv"]
+[ext_resource type="Script" uid="uid://budx4gx17mb22" path="res://scripts/enemy custom behaviours/enemy_behaviour_boosted_attacks.gd" id="3_dykmc"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="3_thq7v"]
 [ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="4_xu4oe"]
+[ext_resource type="Resource" uid="uid://d21a1y2ujj0t3" path="res://data/enemies/freak/moves/hurricane.tres" id="6_c2gxs"]
+[ext_resource type="Resource" uid="uid://dkv48dy6ua28k" path="res://data/enemies/freak/moves/headfirst.tres" id="7_2hwdp"]
+[ext_resource type="Resource" uid="uid://b4wirit8cff20" path="res://data/enemies/freak/moves/freaks_wild_swinging.tres" id="7_dykmc"]
+
+[sub_resource type="Resource" id="Resource_4vsv7"]
+script = ExtResource("3_dykmc")
+bonus_amount = 2
+bonus_type = 3
+trigger = 3
+metadata/_custom_type_script = "uid://budx4gx17mb22"
+
+[sub_resource type="Resource" id="Resource_wpsfc"]
+script = ExtResource("2_0riuv")
+moves = Array[ExtResource("3_thq7v")]([ExtResource("6_c2gxs")])
+metadata/_custom_type_script = "uid://07xrxm0x4phv"
+
+[sub_resource type="Resource" id="Resource_yr5dj"]
+script = ExtResource("2_0riuv")
+moves = Array[ExtResource("3_thq7v")]([ExtResource("7_dykmc")])
+metadata/_custom_type_script = "uid://07xrxm0x4phv"
+
+[sub_resource type="Resource" id="Resource_i6d36"]
+script = ExtResource("2_0riuv")
+moves = Array[ExtResource("3_thq7v")]([ExtResource("7_2hwdp"), ExtResource("7_2hwdp")])
+metadata/_custom_type_script = "uid://07xrxm0x4phv"
 
 [resource]
 script = ExtResource("4_xu4oe")
 name = "Freak with three swords"
-moves = Array[ExtResource("2_0riuv")]([])
+behaviour = 0
+moves = Array[ExtResource("2_0riuv")]([SubResource("Resource_wpsfc"), SubResource("Resource_yr5dj"), SubResource("Resource_i6d36")])
 reactions = Array[ExtResource("3_thq7v")]([])
-max_hp = 0
+max_hp = 45
 armor = Array[ExtResource("1_17p38")]([])
+behaviours = Array[ExtResource("2_0n3ni")]([SubResource("Resource_4vsv7")])
 metadata/_custom_type_script = "uid://3jkx5d0irahs"

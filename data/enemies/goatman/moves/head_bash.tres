@@ -25,5 +25,4 @@ healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
-has_custom_effects = false
-custom_effects = Array[ExtResource("2_j1yeo")]([])
+special_effects = Array[ExtResource("2_j1yeo")]([])

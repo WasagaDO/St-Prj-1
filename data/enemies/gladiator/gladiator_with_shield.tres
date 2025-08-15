@@ -55,10 +55,10 @@ metadata/_custom_type_script = "uid://07xrxm0x4phv"
 [resource]
 script = ExtResource("4_au17a")
 name = "Gladiator with shield"
+behaviour = 2
 moves = Array[ExtResource("2_6bx8u")]([SubResource("Resource_lg0sv"), SubResource("Resource_x8wp6"), SubResource("Resource_chn7b")])
 reactions = Array[ExtResource("3_54a7w")]([ExtResource("10_u10dx")])
-max_hp = 36
+max_hp = 35
 armor = Array[ExtResource("1_wy082")]([SubResource("Resource_0jvye"), SubResource("Resource_mudd0"), SubResource("Resource_ca34l")])
-has_custom_behaviours = true
 behaviours = Array[ExtResource("2_jee1v")]([SubResource("Resource_u10dx")])
 metadata/_custom_type_script = "uid://3jkx5d0irahs"

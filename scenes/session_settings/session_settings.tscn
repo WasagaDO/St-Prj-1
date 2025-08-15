@@ -511,6 +511,39 @@ popup/item_0/id = 0
 popup/item_1/text = "Enemy"
 popup/item_1/id = 1
 
+[node name="MenuRow5" type="HBoxContainer" parent="BattleSettings/Settings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow5"]
+layout_mode = 2
+text = "Enemy"
+label_settings = SubResource("LabelSettings_vvp3d")
+
+[node name="EnemyOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow5"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("17_ctiyb")
+alignment = 2
+selected = 0
+item_count = 8
+popup/item_0/text = "Goatman"
+popup/item_0/id = 0
+popup/item_1/text = "Freak with a spear"
+popup/item_1/id = 1
+popup/item_2/text = "Freak with a crossbow"
+popup/item_2/id = 2
+popup/item_3/text = "Freak with a net and sword"
+popup/item_3/id = 3
+popup/item_4/text = "Freak with three swords"
+popup/item_4/id = 4
+popup/item_5/text = "Gladiator with dual weapons"
+popup/item_5/id = 5
+popup/item_6/text = "Gladiator with shield"
+popup/item_6/id = 6
+popup/item_7/text = "Gladoator with sword"
+popup/item_7/id = 7
+
 [node name="CloseButton" type="Button" parent="BattleSettings"]
 layout_mode = 1
 anchors_preset = 7
@@ -555,4 +588,5 @@ metadata/_edit_lock_ = true
 [connection signal="item_selected" from="BattleSettings/Settings/MenuRow2/TimeofDayOptionButton" to="." method="_on_timeof_day_option_button_item_selected"]
 [connection signal="item_selected" from="BattleSettings/Settings/MenuRow3/ItemsOptionButton" to="." method="_on_items_option_button_item_selected"]
 [connection signal="item_selected" from="BattleSettings/Settings/MenuRow4/FirstTurnOptionButton" to="." method="_on_first_turn_option_button_item_selected"]
+[connection signal="item_selected" from="BattleSettings/Settings/MenuRow5/EnemyOptionButton" to="." method="_on_enemy_button_item_selected"]
 [connection signal="pressed" from="BattleSettings/CloseButton" to="BattleSettings" method="_on_close_button_pressed"]

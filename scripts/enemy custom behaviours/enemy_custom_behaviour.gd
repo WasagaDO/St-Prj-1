@@ -13,5 +13,5 @@ enum Trigger {
 @export var trigger: Trigger
 
 # function made to be overwritten by subclasses
-func execute(enemy: Enemy):
+func execute(source: Combatant, target: Combatant):
 	pass

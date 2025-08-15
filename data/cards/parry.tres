@@ -8,7 +8,7 @@
 [sub_resource type="Resource" id="Resource_heus4"]
 script = ExtResource("1_heus4")
 type = 1
-amt = 0
+amt = 6
 metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 
 [resource]
@@ -28,6 +28,5 @@ healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = false
-has_custom_effects = false
-custom_effects = Array[ExtResource("2_8cxny")]([])
+special_effects = Array[ExtResource("2_8cxny")]([])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

@@ -45,3 +45,7 @@ func _on_items_option_button_item_selected(index: int) -> void:
 
 func _on_first_turn_option_button_item_selected(index: int) -> void:
 	BattleSettings.first_turn = index;
+
+
+func _on_enemy_button_item_selected(index: int) -> void:
+	BattleSettings.enemy_type = index;

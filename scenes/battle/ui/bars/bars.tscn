@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dlgug5h82pnj5"]
+[gd_scene load_steps=18 format=3 uid="uid://dlgug5h82pnj5"]
 
 [ext_resource type="Texture2D" uid="uid://dhfo154kag2vs" path="res://assets/misc/bars/health_bar_base.png" id="1_ytwkl"]
 [ext_resource type="PackedScene" uid="uid://btyo6lo3wp2o8" path="res://scenes/battle/ui/bars/bar.tscn" id="2_bawsi"]
@@ -9,11 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://2dpumdk526cl" path="res://assets/ui/stamina_icon.png" id="6_6mhh8"]
 [ext_resource type="Texture2D" uid="uid://cn873hj5wtugq" path="res://assets/ui/slashing_icon.png" id="6_7ekre"]
 [ext_resource type="Texture2D" uid="uid://4odu8cyhbo3o" path="res://assets/ui/bashing_damage.png" id="7_x6ixa"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_i2hdq"]
-resource_local_to_scene = true
-shader = ExtResource("3_cff34")
-shader_parameter/fill_amt = 1.0
+[ext_resource type="Texture2D" uid="uid://y5wo0blq888d" path="res://assets/misc/bars/BAR_ULT.png" id="10_44gc7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m0sg6"]
 resource_local_to_scene = true
@@ -35,13 +31,28 @@ resource_local_to_scene = true
 shader = ExtResource("3_cff34")
 shader_parameter/fill_amt = 1.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pp80d"]
+resource_local_to_scene = true
+shader = ExtResource("3_cff34")
+shader_parameter/fill_amt = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fl5lq"]
+resource_local_to_scene = true
+shader = ExtResource("3_cff34")
+shader_parameter/fill_amt = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b24xc"]
+resource_local_to_scene = true
+shader = ExtResource("3_cff34")
+shader_parameter/fill_amt = 1.0
+
 [node name="Bars" type="Sprite2D"]
 texture = ExtResource("1_ytwkl")
 script = ExtResource("2_hkpxn")
 
 [node name="HpBar" parent="." instance=ExtResource("2_bawsi")]
 self_modulate = Color(0.678431, 0.152941, 0, 1)
-material = SubResource("ShaderMaterial_i2hdq")
+material = SubResource("ShaderMaterial_m0sg6")
 offset_left = -1274.0
 offset_top = -108.0
 offset_right = 1280.0
@@ -50,7 +61,7 @@ icon = ExtResource("5_j4cr2")
 
 [node name="StaminaBar" parent="." instance=ExtResource("2_bawsi")]
 self_modulate = Color(0.776471, 0.513726, 0, 1)
-material = SubResource("ShaderMaterial_m0sg6")
+material = SubResource("ShaderMaterial_44gc7")
 offset_left = -1245.0
 offset_top = -181.0
 offset_right = 1234.0
@@ -62,7 +73,7 @@ icon = ExtResource("6_6mhh8")
 
 [node name="PiercingArmor" parent="Armor" instance=ExtResource("2_bawsi")]
 self_modulate = Color(0, 0.635294, 0.25098, 1)
-material = SubResource("ShaderMaterial_44gc7")
+material = SubResource("ShaderMaterial_omjur")
 offset_left = -1234.0
 offset_top = 2.0
 offset_right = -433.0
@@ -72,7 +83,7 @@ icon = ExtResource("5_ouf2k")
 
 [node name="CuttingArmor" parent="Armor" instance=ExtResource("2_bawsi")]
 self_modulate = Color(0, 0.521569, 0.627451, 1)
-material = SubResource("ShaderMaterial_omjur")
+material = SubResource("ShaderMaterial_hk7s8")
 offset_left = -407.0
 offset_top = 2.0
 offset_right = 393.0
@@ -82,10 +93,32 @@ icon = ExtResource("6_7ekre")
 
 [node name="CrushingArmor" parent="Armor" instance=ExtResource("2_bawsi")]
 self_modulate = Color(0.4, 0.545098, 0.447059, 1)
-material = SubResource("ShaderMaterial_hk7s8")
+material = SubResource("ShaderMaterial_pp80d")
 offset_left = 417.0
 offset_top = 2.0
 offset_right = 1240.0
 offset_bottom = 45.0
 expand_mode = 2
 icon = ExtResource("7_x6ixa")
+
+[node name="BalanceBar background" type="TextureRect" parent="."]
+self_modulate = Color(0.0965544, 9.73444e-06, 0.100412, 1)
+material = SubResource("ShaderMaterial_fl5lq")
+offset_left = -1234.0
+offset_top = 159.0
+offset_right = -433.0
+offset_bottom = 202.0
+texture = ExtResource("10_44gc7")
+expand_mode = 2
+
+[node name="BalanceBar" parent="." instance=ExtResource("2_bawsi")]
+self_modulate = Color(0.493079, 0.00021216, 0.507029, 1)
+material = SubResource("ShaderMaterial_b24xc")
+offset_left = -1234.0
+offset_top = 159.0
+offset_right = -433.0
+offset_bottom = 202.0
+expand_mode = 2
+
+[connection signal="mouse_entered" from="BalanceBar background" to="BalanceBar background" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BalanceBar background" to="BalanceBar background" method="_on_mouse_exited"]

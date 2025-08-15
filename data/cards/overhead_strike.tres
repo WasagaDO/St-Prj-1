@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://brlmjw0y6oui0"]
+[gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://brlmjw0y6oui0"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_ni5i7"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="4_0sj3b"]
 [ext_resource type="Texture2D" uid="uid://6mfaxa560vaw" path="res://assets/card_art/overhead_strike.png" id="4_cjdyc"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_vyq3q"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_yop6l"]
@@ -33,3 +34,4 @@ healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
+special_effects = Array[ExtResource("4_0sj3b")]([])

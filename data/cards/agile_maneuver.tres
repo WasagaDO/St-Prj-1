@@ -8,7 +8,8 @@
 
 [sub_resource type="Resource" id="Resource_b6r6p"]
 script = ExtResource("3_vfw55")
-custom_logic_timing = 0
+timing = 0
+revert_on_end_of_turn = false
 metadata/_custom_type_script = "uid://dbnbcv25x7uyr"
 
 [resource]

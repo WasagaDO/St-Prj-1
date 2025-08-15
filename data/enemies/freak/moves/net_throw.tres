@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://bqgodlq23vid3"]
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://bqgodlq23vid3"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_5ssl7"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_tosel"]
+[ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="3_mkv20"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_qko6p"]
 [ext_resource type="Resource" uid="uid://djywox21hc4cv" path="res://data/status_effects/in_nets.tres" id="4_tosel"]
 
@@ -9,9 +10,10 @@
 script = ExtResource("3_qko6p")
 log_name = "In Nets"
 timing = 0
-special_effect_behaviour = 0
 apply_to = 0
 apply_only_if_unarmored = false
+duration = 100000
+revert_on_end = false
 effect = ExtResource("4_tosel")
 metadata/_custom_type_script = "uid://bgj73ykcpodne"
 
@@ -26,9 +28,9 @@ damage = Array[ExtResource("1_5ssl7")]([])
 armor = Array[ExtResource("1_5ssl7")]([])
 status_effects = Array[ExtResource("3_qko6p")]([SubResource("Resource_5ssl7")])
 special_reactions = Array[int]([])
-special_actions = Array[int]([])
 healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
+special_effects = Array[ExtResource("3_mkv20")]([])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

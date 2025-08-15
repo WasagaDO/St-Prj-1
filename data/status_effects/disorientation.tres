@@ -14,7 +14,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 [resource]
 script = ExtResource("2_gue7i")
 description = ""
-name = ""
+name = "Disorientation"
 stamina_cost = 0
 card_type = 0
 speed = 0
@@ -26,6 +26,5 @@ healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
-has_custom_effects = false
-custom_effects = Array[ExtResource("2_u0j1q")]([])
+special_effects = Array[ExtResource("2_u0j1q")]([])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

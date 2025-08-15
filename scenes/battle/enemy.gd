@@ -9,6 +9,8 @@ var turns:Array[EnemyTurnData]
 var turn_index:int = -1;
 var move_index:int = 0;
 
+var player: Player = null;
+
 var card_cooldowns:Dictionary = {};
 func _ready():
 	super._ready();
@@ -48,20 +50,14 @@ func increment_turn():
 	trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ON_EACH_TURN_START)
 	
 
-func try_get_valid_reaction(attack):
+func try_get_valid_reaction(attack:CardData, attacker:Combatant):
 	for reaction in enemy_data.reactions:
 		var on_cooldown = card_cooldowns.has(reaction) and card_cooldowns[reaction] > 0
 		if on_cooldown:
 			continue
-		if not BattleUtil.card_can_react(reaction, attack):
+		if not BattleUtil.card_can_react(reaction, attack, attacker, self):
 			continue
 		
-		# >>> SPEED CHECK <<<
-		var attack_speed := self.get_effective_speed_for(attack, false)
-		var react_speed  := self.get_effective_speed_for(reaction, true)
-		# the reaction must be AT LEAST as fast as the attack
-		if react_speed < attack_speed:
-			continue
 		
 		# valid reaction
 		card_cooldowns[reaction] = reaction.cooldown;
@@ -74,8 +70,6 @@ func try_get_valid_reaction(attack):
 # Argument "trigger_type" : indicates the turn moment we are on. If a custom script
 #     is not set to be triggered on this moment, it will not be triggered.
 func trigger_custom_behaviours(trigger_type: EnemyCustomBehaviour.Trigger):
-	if not enemy_data.has_custom_behaviours:
-		return # enemy's custom behaviours are disabled
 	for behaviour in enemy_data.behaviours:
 		if behaviour.trigger == trigger_type:
-			behaviour.execute(self)
+			behaviour.execute(self, player)

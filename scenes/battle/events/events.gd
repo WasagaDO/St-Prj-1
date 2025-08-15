@@ -103,14 +103,17 @@ func _ready() -> void:
 		})
 	)
 	
-	BattleSignals.player_can_react.connect(func(attack:CardData):
+	BattleSignals.player_can_react.connect(func(attack: CardData, attacker: Combatant, reactor: Combatant):
 		push_event(EventType.PLAYER_CAN_REACT, {
 			"attack": attack,
 			"hand": hand,
 			"end_turn_button": end_turn_button,
-			"darken_overlay": darken_overlay
-		});	
+			"darken_overlay": darken_overlay,
+			"attacker": attacker,
+			"reactor": reactor,
+		})
 	)
+
 	
 	BattleSignals.attack_dodged.connect(func(attack_target, attack_source, attack):
 		push_event(EventType.ATTACK_DODGED, {

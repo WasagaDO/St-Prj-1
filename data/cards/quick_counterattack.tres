@@ -33,6 +33,5 @@ healing = null
 balance_healing = null
 cooldown = null
 needs_target = false
-has_custom_effects = false
-custom_effects = Array[ExtResource("1_yuxrl")]([])
+special_effects = Array[ExtResource("1_yuxrl")]([])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

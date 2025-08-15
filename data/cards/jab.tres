@@ -26,5 +26,4 @@ healing = null
 balance_healing = null
 cooldown = null
 needs_target = null
-has_custom_effects = false
-custom_effects = Array[ExtResource("1_55u4c")]([])
+special_effects = Array[ExtResource("1_55u4c")]([])

@@ -5,6 +5,7 @@ class_name Bars
 @onready var cutting_armor:Bar = $Armor/CuttingArmor
 @onready var crushing_armor:Bar = $Armor/CrushingArmor
 @onready var piercing_armor:Bar = $Armor/PiercingArmor
+@onready var balance_bar:Bar = $BalanceBar
 
 var armor:Dictionary;
 

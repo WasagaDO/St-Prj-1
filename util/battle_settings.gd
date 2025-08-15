@@ -6,6 +6,17 @@ enum EnemyBehaviour {
 	Random
 }
 
+enum EnemyType {
+	Goatman,
+	FreakSpear,
+	FreakCrossbow,
+	FreakNetSword,
+	Freak3Swords,
+	GladoatorDualWeapons,
+	GladiatorShield,
+	GladiatorSword
+}
+
 enum TimeOfDay {
 	Day,
 	Night,
@@ -24,6 +35,7 @@ enum WhoGoesFirst {
 }
 @export var location:LocationData
 @export var enemy_behavioural_model:EnemyBehaviour
+@export var enemy_type: EnemyType
 @export var time_of_day:TimeOfDay
 @export var items_enabled:bool;
 @export var first_turn:WhoGoesFirst

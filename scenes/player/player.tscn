@@ -547,7 +547,7 @@ offset = Vector2(-87, -466)
 [node name="Protagonist-final0000Right-forearm" type="Sprite2D" parent="poligons"]
 position = Vector2(-1182.19, -499.275)
 rotation = 0.0181708
-scale = Vector2(0.999997, 0.999997)
+scale = Vector2(0.999996, 0.999996)
 texture = ExtResource("14_aqmh7")
 offset = Vector2(257, 230)
 
@@ -596,7 +596,7 @@ remote_path = NodePath("../../../../../poligons/Protagonist-final0001Behind-left
 [node name="ShoulderR" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmR"]
 position = Vector2(-303, 351)
 rotation = 0.0347757
-scale = Vector2(0.999996, 0.999996)
+scale = Vector2(0.999995, 0.999995)
 rest = Transform2D(0.999395, 0.0347687, -0.0347687, 0.999395, -303, 351)
 auto_calculate_length_and_angle = false
 length = 552.385

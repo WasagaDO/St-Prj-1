@@ -7,7 +7,7 @@ signal damage_applied(source, target:Combatant, amt:int, type:Combatant.DamageTy
 signal healing_applied(source, target:Combatant, amt:int);
 signal armor_applied(source, target:Combatant, amt:int, type:Combatant.DamageType);
 signal armor_damage_applied(source, target:Combatant, amt:int, type:Combatant.DamageType);
-signal player_can_react(attack:CardData)
+signal player_can_react(attack:CardData, attacker: Combatant, reactor: Combatant);
 
 signal enemy_move_played(source, target:Combatant, move:CardData)
 signal card_played(source, target:Combatant, card:Card);

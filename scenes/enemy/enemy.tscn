@@ -825,23 +825,23 @@ texture = ExtResource("3_vk7ip")
 offset = Vector2(-147.254, 121.435)
 
 [node name="Goat-man-final0009Right-calf" type="Sprite2D" parent="poligons"]
-position = Vector2(849.972, 489.646)
+position = Vector2(849.972, 489.645)
 rotation = 0.0692125
-scale = Vector2(0.999982, 0.999982)
+scale = Vector2(0.999981, 0.999981)
 texture = ExtResource("4_phoul")
 offset = Vector2(140.421, 138.396)
 
 [node name="Goat-man-final0008Right-leg" type="Sprite2D" parent="poligons"]
 position = Vector2(848.156, 9.52222)
 rotation = 0.0402485
-scale = Vector2(0.999982, 0.999982)
+scale = Vector2(0.999981, 0.999981)
 texture = ExtResource("5_qqorh")
 offset = Vector2(-16.1344, 278.904)
 
 [node name="Goat-man-final0010Right-hoof" type="Sprite2D" parent="poligons"]
-position = Vector2(1105.13, 741.748)
+position = Vector2(1105.13, 741.747)
 rotation = 0.0692125
-scale = Vector2(0.999982, 0.999982)
+scale = Vector2(0.999981, 0.999981)
 texture = ExtResource("6_ng3ld")
 offset = Vector2(-34.2507, 334.793)
 
@@ -1005,7 +1005,7 @@ remote_path = NodePath("../../../../../../../poligons/Goat-man-final0000Right-ha
 [node name="HipL" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
 position = Vector2(197.294, 96.3959)
 rotation = -0.0379951
-scale = Vector2(0.999981, 0.999981)
+scale = Vector2(0.99998, 0.99998)
 rest = Transform2D(0.999278, -0.037986, 0.037986, 0.999278, 131, 91)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipL"]

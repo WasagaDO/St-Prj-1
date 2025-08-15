@@ -40,9 +40,9 @@ moves = Array[ExtResource("3_sajlm")]([ExtResource("6_shx4i")])
 [resource]
 script = ExtResource("8_6y6y3")
 name = "Goatman"
+behaviour = 0
 moves = Array[ExtResource("2_p4mp8")]([SubResource("Resource_1n4rt"), SubResource("Resource_t3kag"), SubResource("Resource_0wrom")])
 reactions = Array[ExtResource("3_sajlm")]([ExtResource("7_x5b2r")])
 max_hp = 36
 armor = Array[ExtResource("1_i1770")]([SubResource("Resource_ihh8v"), SubResource("Resource_b0pht"), SubResource("Resource_1d228")])
-has_custom_behaviours = false
 behaviours = Array[ExtResource("2_kxq7j")]([])

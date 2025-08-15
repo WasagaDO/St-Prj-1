@@ -19,6 +19,7 @@ timing = 0
 apply_to = 1
 apply_only_if_unarmored = false
 duration = 100000
+revert_on_end = false
 effect = ExtResource("4_12agl")
 metadata/_custom_type_script = "uid://bgj73ykcpodne"
 
@@ -37,6 +38,5 @@ healing = 0
 balance_healing = 0
 cooldown = 0
 needs_target = true
-has_custom_effects = false
-custom_effects = Array[ExtResource("2_7135w")]([])
+special_effects = Array[ExtResource("2_7135w")]([])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"
