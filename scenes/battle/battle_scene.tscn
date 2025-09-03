@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://cvp83fjtisnpi"]
+[gd_scene load_steps=114 format=3 uid="uid://cvp83fjtisnpi"]
 
 [ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_0hcyc"]
 [ext_resource type="PackedScene" uid="uid://dlgug5h82pnj5" path="res://scenes/battle/ui/bars/bars.tscn" id="4_6f28h"]
@@ -56,10 +56,15 @@
 [ext_resource type="PackedScene" uid="uid://b6l1ys4rqnc57" path="res://scenes/battle/events/state_events/enemy_move_played_event.tscn" id="37_mpgih"]
 [ext_resource type="PackedScene" uid="uid://dakjnfsa0jk6u" path="res://scenes/battle/events/state_events/card_played_event.tscn" id="39_gh2so"]
 [ext_resource type="PackedScene" uid="uid://e3juvlur7cd7" path="res://scenes/battle/events/state_events/new_turn_event.tscn" id="40_18j3u"]
+[ext_resource type="Texture2D" uid="uid://c6jwy7db37oqc" path="res://assets/ui/EXIT MENU BUTTON.png" id="40_becrk"]
+[ext_resource type="Script" uid="uid://4kdcre4baime" path="res://scenes/battle/escape_menu.gd" id="40_fdqrj"]
 [ext_resource type="PackedScene" uid="uid://cubgdjkworik0" path="res://scenes/battle/events/state_events/end_of_game_event.tscn" id="40_t6ak5"]
 [ext_resource type="Texture2D" uid="uid://bv5iyg1mcyuk4" path="res://assets/ui/circle_button.png" id="40_u24ob"]
 [ext_resource type="PackedScene" uid="uid://lmttoefckcl2" path="res://scenes/battle/events/state_events/player_can_react_event.tscn" id="41_ho70s"]
 [ext_resource type="PackedScene" uid="uid://ddevk2tyrxskr" path="res://scenes/battle/events/state_events/start_of_game_event.tscn" id="41_jpniv"]
+[ext_resource type="Texture2D" uid="uid://dfp5c6af206nf" path="res://assets/ui/HEADER.png" id="41_kaah5"]
+[ext_resource type="Script" uid="uid://dio0y0xyjoo7i" path="res://scenes/battle/escape_button.gd" id="41_x3gp7"]
+[ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="42_dmmaj"]
 [ext_resource type="PackedScene" uid="uid://b7jk4c6e3tluy" path="res://scenes/battle/events/react_events/attack_dodged_event.tscn" id="42_i3ye5"]
 [ext_resource type="PackedScene" uid="uid://cbinw3r6wni0k" path="res://scenes/battle/events/battle_events/card_resolved_event.tscn" id="44_gpbrr"]
 [ext_resource type="PackedScene" uid="uid://qjn0sxvwnccc" path="res://scenes/battle/events/battle_events/end_turn_event.tscn" id="44_i32r0"]
@@ -233,6 +238,22 @@ card = ExtResource("31_dmmaj")
 copies = 2
 metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_becrk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdqrj"]
+bg_color = Color(0, 0, 0, 0.462745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ascb6"]
+bg_color = Color(0, 0, 0, 0.894118)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c5cw1"]
+font = ExtResource("42_dmmaj")
+font_size = 48
+outline_size = 20
+outline_color = Color(0.184314, 0.0470588, 0.0470588, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3gp7"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_vv33i"]
 font_size = 64
 
@@ -283,7 +304,7 @@ position = Vector2(715, 938)
 script = ExtResource("11_pluhi")
 card_manager = NodePath("../CardManager")
 card_separation = 150.0
-target_selector = NodePath("../../UI/TargetSelector")
+target_selector = NodePath("../../CanvasLayer/UI/TargetSelector")
 card_y_max = 150.0
 card_hovered_y_offset = -80.0
 enabled = false
@@ -302,7 +323,7 @@ scale = Vector2(0.2, 0.2)
 hand = NodePath("../Cards/Hand")
 max_stamina = 30
 log_name = "Player"
-debug_text = NodePath("../UI/Debug Infos/Player Debug Infos")
+debug_text = NodePath("../CanvasLayer/UI/Debug Infos/Player Debug Infos")
 
 [node name="Bars" parent="Protagonist" instance=ExtResource("4_6f28h")]
 position = Vector2(-300, -1690)
@@ -314,18 +335,121 @@ scale = Vector2(0.18, 0.18)
 enemy_data = ExtResource("26_vwuyc")
 max_stamina = 30
 log_name = "Goat Man"
-debug_text = NodePath("../UI/Debug Infos/Enemy Debug Infos")
+debug_text = NodePath("../CanvasLayer/UI/Debug Infos/Enemy Debug Infos")
 
 [node name="Bars" parent="Enemy" instance=ExtResource("4_6f28h")]
 position = Vector2(500, -1666.67)
 scale = Vector2(1.27222, 1.37778)
 
-[node name="UI" type="Node2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TargetSelector" parent="UI" instance=ExtResource("14_ovprx")]
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="EscapeButton" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 16.0
+offset_right = 159.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_becrk")
+icon = ExtResource("40_becrk")
+flat = true
+expand_icon = true
+script = ExtResource("41_x3gp7")
+
+[node name="EscapeMenu" type="Panel" parent="CanvasLayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fdqrj")
+script = ExtResource("40_fdqrj")
+
+[node name="EscapePanel" type="Panel" parent="CanvasLayer/UI/EscapeMenu"]
+z_index = 4096
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -428.0
+offset_right = 428.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ascb6")
+
+[node name="Header" type="TextureRect" parent="CanvasLayer/UI/EscapeMenu/EscapePanel"]
+z_index = 100
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -268.0
+offset_top = 68.0
+offset_right = 268.0
+offset_bottom = 235.0
+grow_horizontal = 2
+texture = ExtResource("41_kaah5")
+expand_mode = 1
+metadata/_edit_group_ = true
+
+[node name="Title" type="Label" parent="CanvasLayer/UI/EscapeMenu/EscapePanel/Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME  PAUSED"
+label_settings = SubResource("LabelSettings_c5cw1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="VBoxContainer" parent="CanvasLayer/UI/EscapeMenu/EscapePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -362.0
+offset_top = -316.0
+offset_right = 362.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 95
+alignment = 1
+
+[node name="return to combat button" type="Button" parent="CanvasLayer/UI/EscapeMenu/EscapePanel/Settings"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x3gp7")
+text = "Return to combat"
+
+[node name="exit combat button" type="Button" parent="CanvasLayer/UI/EscapeMenu/EscapePanel/Settings"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.842635, 2.06962e-06, 5.77569e-07, 1)
+theme_override_font_sizes/font_size = 51
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x3gp7")
+text = "Exit combat"
+
+[node name="TargetSelector" parent="CanvasLayer/UI" instance=ExtResource("14_ovprx")]
 z_index = 99
 
-[node name="EndTurnButton" type="Button" parent="UI"]
+[node name="EndTurnButton" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 0
 offset_left = 1630.0
 offset_top = 829.0
 offset_right = 1896.0
@@ -333,8 +457,9 @@ offset_bottom = 944.0
 theme_override_font_sizes/font_size = 32
 text = "End Turn"
 
-[node name="Alert" type="Label" parent="UI"]
+[node name="Alert" type="Label" parent="CanvasLayer/UI"]
 visible = false
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -352,28 +477,32 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("28_xevio")
 
-[node name="Debug Infos" type="Control" parent="UI"]
+[node name="Debug Infos" type="Control" parent="CanvasLayer/UI"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 71.0
 offset_top = 31.0
 offset_right = 1889.0
 offset_bottom = 143.0
+mouse_filter = 2
 
-[node name="Player Debug Infos" type="RichTextLabel" parent="UI/Debug Infos"]
+[node name="Player Debug Infos" type="RichTextLabel" parent="CanvasLayer/UI/Debug Infos"]
 layout_mode = 0
+offset_left = 113.0
 offset_top = -21.0
-offset_right = 662.0
+offset_right = 800.0
 offset_bottom = 209.0
+mouse_filter = 2
 
-[node name="Enemy Debug Infos" type="RichTextLabel" parent="UI/Debug Infos"]
+[node name="Enemy Debug Infos" type="RichTextLabel" parent="CanvasLayer/UI/Debug Infos"]
 layout_mode = 0
-offset_left = 1106.0
+offset_left = 966.0
 offset_top = -21.0
-offset_right = 1768.0
+offset_right = 1643.0
 offset_bottom = 194.0
+mouse_filter = 2
 
-[node name="Log" type="Control" parent="UI" node_paths=PackedStringArray("message_parent")]
+[node name="Log" type="Control" parent="CanvasLayer/UI" node_paths=PackedStringArray("message_parent")]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
@@ -387,7 +516,7 @@ max_logs = 20
 message_parent = NodePath("ScrollContainer/MarginContainer/VBoxContainer")
 message_scene = ExtResource("29_wskmf")
 
-[node name="ColorRect" type="ColorRect" parent="UI/Log"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UI/Log"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -396,7 +525,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.568627)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="UI/Log"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/UI/Log"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -406,7 +535,7 @@ grow_vertical = 2
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/Log/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/Log/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -415,14 +544,14 @@ theme_override_constants/margin_top = 7
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 7
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/Log/ScrollContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/Log/ScrollContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 alignment = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer/UI"]
 
-[node name="StateOverlay" type="ColorRect" parent="UI/CanvasLayer"]
+[node name="StateOverlay" type="ColorRect" parent="CanvasLayer/UI/CanvasLayer"]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -431,7 +560,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.145098, 0.145098, 0.145098, 0.6)
 
-[node name="Label" type="Label" parent="UI/CanvasLayer/StateOverlay"]
+[node name="Label" type="Label" parent="CanvasLayer/UI/CanvasLayer/StateOverlay"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -443,17 +572,17 @@ label_settings = SubResource("LabelSettings_qtnqa")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CircleButton" type="Sprite2D" parent="UI"]
+[node name="CircleButton" type="Sprite2D" parent="CanvasLayer/UI"]
 position = Vector2(198, 918)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("40_u24ob")
 
-[node name="BackpackClosed" type="Sprite2D" parent="UI/CircleButton"]
+[node name="BackpackClosed" type="Sprite2D" parent="CanvasLayer/UI/CircleButton"]
 position = Vector2(-10, 40)
 scale = Vector2(0.532, 0.532)
 texture = ExtResource("26_si0dq")
 
-[node name="StatusPopups_Player" type="Control" parent="UI"]
+[node name="StatusPopups_Player" type="Control" parent="CanvasLayer/UI"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 420.0
@@ -463,7 +592,7 @@ offset_bottom = 524.0
 script = ExtResource("27_mfn67")
 stat_popup_scene = ExtResource("28_evgrh")
 
-[node name="StatusPopups_Enemy" type="Control" parent="UI"]
+[node name="StatusPopups_Enemy" type="Control" parent="CanvasLayer/UI"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1445.0
@@ -489,18 +618,21 @@ hand = NodePath("../Cards/Hand")
 deck = NodePath("../Cards/Deck")
 dealer = NodePath("../Cards/Dealer")
 discard_pile = NodePath("../Cards/DiscardPile")
-state_overlay = NodePath("../UI/CanvasLayer/StateOverlay")
+state_overlay = NodePath("../CanvasLayer/UI/CanvasLayer/StateOverlay")
 event_handlers = Array[PackedScene]([ExtResource("34_a8wsi"), ExtResource("36_s0fps"), ExtResource("33_1yotk"), ExtResource("35_8dhsw"), ExtResource("42_i3ye5"), ExtResource("39_gh2so"), ExtResource("37_mpgih"), ExtResource("40_18j3u"), ExtResource("41_ho70s"), ExtResource("40_t6ak5"), ExtResource("41_jpniv"), ExtResource("44_gpbrr"), ExtResource("44_i32r0"), ExtResource("45_40ag2"), ExtResource("46_7a5bm")])
-end_turn_button = NodePath("../UI/EndTurnButton")
+end_turn_button = NodePath("../CanvasLayer/UI/EndTurnButton")
 darken_overlay = NodePath("../ColorRect")
-stat_popups_player = NodePath("../UI/StatusPopups_Player")
-stat_popups_enemy = NodePath("../UI/StatusPopups_Enemy")
+stat_popups_player = NodePath("../CanvasLayer/UI/StatusPopups_Player")
+stat_popups_enemy = NodePath("../CanvasLayer/UI/StatusPopups_Enemy")
 end_scene_path = "res://scenes/session_settings/session_settings.tscn"
 
 [connection signal="card_played" from="Cards/Hand" to="BattleManager" method="_on_hand_card_played"]
-[connection signal="not_enough_stamina" from="Protagonist" to="UI/Alert" method="_on_protagonist_not_enough_stamina"]
+[connection signal="not_enough_stamina" from="Protagonist" to="CanvasLayer/UI/Alert" method="_on_protagonist_not_enough_stamina"]
 [connection signal="move_made" from="Enemy" to="BattleManager" method="_on_enemy_move_made"]
-[connection signal="cancelled" from="UI/TargetSelector" to="Cards/Hand" method="_on_target_selector_cancelled"]
-[connection signal="target_selected" from="UI/TargetSelector" to="Cards/Hand" method="_on_target_selector_target_selected"]
-[connection signal="pressed" from="UI/EndTurnButton" to="BattleManager" method="_on_end_turn_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/EscapeButton" to="CanvasLayer/UI/EscapeMenu" method="open_menu"]
+[connection signal="pressed" from="CanvasLayer/UI/EscapeMenu/EscapePanel/Settings/return to combat button" to="CanvasLayer/UI/EscapeMenu" method="close_menu"]
+[connection signal="pressed" from="CanvasLayer/UI/EscapeMenu/EscapePanel/Settings/exit combat button" to="CanvasLayer/UI/EscapeMenu" method="go_to_title_menu"]
+[connection signal="cancelled" from="CanvasLayer/UI/TargetSelector" to="Cards/Hand" method="_on_target_selector_cancelled"]
+[connection signal="target_selected" from="CanvasLayer/UI/TargetSelector" to="Cards/Hand" method="_on_target_selector_target_selected"]
+[connection signal="pressed" from="CanvasLayer/UI/EndTurnButton" to="BattleManager" method="_on_end_turn_button_pressed"]
 [connection signal="queue_empty" from="Events" to="BattleManager" method="_on_events_queue_empty"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gmurh1l7y8h6"
-path="res://.godot/imported/HORIZONTAL CUT.png-a943eae8c720cab219fa6c8edb4801b9.ctex"
+uid="uid://db2ulcrc3oxka"
+path="res://.godot/imported/horizontal cut.png-5c10887802ec5e5f2183407791ae263d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards_final/Action Cards/HORIZONTAL CUT.png"
-dest_files=["res://.godot/imported/HORIZONTAL CUT.png-a943eae8c720cab219fa6c8edb4801b9.ctex"]
+source_file="res://assets/cards_final/Action Cards/horizontal cut.png"
+dest_files=["res://.godot/imported/horizontal cut.png-5c10887802ec5e5f2183407791ae263d.ctex"]
 
 [params]
 

@@ -564,7 +564,6 @@ expand_icon = true
 
 [node name="Inventory" type="CanvasLayer" parent="."]
 layer = 3
-visible = false
 script = ExtResource("20_g3hyj")
 
 [node name="Backround" type="ColorRect" parent="Inventory"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl4iat4jihltn"
-path="res://.godot/imported/DECEPTIVE STRIKE.png-c4c011d9fe143fbde460eecf785a36d2.ctex"
+uid="uid://b3xmi8ijot1l0"
+path="res://.godot/imported/deceptive strike.png-f47134949e01ec54c0e11c0764112c71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards_final/Action Cards/DECEPTIVE STRIKE.png"
-dest_files=["res://.godot/imported/DECEPTIVE STRIKE.png-c4c011d9fe143fbde460eecf785a36d2.ctex"]
+source_file="res://assets/cards_final/Action Cards/deceptive strike.png"
+dest_files=["res://.godot/imported/deceptive strike.png-f47134949e01ec54c0e11c0764112c71.ctex"]
 
 [params]
 

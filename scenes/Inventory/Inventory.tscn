@@ -27,20 +27,20 @@
 [ext_resource type="Texture2D" uid="uid://csmwqtumwq8qp" path="res://scenes/Inventory/Hero_s Table/SortSearch/RandomPressed.png" id="10_sodv1"]
 [ext_resource type="Texture2D" uid="uid://swo58kw8oblp" path="res://scenes/Inventory/Hero_s Table/SortSearch/Search.png" id="11_ev5pc"]
 [ext_resource type="Texture2D" uid="uid://bndhvwv65i0y5" path="res://scenes/Inventory/Hero_s Table/CardHolder/CardHolderNormal.png" id="17_n1ihj"]
-[ext_resource type="Texture2D" uid="uid://mhfxroea62cr" path="res://assets/cards_final/Action Cards/ACTIVE DEFENSE with stamina.png" id="18_n7aan"]
-[ext_resource type="Texture2D" uid="uid://bl4iat4jihltn" path="res://assets/cards_final/Action Cards/DECEPTIVE STRIKE.png" id="20_nspnh"]
+[ext_resource type="Texture2D" uid="uid://dxg0hucf06wox" path="res://assets/cards_final/Action Cards/active defense.png" id="18_n7aan"]
+[ext_resource type="Texture2D" uid="uid://c24iueqtvlmk3" path="res://assets/cards_final/Action Cards/change of stance.png" id="19_nspnh"]
+[ext_resource type="Texture2D" uid="uid://b3xmi8ijot1l0" path="res://assets/cards_final/Action Cards/deceptive strike.png" id="20_n7aan"]
 [ext_resource type="Texture2D" uid="uid://bc4o7ek6f21s0" path="res://scenes/Inventory/Cards/active defense.png" id="20_puxs0"]
-[ext_resource type="Texture2D" uid="uid://dyx6ha1m3yd5k" path="res://assets/cards_final/Action Cards/DODGE.png" id="21_0a5el"]
-[ext_resource type="Texture2D" uid="uid://bo1a33mhrklgy" path="res://assets/card_art/FullCards/change of stance.png" id="21_ex84n"]
-[ext_resource type="Texture2D" uid="uid://gmurh1l7y8h6" path="res://assets/cards_final/Action Cards/HORIZONTAL CUT.png" id="22_4j2t0"]
+[ext_resource type="Texture2D" uid="uid://cyg6m7ldd3jmu" path="res://assets/cards_final/Action Cards/dodge.png" id="21_n7aan"]
+[ext_resource type="Texture2D" uid="uid://db2ulcrc3oxka" path="res://assets/cards_final/Action Cards/horizontal cut.png" id="22_nspnh"]
+[ext_resource type="Texture2D" uid="uid://co8cji33uvccn" path="res://assets/cards_final/Action Cards/jab.png" id="23_0a5el"]
 [ext_resource type="FontFile" uid="uid://dsgbqt8ne3tjc" path="res://scenes/Inventory/Fonts/BREATHE_FIRE.OTF" id="23_rldjp"]
-[ext_resource type="Texture2D" uid="uid://dkc23sd8fm7pd" path="res://assets/cards_final/Action Cards/LUNGE.png" id="24_n7aan"]
-[ext_resource type="Texture2D" uid="uid://cj1iurx8fjf24" path="res://assets/card_art/FullCards/jab.png" id="25_dwthj"]
-[ext_resource type="Texture2D" uid="uid://b3xqnovvuydro" path="res://assets/cards_final/Action Cards/NOGGIN KICK.png" id="25_nspnh"]
-[ext_resource type="Texture2D" uid="uid://3huap7xompmf" path="res://assets/cards_final/Action Cards/OVERHEAD STRIKE.png" id="26_n7aan"]
-[ext_resource type="Texture2D" uid="uid://bc3dhenbr2f1x" path="res://assets/cards_final/Action Cards/SPRAWLING PUNCH.png" id="27_n7aan"]
-[ext_resource type="Texture2D" uid="uid://cpbutydh1jx1i" path="res://assets/cards_final/Action Cards/SOK.png" id="28_n7aan"]
-[ext_resource type="Texture2D" uid="uid://bhfrbhysvy6uy" path="res://assets/cards_final/Action Cards/WIDE SWING.png" id="29_n7aan"]
+[ext_resource type="Texture2D" uid="uid://bthrabjsptyp" path="res://assets/cards_final/Action Cards/lunge.png" id="24_4j2t0"]
+[ext_resource type="Texture2D" uid="uid://d02en23yyaef8" path="res://assets/cards_final/Action Cards/noggin kick.png" id="25_n7aan"]
+[ext_resource type="Texture2D" uid="uid://b8w8l6oy7p1kt" path="res://assets/cards_final/Action Cards/overhead strike.png" id="26_n7aan"]
+[ext_resource type="Texture2D" uid="uid://gtkeec6vfkeg" path="res://assets/cards_final/Action Cards/SPRAWLING PUNCH.png" id="27_n7aan"]
+[ext_resource type="Texture2D" uid="uid://c8fbu4x406rsb" path="res://assets/cards_final/Action Cards/strong overhead kick.png" id="28_0a5el"]
+[ext_resource type="Texture2D" uid="uid://dk5ldl80owjgb" path="res://assets/cards_final/Action Cards/WIDE SWING.png" id="29_n7aan"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cx5t"]
 bg_color = Color(0.247059, 0.247059, 0.247059, 0)
@@ -390,6 +390,7 @@ custom_minimum_size = Vector2(325, 490)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+scroll_vertical = 146
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
@@ -527,7 +528,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("21_ex84n")
+texture = ExtResource("19_nspnh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -591,7 +592,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_nspnh")
+texture = ExtResource("20_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -657,7 +658,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("21_0a5el")
+texture = ExtResource("21_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -721,7 +722,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("22_4j2t0")
+texture = ExtResource("22_nspnh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -787,7 +788,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("25_dwthj")
+texture = ExtResource("23_0a5el")
 expand_mode = 1
 stretch_mode = 5
 
@@ -853,7 +854,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("24_n7aan")
+texture = ExtResource("24_4j2t0")
 expand_mode = 1
 stretch_mode = 5
 
@@ -919,7 +920,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("25_nspnh")
+texture = ExtResource("25_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1114,7 +1115,7 @@ offset_right = 91.3435
 offset_bottom = 136.628
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("28_n7aan")
+texture = ExtResource("28_0a5el")
 expand_mode = 1
 stretch_mode = 5
 
@@ -1240,7 +1241,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="DescriptionCard" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab"]
+[node name="DescriptionCard" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab" node_paths=PackedStringArray("detect_area")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 300)
 layout_mode = 2
@@ -1250,6 +1251,8 @@ texture = ExtResource("17_n1ihj")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("2_olkvm")
+detect_area = NodePath("DetectArea")
+ZOOM_SCALE = 2.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard"]
 custom_minimum_size = Vector2(130, 240)
@@ -1296,6 +1299,7 @@ text = "Lvl: "
 vertical_alignment = 1
 
 [node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard"]
+z_index = 100
 custom_minimum_size = Vector2(372.4, 558.6)
 layout_mode = 1
 anchors_preset = 8
@@ -1312,6 +1316,16 @@ grow_vertical = 2
 texture = ExtResource("20_puxs0")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="DetectArea" type="Control" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab/DescriptionCard"]
+z_index = 101
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/SecondTab/DescriptionTab"]
 layout_mode = 2

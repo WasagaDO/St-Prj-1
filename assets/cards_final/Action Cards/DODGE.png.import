@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyx6ha1m3yd5k"
-path="res://.godot/imported/DODGE.png-e8d1094bb193ea283cd87bf2b4fe6e4e.ctex"
+uid="uid://cyg6m7ldd3jmu"
+path="res://.godot/imported/dodge.png-ddc98e0dcf06472baf0909de7c381994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards_final/Action Cards/DODGE.png"
-dest_files=["res://.godot/imported/DODGE.png-e8d1094bb193ea283cd87bf2b4fe6e4e.ctex"]
+source_file="res://assets/cards_final/Action Cards/dodge.png"
+dest_files=["res://.godot/imported/dodge.png-ddc98e0dcf06472baf0909de7c381994.ctex"]
 
 [params]
 
