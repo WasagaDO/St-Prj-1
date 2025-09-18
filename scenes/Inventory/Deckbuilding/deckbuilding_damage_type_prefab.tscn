@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4pq2jy4h26ob"]
+
+[ext_resource type="Texture2D" uid="uid://4odu8cyhbo3o" path="res://assets/ui/bashing_damage.png" id="1_ijddw"]
+
+[node name="damage type image" type="TextureRect"]
+custom_minimum_size = Vector2(45, 45)
+mouse_filter = 2
+texture = ExtResource("1_ijddw")
+expand_mode = 1
+stretch_mode = 5

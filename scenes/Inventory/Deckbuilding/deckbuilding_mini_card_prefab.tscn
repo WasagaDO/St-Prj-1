@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1i2hp7e2wve"]
+
+[ext_resource type="Texture2D" uid="uid://cc2c17b7xl5f" path="res://assets/ui utils/mini-card.png" id="1_mj4tl"]
+
+[node name="mini-card" type="Control"]
+custom_minimum_size = Vector2(7.5, 0)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="mini-card image" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 21.0
+offset_bottom = 36.0
+texture = ExtResource("1_mj4tl")
+expand_mode = 1
+stretch_mode = 5

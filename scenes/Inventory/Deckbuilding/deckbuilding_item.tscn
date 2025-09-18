@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqi83ljw7bm6x"]
+
+[ext_resource type="Script" uid="uid://breynndnhyweu" path="res://scenes/Inventory/Deckbuilding/deckbuilding_item.gd" id="1_c4wr6"]
+[ext_resource type="Texture2D" uid="uid://dg43rbrflnkir" path="res://assets/Items/Weapons/battle hammer.png" id="2_h8ar4"]
+[ext_resource type="PackedScene" uid="uid://d1i2hp7e2wve" path="res://scenes/Inventory/Deckbuilding/deckbuilding_mini_card_prefab.tscn" id="3_15ea0"]
+[ext_resource type="PackedScene" uid="uid://c4pq2jy4h26ob" path="res://scenes/Inventory/Deckbuilding/deckbuilding_damage_type_prefab.tscn" id="3_bwstr"]
+[ext_resource type="Texture2D" uid="uid://cojyjpak2iu6p" path="res://assets/ui/piercing_icon.png" id="3_jkm54"]
+[ext_resource type="Texture2D" uid="uid://cn873hj5wtugq" path="res://assets/ui/slashing_icon.png" id="5_vrb7y"]
+[ext_resource type="Texture2D" uid="uid://bpyhuaqd44t4e" path="res://assets/ui utils/thick circle.png" id="6_m2b4f"]
+[ext_resource type="Texture2D" uid="uid://4amx6hjyv6ie" path="res://assets/ui utils/tick.png" id="7_jkm54"]
+
+[node name="Item" type="TextureButton" node_paths=PackedStringArray("weapon_image", "value_text", "weapon_text", "damage_types_container", "mini_cards_container", "tick_button", "tick_image")]
+custom_minimum_size = Vector2(400, 150)
+script = ExtResource("1_c4wr6")
+weapon_name = "Cold Axe"
+weapon_icon = ExtResource("2_h8ar4")
+damage_type_icons = Array[Texture2D]([ExtResource("5_vrb7y"), ExtResource("3_jkm54")])
+mini_card_count = 6
+weapon_image = NodePath("weapon image")
+value_text = NodePath("value text")
+weapon_text = NodePath("weapon text")
+damage_types_container = NodePath("damage types")
+mini_cards_container = NodePath("mini-cards")
+tick_button = NodePath("tick button")
+tick_image = NodePath("tick image")
+damage_type_prefab = ExtResource("3_bwstr")
+mini_card_prefab = ExtResource("3_15ea0")
+
+[node name="weapon image" type="TextureRect" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 4.0
+offset_top = -13.0
+offset_right = 93.0
+offset_bottom = 112.0
+mouse_filter = 2
+texture = ExtResource("2_h8ar4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="value text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 85.5
+offset_top = 15.0
+offset_right = 154.5
+offset_bottom = 52.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
+text = "1.0"
+
+[node name="weapon text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 19.0
+offset_right = 393.0
+offset_bottom = 57.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Cold Axe"
+
+[node name="mini-cards" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 101.0
+offset_right = 77.0
+offset_bottom = 141.0
+mouse_filter = 2
+alignment = 1
+
+[node name="damage types" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 95.0
+offset_right = 196.0
+offset_bottom = 140.0
+
+[node name="tick button" type="TextureButton" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 325.0
+offset_top = 55.0
+offset_right = 359.0
+offset_bottom = 92.0
+texture_normal = ExtResource("6_m2b4f")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="tick image" type="TextureRect" parent="."]
+visible = false
+z_index = 5
+layout_mode = 0
+offset_left = 329.0
+offset_top = 50.0
+offset_right = 363.0
+offset_bottom = 87.0
+mouse_filter = 2
+texture = ExtResource("7_jkm54")
+expand_mode = 1
+stretch_mode = 5
