@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cn873hj5wtugq" path="res://assets/ui/slashing_icon.png" id="6_7ekre"]
 [ext_resource type="Texture2D" uid="uid://4odu8cyhbo3o" path="res://assets/ui/bashing_damage.png" id="7_x6ixa"]
 [ext_resource type="Texture2D" uid="uid://y5wo0blq888d" path="res://assets/misc/bars/BAR_ULT.png" id="10_44gc7"]
-[ext_resource type="Texture2D" uid="uid://b3ik7hj4q5pux" path="res://assets/ui/Conciousness.png" id="11_44gc7"]
+[ext_resource type="Texture2D" uid="uid://b3ik7hj4q5pux" path="res://assets/ui/Balance.png" id="11_44gc7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_44gc7"]
 resource_local_to_scene = true

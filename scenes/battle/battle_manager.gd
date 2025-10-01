@@ -4,6 +4,9 @@ enum Turn {
 	Enemy,
 	Player,
 }
+
+@export var background:Sprite2D 
+
 @export var player:Player;
 @export var deck:Deck;
 @export var hand:Hand;
@@ -27,6 +30,11 @@ var game_over:bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# set the background according to the location
+	if BattleSettings.location:
+		background.texture = BattleSettings.location.cover
+	else:
+		push_warning("location didn't load properly, no location data")
 	# set the correct enemy(es) that we selected.
 	# this system may change later.
 	var i = enemy_data_labels.find(BattleSettings.enemy_type)

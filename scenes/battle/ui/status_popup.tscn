@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://vs4mnjf7dn4a"]
+[gd_scene load_steps=8 format=3 uid="uid://vs4mnjf7dn4a"]
 
-[ext_resource type="Script" path="res://scenes/battle/status_popup.gd" id="1_gqcxg"]
+[ext_resource type="Script" uid="uid://xruxeg4q0m02" path="res://scenes/battle/status_popup.gd" id="1_gqcxg"]
 [ext_resource type="Texture2D" uid="uid://4odu8cyhbo3o" path="res://assets/ui/bashing_damage.png" id="2_id6fa"]
 [ext_resource type="Texture2D" uid="uid://cojyjpak2iu6p" path="res://assets/ui/piercing_icon.png" id="2_t4ke7"]
 [ext_resource type="Texture2D" uid="uid://cn873hj5wtugq" path="res://assets/ui/slashing_icon.png" id="4_i3dwr"]
 [ext_resource type="Texture2D" uid="uid://b81bovb8awv4l" path="res://assets/ui/health_icon.png" id="5_lw1nq"]
+[ext_resource type="Texture2D" uid="uid://b3ik7hj4q5pux" path="res://assets/ui/Balance.png" id="6_w5shn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6d1c7"]
 font_size = 48
@@ -24,6 +25,8 @@ crushing_icon = ExtResource("2_id6fa")
 piericng_icon = ExtResource("2_t4ke7")
 slashing_icon = ExtResource("4_i3dwr")
 health_icon = ExtResource("5_lw1nq")
+pure_damage_icon = ExtResource("5_lw1nq")
+balance_icon = ExtResource("6_w5shn")
 
 [node name="Icon" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(70, 70)

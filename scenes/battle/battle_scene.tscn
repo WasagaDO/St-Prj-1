@@ -271,8 +271,8 @@ metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_right = 2033.0
-offset_bottom = 1141.0
+offset_right = 1045.0
+offset_bottom = 677.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
@@ -602,8 +602,9 @@ offset_bottom = 478.0
 script = ExtResource("27_mfn67")
 stat_popup_scene = ExtResource("28_evgrh")
 
-[node name="BattleManager" type="Node2D" parent="." node_paths=PackedStringArray("player", "deck", "hand", "discard_pile", "enemies")]
+[node name="BattleManager" type="Node2D" parent="." node_paths=PackedStringArray("background", "player", "deck", "hand", "discard_pile", "enemies")]
 script = ExtResource("13_m5uja")
+background = NodePath("../Background")
 player = NodePath("../Protagonist")
 deck = NodePath("../Cards/Deck")
 hand = NodePath("../Cards/Hand")

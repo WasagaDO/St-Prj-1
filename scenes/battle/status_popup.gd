@@ -5,6 +5,8 @@ class_name StatusPopup
 @export var piericng_icon:Texture;
 @export var slashing_icon:Texture
 @export var health_icon:Texture;
+@export var pure_damage_icon:Texture;
+@export var balance_icon:Texture;
 @onready var icon: TextureRect = $Icon
 @onready var amount: Label = $Amount
 
@@ -29,8 +31,8 @@ func setup(damage_type:Combatant.DamageType, amt:int):
 	icons[Combatant.DamageType.PIERCING] = piericng_icon;
 	icons[Combatant.DamageType.CRUSHING] = crushing_icon;
 	icons[Combatant.DamageType.CUTTING] = slashing_icon;
-	icons[Combatant.DamageType.PURE] = null;
-	icons[Combatant.DamageType.BALANCE] = null;
+	icons[Combatant.DamageType.PURE] = pure_damage_icon;
+	icons[Combatant.DamageType.BALANCE] = balance_icon;
 	icons[Combatant.DamageType.NONE] = health_icon;
 	icon.texture = icons[damage_type]
 	amount.text = "%s%d" % ["+" if amt > 0 else "", amt];

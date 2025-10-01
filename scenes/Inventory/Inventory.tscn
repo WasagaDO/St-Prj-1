@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bri2nfm1lp86i"]
+[gd_scene load_steps=77 format=3 uid="uid://bri2nfm1lp86i"]
 
 [ext_resource type="Script" uid="uid://7qnddkoi4ew" path="res://scenes/Inventory/Card.gd" id="1_q6xp5"]
 [ext_resource type="Script" uid="uid://d3uvg6ump6pcs" path="res://scenes/Inventory/Inventory.gd" id="1_tp6t7"]
@@ -37,20 +37,37 @@
 [ext_resource type="FontFile" uid="uid://dsgbqt8ne3tjc" path="res://scenes/Inventory/Fonts/BREATHE_FIRE.OTF" id="23_rldjp"]
 [ext_resource type="Texture2D" uid="uid://bthrabjsptyp" path="res://assets/cards_final/Action Cards/lunge.png" id="24_4j2t0"]
 [ext_resource type="Texture2D" uid="uid://d02en23yyaef8" path="res://assets/cards_final/Action Cards/noggin kick.png" id="25_n7aan"]
+[ext_resource type="Texture2D" uid="uid://b4dqu2pw7kevj" path="res://assets/cards_final/Action Cards/Agile Manuever.png" id="25_oh3du"]
 [ext_resource type="Texture2D" uid="uid://b8w8l6oy7p1kt" path="res://assets/cards_final/Action Cards/overhead strike.png" id="26_n7aan"]
+[ext_resource type="Texture2D" uid="uid://bw5aey0qjhtkx" path="res://assets/cards_final/Action Cards/CIRCULAR STRIKE.png" id="27_2lsd0"]
 [ext_resource type="Texture2D" uid="uid://gtkeec6vfkeg" path="res://assets/cards_final/Action Cards/SPRAWLING PUNCH.png" id="27_n7aan"]
 [ext_resource type="Texture2D" uid="uid://c8fbu4x406rsb" path="res://assets/cards_final/Action Cards/strong overhead kick.png" id="28_0a5el"]
+[ext_resource type="Texture2D" uid="uid://cmswpdr4tidjm" path="res://assets/cards_final/Action Cards/CRUSHING BLOW.png" id="28_26cjx"]
 [ext_resource type="Texture2D" uid="uid://dk5ldl80owjgb" path="res://assets/cards_final/Action Cards/WIDE SWING.png" id="29_n7aan"]
+[ext_resource type="Texture2D" uid="uid://d0j3d1ur2kx1q" path="res://assets/cards_final/Action Cards/Distance Control.png" id="30_uf00k"]
+[ext_resource type="Texture2D" uid="uid://dg03andlqgfk8" path="res://assets/cards_final/Action Cards/Double Strike.png" id="32_uf00k"]
+[ext_resource type="Texture2D" uid="uid://dtsxjoyocmsp8" path="res://assets/cards_final/Action Cards/ELBOW STRIKE.png" id="33_18gvq"]
+[ext_resource type="Texture2D" uid="uid://st6k0xnmkr4u" path="res://assets/cards_final/Action Cards/FEINT.png" id="34_uulvt"]
+[ext_resource type="Texture2D" uid="uid://wskolkwfltyf" path="res://assets/cards_final/Action Cards/Gliding Strike.png" id="35_nn2op"]
 [ext_resource type="Script" uid="uid://tumb3p7opwuf" path="res://scenes/Inventory/Deckbuilding/deckbuilding_page.gd" id="35_orly3"]
 [ext_resource type="PackedScene" uid="uid://cqi83ljw7bm6x" path="res://scenes/Inventory/Deckbuilding/deckbuilding_item.tscn" id="36_0a5el"]
 [ext_resource type="Texture2D" uid="uid://bbu7kvm14x8ag" path="res://scenes/Inventory/Hero_s Table/Bookmark/AllNormal.png" id="37_4j2t0"]
+[ext_resource type="Texture2D" uid="uid://cjfkjyhq3lmgm" path="res://assets/cards_final/Action Cards/LEG STRIKE.png" id="38_nn2op"]
+[ext_resource type="Texture2D" uid="uid://clgrbqorul5hf" path="res://assets/cards_final/Action Cards/PARRY.png" id="42_ei5u0"]
+[ext_resource type="Texture2D" uid="uid://djqiiw1uewm7l" path="res://assets/cards_final/Action Cards/Power Block.png" id="43_7v0kw"]
 [ext_resource type="Texture2D" uid="uid://4odu8cyhbo3o" path="res://assets/ui/bashing_damage.png" id="43_25h1y"]
 [ext_resource type="Texture2D" uid="uid://cn873hj5wtugq" path="res://assets/ui/slashing_icon.png" id="44_7rty5"]
+[ext_resource type="Texture2D" uid="uid://b08fik8ffegmj" path="res://assets/cards_final/Action Cards/Powerful Thrust.png" id="44_053dp"]
 [ext_resource type="Texture2D" uid="uid://cojyjpak2iu6p" path="res://assets/ui/piercing_icon.png" id="45_7rty5"]
 [ext_resource type="Texture2D" uid="uid://b0ejxf32xhpr5" path="res://assets/Items/Weapons/one handed sword.png" id="45_dujje"]
+[ext_resource type="Texture2D" uid="uid://dgvmuypdu7t45" path="res://assets/cards_final/Action Cards/Precise Strike.png" id="45_wldv7"]
 [ext_resource type="Texture2D" uid="uid://bemciywmvbxrh" path="res://assets/Items/Weapons/two handed hammer.png" id="46_bmsdd"]
 [ext_resource type="Texture2D" uid="uid://k2jxl10wpkgw" path="res://assets/Items/Weapons/round shield_updated.png" id="46_orly3"]
+[ext_resource type="Texture2D" uid="uid://brq7ok4krwrt1" path="res://assets/cards_final/Action Cards/Quick Counterattack.png" id="46_vegor"]
+[ext_resource type="Texture2D" uid="uid://b72irwjhw0f58" path="res://assets/cards_final/Action Cards/RAMMING STRIKE.png" id="47_8cloy"]
 [ext_resource type="Texture2D" uid="uid://bdl2q68t1vdtl" path="res://assets/Items/Weapons/buckler_updated.png" id="47_dujje"]
+[ext_resource type="Texture2D" uid="uid://rrebi4oifwtc" path="res://assets/cards_final/Action Cards/SHIELD BASH.png" id="48_rn4vn"]
+[ext_resource type="Texture2D" uid="uid://clipsfjl2srll" path="res://assets/cards_final/Action Cards/WEAPON GRAB.png" id="51_hx6t0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cx5t"]
 bg_color = Color(0.247059, 0.247059, 0.247059, 0)
@@ -91,7 +108,7 @@ font_color = Color(0.94902, 0.67451, 0.32549, 1)
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Inventory" type="Control" node_paths=PackedStringArray("back_button", "menu_button", "filter_buttons", "filter_buttons_2", "cards_scroll", "scroll_container", "st_switchers", "page1", "page2", "page1_button", "page2_button", "page3_button")]
+[node name="Inventory" type="Control" node_paths=PackedStringArray("back_button", "menu_button", "filter_buttons", "filter_buttons_2", "cards_scroll", "scroll_container", "scrollbar_2", "scroll_2_container", "st_switchers", "page1", "page2", "page1_button", "page2_button", "page3_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -105,6 +122,8 @@ filter_buttons = NodePath("Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/F
 filter_buttons_2 = NodePath("Panel/MarginContainer/Book/BookContent/TOP BUTTONS/FilterButtons")
 cards_scroll = NodePath("Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/MarginContainer2/Control/TextureRect/MarginContainer/CardsScroll")
 scroll_container = NodePath("Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer")
+scrollbar_2 = NodePath("Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Scroll Left Page/TextureRect/MarginContainer/Scroll")
+scroll_2_container = NodePath("Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Left page/ScrollContainer")
 st_switchers = NodePath("Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers")
 page1 = NodePath("Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS")
 page2 = NodePath("Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING")
@@ -419,7 +438,7 @@ custom_minimum_size = Vector2(325, 490)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-scroll_vertical = 100
+scroll_vertical = 1130
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 
@@ -432,16 +451,16 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 3
 
-[node name="Card" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Active Defense" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
 expand_mode = 1
 script = ExtResource("1_q6xp5")
-title = "Astrodude"
+title = "Active Defense"
 type2 = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Active Defense"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -455,14 +474,16 @@ offset_bottom = 60.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Active Defense/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
-text = "Astrodude"
+text = "Active Defense"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Active Defense/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -471,14 +492,15 @@ text = "Type: PHY/SWORD"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Active Defense/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 0"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Active Defense"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -496,7 +518,74 @@ texture = ExtResource("18_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card2" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Agile Maneuver" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Title"
+type2 = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Agile Maneuver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.875
+offset_top = -60.5
+offset_right = 44.875
+offset_bottom = 60.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Agile Maneuver/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Agile Maneuver/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Agile Maneuver/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Agile Maneuver"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("25_oh3du")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Change of Stance" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -506,7 +595,7 @@ title = "Monkey"
 type2 = 1
 level = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Change of Stance"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -520,14 +609,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Change of Stance/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Monkey"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Change of Stance/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -536,14 +627,15 @@ text = "Type: PHY/SWORD"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Change of Stance/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 15"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card2"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Change of Stance"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -561,7 +653,143 @@ texture = ExtResource("19_nspnh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card3" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Circular Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Monkey"
+type2 = 1
+level = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Circular Strike"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Circular Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Monkey"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Circular Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Circular Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 15"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Circular Strike"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("27_2lsd0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Crushing Blow" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Monkey"
+type2 = 1
+level = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Crushing Blow"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Crushing Blow/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Monkey"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Crushing Blow/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Crushing Blow/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 15"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Crushing Blow"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_26cjx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Deceptive Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -570,7 +798,7 @@ script = ExtResource("1_q6xp5")
 title = "Hello"
 type2 = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Deceptive Strike"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -584,14 +812,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Deceptive Strike/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Hello"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Deceptive Strike/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -600,14 +830,15 @@ text = "Type: PHY/SWORD"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Deceptive Strike/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 0"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card3"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Deceptive Strike"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -625,7 +856,74 @@ texture = ExtResource("20_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card4" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Distance Control" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Hello"
+type2 = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Distance Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -38.5
+offset_right = 43.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Distance Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Hello"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Distance Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Distance Control/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 0"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Distance Control"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_uf00k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Dodge" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -636,7 +934,7 @@ type = 2
 type2 = 1
 level = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Dodge"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -650,14 +948,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Dodge/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Spider"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Dodge/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -666,14 +966,15 @@ text = "Type: MAG/SWORD"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Dodge/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 8"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card4"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Dodge"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -691,16 +992,18 @@ texture = ExtResource("21_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card5" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Double Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
 expand_mode = 1
 script = ExtResource("1_q6xp5")
-title = "Alt"
-type2 = 2
+title = "Spider"
+type = 2
+type2 = 1
+level = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Double Strike"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -714,14 +1017,290 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Double Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Spider"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Double Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Double Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 8"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Double Strike"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_uf00k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Elbow Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Spider"
+type = 2
+type2 = 1
+level = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Elbow Strike"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Elbow Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Spider"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Elbow Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Elbow Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 8"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Elbow Strike"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("33_18gvq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Feint" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Spider"
+type = 2
+type2 = 1
+level = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Feint"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Feint/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Spider"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Feint/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Feint/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 8"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Feint"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("34_uulvt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Gliding Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Spider"
+type = 2
+type2 = 1
+level = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Gliding Strike"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Gliding Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Spider"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Gliding Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Gliding Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 8"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Gliding Strike"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("35_nn2op")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Horizontal Cut" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Alt"
+type2 = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Horizontal Cut"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Horizontal Cut/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Alt"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Horizontal Cut/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -730,14 +1309,15 @@ text = "Type: PHY/RING"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Horizontal Cut/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 0"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card5"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Horizontal Cut"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -755,7 +1335,7 @@ texture = ExtResource("22_nspnh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card6" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Jab" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -766,7 +1346,7 @@ type = 2
 type2 = 2
 level = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Jab"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -780,14 +1360,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Jab/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Mamma"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Jab/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -796,14 +1378,15 @@ text = "Type: MAG/RING"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Jab/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 6"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card6"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Jab"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -821,7 +1404,76 @@ texture = ExtResource("23_0a5el")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card7" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Leg Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Mamma"
+type = 2
+type2 = 2
+level = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Leg Strike"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Leg Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Mamma"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Leg Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Leg Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 6"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Leg Strike"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("38_nn2op")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Lunge" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -832,7 +1484,7 @@ type = 2
 type2 = 2
 level = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Lunge"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -846,14 +1498,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Lunge/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Bat"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Lunge/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -862,14 +1516,15 @@ text = "Type: MAG/RING"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Lunge/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 4"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card7"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Lunge"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -887,7 +1542,7 @@ texture = ExtResource("24_4j2t0")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card8" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Nogging Kick" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -898,7 +1553,8 @@ type = 2
 type2 = 2
 level = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Nogging Kick"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -912,14 +1568,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Nogging Kick/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Savage"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Nogging Kick/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -928,14 +1586,14 @@ text = "Type: MAG/RING"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Nogging Kick/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 4"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card8"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Nogging Kick"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -953,7 +1611,7 @@ texture = ExtResource("25_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card9" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Overhead Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -963,7 +1621,7 @@ title = "Loreir"
 type2 = 1
 level = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Overhead Strike"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -977,14 +1635,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Overhead Strike/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Loreir"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Overhead Strike/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
@@ -993,14 +1653,15 @@ text = "Type: PHY/SWORD"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Overhead Strike/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 4"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card9"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Overhead Strike"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -1018,7 +1679,483 @@ texture = ExtResource("26_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card10" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Parry" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Parry"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Parry/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Parry/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Parry/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Parry"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("42_ei5u0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Power Block" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Power Block"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Power Block/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Power Block/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Power Block/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Power Block"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("43_7v0kw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Powerful Thrust" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Powerful Thrust"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Powerful Thrust/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Powerful Thrust/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Powerful Thrust/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Powerful Thrust"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("44_053dp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Precise Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Precise Strike"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Precise Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Precise Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Precise Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Precise Strike"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("45_wldv7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Quick Counterattack" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Quick Counterattack"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Quick Counterattack/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Quick Counterattack/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Quick Counterattack/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Quick Counterattack"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("46_vegor")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Ramming Strike" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Ramming Strike"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Ramming Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Ramming Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Ramming Strike/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Ramming Strike"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("47_8cloy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Shield Bash" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Loreir"
+type2 = 1
+level = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Shield Bash"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -38.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Shield Bash/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Loreir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Shield Bash/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: PHY/SWORD"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Shield Bash/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 4"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Shield Bash"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("48_rn4vn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Sprawling Punch" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -1029,7 +2166,7 @@ type = 2
 type2 = 2
 level = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Sprawling Punch"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1043,14 +2180,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Sprawling Punch/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Snappy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Sprawling Punch/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_fonts/font = ExtResource("9_ajwxg")
@@ -1058,14 +2197,15 @@ text = "Type: MAG/RING"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Sprawling Punch/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 12"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card10"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Sprawling Punch"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -1083,7 +2223,7 @@ texture = ExtResource("27_n7aan")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card11" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Strong Overhead Kick" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -1094,7 +2234,7 @@ type = 2
 type2 = 2
 level = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Strong Overhead Kick"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1108,14 +2248,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Strong Overhead Kick/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Snappy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Strong Overhead Kick/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_fonts/font = ExtResource("9_ajwxg")
@@ -1123,14 +2265,15 @@ text = "Type: MAG/RING"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Strong Overhead Kick/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 12"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card11"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Strong Overhead Kick"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -1148,7 +2291,7 @@ texture = ExtResource("28_0a5el")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Card12" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+[node name="Card Weapon Grab" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
 custom_minimum_size = Vector2(95.333, 144)
 layout_mode = 2
 texture = ExtResource("17_n1ihj")
@@ -1159,7 +2302,7 @@ type = 2
 type2 = 2
 level = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Weapon Grab"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1173,14 +2316,16 @@ offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12/VBoxContainer"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Weapon Grab/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Snappy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12/VBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Weapon Grab/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_fonts/font = ExtResource("9_ajwxg")
@@ -1188,14 +2333,80 @@ text = "Type: MAG/RING"
 label_settings = SubResource("LabelSettings_d74hb")
 vertical_alignment = 1
 
-[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12/VBoxContainer"]
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Weapon Grab/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("9_ajwxg")
 text = "Lv: 12"
 vertical_alignment = 1
 
-[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card12"]
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Weapon Grab"]
+custom_minimum_size = Vector2(177.51, 268.128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.1665
+offset_top = -131.5
+offset_right = 91.3435
+offset_bottom = 136.628
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("51_hx6t0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Card Wide Swing" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList"]
+custom_minimum_size = Vector2(95.333, 144)
+layout_mode = 2
+texture = ExtResource("17_n1ihj")
+expand_mode = 1
+script = ExtResource("1_q6xp5")
+title = "Snappy"
+type = 2
+type2 = 2
+level = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Wide Swing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -38.5
+offset_right = 41.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Wide Swing/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Snappy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Wide Swing/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Type: MAG/RING"
+label_settings = SubResource("LabelSettings_d74hb")
+vertical_alignment = 1
+
+[node name="Lvl" type="Label" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Wide Swing/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("9_ajwxg")
+text = "Lv: 12"
+vertical_alignment = 1
+
+[node name="CardPic" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/CardList/Card Wide Swing"]
 custom_minimum_size = Vector2(177.51, 268.128)
 layout_mode = 1
 anchors_preset = 8
@@ -2066,7 +3277,7 @@ mini_card_count = 3
 [node name="HSeparator9" type="HSeparator" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Left page/ScrollContainer/ITEMS"]
 layout_mode = 2
 
-[node name="Left Scroll" type="Control" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING"]
+[node name="Scroll Left Page" type="Control" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING"]
 layout_mode = 2
 anchors_preset = 0
 offset_left = 488.5
@@ -2075,7 +3286,7 @@ offset_right = 488.5
 offset_bottom = 617.5
 size_flags_horizontal = 8
 
-[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Left Scroll"]
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Scroll Left Page"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 offset_left = -3.13501
@@ -2085,7 +3296,7 @@ offset_bottom = 455.5
 texture = ExtResource("6_b530g")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Left Scroll/TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Scroll Left Page/TextureRect"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -2099,7 +3310,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_bottom = 20
 
-[node name="CardsScroll" type="VScrollBar" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Left Scroll/TextureRect/MarginContainer"]
+[node name="Scroll" type="VScrollBar" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Scroll Left Page/TextureRect/MarginContainer"]
 custom_minimum_size = Vector2(20, 400)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -2111,12 +3322,14 @@ theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_4rs2g")
 rounded = true
 
 [node name="Right page - Hammer inspect" type="Control" parent="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING"]
-custom_minimum_size = Vector2(475, 600)
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 483.0
-offset_right = 958.0
-offset_bottom = 600.0
+offset_left = 541.0
+offset_top = 1.0
+offset_right = 941.0
+offset_bottom = 553.0
+mouse_filter = 2
 
 [node name="TOP BUTTONS" type="MarginContainer" parent="Panel/MarginContainer/Book/BookContent"]
 show_behind_parent = true
@@ -2264,7 +3477,7 @@ vertical_alignment = 1
 [connection signal="value_changed" from="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/MarginContainer2/Control/TextureRect/MarginContainer/CardsScroll" to="." method="scroll"]
 [connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers/Info" to="." method="switch_tab" binds= ["info"]]
 [connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers/Deck" to="." method="switch_tab" binds= ["deck"]]
-[connection signal="value_changed" from="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Left Scroll/TextureRect/MarginContainer/CardsScroll" to="." method="scroll"]
+[connection signal="value_changed" from="Panel/MarginContainer/Book/BookContent/PAGE_2_DECKBUILDING/Scroll Left Page/TextureRect/MarginContainer/Scroll" to="." method="scroll_2"]
 [connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/TOP BUTTONS/FilterButtons/Page 1 Button" to="." method="switch_tab" binds= [1]]
 [connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/TOP BUTTONS/FilterButtons/Page 2 Button" to="." method="switch_tab" binds= [2]]
 [connection signal="pressed" from="Panel/MarginContainer/Book/BookContent/TOP BUTTONS/FilterButtons/Page 3 Button" to="." method="switch_tab" binds= [3]]

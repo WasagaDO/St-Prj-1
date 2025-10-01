@@ -6,11 +6,6 @@ extends Control
 
 @onready var card_list: GridContainer = %CardList
 @onready var description_card: TextureRect = %DescriptionCard
-#@onready var filter_buttons: VBoxContainer = $Panel/MarginContainer/Book/BookContent/HBoxContainer/FilterButtons
-#@onready var filter_buttons_2: HBoxContainer = $Panel/MarginContainer/Book/BookContent/MarginContainer/FilterButtons
-#@onready var cards_scroll: VScrollBar = $Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/MarginContainer2/Control/TextureRect/MarginContainer/CardsScroll
-#@onready var scroll_container: ScrollContainer = $Panel/MarginContainer/Book/BookContent/HBoxContainer/MarginContainer/HBoxContainer/Cardlist/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer
-#@onready var st_switchers: VBoxContainer = $Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer/MarginContainer2/STSwitchers
 
 
 # exporting those variables is a better practice than name referencing for scalability
@@ -20,6 +15,10 @@ extends Control
 @export var filter_buttons_2: HBoxContainer
 @export var cards_scroll: VScrollBar
 @export var scroll_container: ScrollContainer
+@export var scrollbar_2: VScrollBar
+@export var scroll_2_container: ScrollContainer
+@export var scrollbar_3: VScrollBar
+@export var scroll_3_container: ScrollContainer
 @export var st_switchers: VBoxContainer
 
 
@@ -29,6 +28,7 @@ func _ready() -> void:
 	switch_tab(1)
 	#
 	cards_scroll.max_value = scroll_container.get_child(0).size.y - scroll_container.size.y
+	scrollbar_2.max_value = scroll_2_container.get_child(0).size.y - scroll_2_container.size.y
 	back_button.mouse_entered.connect(nav_buttons_hover.bind("BackButton","entered"))
 	back_button.mouse_exited.connect(nav_buttons_hover.bind("BackButton","exited"))
 	menu_button.mouse_entered.connect(nav_buttons_hover.bind("MenuButton","entered"))
@@ -149,13 +149,14 @@ func scroll(value: float) -> void:
 	scroll_container.scroll_vertical = value
 
 func scroll_2(value:float) -> void:
-	pass
+	scroll_2_container.scroll_vertical = value
 
 func scroll_3(value:float) -> void:
 	pass
 
 func _process(delta: float) -> void:
 	cards_scroll.value = scroll_container.scroll_vertical
+	scrollbar_2.value = scroll_2_container.scroll_vertical
 
 
 @export var page1: Control
