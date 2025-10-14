@@ -1,0 +1,147 @@
+Gladiators.png
+size:2989,2989
+filter:Linear,Linear
+pma:true
+gladiator1/belt
+bounds:1731,24,712,163
+gladiator1/body
+bounds:2,1802,785,1185
+gladiator1/chest cloth
+bounds:771,550,1062,532
+gladiator1/left boot
+bounds:1874,855,335,992
+gladiator1/waist cloth
+bounds:2114,2460,868,527
+gladiator2/body
+bounds:789,1084,763,1083
+rotate:90
+gladiator2/left hand
+bounds:2,2,611,697
+offsets:1,1,614,699
+rotate:90
+gladiator2/left leg
+bounds:701,137,411,1028
+rotate:90
+gladiator2/right hand
+bounds:789,2449,538,1323
+rotate:90
+gladiator2/right shoulder armor
+bounds:1835,596,257,301
+offsets:1,1,259,303
+rotate:90
+gladiator2/skirt
+bounds:2211,1500,958,724
+rotate:90
+gladiator3/body
+bounds:2,615,767,1185
+gladiator3/left leg
+bounds:1835,189,401,1038
+rotate:90
+gladiator3/right forearm
+bounds:1991,1965,482,210
+rotate:90
+gladiator3/right hand
+bounds:789,1849,598,1200
+rotate:90
+gladiator3/waist cloth
+bounds:2211,592,906,682
+rotate:90
+
+Gladiators_2.png
+size:3000,3000
+filter:Linear,Linear
+pma:true
+gladiator1/cL
+bounds:1784,522,325,545
+offsets:2,2,328,548
+rotate:90
+gladiator1/cM
+bounds:1369,1239,350,728
+offsets:2,1,354,730
+gladiator1/cR
+bounds:2288,858,304,537
+offsets:2,1,307,540
+gladiator1/head
+bounds:830,2,480,570
+gladiator1/left arm
+bounds:2594,819,331,600
+gladiator1/left hand
+bounds:957,1969,758,496
+offsets:1,2,760,500
+gladiator1/left leg
+bounds:441,1145,380,917
+gladiator1/right arm
+bounds:2332,1421,421,611
+offsets:1,1,423,613
+gladiator1/right boot
+bounds:2,243,441,882
+gladiator1/right forearm
+bounds:1925,78,442,356
+rotate:90
+gladiator1/right hand
+bounds:957,2467,806,531
+gladiator1/right leg
+bounds:1765,2517,481,853
+offsets:1,2,483,856
+rotate:90
+gladiator2/head
+bounds:1338,595,444,642
+gladiator2/left shoulder
+bounds:2331,487,330,610
+offsets:1,1,332,613
+rotate:90
+gladiator2/left shoulder armor
+bounds:1784,849,502,546
+offsets:1,1,504,548
+gladiator2/left thight
+bounds:445,226,383,917
+gladiator2/right leg
+bounds:2,1127,437,935
+offsets:0,0,439,935
+gladiator2/right shoulder
+bounds:1312,99,421,611
+offsets:1,1,423,613
+rotate:90
+gladiator2/right thight
+bounds:446,2142,509,856
+gladiator3/head
+bounds:830,574,506,667
+gladiator3/left hand
+bounds:2,5,300,236
+offsets:2,1,303,239
+gladiator3/left shoulder
+bounds:2283,155,330,597
+offsets:1,1,332,600
+rotate:90
+gladiator3/left thight
+bounds:2620,2083,378,915
+offsets:1,1,380,917
+gladiator3/right leg
+bounds:2,2064,442,934
+gladiator3/right shoulder
+bounds:823,1243,544,724
+gladiator3/right thight
+bounds:1765,2034,481,853
+offsets:1,2,483,856
+rotate:90
+gladiator3/shield
+bounds:1721,1397,609,635
+offsets:1,1,611,637
+
+Gladiators_3.png
+size:831,831
+filter:Linear,Linear
+pma:true
+gladiator1/left forearm
+bounds:2,81,499,322
+offsets:1,1,501,324
+rotate:90
+gladiator2/left forearm
+bounds:486,336,493,343
+offsets:1,1,495,345
+rotate:90
+gladiator2/right forearm
+bounds:2,582,482,247
+offsets:1,1,484,249
+gladiator3/left forearm
+bounds:326,12,501,322

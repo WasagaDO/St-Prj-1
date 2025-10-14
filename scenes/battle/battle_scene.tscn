@@ -592,16 +592,6 @@ offset_bottom = 524.0
 script = ExtResource("27_mfn67")
 stat_popup_scene = ExtResource("28_evgrh")
 
-[node name="StatusPopups_Enemy" type="Control" parent="CanvasLayer/UI"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 1445.0
-offset_top = 478.0
-offset_right = 1445.0
-offset_bottom = 478.0
-script = ExtResource("27_mfn67")
-stat_popup_scene = ExtResource("28_evgrh")
-
 [node name="BattleManager" type="Node2D" parent="." node_paths=PackedStringArray("background", "player", "deck", "hand", "discard_pile", "enemies")]
 script = ExtResource("13_m5uja")
 background = NodePath("../Background")
@@ -624,7 +614,7 @@ event_handlers = Array[PackedScene]([ExtResource("34_a8wsi"), ExtResource("36_s0
 end_turn_button = NodePath("../CanvasLayer/UI/EndTurnButton")
 darken_overlay = NodePath("../ColorRect")
 stat_popups_player = NodePath("../CanvasLayer/UI/StatusPopups_Player")
-stat_popups_enemy = NodePath("../CanvasLayer/UI/StatusPopups_Enemy")
+stat_popups_enemy = NodePath("")
 end_scene_path = "res://scenes/session_settings/session_settings.tscn"
 
 [connection signal="card_played" from="Cards/Hand" to="BattleManager" method="_on_hand_card_played"]

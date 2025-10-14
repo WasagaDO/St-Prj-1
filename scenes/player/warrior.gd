@@ -1,7 +1,9 @@
 extends Player
 
-@onready var animation_player: AnimationPlayer = %AnimationPlayer
+@export var uses_animation_player:bool = true
+
 
 func _ready() -> void:
 	super._ready()
-	animation_player.play("Stand")
+	if uses_animation_player:
+		%AnimationPlayer.play("Stand")

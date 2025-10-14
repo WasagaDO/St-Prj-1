@@ -1,0 +1,79 @@
+THREE-ARMED MONSTER 3.png
+size:3858,2019
+filter:Linear,Linear
+pma:true
+Chest
+bounds:741,932,824,1085
+Head
+bounds:910,231,473,522
+Left arm
+bounds:472,36,436,656
+Left foot
+bounds:3077,383,391,413
+Left forearm
+bounds:3117,798,552,364
+offsets:0,0,552,365
+rotate:90
+Left hand
+bounds:2935,104,295,277
+Left knee armor
+bounds:2770,138,334,163
+rotate:90
+Left leg
+bounds:1567,1011,451,923
+rotate:90
+Left shin
+bounds:3498,1315,358,702
+Left shoulder
+bounds:2,19,468,673
+Left waist armor
+bounds:2433,2,243,470
+Middle waist armor
+bounds:1385,311,562,432
+NET1
+bounds:2,694,737,1323
+NET2
+bounds:741,755,175,856
+rotate:90
+NET3
+bounds:2678,91,90,381
+Right arm
+bounds:1949,289,455,454
+Right foot
+bounds:2794,522,474,281
+rotate:90
+Right forearm
+bounds:1385,67,530,242
+Right hand
+bounds:3470,411,320,278
+offsets:0,1,320,279
+Right knee armor
+bounds:1917,18,269,514
+offsets:1,0,270,514
+rotate:90
+Right leg
+bounds:2590,1352,665,906
+rotate:90
+Right shin
+bounds:1599,745,264,631
+rotate:90
+Right shoulder
+bounds:3232,102,279,257
+rotate:90
+Right waist armor
+bounds:910,28,201,368
+rotate:90
+Sword 3
+bounds:1567,1464,1021,553
+Sword 3 handle
+bounds:3491,205,201,204
+Third arm
+bounds:2406,474,386,522
+Third forearm
+bounds:2492,998,623,352
+Third hand
+bounds:3491,6,205,197
+offsets:0,1,205,198
+Waist
+bounds:3483,691,622,343
+rotate:90

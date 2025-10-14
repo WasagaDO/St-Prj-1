@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://ugruw5jthvsk"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://cimbnr2w3fv31" path="res://assets/characters/THREE-ARMED MONSTER 3/THREE-ARMED MONSTER 3.atlas" id="1_8o7nj"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://bdk6wnk0qp056" path="res://assets/characters/THREE-ARMED MONSTER 3/THREE-ARMED MONSTER 3.spine-json" id="2_qg0vp"]
+
+[resource]
+atlas_res = ExtResource("1_8o7nj")
+skeleton_file_res = ExtResource("2_qg0vp")

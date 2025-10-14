@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6f3nqgqepnx8"]
+
+[ext_resource type="SpineSkeletonDataResource" uid="uid://ugruw5jthvsk" path="res://assets/characters/THREE-ARMED MONSTER 3/three_armed_monster_spine_asset_3.tres" id="1_p7wpg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3mog"]
+size = Vector2(1803, 2310)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-521.5, -254)
+shape = SubResource("RectangleShape2D_d3mog")
+
+[node name="SpineSprite" type="SpineSprite" parent="."]
+position = Vector2(-498, 1354)
+skeleton_data_res = ExtResource("1_p7wpg")
+preview_skin = "Default"
+preview_animation = "idle"
+preview_frame = false
+preview_time = 0.0

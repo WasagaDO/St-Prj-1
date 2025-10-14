@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://ophu6ua3hsf0"]
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://ophu6ua3hsf0"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_a083s"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="1_yuxrl"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_yuxrl"]
+[ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_yuxrl"]
 
 [sub_resource type="Resource" id="Resource_a083s"]
 script = ExtResource("1_a083s")
@@ -26,12 +27,12 @@ stamina_cost = 3
 card_type = 3
 speed = 1
 damage = Array[ExtResource("1_a083s")]([SubResource("Resource_a083s"), SubResource("Resource_yuxrl")])
-armor = null
-status_effects = null
-special_reactions = null
-healing = null
-balance_healing = null
-cooldown = null
+armor = Array[ExtResource("1_a083s")]([])
+status_effects = Array[ExtResource("4_yuxrl")]([])
+special_reactions = Array[int]([])
+healing = 0
+balance_healing = 0
+cooldown = 0
 needs_target = false
 special_effects = Array[ExtResource("1_yuxrl")]([])
 metadata/_custom_type_script = "uid://cg1up0heh2u54"

@@ -1,0 +1,87 @@
+THREE-ARMED MONSTER 1.png
+size:3883,1822
+filter:Linear,Linear
+pma:true
+Armor
+bounds:2,57,717,732
+Behind Right shoulder
+bounds:2276,81,90,147
+Belt
+bounds:3675,991,591,170
+rotate:90
+Head
+bounds:3045,566,436,554
+rotate:90
+Left arm
+bounds:1633,674,326,597
+Left foot
+bounds:721,2,356,858
+rotate:90
+Left forearm
+bounds:2473,295,512,267
+Left hand
+bounds:3301,246,245,205
+rotate:90
+Left leg
+bounds:1993,1263,402,852
+rotate:90
+Left shoulder
+bounds:1609,312,360,329
+rotate:90
+Left waist armor
+bounds:2987,250,241,312
+rotate:90
+Left waist armor2
+bounds:1930,17,211,344
+rotate:90
+NET1
+bounds:2,1273,392,1989
+rotate:90
+NET2
+bounds:2,791,480,1629
+rotate:90
+Right arm
+bounds:3224,1584,236,657
+rotate:90
+Right foot
+bounds:721,360,429,886
+rotate:90
+Right forearm
+bounds:1940,230,531,414
+Right hand
+bounds:3515,44,202,214
+Right knee
+bounds:3508,260,308,271
+Right leg
+bounds:1961,646,615,688
+rotate:90
+Right shoulder
+bounds:2847,1302,190,363
+offsets:14,0,204,363
+Right waist armor
+bounds:1581,62,248,347
+rotate:90
+Right waist armor2
+bounds:2980,30,218,304
+offsets:0,0,221,304
+rotate:90
+Spear cloth
+bounds:2473,179,114,505
+rotate:90
+Spear copy
+bounds:2,1667,153,3220
+rotate:90
+Third arm
+bounds:2651,564,697,392
+rotate:90
+Third arm cloth
+bounds:3045,493,71,352
+rotate:90
+Third forearm
+bounds:3601,533,245,456
+Third hand
+bounds:3286,32,212,227
+rotate:90
+Torso
+bounds:3045,1004,628,578
+offsets:1,0,629,578

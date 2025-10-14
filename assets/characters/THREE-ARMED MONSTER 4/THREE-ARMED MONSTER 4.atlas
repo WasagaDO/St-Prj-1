@@ -1,0 +1,82 @@
+THREE-ARMED MONSTER 4.png
+size:2697,2697
+filter:Linear,Linear
+pma:true
+Bolt
+bounds:2088,913,582,87
+rotate:90
+Chest
+bounds:2,1288,878,796
+offsets:0,91,878,887
+Crossbow handle
+bounds:2554,345,213,131
+rotate:90
+Head
+bounds:1497,906,589,589
+Left arm
+bounds:1421,1497,702,396
+Left foot
+bounds:1476,2225,470,952
+rotate:90
+Left forearm
+bounds:2430,2263,432,250
+rotate:90
+Left hand
+bounds:2,21,319,216
+Left leg
+bounds:2,239,359,1047
+Left waist armorL
+bounds:363,130,316,526
+rotate:90
+Quiver
+bounds:2177,1129,430,430
+Right arm
+bounds:2125,1561,570,332
+offsets:0,0,571,332
+Right foot
+bounds:1368,100,411,281
+Right forearm
+bounds:2006,11,356,330
+offsets:1,0,358,330
+Right hand
+bounds:2511,2051,210,145
+offsets:0,0,212,145
+rotate:90
+Right leg
+bounds:363,448,535,838
+offsets:0,0,535,839
+Right shin
+bounds:900,411,305,686
+rotate:90
+Right shoulder
+bounds:2253,1911,312,256
+rotate:90
+Spear handle
+bounds:1476,1895,775,328
+Third arm
+bounds:891,138,271,475
+rotate:90
+Third forearm
+bounds:2177,736,391,456
+rotate:90
+Third hand
+bounds:1781,134,223,247
+Third hand fingers
+bounds:2554,560,174,141
+rotate:90
+Torso
+bounds:882,1357,727,537
+rotate:90
+Waist armor
+bounds:1588,383,509,521
+Waist armorR
+bounds:2364,38,124,303
+cross
+bounds:900,718,637,595
+rotate:90
+cross string
+bounds:2099,343,391,453
+rotate:90
+spearB
+bounds:2,2086,1472,609
+offsets:20,0,1492,609

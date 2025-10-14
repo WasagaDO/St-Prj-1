@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cimbnr2w3fv31"
+path="res://.godot/imported/THREE-ARMED MONSTER 3.atlas-3a602b1b69b06e32d59b714450308b02.spatlas"
+
+[deps]
+
+source_file="res://assets/characters/THREE-ARMED MONSTER 3/THREE-ARMED MONSTER 3.atlas"
+dest_files=["res://.godot/imported/THREE-ARMED MONSTER 3.atlas-3a602b1b69b06e32d59b714450308b02.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"
