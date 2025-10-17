@@ -56,9 +56,6 @@ var outgoing_damage_multiplier:float = 1.0
 
 
 
-func _ready() -> void:
-	pass
-
 # called by battle_manager
 func initialize():
 	hp = max_hp
@@ -237,6 +234,7 @@ func apply_damage(source:Combatant, damage:int, type:DamageType):
 		# same for balance ?
 		decrement_balance(damage)
 		BattleSignals.damage_applied.emit(source, self, damage, type)
+		play_animation("injury")
 		return
 
 	var damage_modifier := get_incoming_damage_multiplier(source)
@@ -250,7 +248,11 @@ func apply_damage(source:Combatant, damage:int, type:DamageType):
 	hp -= damage_to_health
 	armor_amt -= damage_to_armor
 	
-	if hp < 0: hp = 0
+	if hp < 0: 
+		hp = 0
+		play_animation("death")
+	else:
+		play_animation("injury")
 	if armor_amt < 0: armor_amt = 0
 	
 	armor[type] = armor_amt
@@ -315,13 +317,18 @@ func is_armored() -> bool:
 func apply_card_effect(source:Combatant, effect:CardData):
 	print("- apply_card_effect() : source: ",source , " effect: ", effect.name)
 	
+	var is_an_attack = false
 	for damage in effect.damage:
 		if damage.amt > 0:
+			is_an_attack = true
 			var amt = damage.amt
 			if source.did_play_series_of_stabs and effect.name.to_lower() == "gladiator's stab":
 				amt += 3
 				source.did_play_series_of_stabs = false
 			apply_damage(source, amt, damage.type)
+	
+	if is_an_attack:
+		source.play_animation("attack")
 	
 	if effect.healing > 0:
 		apply_healing(effect.healing)
@@ -464,3 +471,72 @@ func _statuses_line_compact() -> String:
 		var rem: int = int(status_effects[s])
 		parts.append("%s(%d)" % [st.log_name, rem])
 	return ", ".join(parts)
+
+
+
+
+# ----- animations -----
+
+
+
+@export_category("animations")
+
+@export var use_new_animation_type: bool = true
+
+@export var old_visual: Node2D
+@export var animation_player: AnimationPlayer
+
+@export var new_visual: Node2D
+@export var spined_character: SpineSprite
+
+
+func _ready() -> void:
+	if use_new_animation_type:
+		new_visual.visible = true
+		old_visual.visible = false
+		var state = spined_character.get_animation_state()
+		state.set_animation("idle", true, 0)
+	else:
+		new_visual.visible = false
+		old_visual.visible = true
+
+
+func play_animation(name: String):
+	if not use_new_animation_type or spined_character == null:
+		return
+
+	var state = spined_character.get_animation_state()
+	if state == null:
+		print("❌ No animation state found on SpineSprite.")
+		return
+
+	var skeleton_data = spined_character.get_skeleton().get_data()
+	if not skeleton_data.find_animation(name):
+		print("⚠️ Spine animation not found:", name)
+		return
+
+	var loop = (name == "idle")
+
+	# Clear previous tracks if this is death (full override)
+	if name == "death":
+		state.clear_tracks()
+
+	var entry = state.set_animation(name, loop, 0)
+
+	# One-shot animations return to idle after finishing (except death)
+	if not loop and name != "death":
+		var idle_delay = entry.get_animation_end() + 0.05
+		state.add_animation("idle", true, idle_delay, 0)
+
+	# For death: freeze AFTER the animation finishes
+	if name == "death" and entry:
+		# Connect once to the "animation_ended" signal
+		spined_character.connect("animation_ended", Callable(self, "_on_death_animation_end"), CONNECT_ONE_SHOT)
+
+
+func _on_death_animation_end(_track_index: int, _animation_name: String):
+	# Wait a frame to ensure last pose is applied
+	await get_tree().process_frame
+	spined_character.set_process(false)
+	spined_character.set_physics_process(false)
+	print("💀 Death animation finished — frozen on last frame.")

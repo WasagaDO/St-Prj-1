@@ -269,10 +269,15 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_0hcyc")
 metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
 modulate = Color(1, 1, 1, 0)
-offset_right = 1045.0
-offset_bottom = 677.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
@@ -458,17 +463,16 @@ theme_override_font_sizes/font_size = 32
 text = "End Turn"
 
 [node name="Alert" type="Label" parent="CanvasLayer/UI"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -2.0
-offset_top = 414.0
-offset_right = 1915.0
-offset_bottom = 502.0
+offset_left = -940.0
+offset_top = 27.0
+offset_right = 977.0
+offset_bottom = 115.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Out of stamina!"
@@ -592,6 +596,16 @@ offset_bottom = 524.0
 script = ExtResource("27_mfn67")
 stat_popup_scene = ExtResource("28_evgrh")
 
+[node name="StatusPopups_Enemy" type="Control" parent="CanvasLayer/UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1445.0
+offset_top = 524.0
+offset_right = 1445.0
+offset_bottom = 524.0
+script = ExtResource("27_mfn67")
+stat_popup_scene = ExtResource("28_evgrh")
+
 [node name="BattleManager" type="Node2D" parent="." node_paths=PackedStringArray("background", "player", "deck", "hand", "discard_pile", "enemies")]
 script = ExtResource("13_m5uja")
 background = NodePath("../Background")
@@ -612,9 +626,9 @@ discard_pile = NodePath("../Cards/DiscardPile")
 state_overlay = NodePath("../CanvasLayer/UI/CanvasLayer/StateOverlay")
 event_handlers = Array[PackedScene]([ExtResource("34_a8wsi"), ExtResource("36_s0fps"), ExtResource("33_1yotk"), ExtResource("35_8dhsw"), ExtResource("42_i3ye5"), ExtResource("39_gh2so"), ExtResource("37_mpgih"), ExtResource("40_18j3u"), ExtResource("41_ho70s"), ExtResource("40_t6ak5"), ExtResource("41_jpniv"), ExtResource("44_gpbrr"), ExtResource("44_i32r0"), ExtResource("45_40ag2"), ExtResource("46_7a5bm")])
 end_turn_button = NodePath("../CanvasLayer/UI/EndTurnButton")
-darken_overlay = NodePath("../ColorRect")
+darken_overlay = NodePath("../CanvasLayer2/ColorRect")
 stat_popups_player = NodePath("../CanvasLayer/UI/StatusPopups_Player")
-stat_popups_enemy = NodePath("")
+stat_popups_enemy = NodePath("../CanvasLayer/UI/StatusPopups_Enemy")
 end_scene_path = "res://scenes/session_settings/session_settings.tscn"
 
 [connection signal="card_played" from="Cards/Hand" to="BattleManager" method="_on_hand_card_played"]

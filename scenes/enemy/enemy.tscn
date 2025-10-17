@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c6eh6dyhgsgg0"]
+[gd_scene load_steps=21 format=3 uid="uid://c6eh6dyhgsgg0"]
 
 [ext_resource type="Texture2D" uid="uid://b8ypwoqvl44jy" path="res://assets/GoatMan/Goat-Man-Final_0007_Left-Arm.png" id="1_ld54p"]
 [ext_resource type="Script" uid="uid://reoeu2ghlb8t" path="res://scenes/enemy/goat_man.gd" id="1_ryhei"]
@@ -15,13 +15,14 @@
 [ext_resource type="Texture2D" uid="uid://j0w1pu6a0mf4" path="res://assets/GoatMan/Goat-Man-Final_0013_Left-Hoof.png" id="12_8puxq"]
 [ext_resource type="Texture2D" uid="uid://whgx8b863dvr" path="res://assets/GoatMan/Goat-Man-Final_0000_Right-Hand.png" id="13_s18n4"]
 [ext_resource type="Texture2D" uid="uid://d0oafxin5e3jg" path="res://assets/GoatMan/Goat-Man-Final_0003_Mane.png" id="14_ygbs6"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://c2qtwdusbekwn" path="res://assets/characters/THREE-ARMED MONSTER 1/three_armed_monster_spine_asset_1.tres" id="16_pb0yv"]
 
 [sub_resource type="Animation" id="Animation_nc686"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Bones/Skeleton2D/Hip/Spine:position")
+tracks/0/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/Spine:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -33,7 +34,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Bones/Skeleton2D/Hip/Spine:rotation")
+tracks/1/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/Spine:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -45,7 +46,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Bones/Skeleton2D/Hip/ArmR:position")
+tracks/2/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -57,7 +58,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Bones/Skeleton2D/Hip/ArmR:rotation")
+tracks/3/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -69,7 +70,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Bones/Skeleton2D/Hip/ArmR/ShoulderR:position")
+tracks/4/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -81,7 +82,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Bones/Skeleton2D/Hip/ArmR/ShoulderR:rotation")
+tracks/5/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -93,7 +94,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2:position")
+tracks/6/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -105,7 +106,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2:rotation")
+tracks/7/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -117,7 +118,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Bones/Skeleton2D/Hip:position")
+tracks/8/path = NodePath("Old Visual/Bones/Skeleton2D/Hip:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -129,7 +130,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Bones/Skeleton2D/Hip:rotation")
+tracks/9/path = NodePath("Old Visual/Bones/Skeleton2D/Hip:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -141,7 +142,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Bones/Skeleton2D/Hip/RemoteTransform2D:position")
+tracks/10/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/RemoteTransform2D:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -153,7 +154,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Bones/Skeleton2D/Hip/RemoteTransform2D:rotation")
+tracks/11/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/RemoteTransform2D:rotation")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -165,7 +166,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Bones/Skeleton2D/Hip/Spine/RemoteTransform2D:position")
+tracks/12/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/Spine/RemoteTransform2D:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -177,7 +178,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Bones/Skeleton2D/Hip/Spine/RemoteTransform2D:rotation")
+tracks/13/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/Spine/RemoteTransform2D:rotation")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -189,7 +190,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Bones/Skeleton2D/Hip/ArmL:position")
+tracks/14/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -201,7 +202,7 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("Bones/Skeleton2D/Hip/ArmL:rotation")
+tracks/15/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL:rotation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -213,7 +214,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Bones/Skeleton2D/Hip/ArmL/ShoulderL:position")
+tracks/16/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL:position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -225,7 +226,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("Bones/Skeleton2D/Hip/ArmL/ShoulderL:rotation")
+tracks/17/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL:rotation")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -237,7 +238,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2:position")
+tracks/18/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2:position")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -249,7 +250,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2:rotation")
+tracks/19/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2:rotation")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -261,7 +262,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("Bones/Skeleton2D/Hip/HipL:position")
+tracks/20/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL:position")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -273,7 +274,7 @@ tracks/20/keys = {
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("Bones/Skeleton2D/Hip/HipL:rotation")
+tracks/21/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL:rotation")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
@@ -285,7 +286,7 @@ tracks/21/keys = {
 tracks/22/type = "value"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("Bones/Skeleton2D/Hip/HipL/LegL:position")
+tracks/22/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL/LegL:position")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
@@ -297,7 +298,7 @@ tracks/22/keys = {
 tracks/23/type = "value"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("Bones/Skeleton2D/Hip/HipL/LegL:rotation")
+tracks/23/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL/LegL:rotation")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
@@ -309,7 +310,7 @@ tracks/23/keys = {
 tracks/24/type = "value"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("Bones/Skeleton2D/Hip/HipL/LegL/LegL2:position")
+tracks/24/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL/LegL/LegL2:position")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
@@ -321,7 +322,7 @@ tracks/24/keys = {
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("Bones/Skeleton2D/Hip/HipL/LegL/LegL2:rotation")
+tracks/25/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL/LegL/LegL2:rotation")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -333,7 +334,7 @@ tracks/25/keys = {
 tracks/26/type = "value"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("Bones/Skeleton2D/Hip/HipR:position")
+tracks/26/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR:position")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = {
@@ -345,7 +346,7 @@ tracks/26/keys = {
 tracks/27/type = "value"
 tracks/27/imported = false
 tracks/27/enabled = true
-tracks/27/path = NodePath("Bones/Skeleton2D/Hip/HipR:rotation")
+tracks/27/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR:rotation")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/keys = {
@@ -357,7 +358,7 @@ tracks/27/keys = {
 tracks/28/type = "value"
 tracks/28/imported = false
 tracks/28/enabled = true
-tracks/28/path = NodePath("Bones/Skeleton2D/Hip/HipR/LegR:position")
+tracks/28/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR/LegR:position")
 tracks/28/interp = 1
 tracks/28/loop_wrap = true
 tracks/28/keys = {
@@ -369,7 +370,7 @@ tracks/28/keys = {
 tracks/29/type = "value"
 tracks/29/imported = false
 tracks/29/enabled = true
-tracks/29/path = NodePath("Bones/Skeleton2D/Hip/HipR/LegR:rotation")
+tracks/29/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR/LegR:rotation")
 tracks/29/interp = 1
 tracks/29/loop_wrap = true
 tracks/29/keys = {
@@ -381,7 +382,7 @@ tracks/29/keys = {
 tracks/30/type = "value"
 tracks/30/imported = false
 tracks/30/enabled = true
-tracks/30/path = NodePath("Bones/Skeleton2D/Hip/HipR/LegR/LegR2:position")
+tracks/30/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR/LegR/LegR2:position")
 tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/keys = {
@@ -393,7 +394,7 @@ tracks/30/keys = {
 tracks/31/type = "value"
 tracks/31/imported = false
 tracks/31/enabled = true
-tracks/31/path = NodePath("Bones/Skeleton2D/Hip/HipR/LegR/LegR2:rotation")
+tracks/31/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR/LegR/LegR2:rotation")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
@@ -409,7 +410,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Bones/Skeleton2D/Hip/Spine:position")
+tracks/0/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/Spine:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -421,7 +422,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Bones/Skeleton2D/Hip/Spine:rotation")
+tracks/1/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/Spine:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -433,7 +434,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Bones/Skeleton2D/Hip/ArmR:position")
+tracks/2/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -445,7 +446,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Bones/Skeleton2D/Hip/ArmR:rotation")
+tracks/3/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -457,7 +458,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Bones/Skeleton2D/Hip/ArmR/ShoulderR:position")
+tracks/4/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -469,7 +470,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Bones/Skeleton2D/Hip/ArmR/ShoulderR:rotation")
+tracks/5/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -481,7 +482,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2:position")
+tracks/6/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -493,7 +494,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2:rotation")
+tracks/7/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -505,7 +506,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Bones/Skeleton2D/Hip:position")
+tracks/8/path = NodePath("Old Visual/Bones/Skeleton2D/Hip:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -517,7 +518,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Bones/Skeleton2D/Hip:rotation")
+tracks/9/path = NodePath("Old Visual/Bones/Skeleton2D/Hip:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -529,7 +530,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Bones/Skeleton2D/Hip/RemoteTransform2D:position")
+tracks/10/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/RemoteTransform2D:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -541,7 +542,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Bones/Skeleton2D/Hip/RemoteTransform2D:rotation")
+tracks/11/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/RemoteTransform2D:rotation")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -553,7 +554,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Bones/Skeleton2D/Hip/Spine/RemoteTransform2D:position")
+tracks/12/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/Spine/RemoteTransform2D:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -565,7 +566,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Bones/Skeleton2D/Hip/Spine/RemoteTransform2D:rotation")
+tracks/13/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/Spine/RemoteTransform2D:rotation")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -577,7 +578,7 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Bones/Skeleton2D/Hip/ArmL:position")
+tracks/14/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -589,7 +590,7 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("Bones/Skeleton2D/Hip/ArmL:rotation")
+tracks/15/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL:rotation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -601,7 +602,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Bones/Skeleton2D/Hip/ArmL/ShoulderL:position")
+tracks/16/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL:position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -613,7 +614,7 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("Bones/Skeleton2D/Hip/ArmL/ShoulderL:rotation")
+tracks/17/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL:rotation")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -625,7 +626,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2:position")
+tracks/18/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2:position")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -637,7 +638,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2:rotation")
+tracks/19/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2:rotation")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -649,7 +650,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("Bones/Skeleton2D/Hip/HipL:position")
+tracks/20/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL:position")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -661,7 +662,7 @@ tracks/20/keys = {
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("Bones/Skeleton2D/Hip/HipL:rotation")
+tracks/21/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL:rotation")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
@@ -673,7 +674,7 @@ tracks/21/keys = {
 tracks/22/type = "value"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("Bones/Skeleton2D/Hip/HipL/LegL:position")
+tracks/22/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL/LegL:position")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
@@ -685,7 +686,7 @@ tracks/22/keys = {
 tracks/23/type = "value"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("Bones/Skeleton2D/Hip/HipL/LegL:rotation")
+tracks/23/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL/LegL:rotation")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
@@ -697,7 +698,7 @@ tracks/23/keys = {
 tracks/24/type = "value"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("Bones/Skeleton2D/Hip/HipL/LegL/LegL2:position")
+tracks/24/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL/LegL/LegL2:position")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
@@ -709,7 +710,7 @@ tracks/24/keys = {
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("Bones/Skeleton2D/Hip/HipL/LegL/LegL2:rotation")
+tracks/25/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipL/LegL/LegL2:rotation")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -721,7 +722,7 @@ tracks/25/keys = {
 tracks/26/type = "value"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("Bones/Skeleton2D/Hip/HipR:position")
+tracks/26/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR:position")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = {
@@ -733,7 +734,7 @@ tracks/26/keys = {
 tracks/27/type = "value"
 tracks/27/imported = false
 tracks/27/enabled = true
-tracks/27/path = NodePath("Bones/Skeleton2D/Hip/HipR:rotation")
+tracks/27/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR:rotation")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/keys = {
@@ -745,7 +746,7 @@ tracks/27/keys = {
 tracks/28/type = "value"
 tracks/28/imported = false
 tracks/28/enabled = true
-tracks/28/path = NodePath("Bones/Skeleton2D/Hip/HipR/LegR:position")
+tracks/28/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR/LegR:position")
 tracks/28/interp = 1
 tracks/28/loop_wrap = true
 tracks/28/keys = {
@@ -757,7 +758,7 @@ tracks/28/keys = {
 tracks/29/type = "value"
 tracks/29/imported = false
 tracks/29/enabled = true
-tracks/29/path = NodePath("Bones/Skeleton2D/Hip/HipR/LegR:rotation")
+tracks/29/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR/LegR:rotation")
 tracks/29/interp = 1
 tracks/29/loop_wrap = true
 tracks/29/keys = {
@@ -769,7 +770,7 @@ tracks/29/keys = {
 tracks/30/type = "value"
 tracks/30/imported = false
 tracks/30/enabled = true
-tracks/30/path = NodePath("Bones/Skeleton2D/Hip/HipR/LegR/LegR2:position")
+tracks/30/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR/LegR/LegR2:position")
 tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/keys = {
@@ -781,7 +782,7 @@ tracks/30/keys = {
 tracks/31/type = "value"
 tracks/31/imported = false
 tracks/31/enabled = true
-tracks/31/path = NodePath("Bones/Skeleton2D/Hip/HipR/LegR/LegR2:rotation")
+tracks/31/path = NodePath("Old Visual/Bones/Skeleton2D/Hip/HipR/LegR/LegR2:rotation")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
@@ -800,119 +801,127 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emepc"]
 size = Vector2(1805, 2508)
 
-[node name="Enemy" type="Area2D" groups=["player"]]
+[node name="Enemy" type="Area2D" node_paths=PackedStringArray("old_visual", "animation_player", "new_visual", "spined_character") groups=["player"]]
 script = ExtResource("1_ryhei")
+old_visual = NodePath("Old Visual")
+animation_player = NodePath("Old Visual/AnimationPlayer")
+new_visual = NodePath("New Visual")
+spined_character = NodePath("New Visual/Spined Character")
 
-[node name="poligons" type="Node2D" parent="."]
+[node name="Old Visual" type="Node2D" parent="."]
+
+[node name="poligons" type="Node2D" parent="Old Visual"]
 position = Vector2(-3, 3)
 
-[node name="Goat-man-final0007Left-arm" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0007Left-arm" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(249.023, -710.273)
 rotation = -0.0268424
+scale = Vector2(1, 1)
 texture = ExtResource("1_ld54p")
 offset = Vector2(29.4503, 156.04)
 
-[node name="Goat-man-final0004Torso" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0004Torso" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(661.352, -128.897)
 rotation = 0.0782436
 texture = ExtResource("2_kdycd")
 offset = Vector2(-103.518, -330.837)
 
-[node name="Goat-man-final0006Left-forearm" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0006Left-forearm" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(325.36, -323.884)
 rotation = 0.348067
 texture = ExtResource("3_vk7ip")
 offset = Vector2(-147.254, 121.435)
 
-[node name="Goat-man-final0009Right-calf" type="Sprite2D" parent="poligons"]
-position = Vector2(849.972, 489.645)
+[node name="Goat-man-final0009Right-calf" type="Sprite2D" parent="Old Visual/poligons"]
+position = Vector2(849.972, 489.64)
 rotation = 0.0692125
-scale = Vector2(0.999981, 0.999981)
+scale = Vector2(0.999971, 0.999971)
 texture = ExtResource("4_phoul")
 offset = Vector2(140.421, 138.396)
 
-[node name="Goat-man-final0008Right-leg" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0008Right-leg" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(848.156, 9.52222)
 rotation = 0.0402485
-scale = Vector2(0.999981, 0.999981)
+scale = Vector2(0.999971, 0.999971)
 texture = ExtResource("5_qqorh")
 offset = Vector2(-16.1344, 278.904)
 
-[node name="Goat-man-final0010Right-hoof" type="Sprite2D" parent="poligons"]
-position = Vector2(1105.13, 741.747)
+[node name="Goat-man-final0010Right-hoof" type="Sprite2D" parent="Old Visual/poligons"]
+position = Vector2(1105.13, 741.74)
 rotation = 0.0692125
-scale = Vector2(0.999981, 0.999981)
+scale = Vector2(0.999971, 0.999971)
 texture = ExtResource("6_ng3ld")
 offset = Vector2(-34.2507, 334.793)
 
-[node name="Goat-man-final0012Left-calf" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0012Left-calf" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(177.603, 365.719)
 rotation = -0.0037796
 texture = ExtResource("7_ws2y0")
 offset = Vector2(224.683, 219.998)
 
-[node name="Goat-man-final0011Left-leg" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0011Left-leg" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(491.567, 22.3874)
 rotation = -0.0250524
+scale = Vector2(1, 1)
 texture = ExtResource("8_abrrk")
 offset = Vector2(-101.329, 211.397)
 
-[node name="Goat-man-final0002Right-arm" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0002Right-arm" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(820.59, -814.007)
 rotation = 0.0617136
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("9_6qaqt")
 offset = Vector2(184.589, 85.4819)
 
-[node name="Goat-man-final0001Right-forearm" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0001Right-forearm" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(1196.19, -580.116)
 rotation = 0.0115226
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("10_d17yg")
 offset = Vector2(-6.7608, 193.844)
 
-[node name="Goat-man-final0005Left-hand" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0005Left-hand" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(-37.3591, -207.725)
 rotation = 0.728913
 texture = ExtResource("11_vrcdh")
 offset = Vector2(-50.6752, 186.458)
 
-[node name="Goat-man-final0013Left-hoof" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0013Left-hoof" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(478.424, 661.941)
 rotation = -0.0037796
 texture = ExtResource("12_8puxq")
 offset = Vector2(-67.8704, 295.826)
 
-[node name="Goat-man-final0000Right-hand" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0000Right-hand" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(1135.91, -162.15)
 rotation = -0.0508677
 scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("13_s18n4")
 offset = Vector2(52.733, 188.509)
 
-[node name="Goat-man-final0003Mane" type="Sprite2D" parent="poligons"]
+[node name="Goat-man-final0003Mane" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(530.464, -758.874)
 rotation = -0.0103924
 texture = ExtResource("14_ygbs6")
 offset = Vector2(-106.074, -151.313)
 
-[node name="Bones" type="Node2D" parent="."]
+[node name="Bones" type="Node2D" parent="Old Visual"]
 position = Vector2(2896, 570)
 
-[node name="Skeleton2D" type="Skeleton2D" parent="Bones"]
+[node name="Skeleton2D" type="Skeleton2D" parent="Old Visual/Bones"]
 position = Vector2(-2503, 339)
 
-[node name="Hip" type="Bone2D" parent="Bones/Skeleton2D"]
+[node name="Hip" type="Bone2D" parent="Old Visual/Bones/Skeleton2D"]
 position = Vector2(263, -1008)
 rotation = 0.0782436
 rest = Transform2D(1, 0, 0, 1, 33, -595)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip"]
 visible = false
 position = Vector2(0.24227, -26.9989)
 remote_path = NodePath("../../../../poligons/Goat-man-final0004Torso")
 
-[node name="Spine" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
+[node name="Spine" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip"]
 position = Vector2(-184.539, -643.613)
 rotation = -0.350435
 rest = Transform2D(0.992479, -0.122411, 0.122411, 0.992479, 41.5987, -846.661)
@@ -920,23 +929,23 @@ auto_calculate_length_and_angle = false
 length = 321.25
 bone_angle = -121.935
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/Spine"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/Spine"]
 visible = false
 position = Vector2(5.15858, 0.603179)
 rotation = 0.261799
 remote_path = NodePath("../../../../../poligons/Goat-man-final0003Mane")
 
-[node name="ArmR" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
+[node name="ArmR" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip"]
 position = Vector2(-479.003, -525.703)
 rotation = -0.105086
 rest = Transform2D(0.999555, -0.0298425, 0.0298425, 0.999555, -327, -824)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/ArmR"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmR"]
 visible = false
 position = Vector2(27.7143, -46.01)
 remote_path = NodePath("../../../../../poligons/Goat-man-final0007Left-arm")
 
-[node name="ShoulderR" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmR"]
+[node name="ShoulderR" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmR"]
 position = Vector2(98.5801, 338.863)
 rotation = 2.55224
 rest = Transform2D(0.999395, 0.0347687, -0.0347687, 0.999395, -303, 351)
@@ -944,13 +953,13 @@ auto_calculate_length_and_angle = false
 length = 552.385
 bone_angle = 34.839
 
-[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/ArmR/ShoulderR"]
+[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR"]
 visible = false
 position = Vector2(5.99894, -0.108866)
 rotation = -2.17733
 remote_path = NodePath("../../../../../../poligons/Goat-man-final0006Left-forearm")
 
-[node name="ShoulderR2" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmR/ShoulderR"]
+[node name="ShoulderR2" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR"]
 position = Vector2(359.425, 116.339)
 rotation = 0.171246
 rest = Transform2D(0.999395, 0.0347687, -0.0347687, 0.999395, -303, 351)
@@ -958,25 +967,25 @@ auto_calculate_length_and_angle = false
 length = 280.135
 bone_angle = -5.806
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmR/ShoulderR/ShoulderR2"]
 visible = false
 position = Vector2(9.298, -3.2477)
 rotation = -1.96773
 remote_path = NodePath("../../../../../../../poligons/Goat-man-final0005Left-hand")
 
-[node name="ArmL" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
+[node name="ArmL" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip"]
 position = Vector2(69.6444, -706.984)
 rotation = 0.236116
 scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(0.972254, 0.233928, -0.233928, 0.972254, 328.907, -764.422)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/ArmL"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmL"]
 visible = false
 position = Vector2(31.1849, -23.4201)
 rotation = -0.252646
 remote_path = NodePath("../../../../../poligons/Goat-man-final0002Right-arm")
 
-[node name="ShoulderL" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmL"]
+[node name="ShoulderL" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmL"]
 position = Vector2(460.7, 82.8704)
 rotation = -0.404599
 rest = Transform2D(0.91926, -0.393651, 0.393651, 0.91926, 203.649, 423.415)
@@ -984,35 +993,35 @@ auto_calculate_length_and_angle = false
 length = 490.375
 bone_angle = 31.935
 
-[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/ArmL/ShoulderL"]
+[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL"]
 visible = false
 rotation = 0.101762
 remote_path = NodePath("../../../../../../poligons/Goat-man-final0001Right-forearm")
 
-[node name="ShoulderL2" type="Bone2D" parent="Bones/Skeleton2D/Hip/ArmL/ShoulderL"]
+[node name="ShoulderL2" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL"]
 position = Vector2(-98.806, 398.515)
 rest = Transform2D(0.91926, -0.393651, 0.393651, 0.91926, 203.649, 423.415)
 auto_calculate_length_and_angle = false
 length = 305.125
 bone_angle = 89.999
 
-[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2"]
+[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/ArmL/ShoulderL/ShoulderL2"]
 visible = false
 position = Vector2(1.10837, 12.3194)
 rotation = 0.0393717
 remote_path = NodePath("../../../../../../../poligons/Goat-man-final0000Right-hand")
 
-[node name="HipL" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
+[node name="HipL" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip"]
 position = Vector2(197.294, 96.3959)
 rotation = -0.0379951
-scale = Vector2(0.999977, 0.999977)
+scale = Vector2(0.999971, 0.999971)
 rest = Transform2D(0.999278, -0.037986, 0.037986, 0.999278, 131, 91)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipL"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipL"]
 visible = false
 remote_path = NodePath("../../../../../poligons/Goat-man-final0008Right-leg")
 
-[node name="LegL" type="Bone2D" parent="Bones/Skeleton2D/Hip/HipL"]
+[node name="LegL" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipL"]
 position = Vector2(21.1344, 479.67)
 rotation = 0.028964
 rest = Transform2D(0.999581, 0.02896, -0.02896, 0.999581, 258, 406)
@@ -1020,31 +1029,31 @@ auto_calculate_length_and_angle = false
 length = 704.875
 bone_angle = 90.0
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipL/LegL"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipL/LegL"]
 visible = false
 remote_path = NodePath("../../../../../../poligons/Goat-man-final0009Right-calf")
 
-[node name="LegL2" type="Bone2D" parent="Bones/Skeleton2D/Hip/HipL/LegL"]
+[node name="LegL2" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipL/LegL"]
 position = Vector2(271.987, 233.857)
 rest = Transform2D(0.999581, 0.02896, -0.02896, 0.999581, 258, 406)
 auto_calculate_length_and_angle = false
 length = 704.875
 bone_angle = 90.0
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipL/LegL/LegL2"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipL/LegL/LegL2"]
 visible = false
 remote_path = NodePath("../../../../../../../poligons/Goat-man-final0010Right-hoof")
 
-[node name="HipR" type="Bone2D" parent="Bones/Skeleton2D/Hip"]
+[node name="HipR" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip"]
 position = Vector2(-157.198, 137.094)
 rotation = -0.103296
 rest = Transform2D(0.99467, -0.103112, 0.103112, 0.99467, -176, 131)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipR"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipR"]
 visible = false
 remote_path = NodePath("../../../../../poligons/Goat-man-final0011Left-leg")
 
-[node name="LegR" type="Bone2D" parent="Bones/Skeleton2D/Hip/HipR"]
+[node name="LegR" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipR"]
 position = Vector2(-314.955, 330.013)
 rotation = 0.0493357
 rest = Transform2D(0.998783, 0.0493157, -0.0493157, 0.998783, -191.718, 547.852)
@@ -1052,26 +1061,27 @@ auto_calculate_length_and_angle = false
 length = 676.0
 bone_angle = 107.419
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipR/LegR"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipR/LegR"]
 visible = false
 position = Vector2(-7.23836, 5.71008)
 rotation = -0.0280629
 remote_path = NodePath("../../../../../../poligons/Goat-man-final0012Left-calf")
 
-[node name="LegR2" type="Bone2D" parent="Bones/Skeleton2D/Hip/HipR/LegR"]
+[node name="LegR2" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipR/LegR"]
 position = Vector2(301.505, 288.513)
 rest = Transform2D(0.998783, 0.0493157, -0.0493157, 0.998783, -191.718, 547.852)
 auto_calculate_length_and_angle = false
 length = 676.0
 bone_angle = 107.419
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Bones/Skeleton2D/Hip/HipR/LegR/LegR2"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipR/LegR/LegR2"]
 visible = false
 position = Vector2(-0.818462, 6.02731)
 rotation = -0.0280629
 remote_path = NodePath("../../../../../../../poligons/Goat-man-final0013Left-hoof")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Old Visual"]
+root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_btbj7")
 }
@@ -1080,3 +1090,15 @@ speed_scale = 0.2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(615.5, -121)
 shape = SubResource("RectangleShape2D_emepc")
+
+[node name="New Visual" type="Node2D" parent="."]
+
+[node name="Spined Character" type="SpineSprite" parent="New Visual"]
+position = Vector2(600, 1451)
+rotation = -3.14159
+scale = Vector2(1, -1)
+skeleton_data_res = ExtResource("16_pb0yv")
+preview_skin = "Gladiator1"
+preview_animation = "-- Empty --"
+preview_frame = false
+preview_time = 0.0

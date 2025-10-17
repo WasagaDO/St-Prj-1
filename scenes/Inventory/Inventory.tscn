@@ -438,7 +438,7 @@ custom_minimum_size = Vector2(325, 490)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-scroll_vertical = 1130
+scroll_vertical = 100
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
 

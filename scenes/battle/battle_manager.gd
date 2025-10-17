@@ -157,6 +157,7 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 		for special:CardData.SpecialReaction in card.special_reactions:
 			if special == CardData.SpecialReaction.DODGE:
 				BattleSignals.attack_dodged.emit(target, source, card)
+				source.play_animation("defense")
 				queued_attack = null
 			elif special == CardData.SpecialReaction.BLOCK:
 				if queued_attack and queued_attack.card:
@@ -167,6 +168,7 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 					print("[BLOCK] %s blocked '%s' from %s (damage: %d, min stamina: %d)" % [source.log_name, queued_attack.card.name, queued_attack.source.log_name, incoming_damage, min_stamina])
 					if source.stamina >= min_stamina:
 						BattleSignals.attack_dodged.emit(target, source, card)
+						source.play_animation("defense")
 						# Block: allow only special damage types or effects to pass through.
 						# You may want to handle phantom damage or other effects here.
 						# For now, we just block normal damage and negative effects.
