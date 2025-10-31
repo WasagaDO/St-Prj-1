@@ -1014,7 +1014,7 @@ remote_path = NodePath("../../../../../../../poligons/Goat-man-final0000Right-ha
 [node name="HipL" type="Bone2D" parent="Old Visual/Bones/Skeleton2D/Hip"]
 position = Vector2(197.294, 96.3959)
 rotation = -0.0379951
-scale = Vector2(0.999971, 0.999971)
+scale = Vector2(0.99997, 0.99997)
 rest = Transform2D(0.999278, -0.037986, 0.037986, 0.999278, 131, 91)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Old Visual/Bones/Skeleton2D/Hip/HipL"]
@@ -1094,11 +1094,11 @@ shape = SubResource("RectangleShape2D_emepc")
 [node name="New Visual" type="Node2D" parent="."]
 
 [node name="Spined Character" type="SpineSprite" parent="New Visual"]
-position = Vector2(600, 1451)
-rotation = -3.14159
-scale = Vector2(1, -1)
 skeleton_data_res = ExtResource("16_pb0yv")
 preview_skin = "Gladiator1"
 preview_animation = "-- Empty --"
 preview_frame = false
 preview_time = 0.0
+position = Vector2(600, 1451)
+rotation = -3.14159
+scale = Vector2(1, -1)

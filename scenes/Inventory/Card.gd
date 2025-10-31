@@ -3,9 +3,10 @@ class_name InventoryCard
 extends TextureRect
 
 enum Types {
-	NONE,
-	PHY,
-	MAG
+	ATTACK,
+	ACTION,
+	REACTION,
+	OTHER
 }
 
 enum SecondaryTypes {
@@ -15,9 +16,12 @@ enum SecondaryTypes {
 }
 
 @export var title: String
-@export var type: Types = Types.PHY
+@export var type: Types = Types.ATTACK
 @export var type2: SecondaryTypes
 @export var level: int
+# tells if we currently have the corresponding weapon equiped, making this card usable ("active")
+var is_active_from_weapon: bool = false
+
 @onready var title_label: Label = $VBoxContainer/Title
 @onready var type_label: Label = $VBoxContainer/Type
 @onready var level_label: Label = $"VBoxContainer/Lvl"

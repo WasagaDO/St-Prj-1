@@ -127,7 +127,8 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 		var attack_animation: CombatantAnimator = CombatantAnimator.new()
 		source.add_child(attack_animation)
 		attack_animation.combatant_attacked(source)
-	
+		if source is Enemy:
+			source.play_animation("attack")
 	
 	# either this is not an attack, or there wasn't any reactions possible.
 	# so we just resolve it.

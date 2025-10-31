@@ -26,9 +26,10 @@ extends Control
 func _ready() -> void:
 	# show page 1
 	switch_tab(1)
-	#
-	cards_scroll.max_value = scroll_container.get_child(0).size.y - scroll_container.size.y
-	scrollbar_2.max_value = scroll_2_container.get_child(0).size.y - scroll_2_container.size.y
+	#cards_scroll.max_value = scroll_container.get_child(0).size.y - scroll_container.size.y
+	#scrollbar_2.max_value = scroll_2_container.get_child(0).size.y - scroll_2_container.size.y
+	update_scroll_bar_distance(0)
+	update_scroll_bar_distance(1)
 	back_button.mouse_entered.connect(nav_buttons_hover.bind("BackButton","entered"))
 	back_button.mouse_exited.connect(nav_buttons_hover.bind("BackButton","exited"))
 	menu_button.mouse_entered.connect(nav_buttons_hover.bind("MenuButton","entered"))
@@ -48,16 +49,45 @@ func card_hover(card: InventoryCard):
 	description_card.update()
 
 
+# updates the travel height of a scroll bar
+func update_scroll_bar_distance(page:int):
+	await get_tree().process_frame
+	var scroll_bar = cards_scroll
+	var container = scroll_container
+	if page == 1:
+		scroll_bar = scrollbar_2
+		container = scroll_2_container
+	elif page == 2:
+		scroll_bar = scrollbar_3
+		container = scroll_3_container
+	#await container.get_child(0).resized
+	var max_scroll_value = container.get_child(0).size.y - container.size.y
+	if max_scroll_value <= 1:
+		max_scroll_value = 1
+	cards_scroll.max_value = max_scroll_value
+	if cards_scroll.value > max_scroll_value:
+		cards_scroll.value = max_scroll_value
+	if cards_scroll.value < 0:
+		cards_scroll.value = 0
+	print("update_scroll_bar_distance(", str(page), ") to ", str(max_scroll_value))
 
-var filtered_type: InventoryCard.Types = InventoryCard.Types.NONE
+
+var filtered_type: InventoryCard.Types = InventoryCard.Types.OTHER
 var filtered_secondary_type: InventoryCard.SecondaryTypes = InventoryCard.SecondaryTypes.NONE
 
 var search_bar_text: String
+
 func update_card_list() -> void:
 	for card: InventoryCard in card_list.get_children():
-		card.visible = (card.type == filtered_type or filtered_type == InventoryCard.Types.NONE) and ((search_bar_text.to_lower() in card.title.to_lower()) or search_bar_text == "") and (card.type2 == filtered_secondary_type or filtered_secondary_type == InventoryCard.SecondaryTypes.NONE)
-		
-	
+		card.visible = (
+				(card.type == filtered_type or filtered_type == InventoryCard.Types.OTHER)
+				and ((search_bar_text.to_lower() in card.title.to_lower()) or search_bar_text == "")
+				and (card.type2 == filtered_secondary_type or filtered_secondary_type == InventoryCard.SecondaryTypes.NONE)
+				and (not show_only_active_from_weapon or card.is_active_from_weapon)
+			)
+	update_scroll_bar_distance(0)
+
+
 const FILTER_NORMAL = preload("res://scenes/Inventory/Hero_s Table/Filter/FilterNormal.png")
 const FILTER_SELECTED = preload("res://scenes/Inventory/Hero_s Table/Filter/FilterSelected.png")
 
@@ -91,48 +121,100 @@ func secondary_filter(type: String) -> void:
 			button.texture_normal = filter_selected
 			button.z_index = 1
 
+
 func searched(new_text: String) -> void:
 	search_bar_text = new_text
 	update_card_list()
 
+
 enum Sorts {
 	ALPHABET,
-	LVL,
+	COST,
+	TYPE,
 	INITIAL_SORT
 }
 
 var initial_card_order: Array[InventoryCard]
+var current_sort: Sorts = Sorts.INITIAL_SORT
+var sort_ascending: bool = true
+
 
 func sort_pressed(sort: Sorts) -> void:
+	# flip the sort order if the button gets re-clicked
+	if sort == current_sort:
+		sort_ascending = !sort_ascending
+	else:
+		sort_ascending = true
+		current_sort = sort
 	match sort:
-		Sorts.ALPHABET: # deletes all cards and make new ones ordered
-			var card_names: Array[String] = []
-			var cards: Array = card_list.get_children()
-			for card: InventoryCard in card_list.get_children():
-				card_names.append(card.title)
+		Sorts.ALPHABET:
+			var cards := card_list.get_children()
+			cards.sort_custom(func(a, b):
+				return a.title < b.title if sort_ascending else a.title > b.title)
+			for card in card_list.get_children():
 				card.queue_free()
-			card_names.sort()
-			for card_name: String in card_names:
-				var card: InventoryCard = (func():
-					for c: InventoryCard in cards:
-						if c.title == card_name:
-							return c.duplicate()).call()
-				card_list.add_child(card)
-				card.mouse_entered.connect(card_hover.bind(card))
-		Sorts.LVL:
-			var card_levels: Array[Array] = []
-			var cards: Array = card_list.get_children()
-			for card: InventoryCard in card_list.get_children():
-				card_levels.append([card.level,card.title])
+			for card in cards:
+				var dup := card.duplicate()
+				card_list.add_child(dup)
+				dup.mouse_entered.connect(card_hover.bind(dup))
+		Sorts.COST:
+			var cards := card_list.get_children()
+			cards.sort_custom(func(a, b):
+				return a.level < b.level if sort_ascending else a.level > b.level
+			)
+			for card in card_list.get_children():
 				card.queue_free()
-			card_levels.sort_custom(func(a,b): return a[0] < b[0])
-			for card_level: Array in card_levels:
-				var card: InventoryCard = (func():
-					for c: InventoryCard in cards:
-						if c.title == card_level[1]:
-							return c.duplicate()).call()
-				card_list.add_child(card)
-				card.mouse_entered.connect(card_hover.bind(card))
+			for card in cards:
+				var dup := card.duplicate()
+				card_list.add_child(dup)
+				dup.mouse_entered.connect(card_hover.bind(dup))
+		Sorts.TYPE:
+			var cards := card_list.get_children()
+			cards.sort_custom(func(a, b):
+				# ordre : Physical < Action < Magic
+				var order = {"Attack": 0, "Action": 1, "Reaction": 2, "Other": 3}
+				if sort_ascending:
+					return order.get(a.get_type_string(a.type), 99) < order.get(b.get_type_string(b.type), 99)
+				else:
+					return order.get(a.get_type_string(a.type), 99) > order.get(b.get_type_string(b.type), 99)
+			)
+			for card in card_list.get_children():
+				card.queue_free()
+			for card in cards:
+				var dup := card.duplicate()
+				card_list.add_child(dup)
+				dup.mouse_entered.connect(card_hover.bind(dup))
+			""" # Old sorting algorithm
+			Sorts.ALPHABET: # deletes all cards and make new ones ordered
+				var card_names: Array[String] = []
+				var cards: Array = card_list.get_children()
+				for card: InventoryCard in card_list.get_children():
+					card_names.append(card.title)
+					card.queue_free()
+				card_names.sort()
+				for card_name: String in card_names:
+					var card: InventoryCard = (func():
+						for c: InventoryCard in cards:
+							if c.title == card_name:
+								return c.duplicate()).call()
+					card_list.add_child(card)
+					card.mouse_entered.connect(card_hover.bind(card))
+			
+			Sorts.COST:
+				var card_levels: Array[Array] = []
+				var cards: Array = card_list.get_children()
+				for card: InventoryCard in card_list.get_children():
+					card_levels.append([card.level,card.title])
+					card.queue_free()
+				card_levels.sort_custom(func(a,b): return a[0] < b[0])
+				for card_level: Array in card_levels:
+					var card: InventoryCard = (func():
+						for c: InventoryCard in cards:
+							if c.title == card_level[1]:
+								return c.duplicate()).call()
+					card_list.add_child(card)
+					card.mouse_entered.connect(card_hover.bind(card))
+				"""
 		Sorts.INITIAL_SORT:
 			for card: InventoryCard in card_list.get_children():
 				card.queue_free()
@@ -141,7 +223,6 @@ func sort_pressed(sort: Sorts) -> void:
 				card_list.add_child(card_)
 				card_.mouse_entered.connect(card_hover.bind(card_))
 			update_card_list()
-
 
 
 
@@ -223,3 +304,42 @@ func nav_buttons_hover(button: String, action: String) -> void:
 			tween.tween_property(button_node.get_parent(),"scale",Vector2(1.1,1.1),0.1)
 		"exited":
 			tween.tween_property(button_node.get_parent(),"scale",Vector2(1,1),0.1)
+
+
+var show_only_active_from_weapon := false
+@export var show_all_button: TextureButton
+@export var show_active_button: TextureButton
+@export var filter_texture_normal: Texture2D
+@export var filter_texture_selected: Texture2D
+var filter_button_label_color_normal: Color = Color.SADDLE_BROWN
+var filter_button_label_color_selected: Color = Color.WHITE
+
+
+func show_all_cards() -> void:
+	print("show_all_cards()")
+	show_only_active_from_weapon = false
+	update_card_list()
+	_update_filter_buttons_visual(show_all_button)
+
+	
+
+func show_only_active_cards() -> void:
+	print("show_only_active_cards()")
+	show_only_active_from_weapon = true
+	update_card_list()
+	_update_filter_buttons_visual(show_active_button)
+
+
+
+
+func _update_filter_buttons_visual(selected_button: TextureButton) -> void:
+	for button in [show_all_button, show_active_button]:
+		if button == null:
+			continue
+		var label = button.get_node("MarginContainer/Label") if button.has_node("MarginContainer/Label") else null
+		if button == selected_button:
+			button.texture_normal = filter_texture_selected
+			if label: label.set("theme_override_colors/font_color", filter_button_label_color_selected)
+		else:
+			button.texture_normal = filter_texture_normal
+			if label: label.set("theme_override_colors/font_color", filter_button_label_color_normal)

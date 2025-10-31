@@ -126,7 +126,6 @@ func apply_new_status_effect(status: StatusEffectData, source: Combatant):
 
 
 
-
 # Called at START of this combatant's turn to apply WHILE_ACTIVE payloads.
 func apply_all_status_effects() -> void:
 	for status: StatusEffectData in status_effects.keys():
@@ -326,9 +325,7 @@ func apply_card_effect(source:Combatant, effect:CardData):
 				amt += 3
 				source.did_play_series_of_stabs = false
 			apply_damage(source, amt, damage.type)
-	
-	if is_an_attack:
-		source.play_animation("attack")
+
 	
 	if effect.healing > 0:
 		apply_healing(effect.healing)
@@ -504,17 +501,14 @@ func _ready() -> void:
 func play_animation(name: String):
 	if not use_new_animation_type or spined_character == null:
 		return
-
 	var state = spined_character.get_animation_state()
 	if state == null:
 		print("❌ No animation state found on SpineSprite.")
 		return
-
 	var skeleton_data = spined_character.get_skeleton().get_data()
 	if not skeleton_data.find_animation(name):
 		print("⚠️ Spine animation not found:", name)
 		return
-
 	var loop = (name == "idle")
 
 	# Clear previous tracks if this is death (full override)

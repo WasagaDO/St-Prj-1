@@ -57,8 +57,6 @@ func try_get_valid_reaction(attack:CardData, attacker:Combatant):
 			continue
 		if not BattleUtil.card_can_react(reaction, attack, attacker, self):
 			continue
-		
-		
 		# valid reaction
 		card_cooldowns[reaction] = reaction.cooldown;
 		return reaction;
