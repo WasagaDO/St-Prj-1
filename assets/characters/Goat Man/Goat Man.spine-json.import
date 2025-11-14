@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.json"
+type="SpineSkeletonFileResource"
+uid="uid://dfnn45vtfjj8h"
+path="res://.godot/imported/Goat Man.spine-json-fe8df287fe7ca116215ebe73a1a30924.spjson"
+
+[deps]
+
+source_file="res://assets/characters/Goat Man/Goat Man.spine-json"
+dest_files=["res://.godot/imported/Goat Man.spine-json-fe8df287fe7ca116215ebe73a1a30924.spjson"]
+
+[params]
+

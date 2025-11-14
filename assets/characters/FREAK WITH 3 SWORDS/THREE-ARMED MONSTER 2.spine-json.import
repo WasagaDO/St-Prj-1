@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.json"
+type="SpineSkeletonFileResource"
+uid="uid://e0qtsxe7o2f4"
+path="res://.godot/imported/THREE-ARMED MONSTER 2.spine-json-58cc0455106a0e34149efee94f89a973.spjson"
+
+[deps]
+
+source_file="res://assets/characters/FREAK WITH 3 SWORDS/THREE-ARMED MONSTER 2.spine-json"
+dest_files=["res://.godot/imported/THREE-ARMED MONSTER 2.spine-json-58cc0455106a0e34149efee94f89a973.spjson"]
+
+[params]
+

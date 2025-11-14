@@ -1,0 +1,66 @@
+Goat Man.png
+size:2207,2207
+filter:Linear,Linear
+pma:true
+EarL
+bounds:1915,1092,193,153
+Groin
+bounds:1685,937,228,480
+Head
+bounds:619,930,388,740
+rotate:90
+Left Arm
+bounds:1990,1247,205,529
+Left Calf
+bounds:1651,589,374,346
+Left Forearm
+bounds:1530,1419,458,357
+Left Hand
+bounds:1189,7,294,419
+rotate:90
+Left Hoof
+bounds:752,1320,462,776
+rotate:90
+Left Leg
+bounds:2,582,615,797
+Mane
+bounds:2,107,473,631
+rotate:90
+Right Arm
+bounds:635,296,536,335
+Right Calf
+bounds:1610,41,349,346
+offsets:0,0,363,346
+Right Forearm
+bounds:1550,389,198,500
+rotate:90
+Right Hand
+bounds:1361,942,322,376
+Right Hoof
+bounds:619,633,295,833
+rotate:90
+Right Leg
+bounds:752,1784,421,910
+rotate:90
+Torso
+bounds:2,1381,748,824
+Waist Fur
+bounds:635,62,552,232
+earR
+bounds:2027,839,113,123
+head hair
+bounds:2,2,103,218
+rotate:90
+hornL
+bounds:1664,1778,526,427
+offsets:0,1,526,428
+hornLB
+bounds:1173,303,328,375
+rotate:90
+hornR
+bounds:1454,634,195,306
+hornRB
+bounds:1961,11,204,376
+mouth
+bounds:1915,964,126,188
+rotate:90

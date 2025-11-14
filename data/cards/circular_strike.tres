@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://7cy4bdn1ctqi"]
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://7cy4bdn1ctqi"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_w2dga"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_27mcp"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_35mfj"]
+[ext_resource type="Texture2D" uid="uid://bqg8f0qgr2um3" path="res://assets/cards_icons/CIRCULAR STRIKE.png" id="2_pijus"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_27mcp"]
 
 [sub_resource type="Resource" id="Resource_w2dga"]
@@ -15,6 +16,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("2_35mfj")
 description = "Deal 8 slashing damage to all enemies."
 name = "Circular Strike"
+image = ExtResource("2_pijus")
 stamina_cost = 3
 card_type = 0
 speed = 0

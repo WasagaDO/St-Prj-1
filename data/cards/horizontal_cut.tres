@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_81nnw"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_hjgk6"]
+[ext_resource type="Texture2D" uid="uid://baax31crw40sq" path="res://assets/cards_icons/horizontal cut.png" id="2_hypf5"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_7mgvq"]
-[ext_resource type="Texture2D" uid="uid://ciw00tqn0fq7m" path="res://assets/card_art/horizontal_cut.png" id="4_gxw06"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_j3502"]
 
 [sub_resource type="Resource" id="Resource_pcjlx"]
@@ -15,7 +15,7 @@ amt = 4
 script = ExtResource("4_7mgvq")
 description = "Deal 4 slashing damage."
 name = "Horizontal Cut"
-image = ExtResource("4_gxw06")
+image = ExtResource("2_hypf5")
 stamina_cost = 3
 card_type = 0
 speed = 0

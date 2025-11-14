@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://by5jslim0rd0f"]
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://by5jslim0rd0f"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_heus4"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_8cxny"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_f07ol"]
+[ext_resource type="Texture2D" uid="uid://bsaantykvy3ul" path="res://assets/cards_icons/PARRY.png" id="2_fclgn"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_8cxny"]
 
 [sub_resource type="Resource" id="Resource_heus4"]
@@ -17,6 +18,7 @@ description = "REACTION
 
 Block an enemy's attack and deal 6 slashing damage."
 name = "Parry"
+image = ExtResource("2_fclgn")
 stamina_cost = 5
 card_type = 3
 speed = 1

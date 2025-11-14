@@ -16,6 +16,7 @@ enum SecondaryTypes {
 }
 
 @export var title: String
+@export var description: String = ""
 @export var type: Types = Types.ATTACK
 @export var type2: SecondaryTypes
 @export var level: int
@@ -44,6 +45,7 @@ func on_hover(card: InventoryCard, hover: String) -> void:
 			card.texture = CARD_HOLDER_SELECTED
 		"exited":
 			card.texture = CARD_HOLDER_NORMAL
+
 
 func get_type_string(type: Types) -> String:
 	return Types.find_key(type)

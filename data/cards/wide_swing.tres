@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_8rjlj"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_hfrd8"]
-[ext_resource type="Texture2D" uid="uid://cn1wh6wpovubf" path="res://assets/card_art/wide_swing.png" id="4_d75gh"]
+[ext_resource type="Texture2D" uid="uid://d4nl5qp66q4n8" path="res://assets/cards_icons/wide swing.png" id="2_lxqrp"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_pl4bd"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_ynpha"]
 
@@ -15,7 +15,7 @@ amt = 7
 script = ExtResource("4_pl4bd")
 description = "Deal 7 slashing damage."
 name = "Wide Swing"
-image = ExtResource("4_d75gh")
+image = ExtResource("2_lxqrp")
 stamina_cost = 5
 card_type = 0
 speed = -1

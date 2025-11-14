@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://cd0ke7keiwnu5"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_cnl6r"]
+[ext_resource type="Texture2D" uid="uid://b78edn5a3770f" path="res://assets/cards_icons/noggin kick.png" id="2_8xc1q"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_eohcp"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_jccsc"]
-[ext_resource type="Texture2D" uid="uid://dpnnn8kgg8kph" path="res://assets/card_art/noggin_kick.png" id="4_qqar6"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_y24au"]
 
 [sub_resource type="Resource" id="Resource_5uhfg"]
@@ -15,7 +15,7 @@ amt = 4
 script = ExtResource("4_jccsc")
 description = "Deal 4 crushing damage."
 name = "Noggin Kick"
-image = ExtResource("4_qqar6")
+image = ExtResource("2_8xc1q")
 stamina_cost = 3
 card_type = 0
 speed = 0

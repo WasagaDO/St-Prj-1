@@ -1,18 +1,15 @@
 extends Control
 
-# these will also be used from another script
-#@onready var back_button: TextureButton = $Panel/BackButton/Pivot/BackButton
-#@onready var menu_button: TextureButton = $Panel/MenuButton/Pivot/MenuButton
-
-@onready var card_list: GridContainer = %CardList
-@onready var description_card: TextureRect = %DescriptionCard
+@export var card_list: GridContainer
+@export var description_card: TextureRect
+@export var card_description_text: RichTextLabel
 
 
-# exporting those variables is a better practice than name referencing for scalability
 @export var back_button: TextureButton
 @export var menu_button: TextureButton
 @export var filter_buttons: VBoxContainer
 @export var filter_buttons_2: HBoxContainer
+
 @export var cards_scroll: VScrollBar
 @export var scroll_container: ScrollContainer
 @export var scrollbar_2: VScrollBar
@@ -20,6 +17,7 @@ extends Control
 @export var scrollbar_3: VScrollBar
 @export var scroll_3_container: ScrollContainer
 @export var st_switchers: VBoxContainer
+
 
 
 
@@ -47,10 +45,12 @@ func card_hover(card: InventoryCard):
 	description_card.type2 = card.get_secondary_type_string(card.type2)
 	description_card.level = str(card.level)
 	description_card.update()
+	card_description_text.text = card.description
 
 
 # updates the travel height of a scroll bar
 func update_scroll_bar_distance(page:int):
+	await get_tree().process_frame
 	await get_tree().process_frame
 	var scroll_bar = cards_scroll
 	var container = scroll_container

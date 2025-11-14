@@ -9,6 +9,9 @@ class_name EnemyData
 @export var max_hp:int = 36;
 @export var armor:Array[ArmorData]
 
+@export var skeleton_asset:SpineSkeletonDataResource
+@export var skeleton_subskin:String # optional
+
 
 @export_category("Enemy's custom behaviours")
 @export var behaviours: Array[EnemyCustomBehaviour] = []

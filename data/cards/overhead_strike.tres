@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://brlmjw0y6oui0"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_ni5i7"]
+[ext_resource type="Texture2D" uid="uid://ckury4qeewumc" path="res://assets/cards_icons/overhead strike.png" id="2_0sj3b"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="4_0sj3b"]
-[ext_resource type="Texture2D" uid="uid://6mfaxa560vaw" path="res://assets/card_art/overhead_strike.png" id="4_cjdyc"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_vyq3q"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_yop6l"]
 
@@ -22,7 +22,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("4_vyq3q")
 description = "Deal 5 crushing and 10 balance damage."
 name = "Overhead Strike"
-image = ExtResource("4_cjdyc")
+image = ExtResource("2_0sj3b")
 stamina_cost = 4
 card_type = 0
 speed = 0

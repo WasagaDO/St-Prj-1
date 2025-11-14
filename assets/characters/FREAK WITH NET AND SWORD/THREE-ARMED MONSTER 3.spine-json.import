@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.json"
+type="SpineSkeletonFileResource"
+uid="uid://bdk6wnk0qp056"
+path="res://.godot/imported/THREE-ARMED MONSTER 3.spine-json-b672712c34b06858f0926d0900438c0b.spjson"
+
+[deps]
+
+source_file="res://assets/characters/FREAK WITH NET AND SWORD/THREE-ARMED MONSTER 3.spine-json"
+dest_files=["res://.godot/imported/THREE-ARMED MONSTER 3.spine-json-b672712c34b06858f0926d0900438c0b.spjson"]
+
+[params]
+

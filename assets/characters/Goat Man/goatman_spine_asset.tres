@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://cc1krqbo0iear"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://cp0fjmp27k1sp" path="res://assets/characters/Goat Man/Goat Man.atlas" id="1_t6rjy"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://dfnn45vtfjj8h" path="res://assets/characters/Goat Man/Goat Man.spine-json" id="2_pm8gh"]
+
+[resource]
+atlas_res = ExtResource("1_t6rjy")
+skeleton_file_res = ExtResource("2_pm8gh")

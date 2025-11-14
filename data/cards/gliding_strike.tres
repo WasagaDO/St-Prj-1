@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://m2e55tpcd322"]
+[gd_resource type="Resource" script_class="CardData" load_steps=9 format=3 uid="uid://m2e55tpcd322"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_tcygy"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_23x1l"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_cruk0"]
+[ext_resource type="Texture2D" uid="uid://bjx8327t5x10w" path="res://assets/cards_icons/gliding strike.png" id="2_dnaih"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_cruk0"]
 [ext_resource type="Resource" uid="uid://d12ov26egb5hk" path="res://data/status_effects/fracture.tres" id="4_23x1l"]
 
@@ -27,6 +28,7 @@ metadata/_custom_type_script = "uid://bgj73ykcpodne"
 script = ExtResource("2_23x1l")
 description = "Deal 5 crushing damage and apply \"Fracture\" to an unarmored enemy."
 name = "Gliding Strike"
+image = ExtResource("2_dnaih")
 stamina_cost = 6
 card_type = 0
 speed = 1

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_yg783"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_3cgue"]
+[ext_resource type="Texture2D" uid="uid://bv4mvimh1b2xs" path="res://assets/cards_icons/lunge.png" id="2_a8h0o"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_cgmeh"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_j3nbc"]
-[ext_resource type="Texture2D" uid="uid://bsjsbl7t8rjle" path="res://assets/card_art/lunge.png" id="4_yylsg"]
 
 [sub_resource type="Resource" id="Resource_iw0rt"]
 script = ExtResource("1_yg783")
@@ -15,7 +15,7 @@ amt = 7
 script = ExtResource("4_j3nbc")
 description = "Deal 7 piercing damage."
 name = "Lunge"
-image = ExtResource("4_yylsg")
+image = ExtResource("2_a8h0o")
 stamina_cost = 5
 card_type = 0
 speed = -1

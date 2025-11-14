@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=14 format=3 uid="uid://b7p105j6jandf"]
+[gd_resource type="Resource" script_class="EnemyData" load_steps=15 format=3 uid="uid://b7p105j6jandf"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_3b0g8"]
 [ext_resource type="Script" uid="uid://ckyyf6cokbqg5" path="res://scripts/enemy custom behaviours/enemy_custom_behaviour.gd" id="2_km64a"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://cgvswxyluu0uk" path="res://data/enemies/freak/moves/create_distance.tres" id="5_km64a"]
 [ext_resource type="Resource" uid="uid://siornsgedik4" path="res://data/enemies/freak/moves/shot.tres" id="5_y56cs"]
 [ext_resource type="Resource" uid="uid://dkv48dy6ua28k" path="res://data/enemies/freak/moves/headfirst.tres" id="6_7sjmp"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://c45fm7wtby48f" path="res://assets/characters/FREAK WITH CROSSBOW/three_armed_monster_spine_asset_4.tres" id="10_b5jxr"]
 
 [sub_resource type="Resource" id="Resource_x17rh"]
 script = ExtResource("3_7sjmp")
@@ -40,5 +41,7 @@ moves = Array[ExtResource("2_rt5ns")]([SubResource("Resource_b5jxr"), SubResourc
 reactions = Array[ExtResource("3_km64a")]([ExtResource("5_km64a")])
 max_hp = 45
 armor = Array[ExtResource("1_3b0g8")]([])
+skeleton_asset = ExtResource("10_b5jxr")
+skeleton_subskin = ""
 behaviours = Array[ExtResource("2_km64a")]([SubResource("Resource_x17rh")])
 metadata/_custom_type_script = "uid://3jkx5d0irahs"

@@ -1,0 +1,99 @@
+Final Protagonist (sword and shield).png
+size:2999,2999
+filter:Linear,Linear
+pma:true
+Armor
+bounds:2,257,713,636
+AxeB
+bounds:318,2076,790,921
+AxeF
+bounds:1110,2314,683,924
+rotate:90
+Behind Left Elbow
+bounds:539,44,211,156
+rotate:90
+Belt
+bounds:2812,2433,564,176
+rotate:90
+Bracer
+bounds:1517,125,415,229
+offsets:0,0,444,229
+Head
+bounds:1577,356,397,542
+offsets:0,0,397,549
+Layer 3
+bounds:1110,1818,908,494
+Left Arm
+bounds:2567,812,380,556
+Left Elbow
+bounds:2326,91,147,136
+Left Elbow Strap
+bounds:2812,2259,164,172
+Left Foot
+bounds:1022,900,399,844
+rotate:90
+Left Forehand
+bounds:1055,116,460,309
+Left HandSword
+bounds:2,1421,314,1576
+Left Leg
+bounds:1976,455,495,494
+Mantle
+bounds:2,895,1018,431
+Right Arm
+bounds:1976,127,326,348
+rotate:90
+Right Elbow
+bounds:1868,1093,104,206
+Right Elbow Strap
+bounds:2326,229,224,140
+rotate:90
+Right Foot
+bounds:2020,1798,449,866
+rotate:90
+Right Leg
+bounds:1996,951,417,569
+rotate:90
+Shield
+bounds:2036,2249,748,774
+rotate:90
+ShieldB
+bounds:318,1328,746,770
+rotate:90
+Undershirt
+bounds:2,2,535,253
+offsets:0,22,535,275
+W/Layer 3
+bounds:1090,1301,904,515
+W/Left Leg
+bounds:1055,427,520,471
+W/Right Leg
+bounds:2473,242,414,568
+W/wound
+bounds:2475,42,198,213
+rotate:90
+Waist Cloth 2
+bounds:717,219,674,336
+offsets:79,0,753,336
+rotate:90
+Waist Cloth behind
+bounds:1996,1370,908,426
+handR
+bounds:697,30,277,187
+offsets:1,0,278,187
+
+Final Protagonist (sword and shield)_2.png
+size:581,581
+filter:Linear,Linear
+pma:true
+Right Forearm
+bounds:296,33,262,248
+offsets:0,0,262,249
+Right hand
+bounds:2,62,292,250
+Thigh Armor Left
+bounds:322,283,296,257
+offsets:0,2,300,259
+rotate:90
+Thigh Armor Right
+bounds:2,314,318,265

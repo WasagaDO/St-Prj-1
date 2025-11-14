@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://bqp6hqt8l66ky"]
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://bqp6hqt8l66ky"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_kak6r"]
+[ext_resource type="Texture2D" uid="uid://cy7kr1n3bmxhb" path="res://assets/cards_icons/double strike.png" id="2_62d01"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_bke5n"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_62d01"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="3_bke5n"]
@@ -9,6 +10,7 @@
 script = ExtResource("2_bke5n")
 description = "Choose two attack cards and play them sequentially with a stamina discount equal to the cheapest one."
 name = "Double Strike"
+image = ExtResource("2_62d01")
 stamina_cost = 0
 card_type = 0
 speed = 0

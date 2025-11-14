@@ -24,27 +24,23 @@ var waiting_for_player_reaction:bool = false;
 var game_over:bool = false;
 
 
-@export var enemy_datas:Array[EnemyData]
-@export var enemy_data_labels:Array[BattleSettings.EnemyType]
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# set the background according to the location
-	if BattleSettings.location:
-		background.texture = BattleSettings.location.cover
-	else:
-		push_warning("location didn't load properly, no location data")
-	# set the correct enemy(es) that we selected.
-	# this system may change later.
-	var i = enemy_data_labels.find(BattleSettings.enemy_type)
-	for enemy in enemies:
-		var data = enemy_datas[i]
-		enemy.enemy_data = data
-		enemy.log_name = data.name
-		enemy.max_hp = data.max_hp
+	background.texture = BattleSettings.location.cover
+	var enemy_data = BattleSettings.enemy_data
+	for enemy:Enemy in enemies:
+		enemy.set_character_spine_asset(enemy_data.skeleton_asset, enemy_data.skeleton_subskin)
+		print("set enemy asset to ")
+		enemy.enemy_data = enemy_data
+		enemy.log_name = enemy_data.name
+		enemy.max_hp = enemy_data.max_hp
 		enemy.initialize()
 		enemy.player = player
+		enemy.play_animation("idle")
+		
+
 	player.initialize()
 	
 	# wait a sec before we get started
@@ -148,9 +144,9 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 	# the initial attacker who played the attack card
 	if card.card_type == CardData.CardType.REACTION:
 		# set the right target
-		if source is Player:
+		if source is Player and queued_attack:
 			target = queued_attack.source
-		elif source is Enemy:
+		elif source is Enemy and queued_attack:
 			target = queued_attack.source
 	
 	# special reactions (dodge, block, ...)

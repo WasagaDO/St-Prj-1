@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://bskj3wiyc6sdt"]
+[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://bskj3wiyc6sdt"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_g8q53"]
+[ext_resource type="Texture2D" uid="uid://cfoqmd5sghrla" path="res://assets/cards_icons/FEINT.png" id="2_0tr5c"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_jmu1c"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_0tr5c"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="3_jmu1c"]
@@ -9,6 +10,7 @@
 script = ExtResource("2_jmu1c")
 description = "Trigger the enemy’s reaction. If their reaction is on cooldown, reset it."
 name = "Feint"
+image = ExtResource("2_0tr5c")
 stamina_cost = 0
 card_type = 1
 speed = 0

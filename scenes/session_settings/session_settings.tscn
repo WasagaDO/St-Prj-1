@@ -1,19 +1,28 @@
-[gd_scene load_steps=29 format=3 uid="uid://bw4iu7av3kh7y"]
+[gd_scene load_steps=38 format=3 uid="uid://bw4iu7av3kh7y"]
 
 [ext_resource type="Script" uid="uid://wxl4p8jdcy24" path="res://scenes/session_settings/session_settings.gd" id="1_7ngu6"]
 [ext_resource type="Script" uid="uid://f60j2p7cq8o5" path="res://scenes/session_settings/location_selector.gd" id="2_6k2tw"]
 [ext_resource type="Texture2D" uid="uid://byblm2p042tg3" path="res://assets/ui/BACKGROUND.png" id="2_iv6sp"]
+[ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="2_xfdo7"]
+[ext_resource type="Resource" uid="uid://kffdlj5dqjq3" path="res://data/enemies/goatman/goatman.tres" id="3_akhxv"]
 [ext_resource type="PackedScene" uid="uid://d25gbowo88gdv" path="res://scenes/session_settings/big_button.tscn" id="3_mjfei"]
+[ext_resource type="Resource" uid="uid://c6wtc8libsxgp" path="res://data/enemies/freak/freak_with_a_spear.tres" id="4_d8qul"]
 [ext_resource type="Theme" uid="uid://kldlvd6qmeiv" path="res://resources/big_button_highlight_theme.tres" id="4_p44ky"]
+[ext_resource type="Resource" uid="uid://b7p105j6jandf" path="res://data/enemies/freak/freak_with_a_crossbow.tres" id="5_jhab0"]
 [ext_resource type="Texture2D" uid="uid://plgvx6ca866i" path="res://assets/ui/MAIN ARENA SELECT.png" id="5_omtcd"]
+[ext_resource type="Resource" uid="uid://b6unc8ncrqo7u" path="res://data/enemies/freak/freak_with_a_net_and_sword.tres" id="6_hyv2w"]
 [ext_resource type="Script" uid="uid://b5mujyncm8ip1" path="res://data/scripts/location_data.gd" id="6_rlba2"]
+[ext_resource type="Resource" uid="uid://b1yfgmwejoiju" path="res://data/enemies/freak/freak_with_3_swords.tres" id="7_01lax"]
 [ext_resource type="Resource" uid="uid://ceqhyanhgbbnu" path="res://data/locations/the_old_mill.tres" id="7_4kfuu"]
 [ext_resource type="Texture2D" uid="uid://dxrlfburrobob" path="res://assets/ui/arrow right.png" id="8_by1rr"]
 [ext_resource type="Resource" uid="uid://b5akrkfsutc6e" path="res://data/locations/blood_palace.tres" id="8_oj5um"]
+[ext_resource type="Resource" uid="uid://dyqx3duejof0l" path="res://data/enemies/gladiator/gladiator_with_dual_weapons.tres" id="8_ow0xl"]
 [ext_resource type="Texture2D" uid="uid://cn2at2kby6rhx" path="res://assets/ui/MENU.png" id="9_aiap3"]
 [ext_resource type="Resource" uid="uid://b562ce4gp4ijm" path="res://data/locations/the_arena.tres" id="9_cef1e"]
+[ext_resource type="Resource" uid="uid://d0n5ss0mxq3gu" path="res://data/enemies/gladiator/gladiator_with_shield.tres" id="9_qguo2"]
 [ext_resource type="Texture2D" uid="uid://dfp5c6af206nf" path="res://assets/ui/HEADER.png" id="9_tpusw"]
 [ext_resource type="FontFile" uid="uid://djygcxjqc5f23" path="res://assets/fonts/02 BREATHE_FIRE.OTF" id="10_cmggk"]
+[ext_resource type="Resource" uid="uid://dnk025ovxfb34" path="res://data/enemies/gladiator/gladiator_with_sword.tres" id="10_sh1ki"]
 [ext_resource type="Script" uid="uid://c8hlrbsranbk" path="res://scenes/session_settings/pop_button.gd" id="13_tr7ww"]
 [ext_resource type="Script" uid="uid://6hcwqr7oecl3" path="res://scenes/title/basic_menu.gd" id="16_3b30q"]
 [ext_resource type="FontFile" uid="uid://drw6amwfsq20x" path="res://assets/fonts/CenturyGothic.ttf" id="16_e20v3"]
@@ -54,6 +63,7 @@ script = ExtResource("1_7ngu6")
 title_scene = "res://scenes/title/title.tscn"
 equipment_scene = "res://scenes/Inventory/Inventory.tscn"
 battle_scene = "res://scenes/battle/battle_scene.tscn"
+enemy_datas = Array[ExtResource("2_xfdo7")]([ExtResource("3_akhxv"), ExtResource("4_d8qul"), ExtResource("5_jhab0"), ExtResource("6_hyv2w"), ExtResource("7_01lax"), ExtResource("8_ow0xl"), ExtResource("9_qguo2"), ExtResource("10_sh1ki")])
 
 [node name="BACKGROUND" type="TextureRect" parent="."]
 anchors_preset = 15

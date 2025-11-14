@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cp0fjmp27k1sp"
+path="res://.godot/imported/Goat Man.atlas-7c3ca6920a855f8ed61593b00c65faac.spatlas"
+
+[deps]
+
+source_file="res://assets/characters/Goat Man/Goat Man.atlas"
+dest_files=["res://.godot/imported/Goat Man.atlas-7c3ca6920a855f8ed61593b00c65faac.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

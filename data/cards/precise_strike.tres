@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=11 format=3 uid="uid://ev13s10ogqxi"]
+[gd_resource type="Resource" script_class="CardData" load_steps=12 format=3 uid="uid://ev13s10ogqxi"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_j85td"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_34xlw"]
+[ext_resource type="Texture2D" uid="uid://c5te571eitrr5" path="res://assets/cards_icons/PRECISE STRIKE.png" id="2_egwfa"]
 [ext_resource type="Script" uid="uid://bafoedredhjvd" path="res://scripts/card custom behaviour/damage_if_enemy_has_any_effect.gd" id="3_egwfa"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_lxyyc"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="3_xqi38"]
@@ -41,6 +42,7 @@ metadata/_custom_type_script = "uid://bafoedredhjvd"
 script = ExtResource("2_34xlw")
 description = "Deal 6 slashing and 4 piercing damage. Double the damage if the enemy has a status effect."
 name = "Precise Strike"
+image = ExtResource("2_egwfa")
 stamina_cost = 5
 card_type = 0
 speed = 1

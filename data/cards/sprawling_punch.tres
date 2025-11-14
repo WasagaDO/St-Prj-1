@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://dpgb3yd0f5q31"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_wcboa"]
+[ext_resource type="Texture2D" uid="uid://cd4wfdsw5cpv8" path="res://assets/cards_icons/sprawling punch.png" id="2_651i0"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_auluk"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_28m3t"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_npxhb"]
-[ext_resource type="Texture2D" uid="uid://islelfjm3136" path="res://assets/card_art/sprawling_punch.png" id="4_rptus"]
 
 [sub_resource type="Resource" id="Resource_7vnum"]
 script = ExtResource("1_wcboa")
@@ -15,7 +15,7 @@ amt = 7
 script = ExtResource("4_npxhb")
 description = "Deal 7 crushing damage."
 name = "Sprawling Punch"
-image = ExtResource("4_rptus")
+image = ExtResource("2_651i0")
 stamina_cost = 3
 card_type = 0
 speed = -1

@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://ophu6ua3hsf0"]
+[gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://ophu6ua3hsf0"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_a083s"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="1_yuxrl"]
+[ext_resource type="Texture2D" uid="uid://c24cyue7ugs4j" path="res://assets/cards_icons/QUICK COUNTER.png" id="2_v0ppm"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_yuxrl"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_yuxrl"]
 
@@ -23,6 +24,7 @@ description = "REACTION
 
 Deal 6 slashing and 5 crushing damage."
 name = "Quick Counterattack"
+image = ExtResource("2_v0ppm")
 stamina_cost = 3
 card_type = 3
 speed = 1

@@ -56,12 +56,18 @@ var outgoing_damage_multiplier:float = 1.0
 
 
 
+var initial_position: Vector2
+
+
 # called by battle_manager
 func initialize():
+	initial_position = position
 	hp = max_hp
 	stamina = max_stamina
 	initialize_bars()
 	debug_text.visible = debug_overlay_enabled # debug text
+
+
 
 
 func initialize_bars():
@@ -487,18 +493,33 @@ func _statuses_line_compact() -> String:
 @export var spined_character: SpineSprite
 
 
+# changes the spine_asset (SpineSkeletonDataResource) of the character in the new_visual component
+func set_character_spine_asset(asset : SpineSkeletonDataResource, subskin: String):
+	# set the skeleton asset
+	spined_character.skeleton_data_res = asset
+	
+	# set the skin if specified
+	if subskin != null and subskin != "":
+		var skeleton = spined_character.get_skeleton()
+		var skeleton_data = skeleton.get_data()
+		var subskin_skin = skeleton_data.find_skin(subskin)
+		if subskin_skin:
+			skeleton.set_skin(subskin_skin)
+			skeleton.set_to_setup_pose()
+		else:
+			push_warning("skeleton skin not found: ", subskin)
+
+
 func _ready() -> void:
 	if use_new_animation_type:
 		new_visual.visible = true
 		old_visual.visible = false
-		var state = spined_character.get_animation_state()
-		state.set_animation("idle", true, 0)
 	else:
 		new_visual.visible = false
 		old_visual.visible = true
 
 
-func play_animation(name: String):
+func play_animation(name: String, mix_time:float=0.2):
 	if not use_new_animation_type or spined_character == null:
 		return
 	var state = spined_character.get_animation_state()
@@ -516,6 +537,7 @@ func play_animation(name: String):
 		state.clear_tracks()
 
 	var entry = state.set_animation(name, loop, 0)
+	entry.set_mix_time(mix_time)
 
 	# One-shot animations return to idle after finishing (except death)
 	if not loop and name != "death":

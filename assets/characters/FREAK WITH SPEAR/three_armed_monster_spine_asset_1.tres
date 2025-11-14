@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://c2qtwdusbekwn"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://dt842leoqgf2" path="res://assets/characters/FREAK WITH SPEAR/THREE-ARMED MONSTER 1.atlas" id="1_wklc1"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://ds4bn1ae28p10" path="res://assets/characters/FREAK WITH SPEAR/THREE-ARMED MONSTER 1.spine-json" id="2_bn6ke"]
+
+[resource]
+atlas_res = ExtResource("1_wklc1")
+skeleton_file_res = ExtResource("2_bn6ke")

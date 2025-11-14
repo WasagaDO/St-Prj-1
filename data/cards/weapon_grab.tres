@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://bce3c3hqkmne2"]
+[gd_resource type="Resource" script_class="CardData" load_steps=9 format=3 uid="uid://bce3c3hqkmne2"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_3ls1m"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_12agl"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_7135w"]
+[ext_resource type="Texture2D" uid="uid://ow3m1a3oqb1u" path="res://assets/cards_icons/WEAPON GRAB.png" id="2_l14io"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_7135w"]
 [ext_resource type="Resource" uid="uid://dgovdss83vala" path="res://data/status_effects/stun.tres" id="4_12agl"]
 
@@ -27,6 +28,7 @@ metadata/_custom_type_script = "uid://bgj73ykcpodne"
 script = ExtResource("2_12agl")
 description = "Deal 15 balance damage and apply Stun."
 name = "Weapon Grab"
+image = ExtResource("2_l14io")
 stamina_cost = 3
 card_type = 1
 speed = 0

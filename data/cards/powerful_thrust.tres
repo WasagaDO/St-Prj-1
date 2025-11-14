@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="CardData" load_steps=6 format=3 uid="uid://ct40w0eufijbo"]
+[gd_resource type="Resource" script_class="CardData" load_steps=7 format=3 uid="uid://ct40w0eufijbo"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_f3scx"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="2_basv3"]
+[ext_resource type="Texture2D" uid="uid://chlntrin1vevx" path="res://assets/cards_icons/THRUST.png" id="2_be8x2"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_vsrpy"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="3_vsrpy"]
 
@@ -15,6 +16,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("2_basv3")
 description = "Deal 11 piercing damage."
 name = "Powerful Thrust"
+image = ExtResource("2_be8x2")
 stamina_cost = 5
 card_type = 0
 speed = -1

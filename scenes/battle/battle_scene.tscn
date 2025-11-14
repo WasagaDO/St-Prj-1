@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://cvp83fjtisnpi"]
+[gd_scene load_steps=106 format=3 uid="uid://cvp83fjtisnpi"]
 
 [ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_0hcyc"]
 [ext_resource type="PackedScene" uid="uid://dlgug5h82pnj5" path="res://scenes/battle/ui/bars/bars.tscn" id="4_6f28h"]
@@ -70,14 +70,6 @@
 [ext_resource type="PackedScene" uid="uid://qjn0sxvwnccc" path="res://scenes/battle/events/battle_events/end_turn_event.tscn" id="44_i32r0"]
 [ext_resource type="PackedScene" uid="uid://c60ncshk4otu6" path="res://scenes/battle/events/battle_events/status_applied.tscn" id="45_40ag2"]
 [ext_resource type="PackedScene" uid="uid://ij7gsovl7fxo" path="res://scenes/battle/events/battle_events/status_wore_off.tscn" id="46_7a5bm"]
-[ext_resource type="Script" uid="uid://3jkx5d0irahs" path="res://data/scripts/enemy_data.gd" id="50_ac7wl"]
-[ext_resource type="Resource" uid="uid://c6wtc8libsxgp" path="res://data/enemies/freak/freak_with_a_spear.tres" id="51_ytjid"]
-[ext_resource type="Resource" uid="uid://b7p105j6jandf" path="res://data/enemies/freak/freak_with_a_crossbow.tres" id="52_03fk3"]
-[ext_resource type="Resource" uid="uid://b6unc8ncrqo7u" path="res://data/enemies/freak/freak_with_a_net_and_sword.tres" id="53_au34j"]
-[ext_resource type="Resource" uid="uid://b1yfgmwejoiju" path="res://data/enemies/freak/freak_with_3_swords.tres" id="54_fdqrj"]
-[ext_resource type="Resource" uid="uid://dyqx3duejof0l" path="res://data/enemies/gladiator/gladiator_with_dual_weapons.tres" id="55_becrk"]
-[ext_resource type="Resource" uid="uid://d0n5ss0mxq3gu" path="res://data/enemies/gladiator/gladiator_with_shield.tres" id="56_x3gp7"]
-[ext_resource type="Resource" uid="uid://dnk025ovxfb34" path="res://data/enemies/gladiator/gladiator_with_sword.tres" id="57_ytjid"]
 
 [sub_resource type="Resource" id="Resource_yqjmm"]
 script = ExtResource("9_dn6dx")
@@ -614,8 +606,6 @@ deck = NodePath("../Cards/Deck")
 hand = NodePath("../Cards/Hand")
 discard_pile = NodePath("../Cards/DiscardPile")
 enemies = [NodePath("../Enemy")]
-enemy_datas = Array[ExtResource("50_ac7wl")]([ExtResource("26_vwuyc"), ExtResource("51_ytjid"), ExtResource("52_03fk3"), ExtResource("53_au34j"), ExtResource("54_fdqrj"), ExtResource("55_becrk"), ExtResource("56_x3gp7"), ExtResource("57_ytjid")])
-enemy_data_labels = Array[int]([0, 1, 2, 3, 4, 5, 6, 7])
 
 [node name="Events" type="Node" parent="." node_paths=PackedStringArray("hand", "deck", "dealer", "discard_pile", "state_overlay", "end_turn_button", "darken_overlay", "stat_popups_player", "stat_popups_enemy")]
 script = ExtResource("31_go2ce")

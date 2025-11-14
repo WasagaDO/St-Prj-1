@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cimbnr2w3fv31"
+path="res://.godot/imported/THREE-ARMED MONSTER 3.atlas-19b16d2a5cb4d697d0bd43bb1874bb30.spatlas"
+
+[deps]
+
+source_file="res://assets/characters/FREAK WITH NET AND SWORD/THREE-ARMED MONSTER 3.atlas"
+dest_files=["res://.godot/imported/THREE-ARMED MONSTER 3.atlas-19b16d2a5cb4d697d0bd43bb1874bb30.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

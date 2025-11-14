@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_latiy"]
 [ext_resource type="Script" uid="uid://cjse41b2rj5pc" path="res://scripts/card custom behaviour/special_card_effect.gd" id="2_pe14h"]
+[ext_resource type="Texture2D" uid="uid://cvf13li0o62yg" path="res://assets/cards_icons/active defense.png" id="2_tyt2p"]
 [ext_resource type="Script" uid="uid://bgj73ykcpodne" path="res://data/scripts/status_effect.gd" id="4_1nas7"]
 [ext_resource type="Script" uid="uid://cg1up0heh2u54" path="res://data/scripts/card_data.gd" id="4_dx4y5"]
-[ext_resource type="Texture2D" uid="uid://bq44re1wqbv32" path="res://assets/card_art/active_defense.png" id="4_pildl"]
 [ext_resource type="Resource" uid="uid://br42hnpsroipc" path="res://data/status_effects/active_defense.tres" id="5_1px4w"]
 
 [resource]
 script = ExtResource("4_dx4y5")
 description = "Gain 5 crushing, slashing and piercing armor until the start of your next turn."
 name = "Active Defense"
-image = ExtResource("4_pildl")
+image = ExtResource("2_tyt2p")
 stamina_cost = 3
 card_type = 1
 speed = 0

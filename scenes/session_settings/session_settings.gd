@@ -8,6 +8,10 @@ class_name SessionSettings
 @export_file var equipment_scene:String;
 @export_file var battle_scene:String
 
+func _ready():
+	BattleSettings.enemy_data = enemy_datas[0]
+
+
 func _on_back_to_menu_pressed() -> void:
 	get_tree().change_scene_to_file(title_scene);
 	pass # Replace with function body.
@@ -47,5 +51,10 @@ func _on_first_turn_option_button_item_selected(index: int) -> void:
 	BattleSettings.first_turn = index;
 
 
+@export var enemy_datas: Array[EnemyData]
+
+
 func _on_enemy_button_item_selected(index: int) -> void:
-	BattleSettings.enemy_type = index;
+	var enemy_data = enemy_datas[index]
+	BattleSettings.enemy_data = enemy_data
+	print("selected enemy " + str(index) + " : " + enemy_data.name)

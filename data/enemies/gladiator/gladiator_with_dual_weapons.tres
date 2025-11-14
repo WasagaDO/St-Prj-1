@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=18 format=3 uid="uid://dyqx3duejof0l"]
+[gd_resource type="Resource" script_class="EnemyData" load_steps=19 format=3 uid="uid://dyqx3duejof0l"]
 
 [ext_resource type="Script" uid="uid://pjnjtqn2vm0f" path="res://data/scripts/armor_data.gd" id="1_u67gk"]
 [ext_resource type="Script" uid="uid://07xrxm0x4phv" path="res://data/scripts/enemy_turn_data.gd" id="2_bwhku"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://diw3aqf3b3rdt" path="res://data/enemies/gladiator/moves/jump_cut.tres" id="8_ctw53"]
 [ext_resource type="Resource" uid="uid://iu1m8necot4i" path="res://data/enemies/gladiator/moves/double_stab.tres" id="9_wyn3a"]
 [ext_resource type="Resource" uid="uid://b3nyv6vrmrvqr" path="res://data/enemies/gladiator/moves/gladiators_stab.tres" id="10_u0o7a"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://bkpueqvh6feui" path="res://assets/characters/Gladiators/gladiator_spine_asset.tres" id="14_wyn3a"]
 
 [sub_resource type="Resource" id="Resource_hbrdu"]
 script = ExtResource("3_k6k4w")
@@ -44,5 +45,7 @@ moves = Array[ExtResource("2_bwhku")]([SubResource("Resource_2orda"), SubResourc
 reactions = Array[ExtResource("3_te25b")]([ExtResource("6_hbrdu"), ExtResource("7_r4da1")])
 max_hp = 35
 armor = Array[ExtResource("1_u67gk")]([])
+skeleton_asset = ExtResource("14_wyn3a")
+skeleton_subskin = "Gladiator1"
 behaviours = Array[ExtResource("2_te25b")]([SubResource("Resource_hbrdu")])
 metadata/_custom_type_script = "uid://3jkx5d0irahs"
