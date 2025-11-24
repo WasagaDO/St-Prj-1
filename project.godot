@@ -21,6 +21,7 @@ BattleSignals="*res://scenes/battle/battle_signals.gd"
 BattleUtil="*res://scripts/util/battle_util.gd"
 LogSignals="*res://scenes/battle/ui/logs/log_signals.gd"
 BattleSettings="*res://scripts/util/battle_settings.gd"
+AudioManager="*res://scripts/audio/audio_manager.gd"
 
 [display]
 

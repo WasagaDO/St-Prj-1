@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="AudioLibrary" load_steps=19 format=3 uid="uid://ckpwskqjwabwh"]
+
+[ext_resource type="AudioStream" uid="uid://drt7no1ljdboh" path="res://assets/audio/Music/Battle Track Intro.wav" id="1_n52gk"]
+[ext_resource type="Script" uid="uid://fkckwe0cqjia" path="res://scripts/audio/audio_library.gd" id="1_vwjim"]
+[ext_resource type="AudioStream" uid="uid://ck2e6feaiycj6" path="res://assets/audio/Music/Battle Track Loop.wav" id="2_wpbyn"]
+[ext_resource type="AudioStream" uid="uid://bhx5a3elbwqfa" path="res://assets/audio/SFX/Battle.wav" id="4_2neud"]
+[ext_resource type="AudioStream" uid="uid://fuyps4l2fn31" path="res://assets/audio/SFX/Bone Crack.wav" id="5_b3gf6"]
+[ext_resource type="AudioStream" uid="uid://dbfd5vsmployc" path="res://assets/audio/SFX/Candle Loop.wav" id="6_8i5ql"]
+[ext_resource type="AudioStream" uid="uid://bm14knmjysd8h" path="res://assets/audio/SFX/Card Apperance.wav" id="7_4adfn"]
+[ext_resource type="AudioStream" uid="uid://d1p3ld23qg1xg" path="res://assets/audio/SFX/Card Options.wav" id="8_rwtp3"]
+[ext_resource type="AudioStream" uid="uid://oi6jfhbjocrt" path="res://assets/audio/SFX/Card Play.wav" id="9_ban20"]
+[ext_resource type="AudioStream" uid="uid://c5ksmo2gq3byc" path="res://assets/audio/SFX/Claw Strike.wav" id="10_o5540"]
+[ext_resource type="AudioStream" uid="uid://d38brevsbdgy3" path="res://assets/audio/SFX/Click.wav" id="11_cq456"]
+[ext_resource type="AudioStream" uid="uid://cjqmbj0a6rwsj" path="res://assets/audio/SFX/Enemy Activation.wav" id="12_f8c8l"]
+[ext_resource type="AudioStream" uid="uid://bwfs0hl8wcjns" path="res://assets/audio/SFX/Hover.wav" id="13_hquuc"]
+[ext_resource type="AudioStream" uid="uid://m2l17c3hhgfn" path="res://assets/audio/SFX/Page Flip.wav" id="14_mwt6g"]
+[ext_resource type="AudioStream" uid="uid://glf07uyiec2q" path="res://assets/audio/SFX/Push.wav" id="15_72ak2"]
+[ext_resource type="AudioStream" uid="uid://cqv2nsbc0h5vw" path="res://assets/audio/SFX/Quick Flesh Cut.wav" id="16_yj72v"]
+[ext_resource type="AudioStream" uid="uid://uecpl1j0pwup" path="res://assets/audio/SFX/Scrollbar.wav" id="17_o3v8a"]
+[ext_resource type="AudioStream" uid="uid://bm5h304wgp2rw" path="res://assets/audio/SFX/Sword Strike.wav" id="18_1o1ip"]
+
+[resource]
+script = ExtResource("1_vwjim")
+music = {
+"Battle Intro": ExtResource("1_n52gk"),
+"Battle Loop": ExtResource("2_wpbyn")
+}
+sfx = {
+"Battle": ExtResource("4_2neud"),
+"Bone Crack": ExtResource("5_b3gf6"),
+"Candle Loop": ExtResource("6_8i5ql"),
+"Card Appearance": ExtResource("7_4adfn"),
+"Card Options": ExtResource("8_rwtp3"),
+"Card Play": ExtResource("9_ban20"),
+"Card Strike": ExtResource("10_o5540"),
+"Click": ExtResource("11_cq456"),
+"Enemy Activation": ExtResource("12_f8c8l"),
+"Hover": ExtResource("13_hquuc"),
+"Page Flip": ExtResource("14_mwt6g"),
+"Push": ExtResource("15_72ak2"),
+"Quick Flesh Cut": ExtResource("16_yj72v"),
+"Scrollbar": ExtResource("17_o3v8a"),
+"Sword Strike": ExtResource("18_1o1ip")
+}
+metadata/_custom_type_script = "uid://fkckwe0cqjia"

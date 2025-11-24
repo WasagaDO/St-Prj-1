@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.json"
+type="SpineSkeletonFileResource"
+uid="uid://bx8ahui46rdkh"
+path="res://.godot/imported/Gladiators03.spine-json-33976916eeff3d1678b5c462e2b45fc1.spjson"
+
+[deps]
+
+source_file="res://assets/characters/Gladiators new/Gladiators03.spine-json"
+dest_files=["res://.godot/imported/Gladiators03.spine-json-33976916eeff3d1678b5c462e2b45fc1.spjson"]
+
+[params]
+

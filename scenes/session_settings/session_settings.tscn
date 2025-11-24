@@ -58,9 +58,11 @@ font_size = 32
 shader = ExtResource("20_7h11a")
 shader_parameter/lod = 0.0
 
-[node name="SessionSettings" type="CanvasLayer"]
+[node name="SessionSettings" type="CanvasLayer" node_paths=PackedStringArray("battle_settings", "inventory")]
 script = ExtResource("1_7ngu6")
 title_scene = "res://scenes/title/title.tscn"
+battle_settings = NodePath("BattleSettings")
+inventory = NodePath("Inventory")
 equipment_scene = "res://scenes/Inventory/Inventory.tscn"
 battle_scene = "res://scenes/battle/battle_scene.tscn"
 enemy_datas = Array[ExtResource("2_xfdo7")]([ExtResource("3_akhxv"), ExtResource("4_d8qul"), ExtResource("5_jhab0"), ExtResource("6_hyv2w"), ExtResource("7_01lax"), ExtResource("8_ow0xl"), ExtResource("9_qguo2"), ExtResource("10_sh1ki")])
@@ -589,10 +591,14 @@ metadata/_edit_lock_ = true
 [node name="Inventory" parent="Inventory" instance=ExtResource("20_3qynl")]
 
 [connection signal="pressed" from="HBoxContainer/BattleSettings" to="." method="_on_battle_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/BattleSettings" to="HBoxContainer/BattleSettings" method="play_click_sound"]
 [connection signal="pressed" from="HBoxContainer/Equipment" to="." method="_on_equipment_pressed"]
+[connection signal="pressed" from="HBoxContainer/Equipment" to="HBoxContainer/Equipment" method="play_click_sound"]
 [connection signal="pressed" from="HBoxContainer/ToBattle" to="." method="_on_to_battle_pressed"]
 [connection signal="pressed" from="LocationSelector/LeftArrow" to="LocationSelector" method="_on_left_arrow_pressed"]
+[connection signal="pressed" from="LocationSelector/LeftArrow" to="LocationSelector/LeftArrow" method="play_hover_sound"]
 [connection signal="pressed" from="LocationSelector/RightArrow" to="LocationSelector" method="_on_right_arrow_pressed"]
+[connection signal="pressed" from="LocationSelector/RightArrow" to="LocationSelector/RightArrow" method="play_hover_sound"]
 [connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
 [connection signal="item_selected" from="BattleSettings/Settings/MenuRow/EnemyBehaviourOptionButton" to="." method="_on_enemy_behaviour_option_button_item_selected"]
 [connection signal="item_selected" from="BattleSettings/Settings/MenuRow2/TimeofDayOptionButton" to="." method="_on_timeof_day_option_button_item_selected"]

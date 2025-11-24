@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjqmbj0a6rwsj"
+path="res://.godot/imported/Enemy Activation.wav-99a985cd7935f4fa0d4ed60367c919b4.sample"
+
+[deps]
+
+source_file="res://assets/audio/SFX/Enemy Activation.wav"
+dest_files=["res://.godot/imported/Enemy Activation.wav-99a985cd7935f4fa0d4ed60367c919b4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -14,6 +14,7 @@ func _ready() -> void:
 	for card in deck.cards:
 		card_weights[card] = 1;
 	deck.card_dealt.connect(_on_card_dealt)
+
 func _on_card_dealt(card:Card, location:CardContainer):
 	# this card isn't in the deck any more, so remove it from weights
 	card_weights.erase(card);
@@ -23,6 +24,7 @@ func _on_card_dealt(card:Card, location:CardContainer):
 			card_weights[other_card] += 0.25;
 		else:
 			card_weights[other_card] = 1;
+
 func deal_cards(amt:int):
 	# if this is our first hand, throw a reaction card in there.
 	if not dealt_opening_hand:
@@ -40,6 +42,8 @@ func deal_cards(amt:int):
 	
 func deal_random_card():
 	deck.deal_card(pick_weighted(), hand);
+	AudioManager.play_sfx("card appearance")
+
 func pick_weighted() -> Card:
 	# Reset total_weight to make sure it holds the correct value after initialization
 	var total_weight = 0.0

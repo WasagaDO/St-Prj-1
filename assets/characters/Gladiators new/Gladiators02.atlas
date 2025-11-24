@@ -1,0 +1,51 @@
+Gladiators02.png
+size:2537,2537
+filter:Linear,Linear
+pma:true
+gladiator2/body
+bounds:2,1452,763,1083
+gladiator2/head
+bounds:1881,1479,444,642
+rotate:90
+gladiator2/left forearm
+bounds:1278,1688,493,343
+offsets:1,1,495,345
+gladiator2/left hand
+bounds:1268,980,611,697
+offsets:1,1,614,699
+gladiator2/left leg
+bounds:542,79,411,1028
+rotate:90
+gladiator2/left shoulder
+bounds:2205,1925,330,610
+offsets:1,1,332,613
+gladiator2/left shoulder armor
+bounds:1278,2033,502,546
+offsets:1,1,504,548
+rotate:90
+gladiator2/left thight
+bounds:1572,156,383,917
+rotate:90
+gladiator2/right forearm
+bounds:2205,572,482,247
+offsets:1,1,484,249
+rotate:90
+gladiator2/right hand
+bounds:2,127,538,1323
+gladiator2/right leg
+bounds:1268,541,437,935
+offsets:0,0,439,935
+rotate:90
+gladiator2/right shoulder
+bounds:1881,1056,421,611
+offsets:1,1,423,613
+rotate:90
+gladiator2/right shoulder armor
+bounds:1826,2278,257,301
+offsets:1,1,259,303
+rotate:90
+gladiator2/right thight
+bounds:767,1679,509,856
+gladiator2/skirt
+bounds:542,492,958,724
+rotate:90

@@ -24,7 +24,13 @@ func _ready() -> void:
 		await get_tree().process_frame;
 		original_position = position;
 		dest_position = position;
-		
+	# sfx
+	mouse_entered.connect(play_hover_sound)
+
+func play_hover_sound():
+	AudioManager.play_sfx("hover")
+func play_click_sound():
+	AudioManager.play_sfx("click")
 
 func _process(delta: float) -> void:
 	if not Engine.is_editor_hint():
@@ -41,4 +47,4 @@ func _on_mouse_exited() -> void:
 func _on_pressed() -> void:
 	$Flash.color.a = 1;
 	dest_position = original_position + Vector2.UP * hover_lift_amount
-	position = original_position + Vector2.DOWN * press_lower_amount;
+	position = original_position + Vector2.DOWN * press_lower_amount

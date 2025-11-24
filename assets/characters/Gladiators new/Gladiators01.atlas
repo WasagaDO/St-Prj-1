@@ -1,0 +1,53 @@
+Gladiators01.png
+size:2578,2578
+filter:Linear,Linear
+pma:true
+gladiator1/belt
+bounds:2339,374,709,159
+offsets:2,2,712,163
+rotate:90
+gladiator1/body
+bounds:2,1391,785,1185
+gladiator1/cL
+bounds:1688,63,325,545
+offsets:2,2,328,548
+gladiator1/cM
+bounds:1799,968,350,728
+offsets:2,1,354,730
+gladiator1/cR
+bounds:2,21,304,537
+offsets:2,1,307,540
+rotate:90
+gladiator1/chest cloth
+bounds:2,327,1062,532
+rotate:90
+gladiator1/head
+bounds:873,89,480,570
+gladiator1/left arm
+bounds:1355,30,331,600
+gladiator1/left boot
+bounds:536,397,335,992
+gladiator1/left forearm
+bounds:2015,109,499,322
+offsets:1,1,501,324
+rotate:90
+gladiator1/left hand
+bounds:1659,1698,758,496
+offsets:1,2,760,500
+gladiator1/left leg
+bounds:1659,2196,380,917
+rotate:90
+gladiator1/right arm
+bounds:2151,1085,421,611
+offsets:1,1,423,613
+gladiator1/right boot
+bounds:1356,632,441,882
+gladiator1/right forearm
+bounds:1799,610,442,356
+gladiator1/right hand
+bounds:789,1516,806,531
+gladiator1/right leg
+bounds:873,661,481,853
+offsets:1,2,483,856
+gladiator1/waist cloth
+bounds:789,2049,868,527

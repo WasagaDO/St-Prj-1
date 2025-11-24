@@ -71,7 +71,7 @@ func _ready():
 				card_manager.register_card(new_card);
 		snap_cards_in_place = false;
 		cards.shuffle();
-			
+
 func add_card(card:Card):
 	super.add_card(card);
 	card_queue.append(card);

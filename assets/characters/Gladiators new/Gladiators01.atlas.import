@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://bvb76x0euhcsk"
+path="res://.godot/imported/Gladiators01.atlas-35abab1597262bdf15503e0794134a04.spatlas"
+
+[deps]
+
+source_file="res://assets/characters/Gladiators new/Gladiators01.atlas"
+dest_files=["res://.godot/imported/Gladiators01.atlas-35abab1597262bdf15503e0794134a04.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

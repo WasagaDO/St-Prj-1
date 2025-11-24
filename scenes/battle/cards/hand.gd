@@ -46,6 +46,11 @@ func _ready() -> void:
 	set_enabled(enabled);
 
 
+
+func card_played_sound():
+	AudioManager.play_sfx("card play")
+
+
 func _process(_delta):
 	if card_queue.size() == 0 and not all_cards_settled:
 		all_cards_settled = true;
@@ -82,6 +87,7 @@ func _process(_delta):
 	for i in range(0, cards.size()):
 		var card:Card = cards[i]
 		position_card(card, i, card_being_played != null);
+
 
 func position_card(card:Card, i:int, card_in_play:bool):
 	card.z_index = z_index + i;
@@ -148,7 +154,8 @@ func _on_card_dropped(card:Card):
 		if not card.needs_target:
 			# passing null in will have the battle manager default to the 
 			# target being the player
-			card_played.emit(card, null);
+			card_played.emit(card, null)
+			card_played_sound()
 	else:
 		card.change_state(Card.CardState.IN_HAND)
 
@@ -203,7 +210,8 @@ func _on_target_selector_cancelled():
 func _on_target_selector_target_selected(target):
 	card_being_played = null;
 	card_being_dragged = null;
-	card_played.emit(target_selector.current_card, target);
+	card_played.emit(target_selector.current_card, target)
+	card_played_sound()
 	
 
 # feel free to uncomment this if needed in the future

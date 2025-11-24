@@ -1,9 +1,12 @@
 extends CanvasLayer
+class_name JournalInventory
 
 @onready var backround: ColorRect = $Backround
 @onready var inventory: Control = $Inventory
-
 @export var blur_value: float = 4.0
+
+signal inventory_opened
+signal inventory_closed
 
 func _ready() -> void:
 	inventory.hide()
@@ -18,6 +21,7 @@ func toggle_inventory() -> void:
 			hide_inventory()
 
 func show_inventory() -> void:
+	inventory_opened.emit()
 	show()
 	var tween := create_tween()
 	tween.tween_property(backround,"material:shader_parameter/lod",blur_value,0.5)
@@ -25,6 +29,7 @@ func show_inventory() -> void:
 		inventory.show())
 
 func hide_inventory() -> void:
+	inventory_closed.emit()
 	inventory.hide()
 	var tween := create_tween()
 	tween.tween_property(backround,"material:shader_parameter/lod",0.0,0.5)

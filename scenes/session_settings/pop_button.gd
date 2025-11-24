@@ -3,13 +3,21 @@ extends TextureButton
 var original_scale:Vector2;
 var dest_scale:Vector2;
 
+
+
 func _ready() -> void:
 	original_scale = scale;
 	dest_scale = scale;
 	pressed.connect(_on_pressed);
 	mouse_entered.connect(_on_mouse_entered);
-	mouse_exited.connect(_on_mouse_exited);
-	
+
+func play_hover_sound():
+	AudioManager.play_sfx("hover")
+
+func play_click_sound():
+	AudioManager.play_sfx("click")
+
+
 func _process(delta: float) -> void:
 	scale = scale.lerp(dest_scale, 0.2);
 	$Flash.color.a -= 0.075;

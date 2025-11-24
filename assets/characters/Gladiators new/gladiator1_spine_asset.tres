@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://bxihw0m7jlcwr"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://bvb76x0euhcsk" path="res://assets/characters/Gladiators new/Gladiators01.atlas" id="1_luppt"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://2har34e7so42" path="res://assets/characters/Gladiators new/Gladiators01.spine-json" id="2_wrf1m"]
+
+[resource]
+atlas_res = ExtResource("1_luppt")
+skeleton_file_res = ExtResource("2_wrf1m")

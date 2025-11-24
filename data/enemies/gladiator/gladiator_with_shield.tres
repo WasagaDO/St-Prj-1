@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://dtg78t3ktp8ds" path="res://data/enemies/gladiator/moves/cut.tres" id="6_0jvye"]
 [ext_resource type="Resource" uid="uid://mxglx0rkqvx8" path="res://data/enemies/gladiator/moves/weak_point_strike.tres" id="7_u10dx"]
 [ext_resource type="Resource" uid="uid://b2eppwd5tx520" path="res://data/enemies/gladiator/moves/block.tres" id="10_u10dx"]
-[ext_resource type="SpineSkeletonDataResource" uid="uid://bkpueqvh6feui" path="res://assets/characters/Gladiators/gladiator_spine_asset.tres" id="12_lg0sv"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://bmk3eqh4ynsl2" path="res://assets/characters/Gladiators new/gladiator3_spine_asset.tres" id="12_lg0sv"]
 
 [sub_resource type="Resource" id="Resource_0jvye"]
 script = ExtResource("1_wy082")

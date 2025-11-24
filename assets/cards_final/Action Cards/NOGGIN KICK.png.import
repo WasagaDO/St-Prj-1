@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d02en23yyaef8"
-path="res://.godot/imported/NOGGIN KICK.png-ba8f66291d17922a618e0aeb0fa9c572.ctex"
+path="res://.godot/imported/noggin kick.png-4f8058a3ca59a411570e8397b1f7bf21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards_final/Action Cards/NOGGIN KICK.png"
-dest_files=["res://.godot/imported/NOGGIN KICK.png-ba8f66291d17922a618e0aeb0fa9c572.ctex"]
+source_file="res://assets/cards_final/Action Cards/noggin kick.png"
+dest_files=["res://.godot/imported/noggin kick.png-4f8058a3ca59a411570e8397b1f7bf21.ctex"]
 
 [params]
 
