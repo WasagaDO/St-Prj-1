@@ -12,6 +12,8 @@ func _ready():
 	BattleSettings.enemy_data = enemy_datas[0]
 	inventory.inventory_closed.connect(_on_inventory_closed)
 	inventory.inventory_opened.connect(_on_inventory_opened)
+	battle_settings.visible = false
+	inventory.visible = false
 
 
 func _on_back_to_menu_pressed() -> void:
@@ -78,3 +80,10 @@ func _on_enemy_button_item_selected(index: int) -> void:
 
 func play_sfx(id: String, fade_in_duration:float = 0):
 	AudioManager.play_sfx(id, fade_in_duration)
+
+
+func play_hover_sound(volume_db:float=0.0):
+	AudioManager.play_sfx("hover", 0, volume_db, 1, true)
+
+func play_click_sound(volume_db:float=0.0):
+	AudioManager.play_sfx("click", 0, volume_db, 1, true)

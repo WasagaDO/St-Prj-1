@@ -14,11 +14,13 @@ var cards_moused_over:Array[Card]
 func register_card(card:Card):
 	all_cards.append(card);
 	card.connect("raw_pressed", _on_card_pressed)
-		
+
+var last_card_moused_over = null
+
 func _process(_delta):
 		# the idea here: we get all the cards moused over, sorted by
 	# z index.
-	cards_moused_over = [];
+	cards_moused_over = []
 
 	for card in all_cards:
 		# the hand object manages the cards z_index differently
@@ -35,6 +37,14 @@ func _process(_delta):
 	cards_moused_over.sort_custom(func(a, b):
 		return a.z_index > b.z_index
 	)
+	# card hover sound
+	if !cards_moused_over.is_empty() and last_card_moused_over != cards_moused_over[0]:
+		AudioManager.play_sfx("Card Options")
+	if !cards_moused_over.is_empty():
+		last_card_moused_over = cards_moused_over[0]
+	else:
+		last_card_moused_over = null
+
 func _on_card_pressed(card):
 	if cards_moused_over.size() > 0 and card == cards_moused_over[0]:
 		card.on_mouse_pressed();

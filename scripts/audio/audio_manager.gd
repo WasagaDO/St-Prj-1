@@ -22,8 +22,12 @@ func _play(id: StringName, bus_name: StringName, volume_db: float, pitch_scale: 
 		push_error("AudioManager: audio_library is not set.")
 		return null
 
-	var stream := audio_library.get_audio(id)
+	var entry := audio_library.get_audio(id)
+	if entry == null:
+		return null
+	var stream = entry.stream
 	if stream == null:
+		push_warning("AudioManager: AudioEntry '%s' has no stream." % id)
 		return null
 
 	var player: StandaloneAudioPlayer = standalone_player_prefab.instantiate() as StandaloneAudioPlayer
@@ -46,13 +50,15 @@ func _play(id: StringName, bus_name: StringName, volume_db: float, pitch_scale: 
 			scene_root = get_tree().root
 		scene_root.add_child(player)
 
+	var final_volume_db := entry.base_volume_db + volume_db
+
 	if fade_in_duration > 0.0:
 		player.volume_db = -80.0
 		player.play()
 		var tween := player.create_tween()
-		tween.tween_property(player, "volume_db", volume_db, fade_in_duration).from(-80.0)
+		tween.tween_property(player, "volume_db", final_volume_db, fade_in_duration).from(-80.0)
 	else:
-		player.volume_db = volume_db
+		player.volume_db = final_volume_db
 		player.play()
 
 	return player

@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="AudioLibrary" load_steps=19 format=3 uid="uid://ckpwskqjwabwh"]
+[gd_resource type="Resource" script_class="AudioLibrary" load_steps=37 format=3 uid="uid://ckpwskqjwabwh"]
 
 [ext_resource type="AudioStream" uid="uid://drt7no1ljdboh" path="res://assets/audio/Music/Battle Track Intro.wav" id="1_n52gk"]
-[ext_resource type="Script" uid="uid://fkckwe0cqjia" path="res://scripts/audio/audio_library.gd" id="1_vwjim"]
+[ext_resource type="Script" uid="uid://bw3dv10fnihgn" path="res://scripts/audio/audio_entry_resource.gd" id="1_tfmfj"]
 [ext_resource type="AudioStream" uid="uid://ck2e6feaiycj6" path="res://assets/audio/Music/Battle Track Loop.wav" id="2_wpbyn"]
+[ext_resource type="Script" uid="uid://fkckwe0cqjia" path="res://scripts/audio/audio_library_resource.gd" id="2_xf70o"]
 [ext_resource type="AudioStream" uid="uid://bhx5a3elbwqfa" path="res://assets/audio/SFX/Battle.wav" id="4_2neud"]
 [ext_resource type="AudioStream" uid="uid://fuyps4l2fn31" path="res://assets/audio/SFX/Bone Crack.wav" id="5_b3gf6"]
 [ext_resource type="AudioStream" uid="uid://dbfd5vsmployc" path="res://assets/audio/SFX/Candle Loop.wav" id="6_8i5ql"]
@@ -19,27 +20,127 @@
 [ext_resource type="AudioStream" uid="uid://uecpl1j0pwup" path="res://assets/audio/SFX/Scrollbar.wav" id="17_o3v8a"]
 [ext_resource type="AudioStream" uid="uid://bm5h304wgp2rw" path="res://assets/audio/SFX/Sword Strike.wav" id="18_1o1ip"]
 
+[sub_resource type="Resource" id="Resource_c4kn6"]
+script = ExtResource("1_tfmfj")
+id = &"Battle Intro"
+stream = ExtResource("1_n52gk")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_geqqb"]
+script = ExtResource("1_tfmfj")
+id = &"Battle Loop"
+stream = ExtResource("2_wpbyn")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_wpbyn"]
+script = ExtResource("1_tfmfj")
+id = &"Battle"
+stream = ExtResource("4_2neud")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_2neud"]
+script = ExtResource("1_tfmfj")
+id = &"Bone Crack"
+stream = ExtResource("5_b3gf6")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_b3gf6"]
+script = ExtResource("1_tfmfj")
+id = &"Candle Loop"
+stream = ExtResource("6_8i5ql")
+base_volume_db = -1.5
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_8i5ql"]
+script = ExtResource("1_tfmfj")
+id = &"Card Appearance"
+stream = ExtResource("7_4adfn")
+base_volume_db = -2.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_4adfn"]
+script = ExtResource("1_tfmfj")
+id = &"Card Options"
+stream = ExtResource("8_rwtp3")
+base_volume_db = -2.5
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_rwtp3"]
+script = ExtResource("1_tfmfj")
+id = &"Card Play"
+stream = ExtResource("9_ban20")
+base_volume_db = -2.5
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_ban20"]
+script = ExtResource("1_tfmfj")
+id = &"Claw Strike"
+stream = ExtResource("10_o5540")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_o5540"]
+script = ExtResource("1_tfmfj")
+id = &"Click"
+stream = ExtResource("11_cq456")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_cq456"]
+script = ExtResource("1_tfmfj")
+id = &"Enemy Activation"
+stream = ExtResource("12_f8c8l")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_f8c8l"]
+script = ExtResource("1_tfmfj")
+id = &"Hover"
+stream = ExtResource("13_hquuc")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_hquuc"]
+script = ExtResource("1_tfmfj")
+id = &"Page Flip"
+stream = ExtResource("14_mwt6g")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_mwt6g"]
+script = ExtResource("1_tfmfj")
+id = &"Push"
+stream = ExtResource("15_72ak2")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_72ak2"]
+script = ExtResource("1_tfmfj")
+id = &"Quick Flesh Cut"
+stream = ExtResource("16_yj72v")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_yj72v"]
+script = ExtResource("1_tfmfj")
+id = &"Scrollbar"
+stream = ExtResource("17_o3v8a")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
+[sub_resource type="Resource" id="Resource_o3v8a"]
+script = ExtResource("1_tfmfj")
+id = &"Sword Strike"
+stream = ExtResource("18_1o1ip")
+base_volume_db = 0.0
+metadata/_custom_type_script = "uid://bw3dv10fnihgn"
+
 [resource]
-script = ExtResource("1_vwjim")
-music = {
-"Battle Intro": ExtResource("1_n52gk"),
-"Battle Loop": ExtResource("2_wpbyn")
-}
-sfx = {
-"Battle": ExtResource("4_2neud"),
-"Bone Crack": ExtResource("5_b3gf6"),
-"Candle Loop": ExtResource("6_8i5ql"),
-"Card Appearance": ExtResource("7_4adfn"),
-"Card Options": ExtResource("8_rwtp3"),
-"Card Play": ExtResource("9_ban20"),
-"Card Strike": ExtResource("10_o5540"),
-"Click": ExtResource("11_cq456"),
-"Enemy Activation": ExtResource("12_f8c8l"),
-"Hover": ExtResource("13_hquuc"),
-"Page Flip": ExtResource("14_mwt6g"),
-"Push": ExtResource("15_72ak2"),
-"Quick Flesh Cut": ExtResource("16_yj72v"),
-"Scrollbar": ExtResource("17_o3v8a"),
-"Sword Strike": ExtResource("18_1o1ip")
-}
+script = ExtResource("2_xf70o")
+music_entries = Array[ExtResource("1_tfmfj")]([SubResource("Resource_c4kn6"), SubResource("Resource_geqqb")])
+sfx_entries = Array[ExtResource("1_tfmfj")]([SubResource("Resource_wpbyn"), SubResource("Resource_2neud"), SubResource("Resource_b3gf6"), SubResource("Resource_8i5ql"), SubResource("Resource_4adfn"), SubResource("Resource_rwtp3"), SubResource("Resource_ban20"), SubResource("Resource_o5540"), SubResource("Resource_cq456"), SubResource("Resource_f8c8l"), SubResource("Resource_hquuc"), SubResource("Resource_mwt6g"), SubResource("Resource_72ak2"), SubResource("Resource_yj72v"), SubResource("Resource_o3v8a")])
 metadata/_custom_type_script = "uid://fkckwe0cqjia"

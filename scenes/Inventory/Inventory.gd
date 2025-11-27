@@ -257,7 +257,12 @@ func _process(delta: float) -> void:
 @export var page3_normal: Texture2D
 @export var page3_selected: Texture2D
 
+
+var current_tab_index = 1
+
 func switch_tab(tab_index: int) -> void:
+	if current_tab_index != tab_index:
+		AudioManager.play_sfx("page flip")
 	# Hide all pages
 	if page1: page1.visible = false
 	if page2: page2.visible = false
@@ -293,7 +298,7 @@ func switch_tab(tab_index: int) -> void:
 				page3_button.z_index = 1
 		_:
 			push_warning("Invalid tab index: " + str(tab_index))
-
+	current_tab_index = tab_index
 
 
 func nav_buttons_hover(button: String, action: String) -> void:
@@ -330,8 +335,6 @@ func show_only_active_cards() -> void:
 	_update_filter_buttons_visual(show_active_button)
 
 
-
-
 func _update_filter_buttons_visual(selected_button: TextureButton) -> void:
 	for button in [show_all_button, show_active_button]:
 		if button == null:
@@ -343,3 +346,17 @@ func _update_filter_buttons_visual(selected_button: TextureButton) -> void:
 		else:
 			button.texture_normal = filter_texture_normal
 			if label: label.set("theme_override_colors/font_color", filter_button_label_color_normal)
+
+
+
+
+
+func play_sfx(id: String, fade_in_duration:float = 0):
+	AudioManager.play_sfx(id, fade_in_duration)
+
+
+func play_hover_sound(volume_db:float=0.0):
+	AudioManager.play_sfx("hover", 0, volume_db, 1, true)
+
+func play_click_sound(volume_db:float=0.0):
+	AudioManager.play_sfx("click", 0, volume_db, 1, true)

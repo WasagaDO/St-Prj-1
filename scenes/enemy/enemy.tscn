@@ -833,23 +833,23 @@ texture = ExtResource("3_vk7ip")
 offset = Vector2(-147.254, 121.435)
 
 [node name="Goat-man-final0009Right-calf" type="Sprite2D" parent="Old Visual/poligons"]
-position = Vector2(849.972, 489.638)
+position = Vector2(849.972, 489.637)
 rotation = 0.0692125
-scale = Vector2(0.999967, 0.999967)
+scale = Vector2(0.999965, 0.999965)
 texture = ExtResource("4_phoul")
 offset = Vector2(140.421, 138.396)
 
 [node name="Goat-man-final0008Right-leg" type="Sprite2D" parent="Old Visual/poligons"]
 position = Vector2(848.156, 9.52222)
 rotation = 0.0402485
-scale = Vector2(0.999967, 0.999967)
+scale = Vector2(0.999965, 0.999965)
 texture = ExtResource("5_qqorh")
 offset = Vector2(-16.1344, 278.904)
 
 [node name="Goat-man-final0010Right-hoof" type="Sprite2D" parent="Old Visual/poligons"]
-position = Vector2(1105.13, 741.737)
+position = Vector2(1105.13, 741.735)
 rotation = 0.0692125
-scale = Vector2(0.999967, 0.999967)
+scale = Vector2(0.999965, 0.999965)
 texture = ExtResource("6_ng3ld")
 offset = Vector2(-34.2507, 334.793)
 

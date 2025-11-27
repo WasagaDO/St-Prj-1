@@ -31,9 +31,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="TitleScreen" type="CanvasLayer"]
+[node name="TitleScreen" type="CanvasLayer" node_paths=PackedStringArray("play_button", "settings_button", "about_button", "exit_button")]
 script = ExtResource("1_kd62u")
 session_settings_scene = ExtResource("2_amrso")
+play_button = NodePath("PlayButton")
+settings_button = NodePath("SettingsButton")
+about_button = NodePath("AboutButton")
+exit_button = NodePath("ExitButton")
 
 [node name="BG" type="TextureRect" parent="."]
 anchors_preset = 15
