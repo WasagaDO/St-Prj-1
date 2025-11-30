@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l2d7txja67h7"
-path="res://.godot/imported/Old Mill Final.png-4c5b132e40a1847de3044c42d2b17dfd.ctex"
+uid="uid://cobsnauvf1a81"
+path="res://.godot/imported/blood_palace_night.png-f6a7f1b67a5cfc06f2c9309ccd07e38a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/misc/Old Mill Final.png"
-dest_files=["res://.godot/imported/Old Mill Final.png-4c5b132e40a1847de3044c42d2b17dfd.ctex"]
+source_file="res://assets/backgrounds/blood_palace_night.png"
+dest_files=["res://.godot/imported/blood_palace_night.png-f6a7f1b67a5cfc06f2c9309ccd07e38a.ctex"]
 
 [params]
 

@@ -3,6 +3,7 @@ class_name SpecialCardEffect
 
 # special effects of cards
 
+@export var behaviour_name: String = ""
 @export var timing: Timing
 @export var revert_on_end_of_turn: bool = false
 

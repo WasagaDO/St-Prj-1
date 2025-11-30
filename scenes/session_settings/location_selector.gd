@@ -25,7 +25,7 @@ func _ready() -> void:
 		})
 	shift_frames(0);
 	
-	
+
 func shift_frames(amt:int):
 	location_index += amt
 	location_index = posmod(location_index, locations.size());
@@ -55,7 +55,7 @@ func _process(delta: float) -> void:
 				
 
 func _on_left_arrow_pressed() -> void:
-	shift_frames(1)
+	shift_frames(-1)
 
 func _on_right_arrow_pressed() -> void:
-	shift_frames(-1)
+	shift_frames(1)

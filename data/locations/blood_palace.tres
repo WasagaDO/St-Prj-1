@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="LocationData" load_steps=3 format=3 uid="uid://b5akrkfsutc6e"]
+[gd_resource type="Resource" script_class="LocationData" load_steps=4 format=3 uid="uid://b5akrkfsutc6e"]
 
-[ext_resource type="Texture2D" uid="uid://dp4mxtsa7gi17" path="res://assets/blood_palace.jpg" id="1_8cncj"]
-[ext_resource type="Script" path="res://data/scripts/location_data.gd" id="2_iwff2"]
+[ext_resource type="Texture2D" uid="uid://dp4mxtsa7gi17" path="res://assets/backgrounds/blood_palace.jpg" id="1_fqg6n"]
+[ext_resource type="Texture2D" uid="uid://cobsnauvf1a81" path="res://assets/backgrounds/blood_palace_night.png" id="2_fqg6n"]
+[ext_resource type="Script" uid="uid://b5mujyncm8ip1" path="res://data/scripts/location_data.gd" id="2_iwff2"]
 
 [resource]
 script = ExtResource("2_iwff2")
-cover = ExtResource("1_8cncj")
+cover = ExtResource("1_fqg6n")
+cover_night = ExtResource("2_fqg6n")
 name = "Blood Palace Hall"

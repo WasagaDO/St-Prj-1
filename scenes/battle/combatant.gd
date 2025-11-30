@@ -462,8 +462,10 @@ func _build_debug_text() -> String:
 	# damage multipliers
 	lines.append("Incoming damage mult: " + str(incoming_damage_multiplier))
 	lines.append("Outgoing damage mult: " + str(outgoing_damage_multiplier))
+	
 
 	return "\n".join(lines)
+	
 
 func _statuses_line_compact() -> String:
 	if status_effects.is_empty():

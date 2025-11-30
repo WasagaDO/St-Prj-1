@@ -27,12 +27,34 @@ var game_over:bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# set the background according to the location
+	# set the background according to the location and time_of_day
+	var rng = RandomNumberGenerator.new()
+	if BattleSettings.time_of_day == 2:
+		BattleSettings.time_of_day = randi() % 2
+		print("time of day is set to random. setting it to: ", BattleSettings.time_of_day)
 	background.texture = BattleSettings.location.cover
+	if BattleSettings.time_of_day == 1:
+		var cover = BattleSettings.location.cover_night
+		if cover:
+			background.texture = BattleSettings.location.cover_night
+			print("set night time")
+		else:
+			push_warning("WARNING: No night cover found for location ", BattleSettings.location.name)
+	else:
+		print("set day time")
+	
+	# set the first turn
+	if BattleSettings.first_turn == 1:
+		turn_order = 0
+	# else : turn_order stays -1.
+	# this value gets incremented by 1 before the game starts.
+	# 0 = player, 1 = first enemy
+	
+	
 	var enemy_data = BattleSettings.enemy_data
 	for enemy:Enemy in enemies:
 		enemy.set_character_spine_asset(enemy_data.skeleton_asset, enemy_data.skeleton_subskin)
-		print("set enemy asset to ")
+		print("set enemy asset to ", enemy_data.name)
 		enemy.enemy_data = enemy_data
 		enemy.log_name = enemy_data.name
 		enemy.max_hp = enemy_data.max_hp
@@ -90,6 +112,10 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 	# remove some stamina from the player
 	if source is Player:
 		source.add_stamina(-card.stamina_cost);
+	# handle Feint
+	if _is_feint_card(card):
+		_handle_feint(card, source, target)
+		return
 	# player or enemy plays a reaction card
 	if card.card_type == CardData.CardType.REACTION:
 		waiting_for_player_reaction = false;
@@ -130,6 +156,28 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 	# so we just resolve it.
 	if card_can_be_resolved:
 		resolve_card(card, source, target);
+
+
+func _is_feint_card(card: CardData) -> bool:
+	for effect: SpecialCardEffect in card.special_effects:
+		if effect is Feint:
+			return true
+	return false
+
+
+
+func _handle_feint(card: CardData, source: Combatant, target: Combatant) -> void:
+	if source is Player and target is Enemy:
+		var enemy := target as Enemy
+		var reaction: CardData = enemy.get_next_reaction_for_feint()
+		if reaction == null:
+			return
+		# make the enemy play the reaction
+		resolve_card(reaction, enemy, source)
+	else:
+		pass
+		# TODO
+		# ENEMY FEINTING PLAYER ISN'T IMPLEMENTED YET
 
 
 

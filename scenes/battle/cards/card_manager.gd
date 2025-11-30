@@ -16,11 +16,16 @@ func register_card(card:Card):
 	card.connect("raw_pressed", _on_card_pressed)
 
 var last_card_moused_over = null
+var card_options_sfx_cooldown: float = 0.0
+@export var _CARD_OPTIONS_SFX_COOLDOWN := 0.1
 
-func _process(_delta):
+
+func _process(delta):
 		# the idea here: we get all the cards moused over, sorted by
 	# z index.
 	cards_moused_over = []
+	if card_options_sfx_cooldown > 0:
+		card_options_sfx_cooldown -= delta
 
 	for card in all_cards:
 		# the hand object manages the cards z_index differently
@@ -38,12 +43,17 @@ func _process(_delta):
 		return a.z_index > b.z_index
 	)
 	# card hover sound
-	if !cards_moused_over.is_empty() and last_card_moused_over != cards_moused_over[0]:
-		AudioManager.play_sfx("Card Options")
+	if card_options_sfx_cooldown <= 0.0:
+		if !cards_moused_over.is_empty() and last_card_moused_over != cards_moused_over[0]:
+			AudioManager.play_sfx("Card Options")
+			card_options_sfx_cooldown = _CARD_OPTIONS_SFX_COOLDOWN
 	if !cards_moused_over.is_empty():
 		last_card_moused_over = cards_moused_over[0]
 	else:
 		last_card_moused_over = null
+
+
+
 
 func _on_card_pressed(card):
 	if cards_moused_over.size() > 0 and card == cards_moused_over[0]:

@@ -377,7 +377,6 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="BattleSettings" type="Panel" parent="."]
-visible = false
 z_index = 4096
 anchors_preset = 13
 anchor_left = 0.5
@@ -433,15 +432,15 @@ grow_vertical = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="MenuRow" type="HBoxContainer" parent="BattleSettings/Settings"]
+[node name="Menu row - Enemy Behaviour" type="HBoxContainer" parent="BattleSettings/Settings"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow"]
+[node name="Label" type="Label" parent="BattleSettings/Settings/Menu row - Enemy Behaviour"]
 layout_mode = 2
 text = "Enemy behaviour"
 label_settings = SubResource("LabelSettings_vvp3d")
 
-[node name="EnemyBehaviourOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow"]
+[node name="EnemyBehaviourOptionButton" type="OptionButton" parent="BattleSettings/Settings/Menu row - Enemy Behaviour"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -458,15 +457,15 @@ popup/item_2/id = 2
 popup/item_3/text = "Random"
 popup/item_3/id = 3
 
-[node name="MenuRow2" type="HBoxContainer" parent="BattleSettings/Settings"]
+[node name="Menu row - time of day" type="HBoxContainer" parent="BattleSettings/Settings"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow2"]
+[node name="Label" type="Label" parent="BattleSettings/Settings/Menu row - time of day"]
 layout_mode = 2
 text = "Time of day"
 label_settings = SubResource("LabelSettings_vvp3d")
 
-[node name="TimeofDayOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow2"]
+[node name="TimeofDayOptionButton" type="OptionButton" parent="BattleSettings/Settings/Menu row - time of day"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -481,15 +480,15 @@ popup/item_1/id = 1
 popup/item_2/text = "Random"
 popup/item_2/id = 2
 
-[node name="MenuRow3" type="HBoxContainer" parent="BattleSettings/Settings"]
+[node name="Menu Row - Interactive Items" type="HBoxContainer" parent="BattleSettings/Settings"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow3"]
+[node name="Label" type="Label" parent="BattleSettings/Settings/Menu Row - Interactive Items"]
 layout_mode = 2
 text = "Interactive items"
 label_settings = SubResource("LabelSettings_vvp3d")
 
-[node name="ItemsOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow3"]
+[node name="ItemsOptionButton" type="OptionButton" parent="BattleSettings/Settings/Menu Row - Interactive Items"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -502,15 +501,15 @@ popup/item_0/id = 0
 popup/item_1/text = "No"
 popup/item_1/id = 1
 
-[node name="MenuRow4" type="HBoxContainer" parent="BattleSettings/Settings"]
+[node name="Menu Row - First Turn" type="HBoxContainer" parent="BattleSettings/Settings"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow4"]
+[node name="Label" type="Label" parent="BattleSettings/Settings/Menu Row - First Turn"]
 layout_mode = 2
 text = "First turn"
 label_settings = SubResource("LabelSettings_vvp3d")
 
-[node name="FirstTurnOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow4"]
+[node name="FirstTurnOptionButton" type="OptionButton" parent="BattleSettings/Settings/Menu Row - First Turn"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -523,15 +522,15 @@ popup/item_0/id = 0
 popup/item_1/text = "Enemy"
 popup/item_1/id = 1
 
-[node name="MenuRow5" type="HBoxContainer" parent="BattleSettings/Settings"]
+[node name="Mennu Row - Enemy" type="HBoxContainer" parent="BattleSettings/Settings"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="BattleSettings/Settings/MenuRow5"]
+[node name="Label" type="Label" parent="BattleSettings/Settings/Mennu Row - Enemy"]
 layout_mode = 2
 text = "Enemy"
 label_settings = SubResource("LabelSettings_vvp3d")
 
-[node name="EnemyOptionButton" type="OptionButton" parent="BattleSettings/Settings/MenuRow5"]
+[node name="EnemyOptionButton" type="OptionButton" parent="BattleSettings/Settings/Mennu Row - Enemy"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -600,13 +599,13 @@ metadata/_edit_lock_ = true
 [connection signal="pressed" from="LocationSelector/RightArrow" to="LocationSelector" method="_on_right_arrow_pressed"]
 [connection signal="pressed" from="LocationSelector/RightArrow" to="LocationSelector/RightArrow" method="play_hover_sound"]
 [connection signal="mouse_entered" from="BackToMenu" to="." method="play_hover_sound"]
-[connection signal="pressed" from="BackToMenu" to="." method="play_click_sound"]
 [connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
-[connection signal="item_selected" from="BattleSettings/Settings/MenuRow/EnemyBehaviourOptionButton" to="." method="_on_enemy_behaviour_option_button_item_selected"]
-[connection signal="item_selected" from="BattleSettings/Settings/MenuRow2/TimeofDayOptionButton" to="." method="_on_timeof_day_option_button_item_selected"]
-[connection signal="item_selected" from="BattleSettings/Settings/MenuRow3/ItemsOptionButton" to="." method="_on_items_option_button_item_selected"]
-[connection signal="item_selected" from="BattleSettings/Settings/MenuRow4/FirstTurnOptionButton" to="." method="_on_first_turn_option_button_item_selected"]
-[connection signal="item_selected" from="BattleSettings/Settings/MenuRow5/EnemyOptionButton" to="." method="_on_enemy_button_item_selected"]
+[connection signal="pressed" from="BackToMenu" to="." method="play_click_sound"]
+[connection signal="item_selected" from="BattleSettings/Settings/Menu row - Enemy Behaviour/EnemyBehaviourOptionButton" to="." method="_on_enemy_behaviour_option_button_item_selected"]
+[connection signal="item_selected" from="BattleSettings/Settings/Menu row - time of day/TimeofDayOptionButton" to="." method="_on_timeof_day_option_button_item_selected"]
+[connection signal="item_selected" from="BattleSettings/Settings/Menu Row - Interactive Items/ItemsOptionButton" to="." method="_on_items_option_button_item_selected"]
+[connection signal="item_selected" from="BattleSettings/Settings/Menu Row - First Turn/FirstTurnOptionButton" to="." method="_on_first_turn_option_button_item_selected"]
+[connection signal="item_selected" from="BattleSettings/Settings/Mennu Row - Enemy/EnemyOptionButton" to="." method="_on_enemy_button_item_selected"]
 [connection signal="mouse_entered" from="BattleSettings/CloseButton" to="." method="play_hover_sound" binds= [-0.7]]
 [connection signal="pressed" from="BattleSettings/CloseButton" to="BattleSettings" method="_on_close_button_pressed"]
 [connection signal="pressed" from="BattleSettings/CloseButton" to="." method="play_click_sound" binds= [-0.7]]

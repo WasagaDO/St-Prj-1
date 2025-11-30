@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj1rjuuyjq51t"
-path="res://.godot/imported/fighting_pits.jpg-6f2786f40136f25f0f0482ae2f2b87d1.ctex"
+uid="uid://l2d7txja67h7"
+path="res://.godot/imported/old_mill.png-cef1a7cbc23c7cb1f96907731940b9dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fighting_pits.jpg"
-dest_files=["res://.godot/imported/fighting_pits.jpg-6f2786f40136f25f0f0482ae2f2b87d1.ctex"]
+source_file="res://assets/backgrounds/old_mill.png"
+dest_files=["res://.godot/imported/old_mill.png-cef1a7cbc23c7cb1f96907731940b9dd.ctex"]
 
 [params]
 

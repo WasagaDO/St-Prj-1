@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="LocationData" load_steps=3 format=3 uid="uid://ceqhyanhgbbnu"]
+[gd_resource type="Resource" script_class="LocationData" load_steps=4 format=3 uid="uid://ceqhyanhgbbnu"]
 
-[ext_resource type="Script" path="res://data/scripts/location_data.gd" id="1_lrbnf"]
-[ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/misc/Old Mill Final.png" id="1_yyyuv"]
+[ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/backgrounds/old_mill.png" id="1_j5a6v"]
+[ext_resource type="Script" uid="uid://b5mujyncm8ip1" path="res://data/scripts/location_data.gd" id="1_lrbnf"]
+[ext_resource type="Texture2D" uid="uid://cn6btvc3ypeek" path="res://assets/backgrounds/old_mill_night.png" id="2_j5a6v"]
 
 [resource]
 script = ExtResource("1_lrbnf")
-cover = ExtResource("1_yyyuv")
+cover = ExtResource("1_j5a6v")
+cover_night = ExtResource("2_j5a6v")
 name = "The Old Mill"
