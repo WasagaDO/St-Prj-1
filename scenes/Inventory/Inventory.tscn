@@ -86,15 +86,13 @@ font_size = 9
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wt7xr"]
 texture = ExtResource("6_au8qn")
+region_rect = Rect2(0, 0, 40, 964)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4rs2g"]
+content_margin_top = 22.0
 texture = ExtResource("7_0oy1o")
-texture_margin_top = 37.0
-texture_margin_bottom = 37.0
-expand_margin_left = 15.0
-expand_margin_top = 12.0
-expand_margin_right = 15.0
-expand_margin_bottom = 12.0
+expand_margin_right = 1.0
+region_rect = Rect2(0, 0, 58.2658, 59.0365)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlo1x"]
 bg_color = Color(0.247059, 0.247059, 0.247059, 0)
@@ -2485,8 +2483,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -20.0
-offset_top = -400.0
+offset_top = -412.0
 offset_right = 20.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_bottom = 20
@@ -2501,6 +2500,7 @@ theme_override_styles/grabber = SubResource("StyleBoxTexture_4rs2g")
 theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_4rs2g")
 theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_4rs2g")
 step = 0.1
+value = 50.0
 rounded = true
 
 [node name="SecondTab" type="PanelContainer" parent="Panel/MarginContainer/Book/BookContent/PAGE_1_CARDS/MarginContainer/HBoxContainer"]
@@ -3346,8 +3346,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -20.0
-offset_top = -400.0
+offset_top = -412.5
 offset_right = 20.0
+offset_bottom = 7.5
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_bottom = 20

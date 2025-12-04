@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bihp7rr2uqxld"]
+[gd_scene load_steps=20 format=3 uid="uid://bihp7rr2uqxld"]
 
 [ext_resource type="Script" uid="uid://dcw0unoyolluo" path="res://scenes/player/warrior.gd" id="1_nlwd0"]
 [ext_resource type="Texture2D" uid="uid://uaomgn6uhek2" path="res://assets/mainHERO/Protagonist-Final_0003_Shield.png" id="3_d1xxc"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c7sg53cs03emj" path="res://assets/mainHERO/Protagonist-Final_0000_Head.png" id="13_226fm"]
 [ext_resource type="Texture2D" uid="uid://bs6vvxaiiu0rn" path="res://assets/mainHERO/Protagonist-Final_0004_Left-Forehand.png" id="14_3t16l"]
 [ext_resource type="Texture2D" uid="uid://2tbjna7vpiay" path="res://assets/mainHERO/Protagonist-Final_0000_Right-Forearm.png" id="14_aqmh7"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://dx821jwtyslbl" path="res://assets/characters/Final Protagonist (sword and shield)/protagonist_spine_asset.tres" id="16_myrg7"]
 
 [sub_resource type="Animation" id="Animation_xq1u5"]
 length = 0.001
@@ -465,21 +466,22 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3mog"]
 size = Vector2(1803, 2310)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("old_visual", "animation_player", "new_visual") groups=["player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("old_visual", "animation_player", "new_visual", "spined_character") groups=["player"]]
 script = ExtResource("1_nlwd0")
 armor = {
 0: 60,
 1: 40,
 2: 35
 }
-use_new_animation_type = false
 old_visual = NodePath("Old visual")
 animation_player = NodePath("Old visual/AnimationPlayer")
 new_visual = NodePath("New visual")
+spined_character = NodePath("New visual/Spined Character")
 
 [node name="Old visual" type="Node2D" parent="."]
 
 [node name="poligons" type="Node2D" parent="Old visual"]
+visible = false
 position = Vector2(-3, 3)
 
 [node name="Protagonist-final0003Shield" type="Sprite2D" parent="Old visual/poligons"]
@@ -503,18 +505,21 @@ offset = Vector2(-122.234, 284.624)
 [node name="Protagonist-final0007Right-foot" type="Sprite2D" parent="Old visual/poligons"]
 position = Vector2(-888.963, 670.587)
 rotation = -0.0687811
+scale = Vector2(1, 1)
 texture = ExtResource("6_evix5")
 offset = Vector2(-66.4248, 316.399)
 
 [node name="Protagonist-final0010Behind-left-foot" type="Sprite2D" parent="Old visual/poligons"]
 position = Vector2(-439.216, 65.7267)
 rotation = -0.024753
+scale = Vector2(1, 1)
 texture = ExtResource("7_dyl2i")
 offset = Vector2(157, 327)
 
 [node name="Protagonist-final0008Left-foot" type="Sprite2D" parent="Old visual/poligons"]
 position = Vector2(-171.247, 465.217)
 rotation = 0.004211
+scale = Vector2(1, 1)
 texture = ExtResource("8_56753")
 offset = Vector2(79, 398)
 
@@ -552,14 +557,15 @@ offset = Vector2(-87, -466)
 
 [node name="Protagonist-final0000Right-forearm" type="Sprite2D" parent="Old visual/poligons"]
 position = Vector2(-1182.19, -499.275)
-rotation = 0.0181708
-scale = Vector2(0.99999, 0.99999)
+rotation = 0.0181709
+scale = Vector2(0.999982, 0.999982)
 texture = ExtResource("14_aqmh7")
 offset = Vector2(257, 230)
 
 [node name="Protagonist-final0000Head" type="Sprite2D" parent="Old visual/poligons"]
 position = Vector2(-511, -873)
 rotation = 0.152322
+scale = Vector2(0.999998, 0.999998)
 texture = ExtResource("13_226fm")
 offset = Vector2(60.9673, -245.52)
 
@@ -602,7 +608,7 @@ remote_path = NodePath("../../../../../poligons/Protagonist-final0001Behind-left
 [node name="ShoulderR" type="Bone2D" parent="Old visual/Bones/Skeleton2D/Hip/ArmR"]
 position = Vector2(-303, 351)
 rotation = 0.0347757
-scale = Vector2(0.999986, 0.999986)
+scale = Vector2(0.999982, 0.999982)
 rest = Transform2D(0.999395, 0.0347687, -0.0347687, 0.999395, -303, 351)
 auto_calculate_length_and_angle = false
 length = 552.385
@@ -697,6 +703,17 @@ libraries = {
 speed_scale = 1.398
 
 [node name="New visual" type="Node2D" parent="."]
+position = Vector2(0, 287)
+
+[node name="Spined Character" type="SpineSprite" parent="New visual"]
+skeleton_data_res = ExtResource("16_myrg7")
+preview_skin = "Normal"
+preview_animation = "idle"
+preview_frame = false
+preview_time = 0.0
+position = Vector2(-538, 1451)
+rotation = -3.14159
+scale = Vector2(-1, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-521.5, -254)

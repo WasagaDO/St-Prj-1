@@ -1,0 +1,147 @@
+[gd_scene load_steps=11 format=3 uid="uid://b2gu81a3d5k7l"]
+
+[ext_resource type="Script" uid="uid://b8m832rs5y78g" path="res://scripts/map/map_camera.gd" id="1_ph54e"]
+[ext_resource type="Texture2D" uid="uid://dndajpq8fxdsh" path="res://assets/map/Starborn map.png" id="1_sxf4j"]
+[ext_resource type="Texture2D" uid="uid://gxc6hddx846" path="res://assets/misc/Protagonist final.png" id="2_tqkkf"]
+[ext_resource type="Texture2D" uid="uid://c7lvmi5pwwlan" path="res://assets/map/Icon1.png" id="3_a2pkv"]
+[ext_resource type="Script" uid="uid://cqvmic73fg0vx" path="res://scripts/map/map_player.gd" id="3_fcby6"]
+[ext_resource type="Script" uid="uid://bpejqr02y6ubv" path="res://scripts/map/map_terrain_area.gd" id="5_jcaow"]
+
+[sub_resource type="Gradient" id="Gradient_jcaow"]
+colors = PackedColorArray(0.14436, 0.162992, 0.197158, 1, 0.145098, 0.164706, 0.196078, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_04w0f"]
+gradient = SubResource("Gradient_jcaow")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2pkv"]
+size = Vector2(35, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcby6"]
+size = Vector2(700, 600)
+
+[node name="World Root" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(-35, -212)
+zoom = Vector2(1.5, 1.5)
+script = ExtResource("1_ph54e")
+max_zoom = 4.0
+limit_min = Vector2(-1500, -1500)
+limit_max = Vector2(1500, 1500)
+
+[node name="Background behind the map" type="Sprite2D" parent="."]
+scale = Vector2(200, 200)
+texture = SubResource("GradientTexture2D_04w0f")
+
+[node name="Map" type="Sprite2D" parent="."]
+texture = ExtResource("1_sxf4j")
+
+[node name="Beach Colliders" type="StaticBody2D" parent="Map"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Beach Colliders"]
+polygon = PackedVector2Array(-12, -129, -51, -140, -61, -127, -47, -103, -68, -75, -106, -60, -163, -73, -181, -63, -232, -75, -242, -108, -265, -155, -263, -175, -280, -177, -282, -189, -274, -224, -264, -235, -262, -243, -257, -249, -252, -264, -225, -278, -225, -289, -231, -286, -241, -292, -240, -309, -248, -313, -248, -333, -233, -346, -206, -379, -188, -378, -177, -375, -158, -391, -137, -391, -111, -402, -92, -393, -91, -379, -86, -364, -77, -355, -88, -324, -96, -317, -96, -307, -81, -296, -68, -274, -70, -254, -80, -253, -80, -240, -62, -239, -44, -230, -28, -236, -27, -248, -13, -256, 5, -271, 23, -273, 15, -301, 29, -329, 28, -348, 18, -352, 13, -347, 3, -349, -6, -364, -7, -394, 16, -446, 31, -452, 65, -501, 86, -502, 120, -485, 142, -444, 149, -447, 170, -417, 176, -396, 174, -361, 160, -349, 155, -331, 165, -334, 172, -344, 184, -352, 201, -326, 210, -319, 211, -276, 217, -270, 198, -243, 195, -228, 215, -222, 223, -210, 222, -185, 233, -176, 225, -154, 189, -130, 174, -128, 155, -115, 142, -99, 130, -92, 124, -81, 99, -70, 72, -60, 59, -65, 17, -61, -10, -75, -17, -69, 53, -33, 251, -140, 250, -275, 197, -463, 72, -525, -26, -430, -35, -273, -70, -425, -213, -401, -290, -306, -307.788, -185.797, -249, -57, -148, -26, -18, -70, -12, -76, -24, -97)
+
+[node name="Points Of Interest" type="Node2D" parent="."]
+
+[node name="POI" type="Area2D" parent="Points Of Interest"]
+position = Vector2(-88, -228)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points Of Interest/POI"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_a2pkv")
+
+[node name="POI Sprite" type="Sprite2D" parent="Points Of Interest/POI"]
+texture_filter = 1
+position = Vector2(0, -3)
+texture = ExtResource("3_a2pkv")
+
+[node name="POI2" type="Area2D" parent="Points Of Interest"]
+position = Vector2(-101, -364)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points Of Interest/POI2"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_a2pkv")
+
+[node name="POI Sprite" type="Sprite2D" parent="Points Of Interest/POI2"]
+texture_filter = 1
+position = Vector2(0, -3)
+texture = ExtResource("3_a2pkv")
+
+[node name="POI3" type="Area2D" parent="Points Of Interest"]
+position = Vector2(46, -324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points Of Interest/POI3"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_a2pkv")
+
+[node name="POI Sprite" type="Sprite2D" parent="Points Of Interest/POI3"]
+texture_filter = 1
+position = Vector2(0, -3)
+texture = ExtResource("3_a2pkv")
+
+[node name="POI4" type="Area2D" parent="Points Of Interest"]
+position = Vector2(162, -404)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points Of Interest/POI4"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_a2pkv")
+
+[node name="POI Sprite" type="Sprite2D" parent="Points Of Interest/POI4"]
+texture_filter = 1
+position = Vector2(0, -3)
+texture = ExtResource("3_a2pkv")
+
+[node name="POI5" type="Area2D" parent="Points Of Interest"]
+position = Vector2(189, -290)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points Of Interest/POI5"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_a2pkv")
+
+[node name="POI Sprite" type="Sprite2D" parent="Points Of Interest/POI5"]
+texture_filter = 1
+position = Vector2(0, -3)
+texture = ExtResource("3_a2pkv")
+
+[node name="POI6" type="Area2D" parent="Points Of Interest"]
+position = Vector2(42, -81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points Of Interest/POI6"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_a2pkv")
+
+[node name="POI Sprite" type="Sprite2D" parent="Points Of Interest/POI6"]
+texture_filter = 1
+position = Vector2(0, -3)
+texture = ExtResource("3_a2pkv")
+
+[node name="Terrain Areas" type="Node2D" parent="."]
+
+[node name="Forest 1" type="Area2D" parent="Terrain Areas"]
+position = Vector2(-183, -237)
+script = ExtResource("5_jcaow")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Terrain Areas/Forest 1"]
+position = Vector2(1, 0)
+polygon = PackedVector2Array(54, 55, 19, 69, 16, 80, -11, 83, -9, 69, -33, 67, -42, 38, -63, 22, -50, -21, -17, -43, -46, -84, -13, -115, 31, -120, 45, -96, 6, -67, 41, -54, 54, -21, 38, -10, 52, 15, 40, 46)
+
+[node name="Forest 2" type="Area2D" parent="Terrain Areas"]
+position = Vector2(62, -188)
+script = ExtResource("5_jcaow")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Terrain Areas/Forest 2"]
+position = Vector2(1, 0)
+polygon = PackedVector2Array(86, -27, 113, -22, 125, 10, 9, 89, -36, 88, -43, 64, -36, 44, -61, 37, -72, 8, -56, -9, -67, -32, -57, -54, -17, -75, -21, -104, 13, -151, -14, -154, -13, -171, -56, -182, -30, -218, -43, -238, -2, -275, 39, -281, 87, -204, 74, -174, 73, -114, 91, -121, 122, -110, 120, -73)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-169, -119)
+scale = Vector2(0.01, 0.01)
+script = ExtResource("3_fcby6")
+base_speed = 50.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-450, 1000)
+shape = SubResource("RectangleShape2D_fcby6")
+
+[node name="Player Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_tqkkf")

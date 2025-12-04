@@ -9,6 +9,7 @@
 script = ExtResource("2_hwvtf")
 description = ""
 name = "Block"
+sound = ""
 stamina_cost = 0
 card_type = 3
 speed = 1

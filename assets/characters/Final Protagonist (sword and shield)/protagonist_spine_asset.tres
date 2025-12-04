@@ -1,3 +1,8 @@
-[gd_resource type="SpineSkeletonDataResource" format=3 uid="uid://dx821jwtyslbl"]
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://dx821jwtyslbl"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://q55y1t6usbgq" path="res://assets/characters/Final Protagonist (sword and shield)/Final Protagonist (sword and shield).atlas" id="1_fphk5"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://b61s7pfpb6co7" path="res://assets/characters/Final Protagonist (sword and shield)/Final Protagonist (sword and shield).spine-json" id="2_4o0al"]
 
 [resource]
+atlas_res = ExtResource("1_fphk5")
+skeleton_file_res = ExtResource("2_4o0al")

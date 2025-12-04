@@ -14,6 +14,7 @@ amt = 11
 script = ExtResource("4_bmtos")
 description = ""
 name = "Head Bash"
+sound = "Push"
 stamina_cost = 0
 card_type = 0
 speed = 0

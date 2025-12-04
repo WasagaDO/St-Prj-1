@@ -17,6 +17,7 @@ description = "REACTION
 
 Deal 5 damage through armor."
 name = "Deceptive Strike"
+sound = ""
 image = ExtResource("2_emvl0")
 stamina_cost = 4
 card_type = 3

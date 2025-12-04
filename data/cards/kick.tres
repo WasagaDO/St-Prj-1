@@ -27,6 +27,7 @@ metadata/_custom_type_script = "uid://bgj73ykcpodne"
 script = ExtResource("2_wb0fa")
 description = "Deal 3 crushing damage and interrupt the enemy's moveset."
 name = "Kick"
+sound = ""
 stamina_cost = 4
 card_type = 0
 speed = 0

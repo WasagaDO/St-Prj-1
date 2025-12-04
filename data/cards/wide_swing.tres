@@ -15,6 +15,7 @@ amt = 7
 script = ExtResource("4_pl4bd")
 description = "Deal 7 slashing damage."
 name = "Wide Swing"
+sound = ""
 image = ExtResource("2_lxqrp")
 stamina_cost = 5
 card_type = 0

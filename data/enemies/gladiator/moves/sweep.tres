@@ -27,6 +27,7 @@ metadata/_custom_type_script = "uid://bgj73ykcpodne"
 script = ExtResource("2_cqtgu")
 description = ""
 name = "Sweep"
+sound = ""
 stamina_cost = 0
 card_type = 0
 speed = 1

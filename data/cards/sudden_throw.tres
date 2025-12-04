@@ -21,6 +21,7 @@ metadata/_custom_type_script = "uid://bgj73ykcpodne"
 script = ExtResource("2_3i3ox")
 description = "Apply Stun to the enemy."
 name = "Sudden Throw"
+sound = ""
 stamina_cost = 4
 card_type = 0
 speed = 1

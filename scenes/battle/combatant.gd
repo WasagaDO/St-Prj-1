@@ -495,12 +495,15 @@ func _statuses_line_compact() -> String:
 @export var spined_character: SpineSprite
 
 
-# changes the spine_asset (SpineSkeletonDataResource) of the character in the new_visual component
+# changes the spine_asset (SpineSkeletonDataResource) of the character
 func set_character_spine_asset(asset : SpineSkeletonDataResource, subskin: String):
 	# set the skeleton asset
 	spined_character.skeleton_data_res = asset
-	
 	# set the skin if specified
+	change_skin(subskin)
+
+
+func change_skin(subskin: String):
 	if subskin != null and subskin != "":
 		var skeleton = spined_character.get_skeleton()
 		var skeleton_data = skeleton.get_data()

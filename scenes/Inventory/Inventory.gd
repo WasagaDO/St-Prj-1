@@ -24,8 +24,6 @@ extends Control
 func _ready() -> void:
 	# show page 1
 	switch_tab(1)
-	#cards_scroll.max_value = scroll_container.get_child(0).size.y - scroll_container.size.y
-	#scrollbar_2.max_value = scroll_2_container.get_child(0).size.y - scroll_2_container.size.y
 	update_scroll_bar_distance(0)
 	update_scroll_bar_distance(1)
 	back_button.mouse_entered.connect(nav_buttons_hover.bind("BackButton","entered"))
@@ -40,14 +38,13 @@ func card_hover(card: InventoryCard):
 	description_card.title = card.title
 	description_card.card_pic.texture = card.get_node("CardPic").texture
 
-	print("card.texture:", card.get_node("CardPic").texture)
 	description_card.type = card.get_type_string(card.type)
 	description_card.type2 = card.get_secondary_type_string(card.type2)
 	description_card.level = str(card.level)
 	description_card.update()
 	card_description_text.text = card.description
 
-
+"""
 # updates the travel height of a scroll bar
 func update_scroll_bar_distance(page:int):
 	await get_tree().process_frame
@@ -64,12 +61,44 @@ func update_scroll_bar_distance(page:int):
 	var max_scroll_value = container.get_child(0).size.y - container.size.y
 	if max_scroll_value <= 1:
 		max_scroll_value = 1
-	cards_scroll.max_value = max_scroll_value
-	if cards_scroll.value > max_scroll_value:
-		cards_scroll.value = max_scroll_value
-	if cards_scroll.value < 0:
-		cards_scroll.value = 0
+	scroll_bar.max_value = max_scroll_value
+	if scroll_bar.value > max_scroll_value:
+		scroll_bar.value = max_scroll_value
+	if scroll_bar.value < 0:
+		scroll_bar.value = 0
 	print("update_scroll_bar_distance(", str(page), ") to ", str(max_scroll_value))
+"""
+
+func update_scroll_bar_distance(page:int) -> void:
+	await get_tree().process_frame
+	await get_tree().process_frame
+
+	var scroll_bar: VScrollBar = cards_scroll
+	var container: ScrollContainer = scroll_container
+	if page == 1:
+		scroll_bar = scrollbar_2
+		container = scroll_2_container
+	elif page == 2:
+		scroll_bar = scrollbar_3
+		container = scroll_3_container
+
+	var content := container.get_child(0)
+	if content == null:
+		return
+
+	var max_scroll_value = max(0.0, content.size.y - container.size.y)
+
+	scroll_bar.min_value = 0.0
+	scroll_bar.max_value = max_scroll_value
+	scroll_bar.page = 0.0  # IMPORTANT : on laisse à 0 pour garder un grabber constant
+
+	if scroll_bar.value > max_scroll_value:
+		scroll_bar.value = max_scroll_value
+	if scroll_bar.value < 0.0:
+		scroll_bar.value = 0.0
+
+	print("update_scroll_bar_distance(", str(page), ") to ", str(max_scroll_value))
+
 
 
 var filtered_type: InventoryCard.Types = InventoryCard.Types.OTHER
@@ -227,13 +256,20 @@ func sort_pressed(sort: Sorts) -> void:
 
 
 func scroll(value: float) -> void:
-	scroll_container.scroll_vertical = value
+	scroll_container.scroll_vertical = int(value)
+	if visible:
+		AudioManager.notify_inventory_scroll_moved()
 
 func scroll_2(value:float) -> void:
-	scroll_2_container.scroll_vertical = value
+	scroll_2_container.scroll_vertical = int(value)
+	if visible:
+		AudioManager.notify_inventory_scroll_moved()
 
 func scroll_3(value:float) -> void:
-	pass
+	scroll_3_container.scroll_vertical = int(value)
+	if visible:
+		AudioManager.notify_inventory_scroll_moved()
+
 
 func _process(delta: float) -> void:
 	cards_scroll.value = scroll_container.scroll_vertical

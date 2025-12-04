@@ -25,6 +25,7 @@ amt = 5
 script = ExtResource("3_7j1ya")
 description = ""
 name = "Active Defense"
+sound = ""
 image = ExtResource("2_p2xc5")
 stamina_cost = 0
 card_type = 2

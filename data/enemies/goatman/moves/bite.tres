@@ -19,6 +19,7 @@ amt = 6
 script = ExtResource("4_oehdc")
 description = ""
 name = "Bite"
+sound = ""
 stamina_cost = 0
 card_type = 0
 speed = 1

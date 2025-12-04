@@ -15,6 +15,7 @@ amt = 7
 script = ExtResource("4_j3nbc")
 description = "Deal 7 piercing damage."
 name = "Lunge"
+sound = ""
 image = ExtResource("2_a8h0o")
 stamina_cost = 5
 card_type = 0

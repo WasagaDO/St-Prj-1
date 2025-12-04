@@ -15,6 +15,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("2_lqoa8")
 description = ""
 name = "Counter-Strike"
+sound = ""
 stamina_cost = 0
 card_type = 3
 speed = 1

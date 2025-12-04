@@ -12,6 +12,7 @@ description = "REACTION
 
 Dodge an enemy's attack."
 name = "Dodge"
+sound = ""
 image = ExtResource("2_ao4q6")
 stamina_cost = 3
 card_type = 3

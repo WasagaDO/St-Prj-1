@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://q55y1t6usbgq"
+path="res://.godot/imported/Final Protagonist (sword and shield).atlas-fe2841a0a0ee12f574ffbce77aef0351.spatlas"
+
+[deps]
+
+source_file="res://assets/characters/Final Protagonist (sword and shield)/Final Protagonist (sword and shield).atlas"
+dest_files=["res://.godot/imported/Final Protagonist (sword and shield).atlas-fe2841a0a0ee12f574ffbce77aef0351.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

@@ -19,6 +19,7 @@ amt = 4
 script = ExtResource("4_ubkoi")
 description = ""
 name = "Strong Swing"
+sound = ""
 stamina_cost = 0
 card_type = 0
 speed = -1

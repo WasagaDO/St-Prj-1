@@ -10,6 +10,7 @@ func _ready() -> void:
 	dest_scale = scale;
 	pressed.connect(_on_pressed);
 	mouse_entered.connect(_on_mouse_entered);
+	mouse_exited.connect(_on_mouse_exited)
 
 func play_hover_sound():
 	AudioManager.play_sfx("hover")

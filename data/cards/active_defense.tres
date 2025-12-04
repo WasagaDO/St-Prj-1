@@ -11,6 +11,7 @@
 script = ExtResource("4_dx4y5")
 description = "Gain 5 crushing, slashing and piercing armor until the start of your next turn."
 name = "Active Defense"
+sound = ""
 image = ExtResource("2_tyt2p")
 stamina_cost = 3
 card_type = 1

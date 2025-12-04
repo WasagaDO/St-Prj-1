@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("2_tm5gl")
 description = "Deal 12 crushing damage."
 name = "Crushing Blow"
+sound = ""
 image = ExtResource("2_nb2lm")
 stamina_cost = 4
 card_type = 0

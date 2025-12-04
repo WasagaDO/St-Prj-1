@@ -160,6 +160,26 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_y5mlb")
 horizontal_scroll_mode = 0
 
+[node name="RichTextLabel" type="RichTextLabel" parent="AboutTheProject/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 25
+text = "Welcome to StarBorn.
+
+This project is evolving in front of you. You are playing an early version of the game — and stepping into a living universe that will grow, deepen, and expand with new stories, characters, and worlds over time.
+
+StarBorn is designed as a creative platform. Our goal is to give space for different authors to bring their ideas, visual styles, and narratives into a shared universe — and for players to discover and experience them directly inside the game.
+
+As the project develops, you will be able to influence which comics, stories, and characters become part of StarBorn, support creators, vote on future content, and watch the world change alongside its community.
+
+We are building a space that grows not from the top down, but together — step by step, release by release, vote by vote.
+
+Thank you for being here at this early stage.
+You are part of this process.
+
+More is coming."
+
 [node name="CloseButton" type="Button" parent="AboutTheProject"]
 layout_mode = 1
 anchors_preset = 7

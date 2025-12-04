@@ -28,6 +28,7 @@ metadata/_custom_type_script = "uid://bgj73ykcpodne"
 script = ExtResource("2_23x1l")
 description = "Deal 5 crushing damage and apply \"Fracture\" to an unarmored enemy."
 name = "Gliding Strike"
+sound = ""
 image = ExtResource("2_dnaih")
 stamina_cost = 6
 card_type = 0

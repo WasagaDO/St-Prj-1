@@ -12,6 +12,7 @@ description = "REACTION
 
 Block ALL incoming damage."
 name = "Power Block"
+sound = ""
 image = ExtResource("2_scvty")
 stamina_cost = 8
 card_type = 3

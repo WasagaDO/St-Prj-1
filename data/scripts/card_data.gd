@@ -17,6 +17,7 @@ enum SpecialReaction {
 
 @export_multiline var description:String
 @export var name:String;
+@export var sound:String;
 @export var image:Texture2D;
 @export_range(0, 100) var stamina_cost:int;
 @export var card_type:CardType;

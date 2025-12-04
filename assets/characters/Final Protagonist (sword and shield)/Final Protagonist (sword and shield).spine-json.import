@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.json"
+type="SpineSkeletonFileResource"
+uid="uid://b61s7pfpb6co7"
+path="res://.godot/imported/Final Protagonist (sword and shield).spine-json-35123c0d30c57dea01ccb70caaacc2b2.spjson"
+
+[deps]
+
+source_file="res://assets/characters/Final Protagonist (sword and shield)/Final Protagonist (sword and shield).spine-json"
+dest_files=["res://.godot/imported/Final Protagonist (sword and shield).spine-json-35123c0d30c57dea01ccb70caaacc2b2.spjson"]
+
+[params]
+

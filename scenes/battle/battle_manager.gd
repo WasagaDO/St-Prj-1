@@ -61,9 +61,10 @@ func _ready():
 		enemy.initialize()
 		enemy.player = player
 		enemy.play_animation("idle")
-		
 
 	player.initialize()
+	player.change_skin("Normal")
+	player.play_animation("idle")
 	
 	# wait a sec before we get started
 	# for the events system to connect all its events
@@ -149,8 +150,7 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 		var attack_animation: CombatantAnimator = CombatantAnimator.new()
 		source.add_child(attack_animation)
 		attack_animation.combatant_attacked(source)
-		if source is Enemy:
-			source.play_animation("attack")
+		source.play_animation("attack")
 	
 	# either this is not an attack, or there wasn't any reactions possible.
 	# so we just resolve it.

@@ -21,6 +21,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("2_skahw")
 description = ""
 name = "Double Stab"
+sound = ""
 stamina_cost = 0
 card_type = 0
 speed = 1

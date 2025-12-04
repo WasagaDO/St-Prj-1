@@ -41,6 +41,7 @@ metadata/_custom_type_script = "uid://07xrxm0x4phv"
 script = ExtResource("4_dukjm")
 name = "Gladiator with sword"
 behaviour = 1
+sound_on_play_override = ""
 moves = Array[ExtResource("2_ybull")]([SubResource("Resource_8o8jk"), SubResource("Resource_j42ky"), SubResource("Resource_6065l")])
 reactions = Array[ExtResource("3_kyx5l")]([ExtResource("5_dukjm"), ExtResource("12_iywqk")])
 max_hp = 35

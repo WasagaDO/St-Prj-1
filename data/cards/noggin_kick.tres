@@ -15,6 +15,7 @@ amt = 4
 script = ExtResource("4_jccsc")
 description = "Deal 4 crushing damage."
 name = "Noggin Kick"
+sound = ""
 image = ExtResource("2_8xc1q")
 stamina_cost = 3
 card_type = 0

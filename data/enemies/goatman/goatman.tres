@@ -42,6 +42,7 @@ moves = Array[ExtResource("3_sajlm")]([ExtResource("6_shx4i")])
 script = ExtResource("8_6y6y3")
 name = "Goatman"
 behaviour = 0
+sound_on_play_override = ""
 moves = Array[ExtResource("2_p4mp8")]([SubResource("Resource_1n4rt"), SubResource("Resource_t3kag"), SubResource("Resource_0wrom")])
 reactions = Array[ExtResource("3_sajlm")]([ExtResource("7_x5b2r")])
 max_hp = 36

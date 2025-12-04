@@ -33,6 +33,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("2_22d2h")
 description = ""
 name = "Freak's Wild Swinging"
+sound = ""
 stamina_cost = 0
 card_type = 0
 speed = -1

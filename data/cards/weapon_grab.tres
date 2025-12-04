@@ -28,6 +28,7 @@ metadata/_custom_type_script = "uid://bgj73ykcpodne"
 script = ExtResource("2_12agl")
 description = "Deal 15 balance damage and apply Stun."
 name = "Weapon Grab"
+sound = ""
 image = ExtResource("2_l14io")
 stamina_cost = 3
 card_type = 1

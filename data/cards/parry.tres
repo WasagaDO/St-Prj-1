@@ -18,6 +18,7 @@ description = "REACTION
 
 Block an enemy's attack and deal 6 slashing damage."
 name = "Parry"
+sound = ""
 image = ExtResource("2_fclgn")
 stamina_cost = 5
 card_type = 3

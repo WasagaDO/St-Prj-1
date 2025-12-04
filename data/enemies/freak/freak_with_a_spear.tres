@@ -37,6 +37,7 @@ metadata/_custom_type_script = "uid://07xrxm0x4phv"
 script = ExtResource("4_w1224")
 name = "Freak with a spear"
 behaviour = 1
+sound_on_play_override = ""
 moves = Array[ExtResource("2_cv018")]([SubResource("Resource_6d1kk"), SubResource("Resource_xllso"), SubResource("Resource_7dcc0")])
 reactions = Array[ExtResource("3_8bmov")]([])
 max_hp = 45

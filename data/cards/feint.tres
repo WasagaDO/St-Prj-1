@@ -18,6 +18,7 @@ metadata/_custom_type_script = "uid://dvpdienoet24g"
 script = ExtResource("2_jmu1c")
 description = "Trigger the enemy’s reaction. If their reaction is on cooldown, reset it."
 name = "Feint"
+sound = ""
 image = ExtResource("2_0tr5c")
 stamina_cost = 0
 card_type = 1

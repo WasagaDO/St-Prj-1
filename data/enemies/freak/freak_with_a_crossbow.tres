@@ -37,6 +37,7 @@ metadata/_custom_type_script = "uid://07xrxm0x4phv"
 script = ExtResource("4_emu08")
 name = "Freak with a crossbow"
 behaviour = 2
+sound_on_play_override = ""
 moves = Array[ExtResource("2_rt5ns")]([SubResource("Resource_b5jxr"), SubResource("Resource_kcln0"), SubResource("Resource_l25dl")])
 reactions = Array[ExtResource("3_km64a")]([ExtResource("5_km64a")])
 max_hp = 45

@@ -21,6 +21,7 @@ metadata/_custom_type_script = "uid://bgj73ykcpodne"
 script = ExtResource("2_tosel")
 description = ""
 name = "Net Throw"
+sound = ""
 stamina_cost = 0
 card_type = 1
 speed = 0

@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("2_xyoge")
 description = "Deal 4 crushing damage."
 name = "Elbow Strike"
+sound = ""
 image = ExtResource("2_dg146")
 stamina_cost = 2
 card_type = 0

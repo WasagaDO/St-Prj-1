@@ -377,6 +377,7 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="BattleSettings" type="Panel" parent="."]
+visible = false
 z_index = 4096
 anchors_preset = 13
 anchor_left = 0.5
@@ -599,8 +600,8 @@ metadata/_edit_lock_ = true
 [connection signal="pressed" from="LocationSelector/RightArrow" to="LocationSelector" method="_on_right_arrow_pressed"]
 [connection signal="pressed" from="LocationSelector/RightArrow" to="LocationSelector/RightArrow" method="play_hover_sound"]
 [connection signal="mouse_entered" from="BackToMenu" to="." method="play_hover_sound"]
-[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
 [connection signal="pressed" from="BackToMenu" to="." method="play_click_sound"]
+[connection signal="pressed" from="BackToMenu" to="." method="_on_back_to_menu_pressed"]
 [connection signal="item_selected" from="BattleSettings/Settings/Menu row - Enemy Behaviour/EnemyBehaviourOptionButton" to="." method="_on_enemy_behaviour_option_button_item_selected"]
 [connection signal="item_selected" from="BattleSettings/Settings/Menu row - time of day/TimeofDayOptionButton" to="." method="_on_timeof_day_option_button_item_selected"]
 [connection signal="item_selected" from="BattleSettings/Settings/Menu Row - Interactive Items/ItemsOptionButton" to="." method="_on_items_option_button_item_selected"]
