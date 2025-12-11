@@ -1,6 +1,11 @@
 extends Node2D
 class_name Combatant
 
+
+# gets overwritten in Enemy with EnemyData.default_attack_sound at the start of the fight
+@export var default_attack_sound: String
+
+
 enum DamageType {
 	CRUSHING,
 	CUTTING,
@@ -23,14 +28,16 @@ var last_card_played: CardData = null # useful for Agile Maneuver
 # Status storage: StatusEffectData -> int (remaining turns). No stacking of intensity.
 var status_effects := {}
 
+
+
 @export var max_hp:int = 100
 var hp:int
 
 @export var max_stamina:int = 3
 var stamina:int
 
-@export var max_balance:int = 100
-var balance: int = 50
+@export var max_balance:int = 50
+var balance: int = 30
 
 
 @export var max_armor = 100
@@ -43,7 +50,6 @@ var balance: int = 50
 @export var next_reaction_speed_boost:int = 0
 
 var did_play_series_of_stabs: bool = false
-
 
 
 
@@ -349,10 +355,7 @@ func has_status_effect() -> bool:
 
 func increment_stamina(increment: int):
 	stamina += increment
-	if stamina < 0:
-		stamina = 0
-	if stamina > max_stamina:
-		stamina = max_stamina
+	stamina = clamp(stamina, 0, max_stamina)
 
 
 
@@ -524,7 +527,8 @@ func _ready() -> void:
 		old_visual.visible = true
 
 
-func play_animation(name: String, mix_time:float=0.2):
+func play_animation(name_: String, mix_time:float=0.2):
+	print("play_animation(): ", name_)
 	if not use_new_animation_type or spined_character == null:
 		return
 	var state = spined_character.get_animation_state()
@@ -532,30 +536,30 @@ func play_animation(name: String, mix_time:float=0.2):
 		print("❌ No animation state found on SpineSprite.")
 		return
 	var skeleton_data = spined_character.get_skeleton().get_data()
-	if not skeleton_data.find_animation(name):
-		print("⚠️ Spine animation not found:", name)
+	if not skeleton_data.find_animation(name_):
+		print("⚠️ Spine animation not found:", name_)
 		return
-	var loop = (name == "idle")
+	var loop = (name_ == "idle")
 
 	# Clear previous tracks if this is death (full override)
-	if name == "death":
+	if name_ == "death":
 		state.clear_tracks()
 
-	var entry = state.set_animation(name, loop, 0)
+	var entry = state.set_animation(name_, loop, 0)
 	entry.set_mix_time(mix_time)
 
 	# One-shot animations return to idle after finishing (except death)
-	if not loop and name != "death":
+	if not loop and name_ != "death":
 		var idle_delay = entry.get_animation_end() + 0.05
 		state.add_animation("idle", true, idle_delay, 0)
 
 	# For death: freeze AFTER the animation finishes
-	if name == "death" and entry:
+	if name_ == "death" and entry:
 		# Connect once to the "animation_ended" signal
-		spined_character.connect("animation_ended", Callable(self, "_on_death_animation_end"), CONNECT_ONE_SHOT)
+		spined_character.connect("animation_ended", _on_death_animation_end, CONNECT_ONE_SHOT)
 
 
-func _on_death_animation_end(_track_index: int, _animation_name: String):
+func _on_death_animation_end():
 	# Wait a frame to ensure last pose is applied
 	await get_tree().process_frame
 	spined_character.set_process(false)

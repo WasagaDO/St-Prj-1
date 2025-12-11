@@ -16,7 +16,7 @@ func start():
 	hand.set_enabled(acting_combatant is Player);
 	if acting_combatant is Player:
 
-		acting_combatant.add_stamina(2);
+		acting_combatant.add_stamina(3);
 		dealer.deal_cards(BattleSettings.hand_size-hand.cards.size());
 		
 		# we literally just dealt cards to them up to their hand size

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bw4iu7av3kh7y"]
+[gd_scene load_steps=41 format=3 uid="uid://bw4iu7av3kh7y"]
 
 [ext_resource type="Script" uid="uid://wxl4p8jdcy24" path="res://scenes/session_settings/session_settings.gd" id="1_7ngu6"]
 [ext_resource type="Script" uid="uid://f60j2p7cq8o5" path="res://scenes/session_settings/location_selector.gd" id="2_6k2tw"]
@@ -31,6 +31,9 @@
 [ext_resource type="PackedScene" uid="uid://bri2nfm1lp86i" path="res://scenes/Inventory/Inventory.tscn" id="20_3qynl"]
 [ext_resource type="Shader" uid="uid://b1vxxqq5ojkvq" path="res://resources/blur.gdshader" id="20_7h11a"]
 [ext_resource type="Script" uid="uid://qfjemoxd8o7v" path="res://scenes/session_settings/inventory.gd" id="20_g3hyj"]
+[ext_resource type="Texture2D" uid="uid://dp4mxtsa7gi17" path="res://assets/backgrounds/blood_palace.jpg" id="20_jhab0"]
+[ext_resource type="Texture2D" uid="uid://cj1rjuuyjq51t" path="res://assets/backgrounds/fighting_pits.jpg" id="21_hyv2w"]
+[ext_resource type="Texture2D" uid="uid://l2d7txja67h7" path="res://assets/backgrounds/old_mill.png" id="22_01lax"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rb6er"]
 texture = ExtResource("5_omtcd")
@@ -144,12 +147,20 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
 [node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/LeftmostArena"]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.785
+offset_top = -346.955
+offset_right = 631.76
+offset_bottom = 379.88
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.95, 0.95)
 expand_mode = 2
+stretch_mode = 6
 
 [node name="LeftArena" type="Panel" parent="LocationSelector/ArenaPanels"]
 modulate = Color(1, 1, 1, 0.392157)
@@ -172,12 +183,21 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
 [node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/LeftArena"]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.785
+offset_top = -346.955
+offset_right = 631.76
+offset_bottom = 379.88
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("20_jhab0")
 expand_mode = 2
+stretch_mode = 6
 
 [node name="RightArena" type="Panel" parent="LocationSelector/ArenaPanels"]
 modulate = Color(1, 1, 1, 0.392157)
@@ -200,12 +220,21 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
 [node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/RightArena"]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.785
+offset_top = -346.955
+offset_right = 631.76
+offset_bottom = 379.88
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("21_hyv2w")
 expand_mode = 2
+stretch_mode = 6
 
 [node name="RightmostArena" type="Panel" parent="LocationSelector/ArenaPanels"]
 visible = false
@@ -229,12 +258,20 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
 [node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/RightmostArena"]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.785
+offset_top = -346.955
+offset_right = 631.76
+offset_bottom = 379.88
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.95, 0.95)
 expand_mode = 2
+stretch_mode = 6
 
 [node name="MainArena" type="Panel" parent="LocationSelector/ArenaPanels"]
 layout_mode = 1
@@ -255,12 +292,21 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rb6er")
 [node name="LocationCover" type="TextureRect" parent="LocationSelector/ArenaPanels/MainArena"]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.785
+offset_top = -346.955
+offset_right = 631.76
+offset_bottom = 379.88
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("22_01lax")
 expand_mode = 2
+stretch_mode = 6
 
 [node name="LeftArrow" type="TextureButton" parent="LocationSelector"]
 clip_children = 2

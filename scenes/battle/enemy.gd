@@ -48,6 +48,7 @@ func _build_debug_text_extra() -> String:
 
 
 func load_data(data:EnemyData):
+	default_attack_sound = data.default_attack_sound
 	max_hp = data.max_hp;
 	hp = data.max_hp;
 	log_name = data.name;

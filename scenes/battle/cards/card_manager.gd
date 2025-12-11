@@ -32,7 +32,7 @@ func _process(delta):
 		if card.state != Card.CardState.IN_HAND:
 			# we do this because we want to be able to move the card in 0.5 increments,
 			# but the z index is an integer
-			card.z_index = remap(-card.position.y, 0, -game_height, game_height*2 + cards_base_layer, cards_base_layer)
+			card.z_index = int(remap(-card.position.y, 0, -game_height, game_height*2 + cards_base_layer, cards_base_layer))
 		if card.state == Card.CardState.MOVING_TO_DEST:
 			card.z_index += 100;
 			

@@ -28,9 +28,8 @@ var game_over:bool = false;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# set the background according to the location and time_of_day
-	var rng = RandomNumberGenerator.new()
 	if BattleSettings.time_of_day == 2:
-		BattleSettings.time_of_day = randi() % 2
+		BattleSettings.time_of_day = int(randi() % 2) as BattleSettings.TimeOfDay
 		print("time of day is set to random. setting it to: ", BattleSettings.time_of_day)
 	background.texture = BattleSettings.location.cover
 	if BattleSettings.time_of_day == 1:
@@ -108,20 +107,27 @@ func increment_turn_order():
 	BattleSignals.new_turn.emit(acting_combatant)
 
 
+# this function is called whenever a card is played by any combatant. 
+# the card will not necessarily be triggered (resolved), it can be dodged or blocked.
+# we do know for sure that the attacker has all the rights to play this card (enough stamina, ...)
 func on_card_played(card:CardData, source:Combatant, target:Combatant):
-	var card_can_be_resolved:bool = true;
+	var card_can_be_resolved:bool = true
+
+
 	# remove some stamina from the player
 	if source is Player:
 		source.add_stamina(-card.stamina_cost);
 	# handle Feint
 	if _is_feint_card(card):
-		_handle_feint(card, source, target)
+		_handle_feint(source, target)
 		return
-	# player or enemy plays a reaction card
+
+	# reaction card
 	if card.card_type == CardData.CardType.REACTION:
 		waiting_for_player_reaction = false;
 		move_reacted_to = true;
-	# player or enemy plays an attack card
+
+	# attack card
 	if card.card_type == CardData.CardType.ATTACK and not move_reacted_to:
 		# let's put this away for now
 		queued_attack = {"card": card, "source": source, "target": target}
@@ -147,6 +153,7 @@ func on_card_played(card:CardData, source:Combatant, target:Combatant):
 				# it's reaction time, so don't resolve the attack yet.
 				# wait for the player.
 				card_can_be_resolved = false;
+		# animation
 		var attack_animation: CombatantAnimator = CombatantAnimator.new()
 		source.add_child(attack_animation)
 		attack_animation.combatant_attacked(source)
@@ -165,8 +172,8 @@ func _is_feint_card(card: CardData) -> bool:
 	return false
 
 
-
-func _handle_feint(card: CardData, source: Combatant, target: Combatant) -> void:
+# the Feint card forces the opponent to play a reaction card if possible.
+func _handle_feint(source: Combatant, target: Combatant) -> void:
 	if source is Player and target is Enemy:
 		var enemy := target as Enemy
 		var reaction: CardData = enemy.get_next_reaction_for_feint()
@@ -180,18 +187,27 @@ func _handle_feint(card: CardData, source: Combatant, target: Combatant) -> void
 		# ENEMY FEINTING PLAYER ISN'T IMPLEMENTED YET
 
 
-
-
-
-func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_turn:bool = false, special_card_effects:bool = true):
+# this function actually applies the effects of a card.
+# We know for sure that the card isn't dodged or blocked, the card WILL trigger.
+func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_turn:bool = false):
 	print("resolving card ", card.name, " played by ", source.name, " onto ", target.name)
 	BattleSignals.card_resolved.emit(source, target, card)
 	
+	# audio for card play
+	if card.sound.strip_edges() != "":
+		print("♫ playing card sound: ", card.sound)
+		var sound = AudioManager.play_sfx(card.sound)
+		if sound == null:
+			push_warning("  -> sound not found, playing default sound instead.")
+			AudioManager.play_sfx(source.default_attack_sound)
+	else: # default combatant's attack sound
+		print("♫ playing card sound: Card Play (default)")
+		AudioManager.play_sfx(source.default_attack_sound)
+
 	# if the card is a reaction, we need to change the target because the target 
 	# was still the attacked player. Now, the target of the reaction card must be
 	# the initial attacker who played the attack card
 	if card.card_type == CardData.CardType.REACTION:
-		# set the right target
 		if source is Player and queued_attack:
 			target = queued_attack.source
 		elif source is Enemy and queued_attack:
@@ -200,10 +216,12 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 	# special reactions (dodge, block, ...)
 	if card.card_type == CardData.CardType.REACTION:
 		for special:CardData.SpecialReaction in card.special_reactions:
+			# dodge
 			if special == CardData.SpecialReaction.DODGE:
 				BattleSignals.attack_dodged.emit(target, source, card)
 				source.play_animation("defense")
 				queued_attack = null
+			# block
 			elif special == CardData.SpecialReaction.BLOCK:
 				if queued_attack and queued_attack.card:
 					var incoming_damage = 0 # the sum of incoming damage
@@ -222,7 +240,6 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 						# Not enough stamina to block, so resolve the attack as normal.
 						continue
 
-
 	# applies the base effects of the card to the target
 	target.apply_card_effect(source, card)
 
@@ -233,7 +250,11 @@ func resolve_card(card:CardData, source:Combatant, target:Combatant, _finish_tur
 			receiver = source
 		if status.apply_only_if_unarmored and receiver.is_armored():
 			continue # don't apply status if the receiver is armored
-		
+
+		# Fracture sound (delayed)
+		if status.log_name.to_lower() == "fracture":
+			get_tree().create_timer(0.5).timeout.connect(func(): AudioManager.play_sfx("Bone Crack"), CONNECT_DEFERRED)
+
 		receiver.apply_new_status_effect(status, source)
 
 	# custom card effect
@@ -283,6 +304,7 @@ func check_for_end_of_battle():
 	if player.hp <= 0:
 		game_over = true;
 		BattleSignals.game_over.emit(enemies[0]);
+		#player.play_animation("death") # already managed in combatant.gd
 		return;
 		
 	var won_battle = true;
@@ -309,8 +331,11 @@ func _on_end_turn_button_pressed():
 	# it indicates that the player declined to react.
 	if waiting_for_player_reaction:
 		waiting_for_player_reaction = false;
+		# play the queued enemy attack
 		resolve_card(queued_attack.card, queued_attack.source, queued_attack.target);
 	else:
+		AudioManager.play_sfx("Enemy Activation")
+		await get_tree().create_timer(0.5).timeout
 		increment_turn_order();
 
 

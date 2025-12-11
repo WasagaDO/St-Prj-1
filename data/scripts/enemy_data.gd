@@ -4,7 +4,8 @@ class_name EnemyData
 @export var name:String;
 @export var behaviour:BattleSettings.EnemyBehaviour
 
-@export var sound_on_play_override:String
+# overrides the sound of enemy attacks. Otherwise, it's specified in the card data
+@export var default_attack_sound:String
 
 @export var moves:Array[EnemyTurnData]
 @export var reactions:Array[CardData]

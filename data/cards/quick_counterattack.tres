@@ -24,7 +24,7 @@ description = "REACTION
 
 Deal 6 slashing and 5 crushing damage."
 name = "Quick Counterattack"
-sound = ""
+sound = "Quick Flesh Cut"
 image = ExtResource("2_v0ppm")
 stamina_cost = 3
 card_type = 3

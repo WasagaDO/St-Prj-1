@@ -11,6 +11,7 @@
 script = ExtResource("4_e16lc")
 name = "Freak with a net and sword"
 behaviour = 0
+default_attack_sound = "Sword Strike"
 moves = Array[ExtResource("2_wbo3b")]([])
 reactions = Array[ExtResource("3_3xdde")]([])
 max_hp = 45

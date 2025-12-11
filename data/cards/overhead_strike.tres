@@ -22,6 +22,7 @@ metadata/_custom_type_script = "uid://pjnjtqn2vm0f"
 script = ExtResource("4_vyq3q")
 description = "Deal 5 crushing and 10 balance damage."
 name = "Overhead Strike"
+sound = "Sword Strike"
 image = ExtResource("2_0sj3b")
 stamina_cost = 4
 card_type = 0

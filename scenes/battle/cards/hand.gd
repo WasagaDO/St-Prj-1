@@ -48,7 +48,10 @@ func _ready() -> void:
 
 
 func card_played_sound():
-	AudioManager.play_sfx("card play")
+	return
+	# Temporarily disabled. I believe it's a better practice to make this 
+	# sound played in battle_manager > resolve_card()
+	#AudioManager.play_sfx("card play")
 
 
 func _process(_delta):
