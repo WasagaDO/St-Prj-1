@@ -58,10 +58,8 @@ func _play(id: StringName, bus_name: StringName, volume_db: float, pitch_scale: 
 	if survive_scene_change:
 		get_tree().get_root().add_child(player)
 	else:
-		var scene_root := get_tree().current_scene
-		if scene_root == null:
-			scene_root = get_tree().root
-		scene_root.add_child(player)
+		var parent := get_tree().root
+		parent.add_child(player)
 
 	var final_volume_db := entry.base_volume_db + volume_db
 
@@ -130,10 +128,8 @@ func notify_inventory_scroll_moved() -> void:
 	if bus_idx != -1:
 		player.bus = "SFX"
 
-	var scene_root := get_tree().current_scene
-	if scene_root == null:
-		scene_root = get_tree().root
-	scene_root.add_child(player)
+	get_tree().root.add_child(player)
+
 
 	player.volume_db = entry.base_volume_db
 	player.play(_scroll_last_position)

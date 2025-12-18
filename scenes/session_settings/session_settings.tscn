@@ -423,7 +423,6 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="BattleSettings" type="Panel" parent="."]
-visible = false
 z_index = 4096
 anchors_preset = 13
 anchor_left = 0.5
@@ -593,6 +592,7 @@ popup/item_2/text = "Freak with a crossbow"
 popup/item_2/id = 2
 popup/item_3/text = "Freak with a net and sword"
 popup/item_3/id = 3
+popup/item_3/disabled = true
 popup/item_4/text = "Freak with three swords"
 popup/item_4/id = 4
 popup/item_5/text = "Gladiator with dual weapons"

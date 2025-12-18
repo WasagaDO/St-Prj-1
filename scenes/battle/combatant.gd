@@ -84,7 +84,7 @@ func initialize_bars():
 	bars.stamina_bar.value = max_stamina
 	
 	bars.balance_bar.maximum = max_balance
-	bars.balance_bar.value = randi_range(30, 70)
+	bars.balance_bar.value = 30
 
 	for armor_type in bars.armor.keys():
 		bars.armor[armor_type].maximum = max_armor
@@ -285,20 +285,22 @@ func apply_healing(amt:int):
 
 
 func on_balance_limit_reached():
+	print("BALANCE LIMIT REACHED")
 	skip_next_turn = true # stun
 	stamina /= 2 # lose 50% of stamina
 	incoming_damage_multiplier *= 1.3 # +30% incoming damage
 
 
 func set_balance(amt:int):
+	print("set_balance(", amt)
 	balance = amt
 	bars.balance_bar.value = amt
 	if balance <= 0:
 		on_balance_limit_reached()
-		set_balance(30)
-	if balance >= 100:
+		set_balance(15)
+	if balance >= 50:
 		on_balance_limit_reached()
-		set_balance(70)
+		set_balance(35)
 
 
 
@@ -442,7 +444,7 @@ func _build_debug_text() -> String:
 	var cg: int = int(armor.get(DamageType.CRUSHING, 0))
 	var ct: int = int(armor.get(DamageType.CUTTING, 0))
 	var pi: int = int(armor.get(DamageType.PIERCING, 0))
-	var ba: int = int(armor.get(DamageType.BALANCE, 0))
+	var ba: int = balance
 	lines.append("Armor  Cg:%d  Ct:%d  Pi:%d  Ba:%d" % [cg, ct, pi, ba])
 
 	# Speed modifiers & next reaction boost (helpers exist in this class)
@@ -528,7 +530,7 @@ func _ready() -> void:
 
 
 func play_animation(name_: String, mix_time:float=0.2):
-	print("play_animation(): ", name_)
+	print("▶ play_animation(): ", name_)
 	if not use_new_animation_type or spined_character == null:
 		return
 	var state = spined_character.get_animation_state()

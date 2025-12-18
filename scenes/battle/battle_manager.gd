@@ -27,6 +27,8 @@ var game_over:bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	AudioManager.play_music("Battle Loop")
 	# set the background according to the location and time_of_day
 	if BattleSettings.time_of_day == 2:
 		BattleSettings.time_of_day = int(randi() % 2) as BattleSettings.TimeOfDay
@@ -55,6 +57,7 @@ func _ready():
 		enemy.set_character_spine_asset(enemy_data.skeleton_asset, enemy_data.skeleton_subskin)
 		print("set enemy asset to ", enemy_data.name)
 		enemy.enemy_data = enemy_data
+		enemy.load_data(enemy_data) # forces the enemy to load the data of the choosen enemy
 		enemy.log_name = enemy_data.name
 		enemy.max_hp = enemy_data.max_hp
 		enemy.initialize()

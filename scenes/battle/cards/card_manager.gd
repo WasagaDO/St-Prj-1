@@ -17,7 +17,7 @@ func register_card(card:Card):
 
 var last_card_moused_over = null
 var card_options_sfx_cooldown: float = 0.0
-@export var _CARD_OPTIONS_SFX_COOLDOWN := 0.1
+@export var _CARD_OPTIONS_SFX_COOLDOWN: float = 0.1
 
 
 func _process(delta):

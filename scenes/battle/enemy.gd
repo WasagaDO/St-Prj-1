@@ -16,7 +16,6 @@ var player: Player = null;
 var card_cooldowns:Dictionary = {};
 func _ready():
 	super._ready();
-	load_data(enemy_data);
 	trigger_custom_behaviours(EnemyCustomBehaviour.Trigger.ONLY_ONCE_ON_BATTLE_START)
 
 
@@ -59,6 +58,9 @@ func load_data(data:EnemyData):
 
 
 func act():
+	if turns.is_empty():
+		push_warning("Enemy turns not initialized for %s" % log_name)
+		return
 	move_made.emit(self, turns[turn_index].moves[move_index]);
 	move_index += 1;
 	if move_index == turns[turn_index].moves.size():

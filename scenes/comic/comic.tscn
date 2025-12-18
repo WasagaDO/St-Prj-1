@@ -1,0 +1,35 @@
+[gd_scene load_steps=10 format=3 uid="uid://ysry4a2g4h7h"]
+
+[ext_resource type="Script" uid="uid://b3lmvyalnmd34" path="res://scripts/comics/comic_player.gd" id="1_ucvlh"]
+[ext_resource type="Script" uid="uid://bdred5xet6574" path="res://scripts/comics/resources/comic_frame.gd" id="2_hxtdp"]
+[ext_resource type="Script" uid="uid://blmp2d6wc0lj1" path="res://scripts/comics/resources/comic_choice_entry.gd" id="3_mrqt8"]
+[ext_resource type="Script" uid="uid://k8h1xydno4dc" path="res://scripts/comics/resources/comic_choice.gd" id="4_tan4i"]
+[ext_resource type="Script" uid="uid://citql734poxbc" path="res://scripts/comics/resources/comic_image.gd" id="5_0so7o"]
+[ext_resource type="Script" uid="uid://baubwg5n3itgp" path="res://scripts/comics/resources/comic_sequence.gd" id="6_32f44"]
+
+[sub_resource type="Resource" id="Resource_irlbh"]
+script = ExtResource("4_tan4i")
+entries = Array[ExtResource("3_mrqt8")]([])
+fade_duration = 0.25
+wait_after = 0.05
+metadata/_custom_type_script = "uid://k8h1xydno4dc"
+
+[sub_resource type="Resource" id="Resource_3n128"]
+script = ExtResource("5_0so7o")
+expand = true
+stretch_mode = 5
+custom_min_size = Vector2(0, 420)
+fade_duration = 0.25
+wait_after = 0.05
+metadata/_custom_type_script = "uid://citql734poxbc"
+
+[sub_resource type="Resource" id="Resource_fntd7"]
+script = ExtResource("6_32f44")
+frames = Array[ExtResource("2_hxtdp")]([SubResource("Resource_irlbh"), SubResource("Resource_3n128")])
+metadata/_custom_type_script = "uid://baubwg5n3itgp"
+
+[node name="Comic" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ucvlh")
+sequence = SubResource("Resource_fntd7")

@@ -125,13 +125,13 @@ metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 [sub_resource type="Resource" id="Resource_kbog3"]
 script = ExtResource("9_dn6dx")
 card = ExtResource("14_bewwa")
-copies = 2
+copies = 0
 metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 
 [sub_resource type="Resource" id="Resource_folwx"]
 script = ExtResource("9_dn6dx")
 card = ExtResource("15_b6rjj")
-copies = 2
+copies = 0
 metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 
 [sub_resource type="Resource" id="Resource_rkb8f"]
@@ -215,7 +215,7 @@ metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 [sub_resource type="Resource" id="Resource_wfi3p"]
 script = ExtResource("9_dn6dx")
 card = ExtResource("29_bvq7d")
-copies = 2
+copies = 0
 metadata/_custom_type_script = "uid://rh6rqvxn3rx0"
 
 [sub_resource type="Resource" id="Resource_arddj"]
@@ -320,7 +320,6 @@ deck = NodePath("../Deck")
 position = Vector2(536, 553)
 scale = Vector2(0.2, 0.2)
 hand = NodePath("../Cards/Hand")
-default_attack_sound = "Card Play"
 max_stamina = 30
 log_name = "Player"
 debug_text = NodePath("../CanvasLayer/UI/Debug Infos/Player Debug Infos")

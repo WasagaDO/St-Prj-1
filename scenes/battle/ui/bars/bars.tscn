@@ -122,6 +122,7 @@ offset_bottom = 202.0
 expand_mode = 2
 icon = ExtResource("11_44gc7")
 maximum = 50
+value = 30
 
 [connection signal="mouse_entered" from="BalanceBar background" to="BalanceBar background" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="BalanceBar background" to="BalanceBar background" method="_on_mouse_exited"]

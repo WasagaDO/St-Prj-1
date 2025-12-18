@@ -74,6 +74,7 @@ func _on_first_turn_option_button_item_selected(index: int) -> void:
 
 func _on_enemy_button_item_selected(index: int) -> void:
 	var enemy_data = enemy_datas[index]
+	
 	BattleSettings.enemy_data = enemy_data
 	print("selected enemy " + str(index) + " : " + enemy_data.name)
 
